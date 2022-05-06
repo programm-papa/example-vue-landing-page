@@ -160,6 +160,8 @@ main {
     .block {
         .wrapper {
             margin: 0px auto;
+            width: 1200px;
+            padding: 0px 20px;
         }
         &#block1 {
             .wrapper {
@@ -196,7 +198,8 @@ main {
                         margin-bottom: 40px;
                         .stroke-text {
                             color: #fff;
-                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px, #696fe6 -1px 0px 0.6px;
+                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px,
+                                #696fe6 -1px 0px 0.6px;
                         }
                     }
                     .pink-button {
@@ -205,6 +208,7 @@ main {
                 }
                 .decor-img {
                     width: 100%;
+                    height: 645px;
                     position: relative;
                     .input-efect-wrap {
                         position: absolute;
@@ -290,7 +294,8 @@ main {
                                         transform: rotate(0deg) translateY(-216.622px) translateX(41px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px) rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px)
+                                            rotate(-360deg);
                                     }
                                 }
                             }
@@ -305,7 +310,8 @@ main {
                                         transform: rotate(0deg) translateY(-181.44px) translateX(128px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px) rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px)
+                                            rotate(-360deg);
                                     }
                                 }
                             }
@@ -320,7 +326,8 @@ main {
                                         transform: rotate(0deg) translateY(-116.646px) translateX(191px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px) rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px)
+                                            rotate(-360deg);
                                     }
                                 }
                             }
@@ -688,6 +695,261 @@ main {
                             }
                             46% {
                                 transform: rotate(0deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#block2 {
+            .bacground-wrapper {
+                width: calc(100% - 11%);
+                margin: 0px auto;
+                padding: 70px;
+                background: #f3f4f9;
+                border-radius: 20px;
+                .wrapper {
+                    width: 1200px;
+                    padding: 0px 20px;
+                    gap: 40px;
+                    .card {
+                        width: 360px;
+                        height: 495px;
+                        background-color: #ffffff;
+                        border: 2px dashed #696fe6;
+                        border-radius: 20px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 20px;
+                        cursor: pointer;
+                        .card-img-circle {
+                            width: 180px;
+                            height: 180px;
+                            border: 2px dashed #696fe6;
+                            border-radius: 100%;
+                            padding: 15px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .bacground-circle {
+                                width: 150px;
+                                height: 150px;
+                                border-radius: 100%;
+                                background: #f3f4f9;
+                                box-shadow: inset 0px 4px 10px rgba(105, 111, 229, 0.15);
+                            }
+                        }
+                        .description {
+                            padding: 30px;
+                            width: 100%;
+                            .title {
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 20px;
+                                line-height: 25px;
+                                letter-spacing: 0.02em;
+                                color: #424c5c;
+                                margin-bottom: 20px;
+                            }
+                            .text {
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 150%;
+                                color: #424c5c;
+                            }
+                        }
+                        .go-btn {
+                            width: calc(100% + 4px);
+                            height: 60px;
+                            border-radius: 0px 0px 20px 20px;
+                            background: #696fe6;
+                            position: absolute;
+                            left: -2px;
+                            bottom: -2px;
+                            display: flex;
+                            align-items: center;
+                            gap: 7px;
+                            padding: 0px 30px;
+                            .text {
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 20px;
+                                letter-spacing: 0.02em;
+                                text-transform: uppercase;
+                                color: #ffffff;
+                            }
+                            .arrow {
+                                position: relative;
+                            }
+                        }
+                        &:hover {
+                            .go-btn {
+                                background-color: #ff5555;
+                                .arrow {
+                                    left: 0px;
+                                    animation: arrowAnim 0.7s linear infinite;
+                                    @keyframes arrowAnim {
+                                        0% {
+                                            left: 0px;
+                                        }
+                                        50% {
+                                            left: 5px;
+                                        }
+                                        100% {
+                                            left: 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#block3 {
+            padding: 70px 0px;
+            .wrapper {
+                display: flex;
+                .left {
+                    width: 400px;
+                    .title {
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 30px;
+                        line-height: 38px;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                        color: #424c5c;
+                        margin-bottom: 40px;
+                    }
+                    .point-description {
+                        display: flex;
+                        gap: 10px;
+                        .pointer {
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 100%;
+                            background: #ecc0c7;
+                        }
+                        .description {
+                            width: 290px;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+                .right {
+                    flex: 1;
+                    display: grid;
+                    grid-template-columns: repeat(2, 360px);
+                    grid-template-rows: repeat(2, 386px);
+                    gap: 40px;
+                    padding-top: 90px;
+                    .card {
+                        perspective: 800px;
+                        cursor: pointer;
+                        .rotate {
+                            position: relative;
+                            height: 100%;
+                            width: 100%;
+                            border-radius: 40px;
+                            transform-style: preserve-3d;
+                            transition: 0.5s;
+                            .item {
+                                position: relative;
+                                height: 100%;
+                                width: 100%;
+                                background: #fff0ee;
+                                border-radius: 40px;
+                                padding-top: 101px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding: 100px 0px 0px;
+                                .num {
+                                    position: absolute;
+                                    left: 40px;
+                                    top: 40px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    letter-spacing: 0.02em;
+                                    color: #424c5c;
+                                }
+                                img {
+                                    margin-bottom: 40px;
+                                }
+                                .name {
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 24px;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    letter-spacing: 0.02em;
+                                    color: #424c5c;
+                                }
+                            }
+                            .back {
+                                position: absolute;
+                                box-sizing: border-box;
+                                // top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                width: 360px;
+                                height: 100%;
+                                background: #696fe5;
+                                border-radius: 40px;
+                                padding: 100px 40px 40px;
+                                transform: translate3d(0, 0, -0.1px) scale(0.99) rotateY(180deg);
+                                transition: 0.5s;
+                                transition-delay: 0.25s;
+                                .num {
+                                    position: absolute;
+                                    top: 40px;
+                                    left: 40px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    letter-spacing: 0.02em;
+                                    color: #ffffff;
+                                }
+                                .title {
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 24px;
+                                    line-height: 30px;
+                                    letter-spacing: 0.02em;
+                                    color: #ffffff;
+                                    margin-bottom: 20px;
+                                }
+                                .desc {
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    letter-spacing: 0.02em;
+                                    color: #ffffff;
+                                    ul,ol {
+                                        padding-top: 15px;
+                                        padding-left: 30px
+                                    }
+                                }
+                            }
+                        }
+                        &:hover {
+                            .rotate {
+                                transform: rotate3d(0, 1, 0, 180deg);
+                                .back {
+                                    transform: translate3d(0, 0, -0.1px) scale(1) rotateY(180deg);
+                                    box-shadow: 8px 8px 20px rgba(36, 43, 176, 0.3);
+                                    height: 460px;
+                                }
                             }
                         }
                     }
