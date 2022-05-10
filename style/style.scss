@@ -40,6 +40,10 @@ a {
 
 .flex {
     display: flex;
+    &-column {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .adaptive {
@@ -198,8 +202,7 @@ main {
                         margin-bottom: 40px;
                         .stroke-text {
                             color: #fff;
-                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px,
-                                #696fe6 -1px 0px 0.6px;
+                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px, #696fe6 -1px 0px 0.6px;
                         }
                     }
                     .pink-button {
@@ -294,8 +297,7 @@ main {
                                         transform: rotate(0deg) translateY(-216.622px) translateX(41px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px)
-                                            rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px) rotate(-360deg);
                                     }
                                 }
                             }
@@ -310,8 +312,7 @@ main {
                                         transform: rotate(0deg) translateY(-181.44px) translateX(128px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px)
-                                            rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px) rotate(-360deg);
                                     }
                                 }
                             }
@@ -326,8 +327,7 @@ main {
                                         transform: rotate(0deg) translateY(-116.646px) translateX(191px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px)
-                                            rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px) rotate(-360deg);
                                     }
                                 }
                             }
@@ -703,9 +703,9 @@ main {
         }
         &#block2 {
             .bacground-wrapper {
-                width: calc(100% - 11%);
+                width: calc(100% - 200px);
                 margin: 0px auto;
-                padding: 70px;
+                padding: 70px 0px;
                 background: #f3f4f9;
                 border-radius: 20px;
                 .wrapper {
@@ -811,11 +811,12 @@ main {
             }
         }
         &#block3 {
-            padding: 70px 0px;
+            padding: 70px 0px 40px;
             .wrapper {
                 display: flex;
                 .left {
                     width: 400px;
+                    position: relative;
                     .title {
                         font-style: normal;
                         font-weight: 800;
@@ -838,6 +839,38 @@ main {
                         .description {
                             width: 290px;
                             padding-top: 10px;
+                        }
+                    }
+                    .decor-img {
+                        position: absolute;
+                        top: 260px;
+                        left: -52px;
+                        width: 454px;
+                        height: 419px;
+                        .circles {
+                            position: absolute;
+                            left: 0;
+                            top: 13px;
+                            .border-circle {
+                                width: 403px;
+                                height: 403px;
+                                border: 1px solid #5356ae;
+                                border-radius: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .painted-circle {
+                                    width: 329px;
+                                    height: 329px;
+                                    border-radius: 100%;
+                                    background: #cbcdf4;
+                                }
+                            }
+                        }
+                        .chart {
+                            position: absolute;
+                            left: 93px;
+                            z-index: 1;
                         }
                     }
                 }
@@ -935,9 +968,10 @@ main {
                                     line-height: 20px;
                                     letter-spacing: 0.02em;
                                     color: #ffffff;
-                                    ul,ol {
+                                    ul,
+                                    ol {
                                         padding-top: 15px;
-                                        padding-left: 30px
+                                        padding-left: 30px;
                                     }
                                 }
                             }
@@ -950,6 +984,360 @@ main {
                                     box-shadow: 8px 8px 20px rgba(36, 43, 176, 0.3);
                                     height: 460px;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#block4 {
+            .bacground-wrapper {
+                width: calc(100% - 200px);
+                margin: 0px auto;
+                background: #5356ae;
+                border-radius: 20px;
+                min-height: 320px;
+                overflow: hidden;
+                .wrapper {
+                    width: 1200px;
+                    padding: 70px 0px;
+                    gap: 60px;
+                    padding-left: 322px;
+                    position: relative;
+                    .decor-img {
+                        .border-circle {
+                            position: absolute;
+                            width: 121px;
+                            height: 121px;
+                            border: 1px solid #696fe6;
+                            border-radius: 100%;
+                            left: 217px;
+                            bottom: -40px;
+                        }
+                        .painted-circle {
+                            position: absolute;
+                            z-index: 1;
+                            width: 300px;
+                            height: 300px;
+                            border-radius: 100%;
+                            background: #696fe6;
+                            left: -6px;
+                            bottom: -53px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img {
+                                position: absolute;
+                                top: -53px;
+                            }
+                        }
+                    }
+                    .decor-arrow {
+                        position: absolute;
+                        top: 140px;
+                        left: 690px;
+                    }
+                    .left {
+                        .title {
+                            width: 340px;
+                            margin-bottom: 35px;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 26px;
+                            line-height: 32px;
+                            letter-spacing: 0.02em;
+                            color: #ffffff;
+                        }
+                    }
+                    .right {
+                        .description {
+                            width: 440px;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 150%;
+                            color: #ffffff;
+                            .highlighting {
+                                font-weight: 700;
+                                background-color: #696fe5;
+                                border-radius: 5px;
+                                padding: 0px 5px 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#block5 {
+            padding-top: 120px;
+            .bacground-wrapper {
+                width: calc(100% - 200px);
+                margin: 0px auto;
+                background: #696fe6;
+                border-radius: 20px;
+                min-height: 80px;
+                overflow: hidden;
+                .wrapper {
+                    min-height: 80px;
+                    background: url(../assets/image/block5/background-img.svg) center center no-repeat;
+                    background-size: contain;
+                    align-items: center;
+                    .title {
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 42px;
+                        line-height: 52px;
+                        text-align: center;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        &#block6 {
+            .bacground-color {
+                background: #f3f4f9;
+            }
+            .breaf {
+                padding-bottom: 120px;
+                .bacground-wrapper {
+                    width: calc(100% - 200px);
+                    margin: 0px auto;
+                    background: #696fe6;
+                    border-radius: 20px;
+                    min-height: 320px;
+                    overflow: hidden;
+                    position: relative;
+                    .wrapper {
+                        min-height: 320px;
+                        align-items: center;
+                    }
+                }
+                &#breaf-one {
+                    .wrapper {
+                        padding-left: 108px;
+                        gap: 100px;
+                        position: relative;
+                        z-index: 2;
+                        .left {
+                            width: 212px;
+                            height: 252px;
+                        }
+                        .right {
+                            height: 252px;
+                            padding-top: 30px;
+                            .breaf-title {
+                                width: 356px;
+                                margin-bottom: 30px;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 26px;
+                                line-height: 32px;
+                                letter-spacing: 0.02em;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    .decor-img_1 {
+                        position: absolute;
+                        right: 0;
+                        top: 0px;
+                    }
+                    .decor-img_2 {
+                        position: absolute;
+                        left: 37%;
+                        top: 40px;
+                    }
+                }
+            }
+            .step {
+                padding: 120px 0px;
+                flex-direction: column;
+                gap: 120px;
+                .title {
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 30px;
+                    line-height: 38px;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: #424c5c;
+                    display: flex;
+                    flex-direction: column;
+                    .decor-line {
+                        margin-top: 3px;
+                        width: 257px;
+                        height: 10px;
+                        background: #696fe6;
+                    }
+                }
+                &#step-one {
+                    .title {
+                        margin-bottom: 40px;
+                    }
+                    .rebranding-comprehensive {
+                        position: relative;
+                        .rebranding-comprehensive__description {
+                            .row {
+                                position: relative;
+                                z-index: 2;
+                                align-items: center;
+                                gap: 30px;
+                                .circles {
+                                    .border-circle.external {
+                                        width: 240px;
+                                        height: 240px;
+                                        border-radius: 100%;
+                                        background: #f3f4f9;
+                                        border: 1px solid #cbcdf4;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                    .border-circle.internal {
+                                        width: 200px;
+                                        height: 200px;
+                                        border-radius: 100%;
+                                        border: 3px solid #ecc0c7;
+                                        background: #ffffff;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                }
+                                .description-text {
+                                    width: 520px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 150%;
+                                    color: #424c5c;
+                                    b {
+                                        font-weight: 700;
+                                    }
+                                }
+                                &#rebranding-comprehensive__description_row1 {}
+                                &#rebranding-comprehensive__description_row2 {
+                                    left: 320px;
+                                }
+                            }
+                        }
+                        .decor-line {
+                            position: absolute;
+                            top: 91px;
+                        }
+                    }
+                    .complex-services {
+                        .title {
+                            width: 480px;
+                        }
+                    }
+                    .services-list {
+                        gap: 40px;
+                        .service {
+                            overflow: hidden;
+                            width: 1160px;
+                            height: 540px;
+                            background: #f3f4f9;
+                            /* shadow 3 soft */
+                            box-shadow: 0px 14px 30px rgba(105, 111, 229, 0.14);
+                            border-radius: 20px;
+                            gap: 40px;
+                            .service-img {
+                                height: 100%;
+                            }
+                            .service-content {
+                                padding: 40px 0px;
+                                width: 500px;
+                                .service-title {
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 24px;
+                                    line-height: 30px;
+                                    letter-spacing: 0.02em;
+                                    color: #696fe6;
+                                    margin-bottom: 15px;
+                                }
+                                .price {
+                                    width: fit-content;
+                                    height: 25px;
+                                    margin-bottom: 30px;
+                                    padding: 0px 4px;
+                                    display: flex;
+                                    align-items: center;
+                                    background: #ecc0c7;
+                                    //стили текста
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 20px;
+                                    line-height: 24px;
+                                    letter-spacing: 0.02em;
+                                    color: #5356ae;
+                                }
+                                .list {
+                                    .list-title {
+                                        margin-bottom: 20px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 20px;
+                                        letter-spacing: 0.02em;
+                                        color: #424c5c;
+                                        b {
+                                            font-weight: 700;
+                                        }
+                                    }
+                                    ul {
+                                        padding-left: 20px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 20px;
+                                        li {
+                                            display: block;
+                                            position: relative;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 19px;
+                                            letter-spacing: 0.02em;
+                                            color: #424c5c;
+                                            &::before {
+                                                content: "";
+                                                position: absolute;
+                                                left: -20px;
+                                                top: 8px;
+                                                width: 6px;
+                                                height: 6px;
+                                                border-radius: 100%;
+                                                background: #ecc0c7;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            & .service-content:first-child {
+                                margin-left: 60px;
+                            }
+                        }
+                    }
+                }
+                &#step-two {
+                    .title {
+                        margin-bottom: 50px;
+                    }
+                    .step-description {
+                        margin-bottom: 30px;
+                        .text {
+                            width: 480px;
+                            padding-top: 10px;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 150%;
+                            color: #424C5C;
+                            b {
+                                font-weight: 700;
                             }
                         }
                     }
