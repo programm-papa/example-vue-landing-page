@@ -62,4 +62,9 @@ $(document).ready(function() {
     function insertTextInBlock(value) {
         $('.decor-img .input-efect-wrap .input-efect-text').html(value);
     }
+
+    //Фиксированный header
+    let scrollAmount = $window.width() < 768 ? 0 : 100;
+    $window.scroll(e => $('.header').toggleClass('scroll', e.currentTarget.scrollY > scrollAmount));
+    $window.scroll();
 })
