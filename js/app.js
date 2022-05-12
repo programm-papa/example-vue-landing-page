@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //Анимации изображения в начале страницы
     //Анимация ввода текста
     let textArr = ['отбеливание зубов', 'лечение зуба'];
@@ -64,7 +64,51 @@ $(document).ready(function() {
     }
 
     //Фиксированный header
-    let scrollAmount = $window.width() < 768 ? 0 : 100;
-    $window.scroll(e => $('.header').toggleClass('scroll', e.currentTarget.scrollY > scrollAmount));
-    $window.scroll();
+    let scrollAmount = $(window).width() < 768 ? 0 : 100;
+    $(window).resize(e => {
+        scrollAmount = e.currentTarget.width() < 768 ? 0 : 100;
+    })
+    $(window).scroll(e => $('.header').toggleClass('scroll', e.currentTarget.scrollY >= scrollAmount));
+    $(window).scroll();
+
+    //Инициализация слайдера
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: "auto",
+        // spaceBetween: 40,
+        loop: true,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+
+    //Выпадающие блоки
+    //Показываем первый блок
+    const firstDropdownListItem = $('.deployable-item')[0];
+    $(firstDropdownListItem).addClass('open');
+    $(firstDropdownListItem).children('.deployable-content-wrapper').css({ 'max-height': `${$(firstDropdownListItem).find('.deployable-content-wrapper .deployable-content').height() + 30}px` });
+
+    //Обработка разворота блока 
+    $('.deployable-item').each(function () {
+        $(this).click(() => {
+            if (!$(this).hasClass('open')) {
+                if ($('.deployable-item.open')) {
+                    $('.deployable-item.open').each(function () {
+                        $(this).removeClass('open');
+                        $(this).find('.deployable-content-wrapper').animate({
+                            'max-height': '0px'
+                        }, 500)
+                    })
+                }
+                $(this).addClass('open');
+                $(this).find('.deployable-content-wrapper').animate({
+                    'max-height': `${$(this).find('.deployable-content-wrapper .deployable-content').height() + 30}px`
+                }, 500)
+
+            }
+        })
+    });
 })

@@ -25,6 +25,12 @@
     font-weight: 700;
     font-style: normal;
 }
+@font-face {
+    font-family: "Gilroy";
+    src: url("../assets/fonts/Gilroy-Bold.woff");
+    font-weight: 800;
+    font-style: normal;
+}
 
 * {
     margin: 0px;
@@ -75,6 +81,11 @@ a {
 header {
     width: 100%;
     height: 120px;
+    transition: 0.5s;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 10;
     .desctop {
         height: 100%;
         align-items: center;
@@ -158,6 +169,10 @@ header {
         }
     }
     border-bottom: 3px solid #ecc0c7;
+    &.scroll {
+        height: 80px;
+        border-bottom: 2px solid #ecc0c7;
+    }
 }
 
 main {
@@ -202,7 +217,8 @@ main {
                         margin-bottom: 40px;
                         .stroke-text {
                             color: #fff;
-                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px, #696fe6 -1px 0px 0.6px;
+                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px,
+                                #696fe6 -1px 0px 0.6px;
                         }
                     }
                     .pink-button {
@@ -297,7 +313,8 @@ main {
                                         transform: rotate(0deg) translateY(-216.622px) translateX(41px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px) rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px)
+                                            rotate(-360deg);
                                     }
                                 }
                             }
@@ -312,7 +329,8 @@ main {
                                         transform: rotate(0deg) translateY(-181.44px) translateX(128px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px) rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px)
+                                            rotate(-360deg);
                                     }
                                 }
                             }
@@ -327,7 +345,8 @@ main {
                                         transform: rotate(0deg) translateY(-116.646px) translateX(191px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px) rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px)
+                                            rotate(-360deg);
                                     }
                                 }
                             }
@@ -1173,6 +1192,7 @@ main {
                     }
                 }
                 &#step-one {
+                    position: relative;
                     .title {
                         margin-bottom: 40px;
                     }
@@ -1180,6 +1200,7 @@ main {
                         position: relative;
                         .rebranding-comprehensive__description {
                             .row {
+                                width: fit-content;
                                 position: relative;
                                 z-index: 2;
                                 align-items: center;
@@ -1217,7 +1238,7 @@ main {
                                         font-weight: 700;
                                     }
                                 }
-                                &#rebranding-comprehensive__description_row1 {}
+
                                 &#rebranding-comprehensive__description_row2 {
                                     left: 320px;
                                 }
@@ -1226,6 +1247,63 @@ main {
                         .decor-line {
                             position: absolute;
                             top: 91px;
+                        }
+                    }
+                    .swiper-container {
+                        margin-top: -40px;
+                        user-select: none;
+                        .wrapper {
+                            position: relative;
+                            .swiper-pagination-btn-container {
+                                position: absolute;
+                                width: 140px;
+                                height: 60px;
+                                right: 0;
+                                top: -80px;
+                                align-items: center;
+                                .pagination-btn {
+                                    position: absolute;
+                                    top: auto;
+                                    content: "" !important;
+                                    width: 40px;
+                                    height: 40px;
+                                    transition: width 0.1s, height 0.1s;
+                                    border-radius: 100%;
+                                    background-color: #fff;
+                                    &::after {
+                                        display: none !important;
+                                    }
+                                    &.swiper-button-next {
+                                        transform: rotate(180deg);
+                                    }
+                                    &:hover {
+                                        width: 60px;
+                                        height: 60px;
+                                        img {
+                                            width: 23px;
+                                        }
+                                    }
+                                    &:active {
+                                        box-shadow: 0px 0px 10px 5px rgba(105, 111, 229, 0.1);
+                                    }
+                                }
+                            }
+                        }
+                        .swiper {
+                            position: relative;
+                            width: 100%;
+                            height: 443px;
+                            .swiper-wrapper {
+                                .swiper-slide {
+                                    background-color: #f3f4f9;
+                                    width: 600px !important;
+                                    height: 443px !important;
+                                    border: 1px solid #cbcdf4;
+                                    border-radius: 20px;
+                                    padding: 20px;
+                                    margin-left: 40px;
+                                }
+                            }
                         }
                     }
                     .complex-services {
@@ -1335,9 +1413,130 @@ main {
                             font-weight: 500;
                             font-size: 16px;
                             line-height: 150%;
-                            color: #424C5C;
+                            color: #424c5c;
                             b {
                                 font-weight: 700;
+                            }
+                        }
+                    }
+                    .features-website-development {
+                        gap: 40px;
+                        .feature-item {
+                            width: 660px;
+                            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                            border-radius: 20px;
+                            padding: 30px 40px;
+                            gap: 20px;
+                            .text {
+                                flex: 1;
+                                //стиль текста
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 150%;
+                                color: #424c5c;
+                                b {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                    .site-features-container {
+                        width: 1300px;
+                        min-height: 702px;
+                        padding: 60px 70px;
+                        margin: 0 auto;
+                        background-color: #f3f4f9;
+                        border-radius: 20px;
+                        position: relative;
+                        .decor-img {
+                            position: absolute;
+                            &#decor-img_1 {
+                                right: 14px;
+                                top: -261px;
+                            }
+                            &#decor-img_2 {
+                                right: 70px;
+                                top: 137px;
+                            }
+                        }
+                        .title {
+                            margin-bottom: 40px;
+                            //Стили текста
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 30px;
+                            line-height: 38px;
+                            letter-spacing: 0.02em;
+                            text-transform: uppercase;
+                            color: #696fe6;
+                        }
+                        .deployable-blocks-list {
+                            gap: 40px;
+                            .deployable-item {
+                                width: 860px;
+                                .deployable-title {
+                                    min-height: 60px;
+                                    padding: 5px;
+                                    border: 1px solid #696fe6;
+                                    border-radius: 20px;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    &:hover {
+                                        box-shadow: 0px 0px 5px 2px rgba(105, 111, 229, 0.1);
+                                    }
+                                    .text {
+                                        padding: 0px 36px;
+                                        //Стили текста
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        font-size: 20px;
+                                        line-height: 150%;
+                                        color: #424c5c;
+                                    }
+                                    .indicator {
+                                        margin-left: auto;
+                                        width: 100px;
+                                        height: 50px;
+                                        background: #cbcdf4;
+                                        border-radius: 15px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .triangle {
+                                            width: 0;
+                                            height: 0;
+                                            border-left: 10px solid transparent;
+                                            border-right: 10px solid transparent;
+                                            border-top: 10px solid #24375b;
+                                            transition: transform .5s;
+                                        }
+                                    }
+                                }
+                                .deployable-content-wrapper {
+                                    overflow: hidden;
+                                    max-height: 0px;
+                                    .deployable-content {
+                                        padding: 30px 35px 0px 30px;
+                                        gap: 20px;
+                                        p {
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            line-height: 150%;
+                                            color: #424c5c;
+                                        }
+                                    }
+                                }
+                                &.open {
+                                    .deployable-title {
+                                        .indicator {
+                                            .triangle {
+                                                transform: rotate(180deg);
+                                            }
+                                        }
+                                    } 
+                                }
                             }
                         }
                     }
