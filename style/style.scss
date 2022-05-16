@@ -25,6 +25,7 @@
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Gilroy";
     src: url("../assets/fonts/Gilroy-Bold.woff");
@@ -217,8 +218,7 @@ main {
                         margin-bottom: 40px;
                         .stroke-text {
                             color: #fff;
-                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px,
-                                #696fe6 -1px 0px 0.6px;
+                            text-shadow: #696fe6 1px 0px 0.6px, #696fe6 0px 1px 0.6px, #696fe6 0px -1px 0.6px, #696fe6 -1px 0px 0.6px;
                         }
                     }
                     .pink-button {
@@ -313,8 +313,7 @@ main {
                                         transform: rotate(0deg) translateY(-216.622px) translateX(41px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px)
-                                            rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-216.622px) translateX(41px) rotate(-360deg);
                                     }
                                 }
                             }
@@ -329,8 +328,7 @@ main {
                                         transform: rotate(0deg) translateY(-181.44px) translateX(128px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px)
-                                            rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-181.44px) translateX(128px) rotate(-360deg);
                                     }
                                 }
                             }
@@ -345,8 +343,7 @@ main {
                                         transform: rotate(0deg) translateY(-116.646px) translateX(191px) rotate(0deg);
                                     }
                                     to {
-                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px)
-                                            rotate(-360deg);
+                                        transform: rotate(360deg) translateY(-116.646px) translateX(191px) rotate(-360deg);
                                     }
                                 }
                             }
@@ -1271,7 +1268,6 @@ main {
                                         font-weight: 700;
                                     }
                                 }
-
                                 &#rebranding-comprehensive__description_row2 {
                                     left: 320px;
                                 }
@@ -1574,9 +1570,258 @@ main {
                         }
                     }
                 }
+                &#step-three {
+                    border-bottom: 16px solid #696fe6;
+                    .wrapper {
+                        position: relative;
+                    }
+                    .decor-img {
+                        &#decor-img_1 {
+                            width: 0;
+                            height: 0;
+                            border-bottom: 15px solid transparent;
+                            border-right: 30px solid #24375b;
+                            border-top: 15px solid transparent;
+                            position: absolute;
+                            left: 393px;
+                            top: -50px;
+                        }
+                    }
+                    .title {
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-direction: row;
+                        text-align: left;
+                        gap: 76px;
+                        margin-bottom: 33px;
+                        .title__decor {
+                            width: 520px;
+                            gap: 10px;
+                            .avatar {
+                                width: 70px;
+                                height: 70px;
+                            }
+                            .comment {
+                                padding: 21px 19px 0px 54px;
+                                width: 438px;
+                                height: 78px;
+                                background: url(../assets/image/block6/step3/decor-img__comment.svg) center center no-repeat;
+                                background-size: cover;
+                                text-transform: none;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 19px;
+                                letter-spacing: 0.02em;
+                                color: #424c5c;
+                            }
+                        }
+                    }
+                    .step-description {
+                        gap: 40px;
+                        align-items: center;
+                        img {
+                            background-color: #ffffff;
+                            border: 2px solid #ecc0c7;
+                            border-radius: 20px;
+                        }
+                        .content {
+                            .description__title {
+                                width: 250px;
+                                margin-bottom: 30px;
+                                //Стили текста
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 20px;
+                                line-height: 25px;
+                                letter-spacing: 0.02em;
+                                text-transform: uppercase;
+                                color: #424c5c;
+                            }
+                            .description__text {
+                                width: 520px;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 150%;
+                                color: #424c5c;
+                                .blue {
+                                    color: #696fe5;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                        &#step-description {
+                            &_1 {
+                                margin-bottom: 50px;
+                            }
+                            &_2 {
+                                margin-bottom: 60px;
+                            }
+                        }
+                    }
+                    .stages-marketing-list {
+                        width: 1100px;
+                        margin: 0 auto;
+                        justify-content: space-between;
+                        .stage {
+                            align-items: center;
+                            .img-circle {
+                                border-radius: 100%;
+                                width: 180px;
+                                height: 180px;
+                                margin-bottom: 27px;
+                                border: 2px dashed #696fe6;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .img-background {
+                                    width: 150px;
+                                    height: 150px;
+                                    background: #cbcdf4;
+                                    box-shadow: inset 0px 4px 6px rgba(83, 86, 174, 0.5);
+                                    border-radius: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                            .stage-title {
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 150%;
+                                text-align: center;
+                                color: #696fe6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#block7 {
+            padding: 120px 0px;
+            .decor-img {
+                &#decor-img_1 {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background: #5356AE;
+                    transform: rotate(35.78deg);
+                    left: 480px;
+                    top: -30px;
+                }
+            }
+            .title {
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: row;
+                text-align: left;
+                gap: 105px;
+                margin-bottom: 50px;
+                //Стили текста
+                font-style: normal;
+                font-weight: 800;
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: #424c5c;
+                .title__decor {
+                    .text {
+                        text-transform: none;
+                        width: 660px;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 150%;
+                        letter-spacing: 0px;
+                        color: #424c5c;
+                    }
+                }
+            }
+            .wrapper {
+                position: relative;
+            }
+            .case {
+                .case__header {
+                    gap: 40px;
+                    margin-bottom: 50px;
+                    .img-wrapper {
+                        position: relative;
+                        width: 660px;
+                        height: 230px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        background-color: #C8C8C8;
+                        .case-number {
+                            position: absolute;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 147.904px;
+                            line-height: 183px;
+                            letter-spacing: 0.02em;
+                            color: #FFFFFF;
+                            bottom: -61px;
+                            left: 30px;
+                        }
+                    }
+                    .case-title {
+                        max-width: 460px;
+                        .name {
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 30px;
+                            letter-spacing: 0.02em;
+                            color: #696FE6;
+                            margin-bottom: 20px;
+                        }
+                        .description {
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 20px;
+                            letter-spacing: 0.02em;
+                            color: #696FE6;
+                        }
+                    }
+                }
+                .casse__content {
+                    width: 980px;
+                    padding-left: 20px;
+                    margin: 0px auto;
+                    gap: 40px;
+                    .stage {
+                        gap: 40px;
+                        .left {
+                            width: 260px;
+                            .stage-name {
+                                width: 260px;
+                                height: 85px;
+                                background: #FFFFFF;
+                                box-shadow: 0px 14px 30px rgba(105, 111, 229, 0.14);
+                                border-radius: 20px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                        .right {
+                            .text {
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 150%;
+                                color: #424C5C;
+                            }
+                        }
+                    }
+                }
             }
         }
         &#block8 {
+            padding: 120px 0px;
             .wrapper {
                 .title {
                     width: 426px;
@@ -1604,6 +1849,8 @@ main {
                     justify-content: center;
                     align-items: center;
                     .circles {
+                        top: 0;
+                        position: absolute;
                         width: 880px;
                         height: 880px;
                         .big-circle {
@@ -1629,6 +1876,12 @@ main {
                                     border: 3px solid #5356ae;
                                 }
                             }
+                        }
+                    }
+                    .decor-img {
+                        &#decor-img_1 {
+                            top: -140px;
+                            position: absolute;
                         }
                     }
                 }
