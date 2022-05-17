@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :class="scroll ? 'scroll' : ''">
     <div class="desctop flex">
       <a href="#step-two" class="logo">
         <svg
@@ -66,17 +66,24 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            scroll: false,
-        }
-    },
-    mounted() {
-        window.addEventListener('scroll', function() {
-            console.log(this.scroll);
-        }.bind(this))
-    }
-}
+  data() {
+    return {
+      scroll: false,
+    };
+  },
+  mounted() {
+    let scrollAmount = window.innerWidth < 768 ? 0 : 100;
+    window.addEventListener("resize", function () {
+      console.log("resize");
+    });
+    window.addEventListener(
+      "scroll",
+      function (event) {
+        this.scroll = event.currentTarget.scrollY >= scrollAmount;
+      }.bind(this)
+    );
+  },
+};
 </script>
 <style lang="scss" scoped>
 .header {
@@ -171,7 +178,7 @@ export default {
   }
   border-bottom: 3px solid #ecc0c7;
   &.scroll {
-    height: 80px;
+    height: 70px;
     border-bottom: 2px solid #ecc0c7;
   }
 }
