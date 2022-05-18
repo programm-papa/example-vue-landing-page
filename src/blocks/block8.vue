@@ -57,6 +57,7 @@ export default {};
         display: flex;
         justify-content: center;
         align-items: center;
+          height: 880px;
         .circles {
           top: 0;
           position: absolute;
