@@ -34,7 +34,7 @@
               fill="#ECC0C7"
             />
           </svg>
-          <div class="input-efect-text">отбеливание зубов</div>
+          <div class="input-efect-text">{{ inputEfectText }}</div>
           <div class="input-line"></div>
         </div>
         <div class="phone-image">
@@ -56,7 +56,7 @@
             <div class="bell img-wrap">
               <img src="@/assets/image/top_decor-img/bell.png" alt="" />
             </div>
-            <div class="notification">86</div>
+            <div class="notification">{{ notificationNumber }}</div>
           </div>
         </div>
         <div class="doctor">
@@ -113,7 +113,121 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      //Поле ввода в картинке
+      carriageIndent: 0,
+      textArr: [
+        "компьютерная томография",
+        "протезирование зубов",
+        "установка импланта",
+        "суточный холтер ЭКГ",
+        "записаться к ортодонту",
+        "удаление зуба ребёнку",
+      ],
+      textArrIndex: 0,
+      inputEfectText: "",
+
+      //Колокол уведомления
+      notificationNumber: 82,
+    };
+  },
+  methods: {
+    //эффект ввода текста
+    inputEffect: function () {
+      if (this.textArrIndex >= this.textArr.length) {
+        this.textArrIndex = 0;
+      }
+      const textValue = this.textArr[this.textArrIndex];
+      let textСharacterIndex = 0;
+      let insertText = "";
+      this.printСharacter(textValue, textСharacterIndex, insertText);
+    },
+    printСharacter: function (textValue, textСharacterIndex, insertText) {
+      if (textValue.length > 0 && textСharacterIndex < textValue.length) {
+        setTimeout(
+          function () {
+            const newInsertText = insertText + textValue[textСharacterIndex];
+            this.inputEfectText = newInsertText;
+            const newTextСharacterIndex = textСharacterIndex + 1;
+            if (newTextСharacterIndex >= textValue.length) {
+              setTimeout(
+                function () {
+                  this.removeСharacter(
+                    textValue,
+                    newTextСharacterIndex,
+                    newInsertText
+                  );
+                }.bind(this),
+                500
+              );
+              return false;
+            } else {
+              this.printСharacter(
+                textValue,
+                newTextСharacterIndex,
+                newInsertText
+              );
+            }
+          }.bind(this),
+          this.generateRandom(100, 220)
+        );
+      }
+    },
+    removeСharacter(textValue, textСharacterIndex, insertText) {
+      if (textValue.length > 0 && textСharacterIndex >= 0) {
+        setTimeout(
+          function () {
+            const newInsertText = insertText.substring(
+              0,
+              insertText.length - 1
+            );
+            this.inputEfectText = newInsertText;
+            const newTextСharacterIndex = textСharacterIndex - 1;
+            if (newTextСharacterIndex < 0) {
+              this.textArrIndex = this.textArrIndex + 1;
+              setTimeout(
+                function () {
+                  this.inputEffect();
+                }.bind(this),
+                300
+              );
+              return false;
+            } else {
+              this.removeСharacter(
+                textValue,
+                newTextСharacterIndex,
+                newInsertText
+              );
+            }
+          }.bind(this),
+          this.generateRandom(20, 70)
+        );
+      }
+    },
+    generateRandom: function (min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
+    },
+
+    //увеличения числа уведомлений
+    changeNotificationNumber: function () {
+      setTimeout(
+        function () {
+          this.notificationNumber >= 99
+            ? (this.notificationNumber = 82)
+            : (this.notificationNumber += 1);
+          this.changeNotificationNumber();
+        }.bind(this),
+        2100
+      );
+    },
+  },
+  mounted() {
+    this.inputEffect();
+    this.changeNotificationNumber();
+  },
+};
 </script>
 <style lang="scss" scoped>
 .block {
@@ -166,7 +280,7 @@ export default {};
         position: relative;
         .input-efect-wrap {
           position: absolute;
-          width: 214px;
+          width: 250px;
           height: 29px;
           padding-left: 6px;
           border: 1px solid #e7e7e7;
@@ -410,7 +524,7 @@ export default {};
               &#circle1 {
                 top: 47px;
                 left: 4px;
-                animation: cirkle1 0.4s 1.7s linear;
+                animation: cirkle1 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle1 {
                   0% {
@@ -424,7 +538,7 @@ export default {};
               &#circle2 {
                 top: 24px;
                 left: 44px;
-                animation: cirkle2 0.4s 1.7s linear;
+                animation: cirkle2 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle2 {
                   0% {
@@ -438,7 +552,7 @@ export default {};
               &#circle3 {
                 top: 35px;
                 left: 84px;
-                animation: cirkle3 0.4s 1.7s linear;
+                animation: cirkle3 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle3 {
                   0% {
@@ -452,7 +566,7 @@ export default {};
               &#circle4 {
                 top: 0px;
                 left: 123px;
-                animation: cirkle4 0.4s 1.7s linear;
+                animation: cirkle4 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle4 {
                   0% {
@@ -475,7 +589,7 @@ export default {};
                 left: 8px;
                 transform-origin: 100% 50%;
                 transform: rotate(-31deg);
-                animation: line1 0.4s 1.7s linear;
+                animation: line1 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 @keyframes line1 {
                   0% {
@@ -492,7 +606,7 @@ export default {};
                 left: 51px;
                 transform-origin: 0% 50%;
                 transform: rotate(14deg);
-                animation: line2 0.4s 1.7s linear;
+                animation: line2 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 @keyframes line2 {
                   0% {
@@ -509,7 +623,7 @@ export default {};
                 left: 90px;
                 transform-origin: 0% 50%;
                 transform: rotate(-43deg);
-                animation: line3 0.4s 1.7s linear;
+                animation: line3 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 @keyframes line3 {
                   0% {
@@ -538,7 +652,7 @@ export default {};
               height: 80px;
               border-radius: 44px;
               &#segment1 {
-                animation: segment1 0.4s 1.7s linear;
+                animation: segment1 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #bfbfff 0%, #7676e4 100%);
                 @keyframes segment1 {
@@ -551,7 +665,7 @@ export default {};
                 }
               }
               &#segment2 {
-                animation: segment2 0.4s 1.7s linear;
+                animation: segment2 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #f9becf 0%, #d25b97 100%);
                 @keyframes segment2 {
@@ -564,7 +678,7 @@ export default {};
                 }
               }
               &#segment3 {
-                animation: segment3 0.4s 1.7s linear;
+                animation: segment3 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #bfbfff 0%, #7676e4 100%);
                 @keyframes segment3 {
@@ -577,7 +691,7 @@ export default {};
                 }
               }
               &#segment4 {
-                animation: segment4 0.4s 1.7s linear;
+                animation: segment4 0.4s 1.8s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #f9becf 0%, #d25b97 100%);
                 @keyframes segment4 {

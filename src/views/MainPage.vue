@@ -10,6 +10,7 @@
   <block9 />
   <block10 />
   <block11 />
+  <block12 />
 </template>
 
 <script>
@@ -25,6 +26,7 @@ import block8 from "@/blocks/block8.vue";
 import block9 from "@/blocks/block9.vue";
 import block10 from "@/blocks/block10.vue";
 import block11 from "@/blocks/block11.vue";
+import block12 from "@/blocks/block12.vue";
 export default {
   components: {
     block1,
@@ -38,6 +40,7 @@ export default {
     block9,
     block10,
     block11,
+    block12,
   },
 };
 </script>
