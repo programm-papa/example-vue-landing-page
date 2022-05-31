@@ -1,12 +1,12 @@
 <template>
-  <block1 />
-  <block2 />
-  <block3 />
-  <block4 />
+  <welcomeBlock />
+  <tableСontentsBlock />
+  <servicesBlock />
+  <consultationBlock />
   <block5 />
   <block6 />
   <block7 />
-  <block8 /> 
+  <block8 />
   <block9 />
   <block10 />
   <block11 />
@@ -15,10 +15,10 @@
 
 <script>
 //import page blocks
-import block1 from "@/blocks/block1.vue";
-import block2 from "@/blocks/block2.vue";
-import block3 from "@/blocks/block3.vue";
-import block4 from "@/blocks/block4.vue";
+import welcomeBlock from "@/blocks/welcome_block.vue";
+import tableСontentsBlock from "@/blocks/table_contents.vue";
+import servicesBlock from "@/blocks/services_block.vue";
+import consultationBlock from "@/blocks/consultation_block.vue";
 import block5 from "@/blocks/block5.vue";
 import block6 from "@/blocks/block6.vue";
 import block7 from "@/blocks/block7.vue";
@@ -29,10 +29,10 @@ import block11 from "@/blocks/block11.vue";
 import block12 from "@/blocks/block12.vue";
 export default {
   components: {
-    block1,
-    block2,
-    block3,
-    block4,
+    welcomeBlock,
+    tableСontentsBlock,
+    servicesBlock,
+    consultationBlock,
     block5,
     block6,
     block7,
