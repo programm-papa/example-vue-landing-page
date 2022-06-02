@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "Gilroy";
   src: url("./assets/fonts/Gilroy-Light.woff");

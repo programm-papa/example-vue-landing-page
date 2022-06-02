@@ -1,10 +1,31 @@
+/* eslint-disable */
 <template>
-  <div class="block scroll-tracking" id="block6">
+  <div class="block scroll-tracking" ref="scroll_tracking_block" id="block6">
+    <div class="wrapper">
+      <div class="viewing-status">
+        <div class="verticale_line">
+          <div
+            class="prograss"
+            :style="'height:' + scrollProgressValue + '%'"
+          ></div>
+        </div>
+      </div>
+    </div>
     <div class="bacground-color">
       <div class="step flex" id="step-one">
         <div class="wrapper">
           <div class="rebranding-comprehensive">
-            <div class="title">Комплексный ребрендинг</div>
+            <div class="title">
+              <div
+                class="step-number"
+                :class="step1Active ? 'active' : ''"
+                ref="step_number_1"
+              >
+                <div class="bacground"></div>
+                <div class="number">1</div>
+              </div>
+              Комплексный ребрендинг
+            </div>
             <div class="rebranding-comprehensive__description">
               <div
                 class="row flex"
@@ -302,7 +323,17 @@
     </div>
     <div class="step flex" id="step-two">
       <div class="wrapper">
-        <div class="title">Разработка нового сайта</div>
+        <div class="title">
+          <div
+            class="step-number"
+            :class="step2Active ? 'active' : ''"
+            ref="step_number_2"
+          >
+            <div class="bacground"></div>
+            <div class="number">2</div>
+          </div>
+          Разработка нового сайта
+        </div>
         <div class="step-description flex">
           <img
             src="@/assets/image/block6/step2/step-description-img.png"
@@ -415,15 +446,19 @@
             </div>
             <div class="deployable-content-wrapper">
               <div class="deployable-content flex-column">
-                <p>Учитывая ваши финансовые возможности предложим оптимальные
-                решения – исходя из бюджета. У нас нет дешевых решений, но мы не
-                берем сотни тысяч за воздух. Нам важен качественный результат и
-                последующий потенциал работы с сайтом по продвижению и
-                привлечению клиентов.</p><p>Подумайте об этом прежде, чем экономить
-                или обращаться к рядовому подрядчику либо универсалу-фрилансеру.
-                Помните, что <b>вложения на данном этапе обязательно окупятся</b>,
-                учитывая последующий качественный эффект от привлечения новых
-                клиентов.</p>
+                <p>
+                  Учитывая ваши финансовые возможности предложим оптимальные
+                  решения – исходя из бюджета. У нас нет дешевых решений, но мы
+                  не берем сотни тысяч за воздух. Нам важен качественный
+                  результат и последующий потенциал работы с сайтом по
+                  продвижению и привлечению клиентов.
+                </p>
+                <p>
+                  Подумайте об этом прежде, чем экономить или обращаться к
+                  рядовому подрядчику либо универсалу-фрилансеру. Помните, что
+                  <b>вложения на данном этапе обязательно окупятся</b>, учитывая
+                  последующий качественный эффект от привлечения новых клиентов.
+                </p>
               </div>
             </div>
           </div>
@@ -512,6 +547,14 @@
         <div class="wrapper">
           <div class="decor-img" id="decor-img_1"></div>
           <div class="title flex">
+            <div
+              class="step-number"
+              :class="step3Active ? 'active' : ''"
+              ref="step_number_3"
+            >
+              <div class="bacground"></div>
+              <div class="number">3</div>
+            </div>
             Внедряем маркетинг
             <div class="title__decor flex">
               <img
@@ -624,6 +667,16 @@ export default {
 
   data() {
     return {
+      //Прогресс просмотра блока
+      blockElement: "",
+      scrollProgressValue: 0,
+      step1: "",
+      step1Active: false,
+      step2: "",
+      step2Active: false,
+      step3: "",
+      step3Active: false,
+      //Выпадающие аккордеоны
       deployableItemData: {
         item1: true,
         item2: false,
@@ -665,13 +718,118 @@ export default {
         }
       }
     },
+    scrollProgress: function () {
+      if (
+        this.blockElement.offsetTop <=
+          window.scrollY + window.innerHeight / 2 &&
+        this.blockElement.offsetTop + this.blockElement.offsetHeight >=
+          window.scrollY + window.innerHeight / 2
+      ) {
+        this.scrollProgressValue =
+          (window.scrollY + window.innerHeight / 2 - this.blockElement.offsetTop) * 100 / this.blockElement.offsetHeight;
+        //Заполнение кругов тайтлов
+        //Первый блок
+        if (
+          this.step1.getBoundingClientRect().top + 30 <=
+            window.innerHeight / 2 &&
+          !this.step1Active
+        ) {
+          this.step1Active = true;
+        } else if (
+          this.step1.getBoundingClientRect().top + 30 >
+          window.innerHeight / 2
+        ) {
+          this.step1Active = false;
+        }
+        //Второй блок
+        if (
+          this.step2.getBoundingClientRect().top + 30 <=
+            window.innerHeight / 2 &&
+          !this.step2Active
+        ) {
+          this.step2Active = true;
+        } else if (
+          this.step2.getBoundingClientRect().top + 30 >
+          window.innerHeight / 2
+        ) {
+          this.step2Active = false;
+        }
+        //Третий блок
+        if (
+          this.step3.getBoundingClientRect().top + 30 <=
+            window.innerHeight / 2 &&
+          !this.step3Active
+        ) {
+          this.step3Active = true;
+        } else if (
+          this.step3.getBoundingClientRect().top + 30 >
+          window.innerHeight / 2
+        ) {
+          this.step3Active = false;
+        }
+      } else if (
+        this.blockElement.offsetTop >
+        window.scrollY + window.innerHeight / 2
+      ) {
+        this.scrollProgressValue = 0;
+        this.step1Active = false;
+        this.step2Active = false;
+        this.step3Active = false;
+      } else {
+        this.scrollProgressValue = 100;
+        this.step1Active = true;
+        this.step2Active = true;
+        this.step3Active = true;
+      }
+    },
+  },
+  computed: {
+    height: () => {
+      return;
+    },
+  },
+  watch: {
+    deployableItemData: {
+      handler() {
+        this.scrollProgress();
+      },
+      deep: true,
+    },
+  },
+  mounted() {
+    this.blockElement = this.$refs.scroll_tracking_block;
+    this.step1 = this.$refs.step_number_1;
+    this.step2 = this.$refs.step_number_2;
+    this.step3 = this.$refs.step_number_3;
+    window.addEventListener(
+      "scroll",
+      function () {
+        this.scrollProgress();
+      }.bind(this)
+    );
   },
 };
 </script>
 
-
 <style lang="scss" scoped>
 .block {
+  position: relative;
+  .viewing-status {
+    position: absolute;
+    height: 100%;
+    .verticale_line {
+      position: absolute;
+      left: -95px;
+      width: 10px;
+      height: calc(100% - 16px);
+      background: #cbcdf4;
+      .prograss {
+        width: 10px;
+        background: #696fe5;
+        transition: height 0.5s;
+      }
+    }
+  }
   &#block6 {
     .bacground-color {
       background: #f3f4f9;
@@ -766,6 +924,11 @@ export default {
       flex-direction: column;
       gap: 120px;
       .title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //Стили текста
         font-style: normal;
         font-weight: 800;
         font-size: 30px;
@@ -773,13 +936,47 @@ export default {
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #424c5c;
-        display: flex;
-        flex-direction: column;
         .decor-line {
           margin-top: 3px;
           width: 257px;
           height: 10px;
           background: #696fe6;
+        }
+        .step-number {
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          background-color: #cbcdf4;
+          position: absolute;
+          left: -120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          .bacground {
+            position: absolute;
+            background-color: #696fe5;
+            border-radius: 100%;
+            top: -30px;
+            width: 0px;
+            height: 0px;
+            transition: .9s;
+          }
+          .number {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 38px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+          }
+          &.active {
+            .bacground {
+              width: 120px;
+              height: 120px;
+            }
+          }
         }
       }
       &#step-one {

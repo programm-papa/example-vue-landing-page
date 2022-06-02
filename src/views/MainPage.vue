@@ -3,14 +3,14 @@
   <tableСontentsBlock />
   <servicesBlock />
   <consultationBlock />
-  <block5 />
-  <block6 />
-  <block7 />
-  <block8 />
-  <block9 />
-  <block10 />
-  <block11 />
-  <block12 />
+  <blueInfoBlock />
+  <scrollTrackingBlock />
+  <casesBlock />
+  <methodsAttractingCustomersBlock />
+  <stagesSalesFunnel />
+  <commentsSliderBlock />
+  <workersBlock />
+  <completedWorks />
 </template>
 
 <script>
@@ -19,28 +19,28 @@ import welcomeBlock from "@/blocks/welcome_block.vue";
 import tableСontentsBlock from "@/blocks/table_contents.vue";
 import servicesBlock from "@/blocks/services_block.vue";
 import consultationBlock from "@/blocks/consultation_block.vue";
-import block5 from "@/blocks/block5.vue";
-import block6 from "@/blocks/block6.vue";
-import block7 from "@/blocks/block7.vue";
-import block8 from "@/blocks/block8.vue";
-import block9 from "@/blocks/block9.vue";
-import block10 from "@/blocks/block10.vue";
-import block11 from "@/blocks/block11.vue";
-import block12 from "@/blocks/block12.vue";
+import blueInfoBlock from "@/blocks/blue_info_block.vue";
+import scrollTrackingBlock from "@/blocks/scroll_tracking_block.vue";
+import casesBlock from "@/blocks/cases_block.vue";
+import methodsAttractingCustomersBlock from "@/blocks/methods_attracting_customers_block.vue";
+import stagesSalesFunnel from "@/blocks/stages_sales_funnel.vue";
+import commentsSliderBlock from "@/blocks/comments_slider_block.vue";
+import workersBlock from "@/blocks/workers_block.vue";
+import completedWorks from "@/blocks/completed_works.vue";
 export default {
   components: {
     welcomeBlock,
     tableСontentsBlock,
     servicesBlock,
     consultationBlock,
-    block5,
-    block6,
-    block7,
-    block8,
-    block9,
-    block10,
-    block11,
-    block12,
+    blueInfoBlock,
+    scrollTrackingBlock,
+    casesBlock,
+    methodsAttractingCustomersBlock,
+    stagesSalesFunnel,
+    commentsSliderBlock,
+    workersBlock,
+    completedWorks,
   },
 };
 </script>

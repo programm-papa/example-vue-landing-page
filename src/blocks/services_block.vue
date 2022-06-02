@@ -2,7 +2,7 @@
   <div class="block" id="block3">
     <div class="wrapper">
       <div class="left">
-        <div class="title">Наши услуги</div>
+        <div class="title" id="block3_anchor">Наши услуги</div>
         <div class="point-description">
           <div class="pointer"></div>
           <div class="description">

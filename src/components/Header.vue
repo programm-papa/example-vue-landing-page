@@ -43,6 +43,9 @@
           />
         </svg>
       </a>
+      <div class="links">
+        <a href="#block3">Услуги</a>
+      </div>
       <a href="" class="phone"> 8 800 123 45 67 </a>
       <div class="order-call flex">
         <div class="phone-icon">
@@ -74,7 +77,6 @@ export default {
   mounted() {
     let scrollAmount = window.innerWidth < 768 ? 0 : 100;
     window.addEventListener("resize", function () {
-      console.log("resize");
     });
     window.addEventListener(
       "scroll",
@@ -98,8 +100,23 @@ export default {
     height: 100%;
     align-items: center;
     padding: 0px 120px 0px;
-    .phone {
+    .links {
       margin-left: auto;
+      width: 890px;
+      padding: 0px 20px;
+      display: flex;
+      align-items: center;
+      a {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: #424c5c;
+      }
+    }
+    .phone {
+      margin-left: 155px;
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;
