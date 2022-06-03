@@ -1,8 +1,36 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
+  state: {
+    scrollTrackung_ActiveStepList: {
+      step1Active: false,
+      step2Active: false,
+      step3Active: false,
+    }
+  },
+  mutations: {
+    changeActiveStepList(state, newValueObj) {
+      state.scrollTrackung_ActiveStepList = {...newValueObj};
+    }
+  },
+  actions: {
+    updatedActiveStepList(ctx, newValueObj) {
+      ctx.commit('changeActiveStepList', newValueObj);
+    },
+  },
+  getters: {
+    getscrollTrackungStatus(state) {
+      if(state.scrollTrackung_ActiveStepList.step1Active) {
+        if(state.scrollTrackung_ActiveStepList.step2Active) {
+          if(state.scrollTrackung_ActiveStepList.step3Active) {
+            return 'active3';
+          }
+          return 'active2';
+        }
+        return 'active1';
+      }
+      return "";
+    }
+  },
   modules: {},
 });

@@ -18,7 +18,8 @@
             <div class="title">
               <div
                 class="step-number"
-                :class="step1Active ? 'active' : ''"
+               
+                :class="activeStepList.step1Active ? 'active' : ''"
                 ref="step_number_1"
               >
                 <div class="bacground"></div>
@@ -326,7 +327,7 @@
         <div class="title">
           <div
             class="step-number"
-            :class="step2Active ? 'active' : ''"
+            :class="activeStepList.step2Active ? 'active' : ''"
             ref="step_number_2"
           >
             <div class="bacground"></div>
@@ -549,7 +550,7 @@
           <div class="title flex">
             <div
               class="step-number"
-              :class="step3Active ? 'active' : ''"
+              :class="activeStepList.step3Active ? 'active' : ''"
               ref="step_number_3"
             >
               <div class="bacground"></div>
@@ -671,11 +672,13 @@ export default {
       blockElement: "",
       scrollProgressValue: 0,
       step1: "",
-      step1Active: false,
       step2: "",
-      step2Active: false,
       step3: "",
-      step3Active: false,
+      activeStepList: {
+        step1Active: false,
+        step2Active: false,
+        step3Active: false,
+      },
       //Выпадающие аккордеоны
       deployableItemData: {
         item1: true,
@@ -726,60 +729,64 @@ export default {
           window.scrollY + window.innerHeight / 2
       ) {
         this.scrollProgressValue =
-          (window.scrollY + window.innerHeight / 2 - this.blockElement.offsetTop) * 100 / this.blockElement.offsetHeight;
+          ((window.scrollY +
+            window.innerHeight / 2 -
+            this.blockElement.offsetTop) *
+            100) /
+          this.blockElement.offsetHeight;
         //Заполнение кругов тайтлов
         //Первый блок
         if (
           this.step1.getBoundingClientRect().top + 30 <=
             window.innerHeight / 2 &&
-          !this.step1Active
+          !this.activeStepList.step1Active
         ) {
-          this.step1Active = true;
+          this.activeStepList.step1Active = true;
         } else if (
           this.step1.getBoundingClientRect().top + 30 >
           window.innerHeight / 2
         ) {
-          this.step1Active = false;
+          this.activeStepList.step1Active = false;
         }
         //Второй блок
         if (
           this.step2.getBoundingClientRect().top + 30 <=
             window.innerHeight / 2 &&
-          !this.step2Active
+          !this.activeStepList.step2Active
         ) {
-          this.step2Active = true;
+          this.activeStepList.step2Active = true;
         } else if (
           this.step2.getBoundingClientRect().top + 30 >
           window.innerHeight / 2
         ) {
-          this.step2Active = false;
+          this.activeStepList.step2Active = false;
         }
         //Третий блок
         if (
           this.step3.getBoundingClientRect().top + 30 <=
             window.innerHeight / 2 &&
-          !this.step3Active
+          !this.activeStepList.step3Active
         ) {
-          this.step3Active = true;
+          this.activeStepList.step3Active = true;
         } else if (
           this.step3.getBoundingClientRect().top + 30 >
           window.innerHeight / 2
         ) {
-          this.step3Active = false;
+          this.activeStepList.step3Active = false;
         }
       } else if (
         this.blockElement.offsetTop >
         window.scrollY + window.innerHeight / 2
       ) {
         this.scrollProgressValue = 0;
-        this.step1Active = false;
-        this.step2Active = false;
-        this.step3Active = false;
+        this.activeStepList.step1Active = false;
+        this.activeStepList.step2Active = false;
+        this.activeStepList.step3Active = false;
       } else {
         this.scrollProgressValue = 100;
-        this.step1Active = true;
-        this.step2Active = true;
-        this.step3Active = true;
+        this.activeStepList.step1Active = true;
+        this.activeStepList.step2Active = true;
+        this.activeStepList.step3Active = true;
       }
     },
   },
@@ -792,6 +799,14 @@ export default {
     deployableItemData: {
       handler() {
         this.scrollProgress();
+      },
+      deep: true,
+    },
+    activeStepList: {
+      handler() {
+        this.$store.dispatch("updatedActiveStepList", {
+          ...this.activeStepList,
+        });
       },
       deep: true,
     },
@@ -928,6 +943,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         //Стили текста
         font-style: normal;
         font-weight: 800;
@@ -960,7 +976,7 @@ export default {
             top: -30px;
             width: 0px;
             height: 0px;
-            transition: .9s;
+            transition: 0.9s;
           }
           .number {
             font-style: normal;

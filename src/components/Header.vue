@@ -1,7 +1,7 @@
 <template>
   <div class="header" :class="scroll ? 'scroll' : ''">
     <div class="desctop flex">
-      <a href="#step-two" class="logo">
+      <a href="#" class="logo">
         <svg
           width="42"
           height="43"
@@ -45,6 +45,38 @@
       </a>
       <div class="links">
         <a href="#block3">Услуги</a>
+        <div
+          class="scroll_tracking__links"
+          :class="scroll_tracking__linksClass"
+        >
+          <div class="links_row" ref="links_row">
+            <a href="#step-one">Ребрендинг</a>
+            <a href="#step-two">Разработка сайта</a>
+            <a href="#step-three">Маркетинг</a>
+          </div>
+          <div
+            class="prograss_row"
+            :style="
+              'padding-left:' +
+              scrollTrackingLinksWidth.firstElement / 2 +
+              'px; padding-right:' +
+              scrollTrackingLinksWidth.thirdElement / 2 +
+              'px;'
+            "
+          >
+            <div class="progress">
+              <div
+                class="progress-active"
+                :style="'width:' + progressWidth"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <a href="#block7">Кейсы</a>
+        <a href="#block8">Методы</a>
+        <a href="#block9">Пример</a>
+        <a href="#block10">Отзывы</a>
+        <a href="#contacts">Контакты</a>
       </div>
       <a href="" class="phone"> 8 800 123 45 67 </a>
       <div class="order-call flex">
@@ -72,12 +104,50 @@ export default {
   data() {
     return {
       scroll: false,
+      scrollTrackingLinksWidth: {
+        firstElement: 0,
+        secondElement: 0,
+        thirdElement: 0,
+      },
     };
   },
+  computed: {
+    scroll_tracking__linksClass() {
+      return this.$store.getters.getscrollTrackungStatus;
+    },
+    progressWidth() {
+      if (this.scroll_tracking__linksClass == "active1") {
+        return 0;
+      } else if (this.scroll_tracking__linksClass == "active2") {
+        return (
+          this.scrollTrackingLinksWidth.firstElement / 2 +
+          this.scrollTrackingLinksWidth.secondElement / 2 +
+          55 +
+          "px"
+        );
+      } else if (this.scroll_tracking__linksClass == "active3") {
+        return "100%";
+      } else {
+        return "0px";
+      }
+    },
+  },
   mounted() {
+    const scrollTracking_linksRowSize = this.$refs.links_row.offsetWidth;
+    const scrollTracking_linksChild = this.$refs.links_row.children;
+    //Длинна первой ссылки
+    this.scrollTrackingLinksWidth.firstElement =
+      scrollTracking_linksChild[0].offsetWidth;
+    //Длинна второй ссылки
+    this.scrollTrackingLinksWidth.secondElement =
+      scrollTracking_linksChild[1].offsetWidth;
+    //Длинна третей ссылки
+    this.scrollTrackingLinksWidth.thirdElement =
+      scrollTracking_linksChild[2].offsetWidth;
+
+    //Прикрепление шапки при скроле
     let scrollAmount = window.innerWidth < 768 ? 0 : 100;
-    window.addEventListener("resize", function () {
-    });
+    window.addEventListener("resize", function () {});
     window.addEventListener(
       "scroll",
       function (event) {
@@ -102,21 +172,116 @@ export default {
     padding: 0px 120px 0px;
     .links {
       margin-left: auto;
-      width: 890px;
+      width: 1030px;
       padding: 0px 20px;
       display: flex;
       align-items: center;
+      gap: 40px;
       a {
+        position: relative;
+        display: block;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
         letter-spacing: 0.02em;
         color: #424c5c;
+        &:hover {
+          text-shadow: 0 0 0.45px #333, 0 0 0.45px #333;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #696fe6;
+            left: 0;
+            bottom: -3px;
+          }
+        }
+      }
+      .scroll_tracking__links {
+        position: relative;
+        .links_row {
+          position: relative;
+          z-index: 3;
+          display: flex;
+          gap: 40px;
+          a {
+            display: flex;
+            justify-content: center;
+            &::before {
+              position: absolute;
+              content: "";
+              width: 15px;
+              height: 15px;
+              border-radius: 100%;
+              background-color: #cbcdf4;
+              bottom: -15px;
+              left: auto;
+            }
+            &:hover {
+              &::before {
+                background-color: #696fe6;
+              }
+            }
+          }
+        }
+        .prograss_row {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: -8px;
+          padding-left: 20px;
+          .progress {
+            width: 100%;
+            height: 2px;
+            background-color: #cbcdf4;
+            .progress-active {
+              transition: width 0.7s;
+              height: 2px;
+              width: 0px;
+              background-color: #696fe6;
+            }
+          }
+        }
+        //Стиль заполнения
+        &.active1 {
+          .links_row {
+            a:nth-of-type(1) {
+              &::before {
+                transition: background-color 0.7s;
+                background-color: #696fe6;
+              }
+            }
+          }
+        }
+        &.active2 {
+          .links_row {
+            a:nth-of-type(1),
+            a:nth-of-type(2) {
+              &::before {
+                transition: background-color 0.7s;
+                background-color: #696fe6;
+              }
+            }
+          }
+        }
+        &.active3 {
+          .links_row {
+            a:nth-of-type(1),
+            a:nth-of-type(2),
+            a:nth-of-type(3) {
+              &::before {
+                transition: background-color 0.7s;
+                background-color: #696fe6;
+              }
+            }
+          }
+        }
       }
     }
     .phone {
-      margin-left: 155px;
+      margin-left: 70px;
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;

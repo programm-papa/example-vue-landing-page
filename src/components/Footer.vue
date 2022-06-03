@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer" id="contacts">
     <div class="wrapper">
       <div class="top flex">
         <div class="logo">

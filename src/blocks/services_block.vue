@@ -131,7 +131,8 @@ export default {};
 <style lang="scss" scoped>
 .block {
   &#block3 {
-    padding: 70px 0px 40px;
+    padding: 170px 0px 40px;
+    margin-top: -100px;
     .wrapper {
       display: flex;
       .left {
