@@ -1,16 +1,16 @@
 <template>
-  <welcomeBlock />
-  <tableСontentsBlock />
-  <servicesBlock />
-  <consultationBlock />
-  <blueInfoBlock />
-  <scrollTrackingBlock />
-  <casesBlock />
-  <methodsAttractingCustomersBlock />
-  <stagesSalesFunnel />
-  <commentsSliderBlock />
-  <workersBlock />
-  <completedWorks />
+  <welcomeBlock v-if="false"/>
+  <tableСontentsBlock v-if="false"/>
+  <servicesBlock v-if="false"/>
+  <consultationBlock v-if="false"/>
+  <blueInfoBlock v-if="false"/>
+  <scrollTrackingBlock v-if="false"/>
+  <casesBlock v-if="false"/>
+  <methodsAttractingCustomersBlock v-if="false"/>
+  <stagesSalesFunnel v-if="false"/>
+  <commentsSliderBlock v-if="false"/>
+  <workersBlock v-if="false"/>
+  <completedWorks v-if="false"/>
 </template>
 
 <script>
