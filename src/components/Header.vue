@@ -1,4 +1,6 @@
 <template>
+  <!-- header-place Этот блок нужен для того, чтобы не менялся размер страницы (убирает баг с дерганием header) -->
+  <div class="header-place"></div>
   <div class="header" :class="scroll ? 'scroll' : ''">
     <div class="desctop flex">
       <a href="#" class="logo">
@@ -140,6 +142,16 @@
           />
         </svg>
       </a>
+      <div class="menu-btn">
+        <div class="decor">
+          <div class="decor__line"></div>
+          <div class="decor__line"></div>
+          <div class="decor__line"></div>
+        </div>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -190,7 +202,7 @@ export default {
       scrollTracking_linksChild[2].offsetWidth;
 
     //Прикрепление шапки при скроле
-    let scrollAmount = window.innerWidth < 768 ? 0 : 100;
+    let scrollAmount = window.innerWidth <= 768 ? 0 : 120;
     window.addEventListener("resize", function () {});
     window.addEventListener(
       "scroll",
@@ -202,6 +214,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.header-place {
+  height: 120px;
+  width: 100%;
+  position: relative;
+  margin-bottom: -120px;
+}
 .header {
   width: 100%;
   height: 120px;
@@ -406,6 +424,28 @@ export default {
     height: 100%;
     align-items: center;
     padding: 0px 40px;
+    position: relative;
+    .menu-btn {
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: #696fe5;
+    }
+    .menu {
+    }
+    .menu-wrapper {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      position: absolute;
+      background-color: #333;
+      right: 40px;
+      .open {
+
+      }
+    }
   }
   border-bottom: 3px solid #ecc0c7;
   &.scroll {

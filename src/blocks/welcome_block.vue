@@ -61,6 +61,14 @@
         </div>
         <div class="doctor">
           <img src="@/assets/image/top_decor-img/doctor.png" alt="" />
+          <img
+            class="doctor__brow_left"
+            src="@/assets/image/top_decor-img/brow.svg"
+          />
+          <img
+            class="doctor__brow_right"
+            src="@/assets/image/top_decor-img/brow.svg"
+          />
         </div>
         <div class="cloud">
           <img src="@/assets/image/top_decor-img/cloud.png" alt="" />
@@ -476,10 +484,77 @@ export default {
         .doctor {
           position: absolute;
           top: 33px;
-          left: 186px;
+          left: 195px;
           img {
-            width: 216px;
+            width: auto;
             height: 314px;
+          }
+
+          .doctor__brow_left {
+            transform: scale(-1, 1);
+            width: 10px;
+            height: auto;
+            left: 41%;
+            top: 13%;
+            position: absolute;
+            animation: leftBrowAnim 2.5s infinite;
+            @keyframes leftBrowAnim {
+              0% {
+                top: 13% !important;
+              }
+              10% {
+                top: 12%;
+              }
+              15% {
+                top: 12.7%;
+              }
+              20% {
+                top: 12%;
+              }
+              30% {
+                top: 12.7%;
+              }
+              95% {
+                top: 12.7%;
+              }
+              100% {
+                top: 13%;
+              }
+            }
+          }
+          .doctor__brow_right {
+            width: 10px;
+            height: auto;
+            left: 53%;
+            top: 13%;
+            position: absolute;
+            animation: rightBrowAnim 2.5s infinite;
+            @keyframes rightBrowAnim {
+              0% {
+                top: 13% !important;
+              }
+              10% {
+                top: 12%;
+              }
+              15% {
+                top: 12.7%;
+              }
+              20% {
+                top: 12%;
+              }
+              30% {
+                top: 12.5%;
+              }
+              35% {
+                top: 12%;
+              }
+              95% {
+                top: 12%;
+              }
+              100% {
+                top: 13%;
+              }
+            }
           }
         }
         .cloud {
@@ -524,7 +599,7 @@ export default {
               &#circle1 {
                 top: 47px;
                 left: 4px;
-                animation: cirkle1 0.4s 1.8s linear;
+                animation: cirkle1 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle1 {
                   0% {
@@ -538,7 +613,7 @@ export default {
               &#circle2 {
                 top: 24px;
                 left: 44px;
-                animation: cirkle2 0.4s 1.8s linear;
+                animation: cirkle2 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle2 {
                   0% {
@@ -552,7 +627,7 @@ export default {
               &#circle3 {
                 top: 35px;
                 left: 84px;
-                animation: cirkle3 0.4s 1.8s linear;
+                animation: cirkle3 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle3 {
                   0% {
@@ -566,7 +641,7 @@ export default {
               &#circle4 {
                 top: 0px;
                 left: 123px;
-                animation: cirkle4 0.4s 1.8s linear;
+                animation: cirkle4 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 @keyframes cirkle4 {
                   0% {
@@ -589,7 +664,7 @@ export default {
                 left: 8px;
                 transform-origin: 100% 50%;
                 transform: rotate(-31deg);
-                animation: line1 0.4s 1.8s linear;
+                animation: line1 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 @keyframes line1 {
                   0% {
@@ -606,7 +681,7 @@ export default {
                 left: 51px;
                 transform-origin: 0% 50%;
                 transform: rotate(14deg);
-                animation: line2 0.4s 1.8s linear;
+                animation: line2 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 @keyframes line2 {
                   0% {
@@ -623,7 +698,7 @@ export default {
                 left: 90px;
                 transform-origin: 0% 50%;
                 transform: rotate(-43deg);
-                animation: line3 0.4s 1.8s linear;
+                animation: line3 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 @keyframes line3 {
                   0% {
@@ -652,7 +727,7 @@ export default {
               height: 80px;
               border-radius: 44px;
               &#segment1 {
-                animation: segment1 0.4s 1.8s linear;
+                animation: segment1 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #bfbfff 0%, #7676e4 100%);
                 @keyframes segment1 {
@@ -665,7 +740,7 @@ export default {
                 }
               }
               &#segment2 {
-                animation: segment2 0.4s 1.8s linear;
+                animation: segment2 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #f9becf 0%, #d25b97 100%);
                 @keyframes segment2 {
@@ -678,7 +753,7 @@ export default {
                 }
               }
               &#segment3 {
-                animation: segment3 0.4s 1.8s linear;
+                animation: segment3 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #bfbfff 0%, #7676e4 100%);
                 @keyframes segment3 {
@@ -691,7 +766,7 @@ export default {
                 }
               }
               &#segment4 {
-                animation: segment4 0.4s 1.8s linear;
+                animation: segment4 0.4s 1.7s linear;
                 animation-fill-mode: both;
                 background: linear-gradient(90deg, #f9becf 0%, #d25b97 100%);
                 @keyframes segment4 {

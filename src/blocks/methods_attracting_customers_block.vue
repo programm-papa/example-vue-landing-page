@@ -12,9 +12,33 @@
               <div class="small-circle"></div>
             </div>
           </div>
-          <div class="method" id="method_1" ref="method_1">
+          <div class="method method_right" id="method_1" ref="method_1">
             <div class="text blue">
               Разрабатываем маркетинговую стратегию клиники
+            </div>
+            <div class="method-description">
+              <svg
+                width="107"
+                height="47"
+                viewBox="0 0 107 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="triangle"
+              >
+                <path
+                  d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                  fill="white"
+                  stroke="#5356AE"
+                  stroke-width="3"
+                />
+                <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                <rect y="36" width="83" height="5" fill="white" />
+              </svg>
+
+              Предложим оптимальную стратегию привлечения пациентов с учетом
+              масштабов бизнеса (частный кабинет, специализированная клиника,
+              многопрофильный медицинский центр).<br /><br />Поможем
+              сориентироваться, с чего начать продвижение медицинской клиники.
             </div>
           </div>
           <div class="method" id="method_2" ref="method_2">
@@ -131,14 +155,58 @@ export default {};
               font-size: 15px;
               line-height: 18px;
               text-align: center;
-              color: #FFFFFF;
+              color: #ffffff;
               &.blue {
-                color: #5356AE;
+                color: #5356ae;
               }
             }
+            //Описание метода
+            .method-description {
+              transform: translateY(100%);
+              display: none;
+              opacity: 0;
+              transition: opacity .6s;
+              background-color: #ffffff;
+              position: absolute;
+              padding: 25px 30px;
+              border: 3px solid #5356ae;
+              border-radius: 20px;
+              width: 420px;
+              //Стили текста
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 17px;
+              color: #424c5c;
+              .triangle {
+                position: absolute;
+                top: -36px;
+                left: 121px;
+              }
+            }
+            &_left {
+              .method-description {
+                left: -55px;
+              }
+            }
+            &_right {
+              .method-description {
+                left: -215px;
+                .triangle {
+                  left: auto;
+                  right: 121px;
+                  transform: scale(-1,1);
+                }
+              }
+            }
+
             &:hover {
               animation-play-state: paused !important;
               z-index: 3;
+               .method-description {
+                display: flex;
+                opacity: 1;
+               }
             }
             //Большой круг
             &#method_1 {
@@ -171,6 +239,7 @@ export default {};
             }
             //Средний круг
             &#method_3 {
+              background: #696fe5;
               animation: method_3_animation 20s linear infinite;
               @keyframes method_3_animation {
                 from {
@@ -184,6 +253,7 @@ export default {};
               }
             }
             &#method_4 {
+              background: #696fe5;
               animation: method_4_animation 20s linear infinite;
               @keyframes method_4_animation {
                 from {
@@ -198,6 +268,7 @@ export default {};
             }
             //Малый круг
             &#method_5 {
+              background: #5356ae;
               animation: method_5_animation 17s linear infinite;
               @keyframes method_5_animation {
                 from {
@@ -211,6 +282,7 @@ export default {};
               }
             }
             &#method_6 {
+              background: #5356ae;
               animation: method_6_animation 17s linear infinite;
               @keyframes method_6_animation {
                 from {
@@ -231,6 +303,7 @@ export default {};
             position: absolute;
           }
         }
+        margin-bottom: 200px;
       }
     }
   }

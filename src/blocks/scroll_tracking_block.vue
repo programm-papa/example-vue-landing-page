@@ -11,6 +11,11 @@
         </div>
       </div>
     </div>
+    <div class="wrapper">
+      <div class="steps-way">
+        <img src="@/assets/image/block6/steps-way.svg" alt="" />
+      </div>
+    </div>
     <div class="bacground-color">
       <div class="step flex" id="step-one">
         <div class="wrapper">
@@ -18,7 +23,6 @@
             <div class="title">
               <div
                 class="step-number"
-               
                 :class="activeStepList.step1Active ? 'active' : ''"
                 ref="step_number_1"
               >
@@ -294,6 +298,24 @@
           </div>
         </div>
         <div class="breaf" id="breaf-one">
+          <div class="decor">
+            <div class="circle circle_one">
+              <div class="circle circle_two">
+                <div class="circle circle_three">
+                  <div class="circle circle_four"></div>
+                </div>
+              </div>
+            </div>
+            <div class="special-decor">
+              <div class="circle circle_one">
+                <div class="circle circle_two">
+                  <div class="circle circle_three">
+                    <div class="circle circle_four"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="bacground-wrapper">
             <div class="wrapper flex">
               <img
@@ -425,12 +447,16 @@
         </div>
       </div>
       <div class="site-features-container">
-        <img
+        <!-- <img
           class="decor-img"
           id="decor-img_1"
           src="@/assets/image/block6/step2/decor-img_1.png"
           alt="decor-img"
-        />
+        /> -->
+        <div class="decor-img" id="decor-img_1">
+          <img src="@/assets/image/block6/step2/decor-img_1_1.png" alt="" />
+          <img src="@/assets/image/block6/step2/decor-img_1_2.png" alt="" />
+        </div>
         <div class="title">Каким должен быть сайт?</div>
         <div class="deployable-blocks-list flex-column">
           <div
@@ -845,11 +871,18 @@ export default {
       }
     }
   }
+  .steps-way {
+    position: absolute;
+    height: 100%;
+    right: -110px;
+    top: 94px;
+  }
   &#block6 {
     .bacground-color {
       background: #f3f4f9;
     }
     .breaf {
+      position: relative;
       .bacground-wrapper {
         width: calc(100% - 200px);
         margin: 0px auto;
@@ -864,6 +897,81 @@ export default {
         }
       }
       &#breaf-one {
+        .decor {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 596px;
+          width: 596px;
+          top: -102px;
+          left: -143px;
+          .circle {
+            border-radius: 100%;
+            background: #cbcdf4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &_one {
+              width: 100%;
+              height: 100%;
+            }
+            &_two {
+              width: 444px;
+              height: 444px;
+              border: 1px solid #696fe5;
+            }
+            &_three {
+              width: 293px;
+              height: 293px;
+              border: 1px solid #696fe5;
+            }
+            &_four {
+              width: 142px;
+              height: 142px;
+              border: 1px solid #696fe5;
+            }
+          }
+          .special-decor {
+            width: 353px;
+            height: 320px;
+            position: absolute;
+            right: 0;
+            top: 102px;
+            border-radius: 20px;
+            overflow: hidden;
+            z-index: 1;
+            .circle {
+              position: absolute;
+              border-radius: 100%;
+              background: inherit;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &_one {
+                height: 596px;
+                width: 596px;
+                top: -102px;
+                left: -243px;
+              }
+              &_two {
+                width: 444px;
+                height: 444px;
+                border: 1px solid #ecc0c7;
+              }
+              &_three {
+                width: 293px;
+                height: 293px;
+                border: 1px solid #ecc0c7;
+              }
+              &_four {
+                width: 142px;
+                height: 142px;
+                border: 1px solid #ecc0c7;
+              }
+            }
+          }
+        }
         .wrapper {
           padding-left: 108px;
           gap: 100px;
@@ -1262,6 +1370,34 @@ export default {
             &#decor-img_1 {
               right: 14px;
               top: -261px;
+              width: 456px;
+              img {
+                position: absolute;
+                &:nth-of-type(1) {
+                  animation: asteriskOne 5s linear infinite;
+                  @keyframes asteriskOne {
+                    0% {
+                      transform: rotate(0deg);
+                    }
+                    100% {
+                      transform: rotate(360deg);
+                    }
+                  }
+                }
+                &:nth-of-type(2) {
+                  left: 227px;
+                  top: -50px;
+                  animation: asteriskTwo 5s linear infinite;
+                  @keyframes asteriskTwo {
+                    0% {
+                      transform: rotate(0deg);
+                    }
+                    100% {
+                      transform: rotate(-360deg);
+                    }
+                  }
+                }
+              }
             }
             &#decor-img_2 {
               height: 450px;

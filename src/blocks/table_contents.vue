@@ -2,7 +2,7 @@
   <div class="block" id="block2">
     <div class="bacground-wrapper">
       <div class="wrapper flex">
-        <div class="card">
+        <a class="card" href="#block3">
           <div class="card-img-circle">
             <div class="bacground-circle">
               <img src="@/assets/image/block2/services.png" alt="" />
@@ -33,7 +33,7 @@
               </svg>
             </div>
           </div>
-        </div>
+        </a>
         <div class="card">
           <div class="card-img-circle">
             <div class="bacground-circle">
@@ -68,7 +68,7 @@
         <div class="card">
           <div class="card-img-circle">
             <div class="bacground-circle">
-              <img src="@/assets/image/block2/services.png" alt="" />
+              <img src="@/assets/image/block2/calculate.png" alt="" />
             </div>
           </div>
           <div class="description">
