@@ -12,7 +12,7 @@
               <div class="small-circle"></div>
             </div>
           </div>
-          <div class="method method_right" id="method_1" ref="method_1">
+          <div class="method method_left" id="method_1" ref="method_1">
             <div class="text blue">
               Разрабатываем маркетинговую стратегию клиники
             </div>

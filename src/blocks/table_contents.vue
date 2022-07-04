@@ -1,8 +1,8 @@
 <template>
-  <div class="block" id="block2">
+  <div class="block" id="block2" ref="block2">
     <div class="bacground-wrapper">
       <div class="wrapper flex">
-        <a class="card" href="#block3">
+        <a class="card" href="#block3" @click="openSpecialMenu = true">
           <div class="card-img-circle">
             <div class="bacground-circle">
               <img src="@/assets/image/block2/services.png" alt="" />
@@ -103,7 +103,46 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      block: "",
+    };
+  },
+  methods: {
+    changeOpenSpecialMenu() {
+      if (
+        !this.openSpecialMenu &&
+        this.block.offsetTop <= window.scrollY + window.innerHeight / 2 &&
+        !this.scrollTrackung_status
+      ) {
+        this.openSpecialMenu = true;
+      }
+    },
+  },
+  computed: {
+    openSpecialMenu: {
+      get() {
+        return this.$store.state.openSpecialMenuStatus;
+      },
+      set(value) {
+        this.$store.dispatch("updateOpenSpecialMenuStatus", value);
+      },
+    },
+    scrollTrackung_status() {
+      return this.$store.state.scrollTrackung_ActiveStepList.step3Active;
+    },
+  },
+  mounted() {
+    this.block = this.$refs.block2;
+    window.addEventListener(
+      "scroll",
+      function () {
+        this.changeOpenSpecialMenu();
+      }.bind(this)
+    );
+  },
+};
 </script>
 
 <style lang="scss" scoped>
