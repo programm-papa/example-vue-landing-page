@@ -103,46 +103,7 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      block: "",
-    };
-  },
-  methods: {
-    changeOpenSpecialMenu() {
-      if (
-        !this.openSpecialMenu &&
-        this.block.offsetTop <= window.scrollY + window.innerHeight / 2 &&
-        !this.scrollTrackung_status
-      ) {
-        this.openSpecialMenu = true;
-      }
-    },
-  },
-  computed: {
-    openSpecialMenu: {
-      get() {
-        return this.$store.state.openSpecialMenuStatus;
-      },
-      set(value) {
-        this.$store.dispatch("updateOpenSpecialMenuStatus", value);
-      },
-    },
-    scrollTrackung_status() {
-      return this.$store.state.scrollTrackung_ActiveStepList.step3Active;
-    },
-  },
-  mounted() {
-    this.block = this.$refs.block2;
-    window.addEventListener(
-      "scroll",
-      function () {
-        this.changeOpenSpecialMenu();
-      }.bind(this)
-    );
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -150,6 +111,7 @@ export default {
   &#block2 {
     .bacground-wrapper {
       width: calc(100% - 200px);
+      min-width: 1366px;
       margin: 0px auto;
       padding: 70px 0px;
       background: #f3f4f9;

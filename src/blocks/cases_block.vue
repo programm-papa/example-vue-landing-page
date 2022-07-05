@@ -71,7 +71,7 @@
           <div class="stage flex" id="stage_two">
             <div class="left flex-column">
               <div class="stage-name">
-                <div class="stage-name__wrapper">Отправная точка</div>
+                <div class="stage-name__wrapper">Задача</div>
                 <div class="circle-decor"></div>
               </div>
               <svg
@@ -114,7 +114,7 @@
           <div class="stage flex" id="stage_three">
             <div class="left">
               <div class="stage-name">
-                <div class="stage-name__wrapper">Отправная точка</div>
+                <div class="stage-name__wrapper">Результат</div>
                 <div class="circle-decor"></div>
               </div>
             </div>
@@ -199,7 +199,7 @@
             <div class="stage flex" id="stage_two">
               <div class="left flex-column">
                 <div class="stage-name">
-                  <div class="stage-name__wrapper">Отправная точка</div>
+                  <div class="stage-name__wrapper">Задача</div>
                   <div class="circle-decor"></div>
                 </div>
                 <svg
@@ -240,7 +240,7 @@
             <div class="stage flex" id="stage_three">
               <div class="left">
                 <div class="stage-name">
-                  <div class="stage-name__wrapper">Отправная точка</div>
+                  <div class="stage-name__wrapper">Результат</div>
                   <div class="circle-decor"></div>
                 </div>
               </div>
@@ -484,6 +484,7 @@ export default {};
     }
     .bacground-wrapper {
       width: calc(100% - 200px);
+       min-width: 1366px;
       margin: 0px auto;
       padding: 70px 0px 30px;
       background: #f3f4f9;

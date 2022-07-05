@@ -7,7 +7,7 @@
   <scrollTrackingBlock v-if="true"/>
   <casesBlock v-if="true"/>
   <methodsAttractingCustomersBlock v-if="true"/>
-  <stagesSalesFunnel v-if="false"/>
+  <stagesSalesFunnel v-if="true"/>
   <commentsSliderBlock v-if="false"/>
   <workersBlock v-if="false"/>
   <completedWorks v-if="false"/>

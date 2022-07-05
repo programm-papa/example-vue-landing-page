@@ -1,5 +1,5 @@
 <template>
-  <div class="block" id="block3">
+  <div class="block" id="block3" ref="block3">
     <div class="wrapper">
       <div class="left">
         <div class="title" id="block3_anchor">Наши услуги</div>
@@ -90,10 +90,10 @@
               <div class="num">03</div>
               <div class="title">Брендинг и дизайн</div>
               <div class="desc">
-                Создадим для вас бренд близкий потребителю.<br><br>Освежим или
-                разработаем логотип с нуля.<br><br>Заложим основы фирменного стиля,
-                либо предложим комплексное внедрение бренда клиники, взяв все
-                дизайнерские решения на себя.
+                Создадим для вас бренд близкий потребителю.<br /><br />Освежим
+                или разработаем логотип с нуля.<br /><br />Заложим основы
+                фирменного стиля, либо предложим комплексное внедрение бренда
+                клиники, взяв все дизайнерские решения на себя.
               </div>
             </div>
           </div>
@@ -125,7 +125,53 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      block: "",
+      prevScrollPosition: 0,
+    };
+  },
+  methods: {
+    changeOpenSpecialMenu() {
+      if (
+        !this.openSpecialMenu &&
+        this.block.offsetTop <= window.scrollY + window.innerHeight / 2 &&
+        this.block.offsetTop + this.block.offsetHeight >
+          window.scrollY + window.innerHeight / 2 &&
+        window.scrollY > this.prevScrollPosition
+      ) {
+        this.openSpecialMenu = true;
+      } else if (
+        this.openSpecialMenu &&
+        this.block.offsetTop >= window.scrollY + window.innerHeight / 2 &&
+        window.scrollY < this.prevScrollPosition
+      ) {
+        this.openSpecialMenu = false;
+      }
+      this.prevScrollPosition = window.scrollY;
+    },
+  },
+  computed: {
+    openSpecialMenu: {
+      get() {
+        return this.$store.state.openSpecialMenuStatus;
+      },
+      set(value) {
+        this.$store.dispatch("updateOpenSpecialMenuStatus", value);
+      },
+    },
+  },
+  mounted() {
+    this.block = this.$refs.block3;
+    window.addEventListener(
+      "scroll",
+      function () {
+        this.changeOpenSpecialMenu();
+      }.bind(this)
+    );
+  },
+};
 </script>
 
 <style lang="scss" scoped>

@@ -711,6 +711,8 @@ export default {
         item2: false,
         item3: false,
       },
+      //Предыдущая позиция скрола
+      prevScrollPosition: 0,
     };
   },
   methods: {
@@ -815,10 +817,47 @@ export default {
         this.activeStepList.step3Active = true;
       }
     },
+    changeOpenSpecialMenu() {
+      if (
+        !this.openSpecialMenu &&
+        this.blockElement.offsetTop <= window.scrollY + 100 &&
+        this.blockElement.offsetTop + this.blockElement.offsetHeight >=
+          window.scrollY + 100
+      ) {
+        this.openSpecialMenu = true;
+      } else if (
+        this.openSpecialMenu &&
+        this.blockElement.offsetTop + this.blockElement.offsetHeight <=
+          window.scrollY + 100 &&
+        this.blockElement.offsetTop + this.blockElement.offsetHeight + 150 >=
+          window.scrollY + 100 &&
+        this.prevScrollPosition < window.scrollY
+        // !this.scrollTrackung_status
+      ) {
+        this.openSpecialMenu = false;
+      } else if (
+        !this.openSpecialMenu &&
+        this.blockElement.offsetTop + this.blockElement.offsetHeight >=
+          window.scrollY + 100 &&
+        this.blockElement.offsetTop <= window.scrollY + 100 &&
+        this.prevScrollPosition > window.scrollY
+      ) {
+        this.openSpecialMenu = true;
+      }
+      this.prevScrollPosition = window.scrollY;
+    },
   },
   computed: {
-    height: () => {
-      return;
+    // height: () => {
+    //   return;
+    // },
+    openSpecialMenu: {
+      get() {
+        return this.$store.state.openSpecialMenuStatus;
+      },
+      set(value) {
+        this.$store.dispatch("updateOpenSpecialMenuStatus", value);
+      },
     },
   },
   watch: {
@@ -846,6 +885,7 @@ export default {
       "scroll",
       function () {
         this.scrollProgress();
+        this.changeOpenSpecialMenu();
       }.bind(this)
     );
   },
@@ -855,6 +895,7 @@ export default {
 <style lang="scss" scoped>
 .block {
   position: relative;
+  overflow: hidden;
   .viewing-status {
     position: absolute;
     height: 100%;
@@ -1010,6 +1051,7 @@ export default {
       &#breaf-two {
         .bacground-wrapper {
           background-color: #5356ae;
+          min-width: 1366px;
         }
         .wrapper {
           padding-left: 521px;
@@ -1629,6 +1671,29 @@ export default {
               text-align: center;
               color: #696fe6;
             }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1800px) {
+  .block {
+    
+  }
+}
+@media screen and (max-width: 1600px) {
+  .block {
+    .viewing-status {
+      .verticale_line {
+        left: -60px;
+      }
+    }
+    &#block6 {
+      .step {
+        .title {
+          .step-number {
+            left: -85px;
           }
         }
       }

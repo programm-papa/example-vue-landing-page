@@ -1,5 +1,5 @@
 <template>
-  <div class="block" id="block8">
+  <div class="block" id="block8" ref="block8">
     <div class="wrapper">
       <div class="title flex">
         Наши методы лечения дефицита клиентов
@@ -12,7 +12,13 @@
               <div class="small-circle"></div>
             </div>
           </div>
-          <div class="method method_left" id="method_1" ref="method_1">
+          <div
+            class="method"
+            id="method_1"
+            ref="method_1"
+            :class="methodsClass"
+            @mouseover="calculatingPosition"
+          >
             <div class="text blue">
               Разрабатываем маркетинговую стратегию клиники
             </div>
@@ -41,22 +47,182 @@
               сориентироваться, с чего начать продвижение медицинской клиники.
             </div>
           </div>
-          <div class="method" id="method_2" ref="method_2">
+          <div
+            class="method"
+            id="method_2"
+            ref="method_2"
+            :class="methodsClass"
+            @mouseover="calculatingPosition"
+          >
             <div class="text blue">
               Контролируем и улучшаем онлайн репутацию клиники
             </div>
+            <div class="method-description">
+              <svg
+                width="107"
+                height="47"
+                viewBox="0 0 107 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="triangle"
+              >
+                <path
+                  d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                  fill="white"
+                  stroke="#5356AE"
+                  stroke-width="3"
+                />
+                <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                <rect y="36" width="83" height="5" fill="white" />
+              </svg>
+
+              Все знают, что отзывы - лучшая реклама, в том числе и в интернете.
+              Проводим мониторинг, помогаем в работе с негативом. Берем ваши
+              положительные отзывы из Книги Отзывов и переносим их в
+              Интернет.<br /><br />
+              Доверие к клинике, докторам повышается — пациенты из сети
+              становятся такими же, как пациенты по сарафанному радио.
+            </div>
           </div>
-          <div class="method" id="method_3" ref="method_3">
+          <div
+            class="method"
+            id="method_3"
+            ref="method_3"
+            :class="methodsClass"
+            @mouseover="calculatingPosition"
+          >
             <div class="text">Строим понятную аналитику</div>
+            <div class="method-description">
+              <svg
+                width="107"
+                height="47"
+                viewBox="0 0 107 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="triangle"
+              >
+                <path
+                  d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                  fill="white"
+                  stroke="#5356AE"
+                  stroke-width="3"
+                />
+                <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                <rect y="36" width="83" height="5" fill="white" />
+              </svg>
+
+              Правильно настроим Яндекс Метрику и Google Analytics, пропишем
+              необходимые цели и сегменты. Подключим коллтрекинг для
+              отслеживания звонков и соединим его с CRM по работе с записями на
+              приём.<br /><br />Это позволит оценить эффективность каждого
+              источника/канала трафика по стоимости привлечения пациента.<br /><br />Как
+              результат - оптимизируем менее низко конверсионные каналы и
+              масштабируем более эффективные.
+            </div>
           </div>
-          <div class="method" id="method_4" ref="method_4">
+          <div
+            class="method"
+            id="method_4"
+            ref="method_4"
+            :class="methodsClass"
+            @mouseover="calculatingPosition"
+          >
             <div class="text">Не забываем про соцсети</div>
+            <div class="method-description">
+              <svg
+                width="107"
+                height="47"
+                viewBox="0 0 107 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="triangle"
+              >
+                <path
+                  d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                  fill="white"
+                  stroke="#5356AE"
+                  stroke-width="3"
+                />
+                <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                <rect y="36" width="83" height="5" fill="white" />
+              </svg>
+
+              Подогреваем вашу аудиторию в соцсети.<br /><br />Подготовим и
+              оформим ваш канал, например вконтакте, подготовим первичный
+              контент и распланируем публикации, при необходимости подключим ваш
+              официальный канал в телеграм.<br /><br />Все для того, чтобы в
+              ваших соцсетях была «движуха» и заявки.
+            </div>
           </div>
-          <div class="method" id="method_5" ref="method_5">
+          <div
+            class="method"
+            id="method_5"
+            ref="method_5"
+            :class="methodsClass"
+            @mouseover="calculatingPosition"
+          >
             <div class="text">Создаем и управляем рекламными кампаниями</div>
+            <div class="method-description">
+              <svg
+                width="107"
+                height="47"
+                viewBox="0 0 107 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="triangle"
+              >
+                <path
+                  d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                  fill="white"
+                  stroke="#5356AE"
+                  stroke-width="3"
+                />
+                <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                <rect y="36" width="83" height="5" fill="white" />
+              </svg>
+
+              Контекстная реклама в Яндекс.Директ и до последнего времени в
+              Google Adwords - идеальный вариант, когда пациенты нужны "ещё
+              вчера".<br /><br />
+              Вручную прорабатываем каждую рекламную кампанию, добиваюсь
+              минимальной стоимости клика при максимальном количестве лидов и
+              пациентов. Тестируем варианты объявлений и стратегий.
+            </div>
           </div>
-          <div class="method" id="method_6" ref="method_6">
+          <div
+            class="method"
+            id="method_6"
+            ref="method_6"
+            :class="methodsClass"
+            @mouseover="calculatingPosition"
+          >
             <div class="text">Повышаем конверсию сайта</div>
+            <div class="method-description">
+              <svg
+                width="107"
+                height="47"
+                viewBox="0 0 107 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="triangle"
+              >
+                <path
+                  d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                  fill="white"
+                  stroke="#5356AE"
+                  stroke-width="3"
+                />
+                <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                <rect y="36" width="83" height="5" fill="white" />
+              </svg>
+
+              Измеряем текущую конверсию сайта, анализируем поведение
+              пользователей на сайте, изучаем сайты конкурентов и факторы
+              принятия решения о покупке типичными представителями целевой
+              аудитории.<br /><br />Используем альтернативные каналы маркетинга,
+              проводим A/B тестирование, внедряем новые акции, предложения и
+              креативы.
+            </div>
           </div>
         </div>
 
@@ -71,7 +237,41 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      block: "",
+      positionY: "bottom",
+      positionX: "left",
+    };
+  },
+  computed: {
+    methodsClass() {
+      return "method_" + this.positionX + " method_" + this.positionY;
+    },
+  },
+  methods: {
+    calculatingPosition(e) {
+      //Определение пересечений половинок жкрана (горизонтальной и вертикальной)
+      const horizontalCenter = window.innerHeight / 2;
+      const verticalCenter = window.innerWidth / 2;
+      if (e.clientY > horizontalCenter) {
+        this.positionY = "bottom";
+      } else {
+        this.positionY = "top";
+      }
+
+      if (e.clientX > verticalCenter) {
+        this.positionX = "right";
+      } else {
+        this.positionX = "left";
+      }
+    },
+  },
+  mounted() {
+    this.block = this.$refs.block8;
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -165,13 +365,13 @@ export default {};
               transform: translateY(100%);
               display: none;
               opacity: 0;
-              transition: opacity .6s;
+              transition: opacity 0.6s;
               background-color: #ffffff;
               position: absolute;
               padding: 25px 30px;
               border: 3px solid #5356ae;
               border-radius: 20px;
-              width: 420px;
+              width: 426px;
               //Стили текста
               font-style: normal;
               font-weight: 500;
@@ -184,9 +384,20 @@ export default {};
                 left: 121px;
               }
             }
+
             &_left {
               .method-description {
                 left: -55px;
+              }
+              &.method_bottom {
+                .method-description {
+                  transform: translateY(-100%);
+                  .triangle {
+                    top: auto;
+                    bottom: -35.8px;
+                    transform: scale(1, -1);
+                  }
+                }
               }
             }
             &_right {
@@ -195,18 +406,28 @@ export default {};
                 .triangle {
                   left: auto;
                   right: 121px;
-                  transform: scale(-1,1);
+                  transform: scale(-1, 1);
+                }
+              }
+              &.method_bottom {
+                .method-description {
+                  transform: translateY(-100%);
+                  .triangle {
+                    top: auto;
+                    bottom: -36px;
+                    transform: scale(-1, -1);
+                  }
                 }
               }
             }
-
             &:hover {
               animation-play-state: paused !important;
               z-index: 3;
-               .method-description {
+              .method-description {
                 display: flex;
+                transition: opacity .1s .1s;
                 opacity: 1;
-               }
+              }
             }
             //Большой круг
             &#method_1 {

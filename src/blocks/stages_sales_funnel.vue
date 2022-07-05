@@ -13,6 +13,20 @@
           </div>
           <div class="decor-img"></div>
         </div>
+        <div class="funnels-variants">
+          <div class="tab">
+            <div class="name">Небольшая стоматология</div>
+            <div class="description">(5-20 сотрудников)</div>
+          </div>
+          <div class="tab">
+            <div class="name">Средняя стоматология</div>
+            <div class="description">(20-40 сотрудников)</div>
+          </div>
+          <div class="tab">
+             <div class="name">Крупная клиника</div>
+            <div class="description">(40-100 сотрудников)</div>
+          </div>
+        </div>
         <div class="stages-sales-funnel flex-column">
           <div class="stage">
             <div class="stage-content">
@@ -109,7 +123,13 @@
         </div>
         <div class="want flex-column">
           <div class="pink-button">хочу так же!</div>
-          <div class="description">*В итоговом результате не учитывается часть оборота клиники от постоянных клиентов, которые регулярно самостоятельно записываются к своему лечащему врачу или клиентов пришедших по рекомендации. В этой воронке мы учитываем только траффик с интернет-рекламы и попаданий на сайт с поисковых запросов и из соцсетей.</div>
+          <div class="description">
+            *В итоговом результате не учитывается часть оборота клиники от
+            постоянных клиентов, которые регулярно самостоятельно записываются к
+            своему лечащему врачу или клиентов пришедших по рекомендации. В этой
+            воронке мы учитываем только траффик с интернет-рекламы и попаданий
+            на сайт с поисковых запросов и из соцсетей.
+          </div>
         </div>
       </div>
     </div>
@@ -123,7 +143,7 @@ export default {};
 <style lang="scss" scoped>
 .block {
   &#block9 {
-    border-bottom: 16px solid #ECC0C7;
+    border-bottom: 16px solid #ecc0c7;
     .bacground-color {
       background-color: #f3f4f9;
       padding: 120px 0px;
@@ -163,6 +183,35 @@ export default {};
         left: 670px;
         top: -25px;
         transform: rotate(-12deg);
+      }
+    }
+    .funnels-variants {
+      height: 100px;
+      width: 1160px;
+      background-color: #ffffff;
+      margin: 0px auto 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      .tab {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid #ECC0C7;
+        //Стили текста
+        * {
+          font-style: normal;
+          font-size: 20px;
+          line-height: 135%;
+          text-align: center;
+          color: #424c5c;
+        }
+        .name {
+          font-weight: 600;
+        }
+        .description {
+          font-weight: 500;
+        }
       }
     }
     .stages-sales-funnel {

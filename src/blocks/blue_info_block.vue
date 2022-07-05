@@ -18,6 +18,7 @@ export default {};
     padding-top: 120px;
     .bacground-wrapper {
       width: calc(100% - 200px);
+          min-width: 1366px;
       margin: 0px auto;
       background: #696fe6;
       border-radius: 20px;
