@@ -232,6 +232,10 @@
           id="decor-img_1"
         />
       </div>
+      <div class="button-block flex">
+        <div class="pink-button">Узнать больше</div>
+        <div class="blue-border-button">Оставить заявку</div>
+      </div>
     </div>
   </div>
 </template>
@@ -305,6 +309,7 @@ export default {
         justify-content: center;
         align-items: center;
         height: 880px;
+        margin-bottom: 120px;
         .circles {
           top: 0;
           position: absolute;
@@ -425,7 +430,7 @@ export default {
               z-index: 3;
               .method-description {
                 display: flex;
-                transition: opacity .1s .1s;
+                transition: opacity 0.1s 0.1s;
                 opacity: 1;
               }
             }
@@ -524,7 +529,10 @@ export default {
             position: absolute;
           }
         }
-        margin-bottom: 200px;
+      }
+      .button-block {
+        gap: 40px;
+        justify-content: flex-start;
       }
     }
   }

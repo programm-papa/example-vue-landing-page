@@ -133,6 +133,10 @@
               </div>
             </div>
           </div>
+          <div class="case__buttons flex">
+            <div class="pink-button">Хочу так же!</div>
+            <div class="blue-border-button">Смотреть подробнее</div>
+          </div>
         </div>
       </div>
     </div>
@@ -259,6 +263,10 @@
                   снаружи и внутри клиники.
                 </div>
               </div>
+            </div>
+            <div class="case__buttons flex">
+              <div class="pink-button">Хочу так же!</div>
+              <div class="blue-border-button">Смотреть подробнее</div>
             </div>
           </div>
         </div>
@@ -477,6 +485,11 @@ export default {};
             }
           }
         }
+        .case__buttons {
+          justify-content: flex-end;
+          gap: 40px;
+          padding-right: 20px;
+        }
       }
       &#case_1 {
         margin-bottom: 70px;
@@ -484,7 +497,7 @@ export default {};
     }
     .bacground-wrapper {
       width: calc(100% - 200px);
-       min-width: 1366px;
+      min-width: 1366px;
       margin: 0px auto;
       padding: 70px 0px 30px;
       background: #f3f4f9;

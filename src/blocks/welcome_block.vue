@@ -7,7 +7,7 @@
         </div>
         <div class="title">
           Нужен <span class="stroke-text">новый</span> поток клиентов
-          <span class="stroke-text">для</span>
+          <span class="stroke-text">для </span>
           <span class="stroke-text">вашей</span> клиники?
         </div>
         <div class="pink-button">Да, мне нужны пациенты</div>

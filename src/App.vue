@@ -1,7 +1,7 @@
 <template>
   <Header />
   <router-view />
-  <Footer/>
+  <Footer />
 </template>
 <script>
 import Header from "@/components/Header.vue";
@@ -9,11 +9,9 @@ import Footer from "@/components/Footer.vue";
 export default {
   components: {
     Header,
-    Footer
+    Footer,
   },
-  mounted() {
-    
-  },
+  mounted() {},
 };
 </script>
 
@@ -80,9 +78,11 @@ a {
 }
 
 .pink-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 300px;
-  padding: 21px 35px;
-  height: fit-content;
+  height: 60px;
   background: #ecc0c7;
   border-radius: 20px;
   //Стили текста
@@ -96,6 +96,29 @@ a {
   cursor: pointer;
   &:hover {
     background: #ff5555;
+    //Стили текста
+    color: #ffffff;
+  }
+}
+.blue-border-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  border: 2px solid #5356ae;
+  border-radius: 20px;
+  //Стили текста
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #5356ae;
+  cursor: pointer;
+  &:hover {
+    background: #5356ae;
     //Стили текста
     color: #ffffff;
   }

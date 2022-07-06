@@ -1,5 +1,8 @@
 <template>
   <div class="block" id="block9">
+    <div class="decor-img">
+      <img src="@/assets/image/block9/img_dna.svg" alt="" />
+    </div>
     <div class="bacground-color">
       <div class="wrapper">
         <div class="title flex">
@@ -14,113 +17,331 @@
           <div class="decor-img"></div>
         </div>
         <div class="funnels-variants">
-          <div class="tab">
+          <div
+            class="tab"
+            :class="tabsList.tab1 ? 'selected' : ''"
+            @click="changeSelectTab('tab1')"
+          >
             <div class="name">Небольшая стоматология</div>
             <div class="description">(5-20 сотрудников)</div>
           </div>
-          <div class="tab">
+          <div
+            class="tab"
+            :class="tabsList.tab2 ? 'selected' : ''"
+            @click="changeSelectTab('tab2')"
+          >
             <div class="name">Средняя стоматология</div>
             <div class="description">(20-40 сотрудников)</div>
           </div>
-          <div class="tab">
-             <div class="name">Крупная клиника</div>
+          <div
+            class="tab"
+            :class="tabsList.tab3 ? 'selected' : ''"
+            @click="changeSelectTab('tab3')"
+          >
+            <div class="name">Крупная клиника</div>
             <div class="description">(40-100 сотрудников)</div>
           </div>
         </div>
-        <div class="stages-sales-funnel flex-column">
-          <div class="stage">
-            <div class="stage-content">
-              <div class="stage-title flex">
-                <div class="quantitative-value">35.000 ₽</div>
-                <div class="number">1</div>
+        <transition
+          name="fade"
+          mode="out-in"
+          :duration="{ enter: 500, leave: 500 }"
+        >
+          <div
+            class="stages-sales-funnel flex-column"
+            id="funnel_1"
+            v-if="tabsList.tab1"
+          >
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">35.000 ₽</div>
+                  <div class="number">1</div>
+                </div>
+                <div class="stage-description">
+                  <b>Рекламный бюджет.</b> Его размер в основном зависит от
+                  региона продвижения, конкуренции и настроек показа рекламы
+                </div>
               </div>
-              <div class="stage-description">
-                <b>Рекламный бюджет.</b> Его размер в основном зависит от
-                региона продвижения, конкуренции и настроек показа рекламы
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">5 402</div>
+                  <div class="number">2</div>
+                </div>
+                <div class="stage-description">
+                  <b>Общее количество визитов<br />на сайт в месяц</b> из
+                  поисковых запросов, контекстной рекламы, SMM. Средняя
+                  стоимость перехода на сайт 6,47 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">356</div>
+                  <div class="number">3</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество обращений с сайта по запросам в месяц</b
+                  >(звонков и заявок). Средняя стоимость одного обращения 98 ₽.
+                  Конверсия посетителей сайта в обращения 3,2%.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">162</div>
+                  <div class="number">4</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество записей на прием.</b> Конверсия от
+                  обрабатывающих администраторов клиники из обращений в запись
+                  на прием 55%. Средняя стоимость одного обращения 202 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">104</div>
+                  <div class="number">5</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество состоявшихся приемов</b> с учетом того, что 30%
+                  записавшихся пациентов не доходят до клиники.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">488 800 ₽</div>
+                  <div class="number">6</div>
+                </div>
+                <div class="stage-description">
+                  <b>Общий оборотный доход со всех приемов.</b> Средний чек по
+                  пациенту 4 700 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value red">453 800 ₽</div>
+                  <div class="number">7</div>
+                </div>
+                <div class="stage-description black">
+                  <b>Доход минус вложения в рекламу.</b>
+                </div>
+              </div>
+            </div>
+            <div class="decor-arrow">
+              <div class="arrow">
+                <div class="line"></div>
+                <div class="line"></div>
               </div>
             </div>
           </div>
-          <div class="stage">
-            <div class="stage-content">
-              <div class="stage-title flex">
-                <div class="quantitative-value">5 402</div>
-                <div class="number">2</div>
+          <div
+            class="stages-sales-funnel flex-column"
+            id="funnel_1"
+            v-else-if="tabsList.tab2"
+          >
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">35.000 ₽</div>
+                  <div class="number">1</div>
+                </div>
+                <div class="stage-description">
+                  <b>Рекламный бюджет.</b> Его размер в основном зависит от
+                  региона продвижения, конкуренции и настроек показа рекламы
+                </div>
               </div>
-              <div class="stage-description">
-                <b>Общее количество визитов<br />на сайт в месяц</b> из
-                поисковых запросов, контекстной рекламы, SMM. Средняя стоимость
-                перехода на сайт 6,47 ₽.
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">5 402</div>
+                  <div class="number">2</div>
+                </div>
+                <div class="stage-description">
+                  <b>Общее количество визитов<br />на сайт в месяц</b> из
+                  поисковых запросов, контекстной рекламы, SMM. Средняя
+                  стоимость перехода на сайт 6,47 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">356</div>
+                  <div class="number">3</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество обращений с сайта по запросам в месяц</b
+                  >(звонков и заявок). Средняя стоимость одного обращения 98 ₽.
+                  Конверсия посетителей сайта в обращения 3,2%.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">162</div>
+                  <div class="number">4</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество записей на прием.</b> Конверсия от
+                  обрабатывающих администраторов клиники из обращений в запись
+                  на прием 55%. Средняя стоимость одного обращения 202 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">104</div>
+                  <div class="number">5</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество состоявшихся приемов</b> с учетом того, что 30%
+                  записавшихся пациентов не доходят до клиники.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">488 800 ₽</div>
+                  <div class="number">6</div>
+                </div>
+                <div class="stage-description">
+                  <b>Общий оборотный доход со всех приемов.</b> Средний чек по
+                  пациенту 4 700 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value red">453 800 ₽</div>
+                  <div class="number">7</div>
+                </div>
+                <div class="stage-description black">
+                  <b>Доход минус вложения в рекламу.</b>
+                </div>
+              </div>
+            </div>
+            <div class="decor-arrow">
+              <div class="arrow">
+                <div class="line"></div>
+                <div class="line"></div>
               </div>
             </div>
           </div>
-          <div class="stage">
-            <div class="stage-content">
-              <div class="stage-title flex">
-                <div class="quantitative-value">356</div>
-                <div class="number">3</div>
+          <div
+            class="stages-sales-funnel flex-column"
+            id="funnel_1"
+            v-else-if="tabsList.tab3"
+          >
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">35.000 ₽</div>
+                  <div class="number">1</div>
+                </div>
+                <div class="stage-description">
+                  <b>Рекламный бюджет.</b> Его размер в основном зависит от
+                  региона продвижения, конкуренции и настроек показа рекламы
+                </div>
               </div>
-              <div class="stage-description">
-                <b>Количество обращений с сайта по запросам в месяц</b>(звонков
-                и заявок). Средняя стоимость одного обращения 98 ₽. Конверсия
-                посетителей сайта в обращения 3,2%.
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">5 402</div>
+                  <div class="number">2</div>
+                </div>
+                <div class="stage-description">
+                  <b>Общее количество визитов<br />на сайт в месяц</b> из
+                  поисковых запросов, контекстной рекламы, SMM. Средняя
+                  стоимость перехода на сайт 6,47 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">356</div>
+                  <div class="number">3</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество обращений с сайта по запросам в месяц</b
+                  >(звонков и заявок). Средняя стоимость одного обращения 98 ₽.
+                  Конверсия посетителей сайта в обращения 3,2%.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">162</div>
+                  <div class="number">4</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество записей на прием.</b> Конверсия от
+                  обрабатывающих администраторов клиники из обращений в запись
+                  на прием 55%. Средняя стоимость одного обращения 202 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">104</div>
+                  <div class="number">5</div>
+                </div>
+                <div class="stage-description">
+                  <b>Количество состоявшихся приемов</b> с учетом того, что 30%
+                  записавшихся пациентов не доходят до клиники.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value">488 800 ₽</div>
+                  <div class="number">6</div>
+                </div>
+                <div class="stage-description">
+                  <b>Общий оборотный доход со всех приемов.</b> Средний чек по
+                  пациенту 4 700 ₽.
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-content">
+                <div class="stage-title flex">
+                  <div class="quantitative-value red">453 800 ₽</div>
+                  <div class="number">7</div>
+                </div>
+                <div class="stage-description black">
+                  <b>Доход минус вложения в рекламу.</b>
+                </div>
+              </div>
+            </div>
+            <div class="decor-arrow">
+              <div class="arrow">
+                <div class="line"></div>
+                <div class="line"></div>
               </div>
             </div>
           </div>
-          <div class="stage">
-            <div class="stage-content">
-              <div class="stage-title flex">
-                <div class="quantitative-value">162</div>
-                <div class="number">4</div>
-              </div>
-              <div class="stage-description">
-                <b>Количество записей на прием.</b> Конверсия от обрабатывающих
-                администраторов клиники из обращений в запись на прием 55%.
-                Средняя стоимость одного обращения 202 ₽.
-              </div>
-            </div>
-          </div>
-          <div class="stage">
-            <div class="stage-content">
-              <div class="stage-title flex">
-                <div class="quantitative-value">104</div>
-                <div class="number">5</div>
-              </div>
-              <div class="stage-description">
-                <b>Количество состоявшихся приемов</b> с учетом того, что 30%
-                записавшихся пациентов не доходят до клиники.
-              </div>
-            </div>
-          </div>
-          <div class="stage">
-            <div class="stage-content">
-              <div class="stage-title flex">
-                <div class="quantitative-value">488 800 ₽</div>
-                <div class="number">6</div>
-              </div>
-              <div class="stage-description">
-                <b>Общий оборотный доход со всех приемов.</b> Средний чек по
-                пациенту 4 700 ₽.
-              </div>
-            </div>
-          </div>
-          <div class="stage">
-            <div class="stage-content">
-              <div class="stage-title flex">
-                <div class="quantitative-value red">453 800 ₽</div>
-                <div class="number">7</div>
-              </div>
-              <div class="stage-description black">
-                <b>Доход минус вложения в рекламу.</b>
-              </div>
-            </div>
-          </div>
-          <div class="decor-arrow">
-            <div class="arrow">
-              <div class="line"></div>
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
+        </transition>
         <div class="want flex-column">
           <div class="pink-button">хочу так же!</div>
           <div class="description">
@@ -137,11 +358,44 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      tabsList: {
+        tab1: false,
+        tab2: true,
+        tab3: false,
+      },
+    };
+  },
+  methods: {
+    changeSelectTab(selectTabName) {
+      for (const tabIndex in this.tabsList) {
+        this.tabsList[tabIndex] = false;
+      }
+      this.tabsList[selectTabName] = true;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+.fade-enter {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.fade-leave-to {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
 .block {
+  position: relative;
+  .decor-img {
+    position: absolute;
+    right: 0;
+    top: -420px;
+    opacity: .7;
+  }
   &#block9 {
     border-bottom: 16px solid #ecc0c7;
     .bacground-color {
@@ -197,7 +451,8 @@ export default {};
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-bottom: 3px solid #ECC0C7;
+        border-bottom: 3px solid #ecc0c7;
+        cursor: pointer;
         //Стили текста
         * {
           font-style: normal;
@@ -205,12 +460,25 @@ export default {};
           line-height: 135%;
           text-align: center;
           color: #424c5c;
+          user-select: none;
         }
         .name {
           font-weight: 600;
         }
         .description {
           font-weight: 500;
+        }
+        &:hover {
+          border-bottom: 3px solid rgba(105, 111, 229, 0.7);
+          .name {
+            color: rgba(105, 111, 229, 0.7);
+          }
+        }
+        &.selected {
+          border-bottom: 3px solid #696fe5;
+          .name {
+            color: #696fe5;
+          }
         }
       }
     }

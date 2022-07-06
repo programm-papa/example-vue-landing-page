@@ -79,12 +79,12 @@
                 </svg>
               </div>
               <div class="content">
-                <div class="name">Алексей</div>
-                <div class="post">Ведущий дизайнер студии</div>
+                <div class="name">Николай</div>
+                <div class="post">Веб-дизайнер</div>
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/СашаПМ.png" alt="" />
+              <img src="@/assets/image/block11/Николай.png" alt="" />
             </div>
           </div>
           <div class="employee">
@@ -159,7 +159,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Артем.png" alt="" />
+              <img src="@/assets/image/block11/Мария.png" alt="" />
             </div>
           </div>
           <div class="employee">
@@ -176,7 +176,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Артем.png" alt="" />
+              <img src="@/assets/image/block11/Иван.png" alt="" />
             </div>
           </div>
             <div class="employee">
@@ -302,6 +302,10 @@ export default {};
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
     }
