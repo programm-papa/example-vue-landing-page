@@ -34,7 +34,7 @@
             </div>
           </div>
         </a>
-        <div class="card">
+        <a class="card" href="#block7">
           <div class="card-img-circle">
             <div class="bacground-circle">
               <img src="@/assets/image/block2/cases.png" alt="" />
@@ -64,7 +64,7 @@
               </svg>
             </div>
           </div>
-        </div>
+        </a>
         <div class="card">
           <div class="card-img-circle">
             <div class="bacground-circle">

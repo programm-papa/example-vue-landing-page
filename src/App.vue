@@ -6,6 +6,7 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import "@/assets/styles/slider-styles.css";
 export default {
   components: {
     Header,

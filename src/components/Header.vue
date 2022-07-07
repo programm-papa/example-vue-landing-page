@@ -112,11 +112,11 @@
           </div>
         </div>
         <a href="#block7">Кейсы</a>
-        <a href="#block7">Наши методики</a>
-        <a href="#block7">Результативность</a>
-        <a href="#block7">Отзывы</a>
-        <a href="#block7">Кто мы</a>
-        <a href="#block7">Контакты</a>
+        <a href="#block8">Наши методики</a>
+        <a href="#block9">Результативность</a>
+        <a href="#block10">Отзывы</a>
+        <a href="#block11">Кто мы</a>
+        <a href="#contacts">Контакты</a>
       </div>
       <!-- <div class="links">
         <a href="#block3">Услуги</a>

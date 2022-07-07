@@ -114,14 +114,17 @@
             </div>
           </div>
           <swiper
-            :slidesPerView="3"
+            :slidesPerView="'auto'"
+            :spaceBetween="30"
             :loop="true"
-            :autoplay="true"
-            :loopFillGroupWithBlank="true"
             class="swiper"
+            :autoplay="{
+              delay: 22500,
+              disableOnInteraction: false,
+            }"
             :navigation="{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: '#block6 .swiper-button-next',
+              prevEl: '#block6 .swiper-button-prev',
             }"
           >
             <swiper-slide>
@@ -614,6 +617,16 @@
               </div>
             </div>
           </div>
+          <div class="indicators-change-block">
+            <div class="title">
+              пример достигаемых результатов по ключевым показателям
+            </div>
+            <div class="indicators-change-tabs-btn">
+              <div class="btn">До старта наших работ</div>
+              <div class="btn">Через месяц</div>
+              <div class="btn">Через 4 месяца</div>
+            </div>
+          </div>
           <div class="step-description flex" id="step-description_2">
             <img
               src="@/assets/image/block6/step3/step-description-img_2.png"
@@ -681,10 +694,10 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.min.css";
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 
 // install Swiper modules
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 export default {
   components: {
@@ -1074,7 +1087,7 @@ export default {
         }
         .decor-img_1 {
           position: absolute;
-          left: 0;
+          left: calc(-170px + 170 * (100vw - 1366px) / (1920 - 1366));
           top: 0px;
         }
         .decor-img_2 {
@@ -1240,6 +1253,11 @@ export default {
                 &:active {
                   box-shadow: 0px 0px 10px 5px rgba(105, 111, 229, 0.1);
                 }
+                &.swiper-button-disabled {
+                  opacity: 1 !important;
+                  cursor: pointer !important;
+                  pointer-events: auto !important;
+                }
               }
             }
           }
@@ -1248,8 +1266,8 @@ export default {
             width: 100%;
             height: 443px;
             .swiper-wrapper {
-              .swiper-slide,
-              .swiper-slide-duplicate {
+              .swiper-slide {
+                //Некоторые стили слайдера вынесены в отдельный файл (assets/styles/slider-styles.scss)
                 img {
                   background-color: #f3f4f9;
                   width: 600px !important;
@@ -1637,6 +1655,40 @@ export default {
             }
           }
         }
+        .indicators-change-block {
+          .title {
+            margin-bottom: 30px;
+            //Стили текста
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #424c5c;
+          }
+          .indicators-change-tabs-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn {
+              cursor: pointer;
+              width: 360px;
+              height: 60px;
+              border: 2px solid #696fe6;
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              //Стили текста
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 135%;
+              color: #696fe6;
+            }
+          }
+        }
         .stages-marketing-list {
           width: 1100px;
           margin: 0 auto;
@@ -1679,7 +1731,6 @@ export default {
 }
 @media screen and (max-width: 1800px) {
   .block {
-    
   }
 }
 @media screen and (max-width: 1600px) {

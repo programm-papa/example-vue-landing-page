@@ -16,7 +16,7 @@
       <div class="examples-works flex">
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content">
+            <a class="example__content" href="https://sberuniversity.ru/ESG/course/course-page/" target="_blank">
               <svg
                 width="149"
                 height="29"
@@ -105,7 +105,7 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content">
+            <a class="example__content" href="https://yatec.ru/" target="_blank">
               <svg
                 width="141"
                 height="55"
@@ -281,7 +281,7 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content">
+            <a class="example__content" href="https://dodoktor.ru/" target="_blank">
               <svg
                 width="150"
                 height="44"
@@ -438,7 +438,7 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content">
+            <a class="example__content" href="https://prof53.ru/" target="_blank">
               <svg
                 width="150"
                 height="29"
@@ -555,7 +555,7 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content">
+            <a class="example__content" href="https://ipelectron.ru/" target="_blank">
               <svg
                 width="151"
                 height="22"

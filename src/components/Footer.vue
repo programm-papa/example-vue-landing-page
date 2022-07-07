@@ -71,7 +71,7 @@
           <a href="" class="phone">+7 (921) 697-30-02</a>
           <a href="" class="phone">info@artgorka.ru</a>
         </div>
-        <div class="adress">Великий Новгород, ул. Студенческая, 14</div>
+        <a class="adress" href="https://yandex.ru/maps/24/veliky-novgorod/?ll=31.304035%2C58.534311&mode=whatshere&whatshere%5Bpoint%5D=31.303955%2C58.534305&whatshere%5Bzoom%5D=21&z=21" target="_blank">Великий Новгород, ул. Студенческая, 14</a>
       </div>
       <div class="bottom flex">
         <p>студия дизайна, веб-разработок и маркетинга</p>

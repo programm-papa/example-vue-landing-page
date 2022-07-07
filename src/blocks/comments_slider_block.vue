@@ -34,8 +34,8 @@
           :spaceBetween="320"
           class="swiper"
           :navigation="{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '#block10 .swiper-button-next',
+            prevEl: '#block10 .swiper-button-prev',
           }"
         >
           <swiper-slide>
@@ -111,7 +111,7 @@ export default {
 <style lang="scss" scoped>
 .block {
   &#block10 {
-    padding: 120px 0px;
+    padding: 120px 0px 0px;
     .wrapper {
       position: relative;
       .title {
@@ -167,6 +167,7 @@ export default {
             height: 40px;
             background: #f3f4f9;
             border-radius: 100%;
+            user-select: none;
             &:hover {
               width: 60px;
               height: 60px;
@@ -232,7 +233,8 @@ export default {
 
       //Отдельно стили для свайпера
       .swiper-container {
-        overflow: visible !important;
+        // overflow: visible !important;
+        padding-bottom: 120px;
       }
       .swiper {
         width: 100%;
