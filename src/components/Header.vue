@@ -176,58 +176,172 @@
       </div>
     </div>
     <div class="adaptive flex">
-      <a href="#" class="logo">
-        <svg
-          width="42"
-          height="43"
-          viewBox="0 0 42 43"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+      <div class="decor">
+        <a href="#" class="logo">
+          <svg
+            width="90"
+            height="65"
+            viewBox="0 0 90 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M89.9945 7.20006V0H62.3945V7.20006H72.5945V19.2002C72.5945 22.5139 75.2808 25.2002 78.5945 25.2002H79.7945V7.20006H89.9945Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M79.7967 28.7998H72.5967V35.9999H79.7967V28.7998Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M38.3968 35.9998C40.385 35.9998 41.9968 34.388 41.9968 32.3998C41.9968 30.4116 40.385 28.7998 38.3968 28.7998C36.4086 28.7998 34.7969 30.4116 34.7969 32.3998C34.7969 34.388 36.4086 35.9998 38.3968 35.9998Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M62.3982 35.9993H57.5446C55.6864 35.9993 53.933 35.1384 52.7969 33.668L44.3984 22.7993H52.278L62.3982 35.9993Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M59.3966 12.3C59.3966 15.1957 57.5966 21 52.274 22.8C51.2146 23.2082 49.7967 23.4 48.5967 23.4C47.3967 23.4 44.3968 22.8 44.3968 22.8C49.4372 21.7571 52.1969 16.8 52.1969 12.6C52.1969 9.6 50.0969 7.2 47.0967 7.19999C44.3968 7.19999 41.9968 9.37499 41.9968 12.3V25.2H40.7969C37.4832 25.2 34.7969 22.5137 34.7969 19.2V12.3C34.7969 11.76 34.8569 9.83998 34.9769 9.29998C36.2587 4.27952 41.2039 0 46.4967 0C46.8367 0 47.0567 0 47.3967 0C54.3118 0.15367 59.3966 5.66863 59.3966 12.3Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M32.401 36H29.1119C26.7349 36 24.582 34.5967 23.6225 32.4219L16.2007 15.6L8.77946 32.4218C7.81999 34.5967 5.66703 36 3.28994 36H0.000976562L15.6012 0H16.8012L32.401 36Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M16.2006 28.7998L12.6006 35.9998H19.8006L16.2006 28.7998Z"
+              fill="#FF5555"
+            />
+            <path
+              d="M15.6247 54.8558H19.0167V48.1358H9.5127C7.30356 48.1358 5.5127 49.9267 5.5127 52.1358V60.9998C5.5127 63.2089 7.30356 64.9998 9.5127 64.9998H19.0167V58.2478H15.6247V61.8318H8.8727V51.3038H15.6247V54.8558Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M23.0664 60.9998C23.0664 63.2089 24.8573 64.9998 27.0664 64.9998H30.3624V61.8318H26.4264V41.3838H23.0664V60.9998Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M34.1202 44.7438H37.4802V41.3838H34.1202V44.7438ZM34.1202 64.9998H37.4802V48.1358H34.1202V64.9998Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M51.5359 64.9998H54.9279V52.1358C54.9279 49.9266 53.1371 48.1358 50.9279 48.1358H41.4239V64.9998H44.7839V51.3038H51.5359V64.9998Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M59.1027 43.0638C59.1027 43.9916 59.8549 44.7438 60.7827 44.7438C61.7105 44.7438 62.4627 43.9916 62.4627 43.0638C62.4627 42.136 61.7105 41.3838 60.7827 41.3838C59.8549 41.3838 59.1027 42.136 59.1027 43.0638ZM59.1027 64.9998H62.4627V48.1358H59.1027V64.9998Z"
+              fill="#696FE6"
+            />
+            <path
+              d="M76.5184 54.8558H79.9104V48.1358H70.4064C68.1973 48.1358 66.4064 49.9267 66.4064 52.1358V60.9998C66.4064 63.2089 68.1973 64.9998 70.4064 64.9998H79.9104V58.2478H76.5184V61.8318H69.7664V51.3038H76.5184V54.8558Z"
+              fill="#696FE6"
+            />
+          </svg>
+        </a>
+        <div class="dot-arrow">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <a class="special-link" href="#block3"
+          >Услуги медицинского маркетинга</a
         >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M16.265 18.0442C17.7435 18.0442 18.8934 16.8812 18.8934 15.3859C18.8934 13.8907 17.7435 12.7277 16.265 12.7277C14.7866 12.7277 13.6367 13.8907 13.6367 15.3859C13.6367 16.8812 14.8687 18.0442 16.265 18.0442ZM16.265 13.2277C15.0681 13.2277 14.1367 14.1615 14.1367 15.3859C14.1367 16.6003 15.1401 17.5442 16.265 17.5442C17.462 17.5442 18.3934 16.6104 18.3934 15.3859C18.3934 14.1615 17.462 13.2277 16.265 13.2277Z"
-            fill="#696FE5"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M26.1646 15.9178L14.6676 27.6005L11.585 24.4682L3.12891 32.4853C6.8044 38.4958 13.3611 42.5001 20.8326 42.5001C29.368 42.5001 36.7096 37.2742 39.9255 29.8016L26.1646 15.9178ZM11.5729 25.1687L3.76952 32.567C7.39627 38.2464 13.6877 42.0001 20.8326 42.0001C29.04 42.0001 36.1223 37.0462 39.3308 29.9118L26.1659 16.6294L14.6676 28.3133L11.5729 25.1687Z"
-            fill="#696FE5"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M40.3848 29.9992L40.5182 29.6893L26.1633 15.2063L14.6676 26.8876L11.5972 23.7677L2.49121 32.4009L2.70234 32.7462C6.46344 38.8966 13.1772 43.0001 20.8326 43.0001C29.5786 43.0001 37.0942 37.6452 40.3848 29.9992ZM14.6676 27.6005L26.1646 15.9178L39.9255 29.8016C36.7096 37.2742 29.368 42.5001 20.8326 42.5001C13.3611 42.5001 6.8044 38.4958 3.12891 32.4853L11.585 24.4682L14.6676 27.6005Z"
-            fill="#696FE5"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M14.1367 15.3859C14.1367 14.1615 15.0681 13.2277 16.265 13.2277C17.462 13.2277 18.3934 14.1615 18.3934 15.3859C18.3934 16.6104 17.462 17.5442 16.265 17.5442C15.1401 17.5442 14.1367 16.6003 14.1367 15.3859ZM3.76952 32.567L11.5729 25.1687L14.6676 28.3133L26.1659 16.6294L39.3308 29.9118C36.1223 37.0462 29.04 42.0001 20.8326 42.0001C13.6877 42.0001 7.39627 38.2464 3.76952 32.567Z"
-            fill="#696FE5"
-          />
-          <path
-            d="M21.001 0.5C9.39427 0.5 0.5 9.49544 0.5 21.2342C0.5 22.3035 0.578165 23.3544 0.729027 24.3815L1.22372 24.3089C1.07638 23.3058 1 22.2791 1 21.2342C1 9.76624 9.67573 1 21.001 1C32.3262 1 41 9.76618 41 21.2342C41 22.2791 40.9236 23.3058 40.7763 24.3089L41.271 24.3815C41.4218 23.3544 41.5 22.3035 41.5 21.2342C41.5 9.49544 32.6077 0.5 21.001 0.5Z"
-            fill="#696FE5"
-          />
-          <path
-            d="M0.5 21.2342C0.5 9.49544 9.39427 0.5 21.001 0.5C32.6077 0.5 41.5 9.49544 41.5 21.2342C41.5 22.3035 41.4218 23.3544 41.271 24.3815L41.7657 24.4542C41.9201 23.4031 42 22.3279 42 21.2342C42 9.22471 32.8892 0 21.001 0C9.11281 0 0 9.22465 0 21.2342C0 22.3279 0.0799506 23.4031 0.234336 24.4542L0.729027 24.3815C0.578165 23.3544 0.5 22.3035 0.5 21.2342Z"
-            fill="#696FE5"
-          />
-        </svg>
-      </a>
-      <div class="menu-btn">
-        <div class="decor">
-          <div class="decor__line"></div>
-          <div class="decor__line"></div>
-          <div class="decor__line"></div>
+      </div>
+      <div class="menu-btn" @click="openMenu = true">
+        <div class="menu-decor">
+          <div class="menu-decor__line"></div>
+          <div class="menu-decor__line"></div>
+          <div class="menu-decor__line"></div>
         </div>
       </div>
-      <div class="menu-wrapper">
-        <div class="menu"></div>
-      </div>
+      <transition name="fade" mode="out-in">
+        <div class="menu-wrapper" v-if="openMenu" key="menu-wrapper">
+          <div class="menu">
+            <div class="menu-header flex">
+              <svg
+                width="69"
+                height="50"
+                viewBox="0 0 69 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M68.9959 5.53851V0H47.8359V5.53851H55.6559V14.7694C55.6559 17.3184 57.7154 19.3848 60.2559 19.3848H61.1759V5.53851H68.9959Z"
+                  fill="white"
+                />
+                <path
+                  d="M61.1782 22.1538H55.6582V27.6923H61.1782V22.1538Z"
+                  fill="white"
+                />
+                <path
+                  d="M29.4377 27.6923C30.962 27.6923 32.1977 26.4524 32.1977 24.923C32.1977 23.3936 30.962 22.1538 29.4377 22.1538C27.9134 22.1538 26.6777 23.3936 26.6777 24.923C26.6777 26.4524 27.9134 27.6923 29.4377 27.6923Z"
+                  fill="white"
+                />
+                <path
+                  d="M47.8389 27.6919H44.1178C42.6932 27.6919 41.3489 27.0297 40.4779 25.8986L34.0391 17.5381H40.0801L47.8389 27.6919Z"
+                  fill="white"
+                />
+                <path
+                  d="M45.5375 9.46152C45.5375 11.689 44.1575 16.1538 40.0769 17.5384C39.2647 17.8525 38.1776 18 37.2576 18C36.3376 18 34.0377 17.5384 34.0377 17.5384C37.902 16.7362 40.0177 12.9231 40.0177 9.69231C40.0177 7.38461 38.4077 5.53846 36.1076 5.53846C34.0377 5.53845 32.1977 7.21153 32.1977 9.46153V19.3846H31.2777C28.7372 19.3846 26.6777 17.3182 26.6777 14.7692V9.46152C26.6777 9.04613 26.7237 7.56921 26.8157 7.15383C27.7985 3.29193 31.5898 0 35.6476 0C35.9083 0 36.077 0 36.3376 0C41.6392 0.118207 45.5375 4.36049 45.5375 9.46152Z"
+                  fill="white"
+                />
+                <path
+                  d="M24.841 27.6923H22.3194C20.497 27.6923 18.8464 26.6129 18.1108 24.9399L12.4208 12L6.73115 24.9399C5.99555 26.6128 4.34495 27.6923 2.52252 27.6923H0.000976562L11.9612 0H12.8812L24.841 27.6923Z"
+                  fill="white"
+                />
+                <path
+                  d="M12.4211 22.1538L9.66113 27.6923H15.1811L12.4211 22.1538Z"
+                  fill="#FF5555"
+                />
+                <path
+                  d="M11.9791 41.1541H14.5796V37.0278H8.22656C6.01743 37.0278 4.22656 38.8187 4.22656 41.0278V46.0001C4.22656 48.2093 6.01742 50.0001 8.22656 50.0001H14.5796V45.7695H11.9791V47.5632H6.80256V39.4648H11.9791V41.1541Z"
+                  fill="white"
+                />
+                <path
+                  d="M17.6844 46.0001C17.6844 48.2093 19.4753 50.0001 21.6844 50.0001H23.278V47.5632H20.2604V31.834H17.6844V46.0001Z"
+                  fill="white"
+                />
+                <path
+                  d="M26.159 34.4186H28.735V31.834H26.159V34.4186ZM26.159 50.0001H28.735V37.0278H26.159V50.0001Z"
+                  fill="white"
+                />
+                <path
+                  d="M39.5111 50.0001H42.1116V41.0278C42.1116 38.8187 40.3207 37.0278 38.1116 37.0278H31.7585V50.0001H34.3345V39.4648H39.5111V50.0001Z"
+                  fill="white"
+                />
+                <path
+                  d="M45.3122 33.1263C45.3122 33.8376 45.8889 34.4186 46.6002 34.4186C47.3116 34.4186 47.8882 33.8376 47.8882 33.1263C47.8882 32.4149 47.3116 31.834 46.6002 31.834C45.8889 31.834 45.3122 32.4149 45.3122 33.1263ZM45.3122 50.0001H47.8882V37.0278H45.3122V50.0001Z"
+                  fill="white"
+                />
+                <path
+                  d="M58.6643 41.1541H61.2648V37.0278H54.9118C52.7026 37.0278 50.9118 38.8187 50.9118 41.0278V46.0001C50.9118 48.2093 52.7026 50.0001 54.9118 50.0001H61.2648V45.7695H58.6643V47.5632H53.4878V39.4648H58.6643V41.1541Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="close-btn" @click="openMenu = false">
+                <div class="close-btn__line"></div>
+                <div class="close-btn__line"></div>
+              </div>
+            </div>
+            <div class="menu-links flex">
+              <div class="left">
+                <div class="dropdown-link link"></div>
+                <a href="#block7" class="link" @click="openMenu = false">Кейсы</a>
+                <a href="#block8" class="link" @click="openMenu = false">Наши методики</a>
+                <a href="#block9" class="link" @click="openMenu = false">Результативность</a>
+              </div>
+              <div class="right">
+                <a href="#block10" class="link" @click="openMenu = false">Отзывы</a>
+                <a href="#block11" class="link" @click="openMenu = false">Кто мы</a>
+                <a href="" class="link" @click="openMenu = false">Контакты</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -241,6 +355,7 @@ export default {
         secondElement: 0,
         thirdElement: 0,
       },
+      openMenu: false,
     };
   },
   computed: {
@@ -672,24 +787,194 @@ export default {
     align-items: center;
     padding: 0px 40px;
     position: relative;
+    .decor {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      .logo {
+        margin-right: 42px;
+      }
+      .dot-arrow {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-right: 25px;
+        transition: margin-right 0.3s;
+        cursor: pointer;
+        .dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 100%;
+          background-color: #696fe5;
+          transition: 0.3s;
+          &:nth-of-type(2),
+          &:nth-of-type(4) {
+            margin-left: 10px;
+          }
+          &:nth-of-type(3) {
+            margin-left: 20px;
+          }
+        }
+      }
+      .special-link {
+        width: 74px;
+        position: relative;
+        cursor: pointer;
+        //Стили текста
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        color: #5356ae;
+        transition: 0.2s;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        right: 0;
+        transform: translateX(100%);
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-left: 52px solid #ffffff;
+        border-right: 0px solid #ffffff;
+        border-bottom: 50px solid transparent;
+      }
+    }
     .menu-btn {
       margin-left: auto;
       width: 40px;
       height: 40px;
       border-radius: 100%;
       background-color: #696fe5;
-    }
-    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .menu-decor {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3px;
+        .menu-decor__line {
+          background: #ffffff;
+          border-radius: 7px;
+          &:nth-of-type(1) {
+            width: 18px;
+            height: 3px;
+          }
+          &:nth-of-type(2) {
+            width: 20px;
+            height: 1px;
+          }
+          &:nth-of-type(3) {
+            width: 18px;
+            height: 1px;
+          }
+        }
+      }
     }
     .menu-wrapper {
-      display: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 100%;
       position: absolute;
-      background-color: #333;
-      right: 40px;
-      .open {
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #5356ae;
+      .menu {
+        width: 670px;
+        margin: 0 auto;
+        .menu-header {
+          padding: 50px 0px 30px;
+          border-bottom: 1px solid #cbcdf4;
+          .close-btn {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-left: auto;
+            padding-top: 19px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: #cbcdf4;
+            cursor: pointer;
+            .close-btn__line {
+              position: absolute;
+              background-color: #5356ae;
+              width: 16px;
+              height: 2px;
+              &:nth-of-type(1) {
+                transform: rotate(45deg);
+              }
+              &:nth-of-type(2) {
+                transform: rotate(-45deg);
+              }
+            }
+          }
+        }
+        .menu-links {
+          .link {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            cursor: pointer;
+            //Стили текста
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #ffffff;
+            &:hover {
+              background-color: #696fe6;
+            }
+          }
+          .left {
+            flex: 1;
+          }
+          .right {
+            flex: 1;
+          }
+        }
+      }
+    }
+    .fade-enter-active {
+      animation: showMenu 0.3s linear;
+      @keyframes showMenu {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    .fade-enter-active {
+      animation: showMenu 0.3s linear;
+      @keyframes showMenu {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    .fade-leave-active {
+      animation: closeMenu 0.3s linear;
+      @keyframes closeMenu {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
     }
   }
@@ -697,6 +982,23 @@ export default {
   &.scroll {
     height: 100px;
     box-shadow: 0px 12px 10px -4px rgba(34, 60, 80, 0.2);
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .header {
+    &::before,
+    &::after {
+      display: none;
+    }
+    .header-wrapper {
+    }
+    .desctop {
+      display: none;
+    }
+    .adaptive {
+      display: flex !important;
+    }
   }
 }
 </style>
