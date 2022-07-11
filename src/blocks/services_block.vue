@@ -357,5 +357,48 @@ export default {
       }
     }
   }
+  @media screen and (max-width: 1365px) {
+    &#block3 {
+      .wrapper {
+        flex-direction: column;
+        gap: 90px;
+        width: 100%;
+        padding: 0px 50px;
+        .left {
+          height: 330px;
+          padding-bottom: 90px;
+          .decor-img {
+            top: 0;
+            left: 304px;
+          }
+        }
+        .right {
+          grid-template-columns: repeat(2, 300px);
+          grid-template-rows: repeat(2, 386px);
+          width: fit-content;
+          margin: 0 auto;
+          .card {
+            .rotate {
+              .item {
+                padding: 100px 20px 0px;
+              }
+              .back {
+                width: 300px;
+                padding: 80px 20px 50px;
+              }
+            }
+            &:hover {
+              .rotate {
+                .back {
+                  min-height: 386px;
+                  height: fit-content;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

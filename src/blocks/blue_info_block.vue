@@ -18,7 +18,7 @@ export default {};
     padding-top: 120px;
     .bacground-wrapper {
       width: calc(100% - 200px);
-          min-width: 1366px;
+      min-width: 1366px;
       margin: 0px auto;
       background: #696fe6;
       border-radius: 20px;
@@ -39,6 +39,18 @@ export default {};
           letter-spacing: 0.02em;
           text-transform: uppercase;
           color: #ffffff;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1365px) {
+    &#block5 {
+      .bacground-wrapper {
+        width: calc(100% - 100px);
+        min-width: auto;
+        .wrapper {
+          width: 100%;
+          padding: 15px 30px;
         }
       }
     }

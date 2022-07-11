@@ -219,5 +219,19 @@ export default {};
       }
     }
   }
+   @media screen and (max-width: 1365px) {
+    &#block2 {
+      .bacground-wrapper {
+        width: calc(100% - 100px);
+        min-width: auto;
+         padding: 60px 0px;
+        .wrapper {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+   }
 }
 </style>

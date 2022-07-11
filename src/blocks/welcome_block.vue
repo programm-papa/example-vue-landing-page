@@ -848,5 +848,22 @@ export default {
       }
     }
   }
+  @media screen and (max-width: 1365px) {
+    &#block1 {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0px 50px 60px;
+        .content {
+          margin-bottom: 40px;
+        }
+        .decor-img {
+          width: 645px;
+        }
+      }
+    }
+  }
 }
 </style>

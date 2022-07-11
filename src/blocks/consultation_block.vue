@@ -114,5 +114,30 @@ export default {};
       }
     }
   }
+  @media screen and (max-width: 1365px) {
+    &#block4 {
+      .bacground-wrapper {
+        width: calc(100% - 100px);
+        min-width: auto;
+        height: 452px;
+        .wrapper {
+          padding: 0px;
+          width: 768px;
+          .decor-img {
+            .painted-circle {
+              left: -6px;
+              bottom: auto;
+              top: 205px;
+            }
+            .border-circle {
+              left: 217px;
+              bottom: auto;
+              top: 371px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

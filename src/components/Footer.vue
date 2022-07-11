@@ -69,12 +69,12 @@
         <div class="contacts flex">
           <a href="" class="phone">+7 (8162) 55-98-32</a>
           <a href="" class="phone">+7 (921) 697-30-02</a>
-          <a href="" class="phone">info@artgorka.ru</a>
+          <a href="" class="email">info@artgorka.ru</a>
         </div>
         <a class="adress" href="https://yandex.ru/maps/24/veliky-novgorod/?ll=31.304035%2C58.534311&mode=whatshere&whatshere%5Bpoint%5D=31.303955%2C58.534305&whatshere%5Bzoom%5D=21&z=21" target="_blank">Великий Новгород, ул. Студенческая, 14</a>
       </div>
       <div class="bottom flex">
-        <p>студия дизайна, веб-разработок и маркетинга</p>
+        <p class="description">студия дизайна, веб-разработок и маркетинга</p>
         <p>© 2022, Art gorka </p>
         <a href="" class="privacy-policy">Политика обработки персональных данных</a>
       </div>
@@ -102,6 +102,35 @@ export default {};
     .bottom {
       padding-top: 40px;
       justify-content: space-between;
+    }
+  }
+  @media screen and (max-width: 1365px) {
+    .wrapper {
+      width: 100%;
+      .top {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 90px;
+        .logo {
+          margin: 0px 30px 30px 0px;
+        }
+        .contacts {
+          margin: 0px 30px 30px 0px;
+        }
+      }
+      .bottom {
+        * {
+          margin-right: 30px;
+          &.description {
+            width: 145px;
+          }
+          &.privacy-policy {
+            width: 190px;
+            text-decoration: underline;
+            text-align: right;
+          }
+        }
+      }
     }
   }
 }

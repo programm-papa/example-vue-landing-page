@@ -1,9 +1,9 @@
 <template>
-  <welcomeBlock v-if="false"/>
-  <tableСontentsBlock v-if="false"/>
-  <servicesBlock v-if="false"/>
-  <consultationBlock v-if="false"/>
-  <blueInfoBlock v-if="false"/>
+  <welcomeBlock v-if="true"/>
+  <tableСontentsBlock v-if="true"/>
+  <servicesBlock v-if="true"/>
+  <consultationBlock v-if="true"/>
+  <blueInfoBlock v-if="true"/>
   <scrollTrackingBlock v-if="false"/>
   <casesBlock v-if="false"/>
   <methodsAttractingCustomersBlock v-if="false"/>
