@@ -328,14 +328,52 @@
             </div>
             <div class="menu-links flex">
               <div class="left">
-                <div class="dropdown-link link"></div>
-                <a href="#block7" class="link" @click="openMenu = false">Кейсы</a>
-                <a href="#block8" class="link" @click="openMenu = false">Наши методики</a>
-                <a href="#block9" class="link" @click="openMenu = false">Результативность</a>
+                <div
+                  class="dropdown-link link"
+                  :class="adaptiveMenuDropDown ? 'open' : ''"
+                  @click="adaptiveMenuDropDown = !adaptiveMenuDropDown"
+                >
+                  <div class="top flex">
+                    <div class="dropdown-link__title">Услуги</div>
+                    <div class="dropdown-link__decor">
+                      <svg
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1L5 5L9 1"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="dropdown-link__content">
+                    <a href="" class="link">Ребрендинг</a
+                    ><a href="" class="link">Веб-разработка</a
+                    ><a href="" class="link">Маркетинг</a>
+                  </div>
+                </div>
+                <a href="#block7" class="link" @click="openMenu = false"
+                  >Кейсы</a
+                >
+                <a href="#block8" class="link" @click="openMenu = false"
+                  >Наши методики</a
+                >
+                <a href="#block9" class="link" @click="openMenu = false"
+                  >Результативность</a
+                >
               </div>
               <div class="right">
-                <a href="#block10" class="link" @click="openMenu = false">Отзывы</a>
-                <a href="#block11" class="link" @click="openMenu = false">Кто мы</a>
+                <a href="#block10" class="link" @click="openMenu = false"
+                  >Отзывы</a
+                >
+                <a href="#block11" class="link" @click="openMenu = false"
+                  >Кто мы</a
+                >
                 <a href="" class="link" @click="openMenu = false">Контакты</a>
               </div>
             </div>
@@ -356,6 +394,7 @@ export default {
         thirdElement: 0,
       },
       openMenu: false,
+      adaptiveMenuDropDown: false,
     };
   },
   computed: {
@@ -933,6 +972,55 @@ export default {
             color: #ffffff;
             &:hover {
               background-color: #696fe6;
+            }
+            &.dropdown-link {
+              display: block;
+              overflow: hidden;
+              height: auto;
+              max-height: 50px;
+              transition: max-height 0.3s linear;
+              .top {
+                gap: 8px;
+                height: 50px;
+                align-items: center;
+                .dropdown-link__decor {
+                  transform-origin: 50% 61%;
+                  transition: transform 0.3s linear;
+                }
+              }
+              .dropdown-link__content {
+                padding-bottom: 25px;
+                .link {
+                  padding-left: 0px;
+                  display: flex;
+                  gap: 8px;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 17px;
+                  &::before {
+                    content: "";
+                    position: relative;
+                    background-color: #ecc0c7;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100%;
+                  }
+                  &:hover {
+                    color: #CBCDF4;
+                    &::before {
+                      background-color: #cbcdf4;
+                    }
+                  }
+                }
+              }
+              &.open {
+                max-height: 335px;
+                .top {
+                  .dropdown-link__decor {
+                    transform: rotate(180deg);
+                  }
+                }
+              }
             }
           }
           .left {
