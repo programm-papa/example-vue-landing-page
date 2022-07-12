@@ -5,7 +5,7 @@
   <consultationBlock v-if="true"/>
   <blueInfoBlock v-if="true"/>
   <scrollTrackingBlock v-if="false"/>
-  <casesBlock v-if="false"/>
+  <casesBlock v-if="true"/>
   <methodsAttractingCustomersBlock v-if="false"/>
   <stagesSalesFunnel v-if="false"/>
   <commentsSliderBlock v-if="false"/>

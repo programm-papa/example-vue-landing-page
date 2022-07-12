@@ -391,7 +391,27 @@ export default {
               .rotate {
                 .back {
                   min-height: 386px;
-                  height: fit-content;
+                }
+              }
+              &:nth-of-type(1) {
+                .rotate {
+                  .back {
+                    height: 520px;
+                  }
+                }
+              }
+              &:nth-of-type(3) {
+                .rotate {
+                  .back {
+                    height: 400px;
+                  }
+                }
+              }
+              &:nth-of-type(4) {
+                .rotate {
+                  .back {
+                    height: 386px;
+                  }
                 }
               }
             }

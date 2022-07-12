@@ -121,11 +121,12 @@ export default {};
         min-width: auto;
         height: 452px;
         .wrapper {
-          padding: 0px;
-          width: 768px;
+          padding: 40px 30px;
+          width: 670px;
+          gap: 0;
           .decor-img {
             .painted-circle {
-              left: -6px;
+              left: 30px;
               bottom: auto;
               top: 205px;
             }
@@ -133,6 +134,31 @@ export default {};
               left: 217px;
               bottom: auto;
               top: 371px;
+            }
+          }
+          .decor-arrow {
+            transform: scale(-1, 1);
+            top: 33px;
+            left: 370px;
+            img {
+              transform: rotate(130deg);
+              width: 125.23px;
+              height: 100.55px;
+            }
+          }
+          .left {
+            .pink-button {
+              position: absolute;
+              left: 340px;
+              top: 300px;
+            }
+          }
+          .right {
+            .description {
+              position: absolute;
+              left: 340px;
+              top: 134px;
+              width: 316px;
             }
           }
         }

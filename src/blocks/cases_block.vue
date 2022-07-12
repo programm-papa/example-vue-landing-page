@@ -504,5 +504,23 @@ export default {};
       border-radius: 20px;
     }
   }
+  @media screen and (max-width: 1365px) {
+    &#block7 {
+      .wrapper {
+        width: 768px;
+        padding: 0px 50px;
+        .decor-img {
+          &#decor-img_1 {
+            left: 14px;
+            top: 43px;
+          }
+        }
+        .title {
+          flex-direction: column;
+          gap: 40px;
+        }
+      }
+    }
+  }
 }
 </style>
