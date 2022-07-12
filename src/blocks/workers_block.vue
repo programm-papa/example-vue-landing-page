@@ -165,27 +165,45 @@
           <div class="employee">
             <div class="employee__description flex-column">
               <div class="icon">
-               <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.5 13.25H8V23.25H0.5V13.25ZM18 7H25.5V23.25H18V7ZM9.25 0.75H16.75V23.25H9.25V0.75ZM3 15.75V20.75H5.5V15.75H3ZM11.75 3.25V20.75H14.25V3.25H11.75ZM20.5 9.5V20.75H23V9.5H20.5Z" fill="#696FE6"/>
-</svg>
-
+                <svg
+                  width="26"
+                  height="24"
+                  viewBox="0 0 26 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.5 13.25H8V23.25H0.5V13.25ZM18 7H25.5V23.25H18V7ZM9.25 0.75H16.75V23.25H9.25V0.75ZM3 15.75V20.75H5.5V15.75H3ZM11.75 3.25V20.75H14.25V3.25H11.75ZM20.5 9.5V20.75H23V9.5H20.5Z"
+                    fill="#696FE6"
+                  />
+                </svg>
               </div>
               <div class="content">
                 <div class="name">Иван</div>
-                <div class="post">Специалист по контекстной рекламе и аналитике</div>
+                <div class="post">
+                  Специалист по контекстной рекламе и аналитике
+                </div>
               </div>
             </div>
             <div class="employee__avatar">
               <img src="@/assets/image/block11/Иван.png" alt="" />
             </div>
           </div>
-            <div class="employee">
+          <div class="employee">
             <div class="employee__description flex-column">
               <div class="icon">
-               <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M30 12L22.9288 19.0712L21.1613 17.3038L26.465 12L21.1613 6.69625L22.9288 4.92875L30 12ZM3.535 12L8.83875 17.3038L7.07125 19.0712L0 12L7.07125 4.92875L8.8375 6.69625L3.535 12ZM12.235 23.25H9.575L17.765 0.75H20.425L12.235 23.25Z" fill="#696FE6"/>
-</svg>
-
+                <svg
+                  width="30"
+                  height="24"
+                  viewBox="0 0 30 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30 12L22.9288 19.0712L21.1613 17.3038L26.465 12L21.1613 6.69625L22.9288 4.92875L30 12ZM3.535 12L8.83875 17.3038L7.07125 19.0712L0 12L7.07125 4.92875L8.8375 6.69625L3.535 12ZM12.235 23.25H9.575L17.765 0.75H20.425L12.235 23.25Z"
+                    fill="#696FE6"
+                  />
+                </svg>
               </div>
               <div class="content">
                 <div class="name">Павел</div>
@@ -306,6 +324,32 @@ export default {};
             width: 100%;
             height: auto;
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1365px) {
+    &#block11 {
+      .wrapper {
+        width: 768px;
+        padding: 0px 50px;
+        .title {
+          flex-direction: column;
+          gap: 40px;
+          .description {
+            width: 100%;
+            max-width: 533px;
+          }
+          .decor-img {
+            left: -24px;
+            top: 48px;
+          }
+        }
+        .studio-employees {
+          width: fit-content;
+          margin: 0px auto;
+          grid-template-columns: repeat(2, 260px);
+          grid-template-rows: repeat(4, 323px);
         }
       }
     }

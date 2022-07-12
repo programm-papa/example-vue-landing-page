@@ -16,7 +16,11 @@
       <div class="examples-works flex">
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content" href="https://sberuniversity.ru/ESG/course/course-page/" target="_blank">
+            <a
+              class="example__content"
+              href="https://sberuniversity.ru/ESG/course/course-page/"
+              target="_blank"
+            >
               <svg
                 width="149"
                 height="29"
@@ -105,7 +109,11 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content" href="https://yatec.ru/" target="_blank">
+            <a
+              class="example__content"
+              href="https://yatec.ru/"
+              target="_blank"
+            >
               <svg
                 width="141"
                 height="55"
@@ -281,7 +289,11 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content" href="https://dodoktor.ru/" target="_blank">
+            <a
+              class="example__content"
+              href="https://dodoktor.ru/"
+              target="_blank"
+            >
               <svg
                 width="150"
                 height="44"
@@ -438,7 +450,11 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content" href="https://prof53.ru/" target="_blank">
+            <a
+              class="example__content"
+              href="https://prof53.ru/"
+              target="_blank"
+            >
               <svg
                 width="150"
                 height="29"
@@ -555,7 +571,11 @@
         </div>
         <div class="example">
           <div class="example__wrapper">
-            <a class="example__content" href="https://ipelectron.ru/" target="_blank">
+            <a
+              class="example__content"
+              href="https://ipelectron.ru/"
+              target="_blank"
+            >
               <svg
                 width="151"
                 height="22"
@@ -720,10 +740,10 @@ export default {};
           position: absolute;
           width: 20px;
           height: 20px;
-          border-radius: 100%;
-          background: #696fe6;
-          left: 370px;
-          top: -25px;
+          background: #cbcdf4;
+          transform: rotate(45deg);
+          left: 649px;
+          top: -30px;
         }
       }
       .examples-works {
@@ -761,6 +781,31 @@ export default {};
               }
             }
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1365px) {
+    &#block12 {
+      .wrapper {
+        width: 768px;
+        padding: 0px 50px;
+        .title {
+          flex-direction: column;
+          gap: 40px;
+          .description {
+            width: 100%;
+            max-width: 533px;
+          }
+          .decor-img {
+            left: -24px;
+            top: 48px;
+          }
+        }
+        .examples-works {
+          gap: 19px;
+          flex-wrap: wrap;
+          justify-content: space-around;
         }
       }
     }

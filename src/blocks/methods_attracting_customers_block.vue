@@ -231,6 +231,11 @@
           class="decor-img"
           id="decor-img_1"
         />
+        <img
+          src="@/assets/image/block8/decor_img_1_1.png"
+          class="decor-img_adaptive"
+          id="decor-img_1_1"
+        />
       </div>
       <div class="button-block flex">
         <div class="pink-button">Узнать больше</div>
@@ -529,10 +534,52 @@ export default {
             position: absolute;
           }
         }
+        .decor-img_adaptive {
+          display: none;
+        }
       }
       .button-block {
         gap: 40px;
         justify-content: flex-start;
+      }
+    }
+  }
+  @media screen and (max-width: 1365px) {
+    &#block8 {
+      .wrapper {
+        width: 768px;
+        .methods-attracting-customers {
+          height: fit-content;
+          .circles {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            grid-template-rows: repeat(3, 150px);
+            gap: 10px;
+            .big-circle{
+              display: none;
+            }
+            .method {
+              position: relative;
+               &#method_1, &#method_2, &#method_3, &#method_4, &#method_5, &#method_6 {
+                animation: none;
+               }
+            }
+          }
+          .decor-img {
+            display: none;
+          }
+          .decor-img_adaptive {
+            &#decor-img_1_1 {
+            top: -140px;
+            left: -130px;
+            position: absolute;
+            display: block;
+          }
+          }
+        }
       }
     }
   }
