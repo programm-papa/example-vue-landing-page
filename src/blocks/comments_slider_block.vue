@@ -250,5 +250,44 @@ export default {
       }
     }
   }
+  @media screen and (max-width: 1365px) {
+    &#block10 {
+      .wrapper {
+        width: 768px;
+        .decor-img {
+          position: absolute;
+          &#decor-img1 {
+            top: 321px;
+            left: -108px;
+          }
+          &#decor-img2 {
+            top: -20px;
+            left: 595px;
+          }
+        }
+        .swiper-block {
+          position: relative;
+          .wrapper {
+            position: absolute;
+            height: 100%;
+            .swiper-pagination-btn-container {
+              left: 75%;
+              top: auto;
+              bottom: 54px;
+            }
+          }
+          .swiper-content {
+            .top {
+              gap: 20px;
+            }
+          }
+        }
+        .swiper-slide {
+          width: 670px;
+          padding: 30px;
+        }
+      }
+    }
+  }
 }
 </style>

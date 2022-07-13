@@ -4,11 +4,11 @@
   <servicesBlock v-if="true"/>
   <consultationBlock v-if="true"/>
   <blueInfoBlock v-if="true"/>
-  <scrollTrackingBlock v-if="false"/>
+  <scrollTrackingBlock v-if="true"/>
   <casesBlock v-if="true"/>
   <methodsAttractingCustomersBlock v-if="true"/>
-  <stagesSalesFunnel v-if="false"/>
-  <commentsSliderBlock v-if="false"/>
+  <stagesSalesFunnel v-if="true"/>
+  <commentsSliderBlock v-if="true"/>
   <workersBlock v-if="true"/>
   <completedWorks v-if="true"/>
 </template>

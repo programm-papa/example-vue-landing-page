@@ -394,7 +394,7 @@ export default {
     position: absolute;
     right: 0;
     top: -420px;
-    opacity: .7;
+    opacity: 0.7;
   }
   &#block9 {
     border-bottom: 16px solid #ecc0c7;
@@ -618,6 +618,41 @@ export default {
         font-size: 16px;
         line-height: 150%;
         color: #424c5c;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1365px) {
+  .block {
+    &#block9 {
+      .decor-img {
+        display: none;
+      }
+      .wrapper {
+        width: 768px;
+        padding: 0px 50px;
+        .title {
+          flex-direction: column;
+          margin-bottom: 40px;
+          .description {
+            width: 100%;
+            max-width: 514px;
+          }
+          .decor-img {
+            display: block;
+            left: -30px;
+            top: 78px;
+          }
+        }
+        .funnels-variants {
+          width: 100%;
+          margin-bottom: 40px;
+          .tab {
+            .name {
+              padding: 0px 40px;
+            }
+          }
+        }
       }
     }
   }

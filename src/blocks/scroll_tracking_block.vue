@@ -113,13 +113,14 @@
               </div>
             </div>
           </div>
+          <!--Сам свайпер и фото в нем-->
           <swiper
             :slidesPerView="'auto'"
             :spaceBetween="30"
             :loop="true"
             class="swiper"
             :autoplay="{
-              delay: 22500,
+              delay: 1500,
               disableOnInteraction: false,
             }"
             :navigation="{
@@ -141,7 +142,85 @@
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide2.png"
+                src="@/assets/image/block6/step1/slide3.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide4.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide5.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide6.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide7.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide8.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide9.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide10.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide11.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide12.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide13.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide14.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide15.png"
+                alt="slide_img"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="@/assets/image/block6/step1/slide16.png"
                 alt="slide_img"
               />
             </swiper-slide>
@@ -292,7 +371,7 @@
                   </div>
                 </div>
                 <img
-                  src="@/assets/image/block6/step1/service2.png"
+                  src="@/assets/image/block6/step1/service4.png"
                   alt=""
                   class="service-img"
                 />
@@ -622,9 +701,402 @@
               пример достигаемых результатов по ключевым показателям
             </div>
             <div class="indicators-change-tabs-btn">
-              <div class="btn">До старта наших работ</div>
-              <div class="btn">Через месяц</div>
-              <div class="btn">Через 4 месяца</div>
+              <div
+                class="btn"
+                :class="activeIndicatorsTab.indicatorsTab1 ? 'select' : ''"
+              >
+                До старта наших работ
+              </div>
+              <div
+                class="btn"
+                :class="activeIndicatorsTab.indicatorsTab2 ? 'select' : ''"
+              >
+                Через месяц
+              </div>
+              <div
+                class="btn"
+                :class="activeIndicatorsTab.indicatorsTab3 ? 'select' : ''"
+              >
+                Через 4 месяца
+              </div>
+            </div>
+            <div class="indicators-tabs">
+              <div class="tab" v-if="activeIndicatorsTab.indicatorsTab1">
+                <div class="values-main-indicators flex">
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Переходы на сайт</div>
+                    <div class="indicator__value">108</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Переходы на сайт</div>
+                    <div class="indicator__value">-</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Время на сайте</div>
+                    <div class="indicator__value">01:16</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Новые посетители</div>
+                    <div class="indicator__value">14%</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="description flex">
+                  <div class="left">
+                    <p>
+                      Здесь мы приводим наиболее распространенный пример, когда
+                      клиент в момент обращения в нашу студию не смог
+                      предоставить полную статистику продаж и маркетинговых
+                      показателей по своей клинике, в связи с отсутствием
+                      рекламной кампании и скудных показателей с метрики сайта.
+                    </p>
+                    <p>
+                      Наша задача – подготовить и запустить эффективную
+                      контекстную рекламу на новый, специально подготовленный
+                      для этих целей конверсионный сайт и сделать первый срез
+                      показателей уже через месяц.
+                    </p>
+                  </div>
+                  <div class="right">
+                    <p>
+                      Как правило уже
+                      <span class="blue">через 3 - 4 месяца</span> грамотно
+                      настроенная реклама дает кратное увеличение показателей, в
+                      том числе благодаря регулярному анализу показателей,
+                      оптимизации стоимости кликов и объявлений, выделяя из них
+                      и прорабатывая далее наиболее эффективные с точки зрения
+                      конверсии.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab" v-else-if="activeIndicatorsTab.indicatorsTab2">
+                <div class="values-main-indicators flex">
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Переходы на сайт</div>
+                    <div class="indicator__value">286</div>
+                    <div class="indicator__changing-type positive">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+164,8%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Переходы на сайт</div>
+                    <div class="indicator__value">2765</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Время на сайте</div>
+                    <div class="indicator__value">02:05</div>
+                    <div class="indicator__changing-type positive">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+64,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Новые посетители</div>
+                    <div class="indicator__value">32%</div>
+                    <div class="indicator__changing-type positive">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+128,6%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-description">
+                  <div class="dropdown-open">
+                    <div class="text">Развернуть подробные показатели</div>
+                    <div class="dropdown-open__btn flex">
+                      <div class="line"></div>
+                      <div class="corner">
+                        <svg
+                          width="320"
+                          height="20"
+                          viewBox="0 0 320 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 2H140L160 17L180 2H320"
+                            stroke="#696FE6"
+                            stroke-width="4"
+                          />
+                        </svg>
+                      </div>
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-content flex">
+                    <div class="left flex-column">
+                      <div class="condition">
+                        <div class="condition__name">
+                          Стоимость рекламной кампании
+                        </div>
+                        <div class="condition__value">35.000 ₽</div>
+                      </div>
+                      <div class="condition">
+                        <div class="condition__name">
+                          Доход по итогам проведения кампании
+                        </div>
+                        <div class="condition__value">79.657 ₽</div>
+                      </div>
+                      <div class="condition">
+                        <div class="condition__name">
+                          Число обращений (звонков, заявок)
+                        </div>
+                        <div class="condition__value">43</div>
+                      </div>
+                      <div class="condition">
+                        <div class="condition__name">
+                          Людей, совершивших покупку
+                        </div>
+                        <div class="condition__value">17</div>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <div class="indicator">1</div>
+                      <div class="indicator">2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab" v-else-if="activeIndicatorsTab.indicatorsTab3">
+                <div class="values-main-indicators flex">
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Переходы на сайт</div>
+                    <div class="indicator__value">108</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Переходы на сайт</div>
+                    <div class="indicator__value">-</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Время на сайте</div>
+                    <div class="indicator__value">01:16</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                  <div class="indicator flex-column">
+                    <div class="indicator__decor"></div>
+                    <div class="indicator__title">Новые посетители</div>
+                    <div class="indicator__value">14%</div>
+                    <div class="indicator__changing-type">
+                      <svg
+                        class="corner"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                          fill="#12AB44"
+                        />
+                      </svg>
+                      <div class="value">+3,4%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="description flex">
+                  <div class="left">
+                    <p>
+                      Здесь мы приводим наиболее распространенный пример, когда
+                      клиент в момент обращения в нашу студию не смог
+                      предоставить полную статистику продаж и маркетинговых
+                      показателей по своей клинике, в связи с отсутствием
+                      рекламной кампании и скудных показателей с метрики сайта.
+                    </p>
+                    <p>
+                      Наша задача – подготовить и запустить эффективную
+                      контекстную рекламу на новый, специально подготовленный
+                      для этих целей конверсионный сайт и сделать первый срез
+                      показателей уже через месяц.
+                    </p>
+                  </div>
+                  <div class="right">
+                    <p>
+                      Как правило уже
+                      <span class="blue">через 3 - 4 месяца</span> грамотно
+                      настроенная реклама дает кратное увеличение показателей, в
+                      том числе благодаря регулярному анализу показателей,
+                      оптимизации стоимости кликов и объявлений, выделяя из них
+                      и прорабатывая далее наиболее эффективные с точки зрения
+                      конверсии.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="step-description flex" id="step-description_2">
@@ -713,6 +1185,12 @@ export default {
       step1: "",
       step2: "",
       step3: "",
+      activeIndicatorsTab: {
+        indicatorsTab1: false,
+        indicatorsTab2: true,
+        indicatorsTab3: false,
+      },
+      //Табы воронок
       activeStepList: {
         step1Active: false,
         step2Active: false,
@@ -1656,6 +2134,7 @@ export default {
           }
         }
         .indicators-change-block {
+          margin-bottom: 100px;
           .title {
             margin-bottom: 30px;
             //Стили текста
@@ -1671,11 +2150,12 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 40px;
             .btn {
               cursor: pointer;
               width: 360px;
               height: 60px;
-              border: 2px solid #696fe6;
+              border: 2px solid #cbcdf4;
               border-radius: 20px;
               display: flex;
               align-items: center;
@@ -1686,6 +2166,215 @@ export default {
               font-size: 16px;
               line-height: 135%;
               color: #696fe6;
+              &:hover {
+                border: 2px solid #696fe6;
+                color: #696fe6;
+              }
+              &.select {
+                border: 2px solid #696fe6;
+                background-color: #696fe6;
+                color: #ffffff;
+              }
+            }
+          }
+          .indicators-tabs {
+            .tab {
+              .values-main-indicators {
+                gap: 40px;
+                margin-bottom: 80px;
+                .indicator {
+                  overflow: hidden;
+                  position: relative;
+                  width: 260px;
+                  height: 260px;
+                  padding: 86px 30px 20px;
+                  background: #f9f9fd;
+                  border-bottom: 4px solid #696fe6;
+                  box-shadow: 0px 14px 30px rgba(105, 111, 229, 0.14);
+                  border-radius: 30px;
+                  .indicator__decor {
+                    position: absolute;
+                    right: -90px;
+                    top: -90px;
+                    width: 180px;
+                    height: 180px;
+                    border: 1px solid #cbcdf4;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &::before {
+                      position: relative;
+                      content: "";
+                      width: 108px;
+                      height: 108px;
+                      border: 1px solid #cbcdf4;
+                      border-radius: 100%;
+                    }
+                  }
+                  .indicator__title {
+                    margin-bottom: 5px;
+                    //Стили текста
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #696fe6;
+                  }
+                  .indicator__value {
+                    //Стили текста
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 59px;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: #424c5c;
+                  }
+                  .indicator__changing-type {
+                    margin-top: auto;
+                    gap: 6px;
+                    align-items: center;
+                    .value {
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 20px;
+                      line-height: 150%;
+                      color: #12ab44;
+                    }
+                    display: none;
+                    &.positive {
+                      display: flex;
+                    }
+                    &.negative {
+                      display: flex;
+                      .corner {
+                        transform: rotate(180deg);
+                        path {
+                          fill: #e93d3d;
+                        }
+                      }
+                      .value {
+                        color: #e93d3d;
+                      }
+                    }
+                  }
+                }
+              }
+              .description {
+                border-top: 1px solid #cbcdf4;
+                border-bottom: 1px solid #cbcdf4;
+                padding: 40px 0px;
+                gap: 40px;
+                .left,
+                .right {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  p {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #424c5c;
+                    span.blue {
+                      color: #696fe5;
+                    }
+                  }
+                }
+              }
+              .dropdown-description {
+                .dropdown-open {
+                  cursor: pointer;
+                  .text {
+                    margin-bottom: 20px;
+                    position: relative;
+                    //Стили текста
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: #696fe6;
+                    //Анимация
+                    animation: jumpText 1s linear infinite;
+                    @keyframes jumpText {
+                      0% {
+                        top: 0px;
+                      }
+                      25% {
+                        top: -6px;
+                      }
+                      50% {
+                        top: 0px;
+                      }
+                      75% {
+                        top: 6px;
+                      }
+                      100% {
+                        top: 0;
+                      }
+                    }
+                  }
+                  .dropdown-open__btn {
+                    justify-content: center;
+                    .line {
+                      flex: 2;
+                      border-top: 4px solid #696fe5;
+                    }
+                    .corner {
+                      flex: 1;
+                    }
+                  }
+                }
+                .dropdown-content {
+                  padding: 40px 0px;
+                  gap: 40px;
+                  .left {
+                    gap: 50px;
+                    min-width: 360px;
+                    .condition {
+                      .condition__name {
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: #696fe6;
+                      }
+                      .condition__value {
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 45px;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                        color: #424c5c;
+                      }
+                    }
+                  }
+                  .right {
+                    flex: 1;
+                    display: grid;
+                    gap: 30px 40px;
+                    grid-template-columns: repeat(2, 360px);
+                    grid-template-rows: repeat(3, 160px);
+                    .indicator {
+                      cursor: pointer;
+                      width: 100%;
+                      height: 100%;
+                      border: 1px solid #cbcdf4;
+                      border-radius: 20px;
+                      &:hover {
+                        background-color: #696fe6;
+                        * {
+                          color: #ffffff;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
