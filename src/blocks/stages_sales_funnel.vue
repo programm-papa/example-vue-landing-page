@@ -39,7 +39,7 @@
             @click="changeSelectTab('tab3')"
           >
             <div class="name">Крупная клиника</div>
-            <div class="description">(40-100 сотрудников)</div>
+            <div class="description">(40-100+ сотрудников)</div>
           </div>
         </div>
         <transition
@@ -55,7 +55,7 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">35.000 ₽</div>
+                  <div class="quantitative-value">20 000 ₽</div>
                   <div class="number">1</div>
                 </div>
                 <div class="stage-description">
@@ -67,46 +67,44 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">5 402</div>
+                  <div class="quantitative-value">2 402</div>
                   <div class="number">2</div>
                 </div>
                 <div class="stage-description">
-                  <b>Общее количество визитов<br />на сайт в месяц</b> из
-                  поисковых запросов, контекстной рекламы, SMM. Средняя
-                  стоимость перехода на сайт 6,47 ₽.
+                  <b>Общее количество визитов на сайт в месяц</b> из поисковых
+                  запросов и контекстной рекламы. Средняя стоимость перехода на
+                  сайт 8,33 ₽.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">356</div>
+                  <div class="quantitative-value">84</div>
                   <div class="number">3</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество обращений с сайта по запросам в месяц</b
-                  >(звонков и заявок). Средняя стоимость одного обращения 98 ₽.
-                  Конверсия посетителей сайта в обращения 3,2%.
+                  <b>Количество обращений с сайта по запросам в месяц</b>
+                  (звонков и заявок). Средняя стоимость одного обращения 238.10
+                  ₽. Конверсия посетителей сайта в обращения 3,5%.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">162</div>
+                  <div class="quantitative-value">48</div>
                   <div class="number">4</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество записей на прием.</b> Конверсия от
-                  обрабатывающих администраторов клиники из обращений в запись
-                  на прием 55%. Средняя стоимость одного обращения 202 ₽.
+                  <b>Количество записей на прием.</b> Конверсия от обрабатывающих администраторов клиники из обращений в запись на прием 55%. Средняя стоимость одной записи 432.1 ₽.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">104</div>
+                  <div class="quantitative-value">29</div>
                   <div class="number">5</div>
                 </div>
                 <div class="stage-description">
@@ -118,19 +116,18 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">488 800 ₽</div>
+                  <div class="quantitative-value">62 850 ₽</div>
                   <div class="number">6</div>
                 </div>
                 <div class="stage-description">
-                  <b>Общий оборотный доход со всех приемов.</b> Средний чек по
-                  пациенту 4 700 ₽.
+                  <b>Общий доход с приемов.</b> Средний чек покупки 2167.2 ₽
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value red">453 800 ₽</div>
+                  <div class="quantitative-value red">42 850 ₽</div>
                   <div class="number">7</div>
                 </div>
                 <div class="stage-description black">
@@ -153,7 +150,7 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">35.000 ₽</div>
+                  <div class="quantitative-value">50 000 ₽</div>
                   <div class="number">1</div>
                 </div>
                 <div class="stage-description">
@@ -165,33 +162,29 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">5 402</div>
+                  <div class="quantitative-value">3 987</div>
                   <div class="number">2</div>
                 </div>
                 <div class="stage-description">
-                  <b>Общее количество визитов<br />на сайт в месяц</b> из
-                  поисковых запросов, контекстной рекламы, SMM. Средняя
-                  стоимость перехода на сайт 6,47 ₽.
+                  <b> Общее количество визитов</b> на сайт в месяц из поисковых запросов, контекстной рекламы и SMM каналов. Средняя стоимость перехода на сайт 12,5 ₽.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">356</div>
+                  <div class="quantitative-value">242</div>
                   <div class="number">3</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество обращений с сайта по запросам в месяц</b
-                  >(звонков и заявок). Средняя стоимость одного обращения 98 ₽.
-                  Конверсия посетителей сайта в обращения 3,2%.
+                  <b>Количество обращений с сайта по запросам в месяц</b> (звонков и заявок). Средняя стоимость одного обращения 206.6 ₽. Конверсия посетителей сайта в обращения 6,07%
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">162</div>
+                  <div class="quantitative-value">118</div>
                   <div class="number">4</div>
                 </div>
                 <div class="stage-description">
@@ -204,31 +197,29 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">104</div>
+                  <div class="quantitative-value">81</div>
                   <div class="number">5</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество состоявшихся приемов</b> с учетом того, что 30%
-                  записавшихся пациентов не доходят до клиники.
+                  <b>Количество состоявшихся приемов</b> с учетом того, что 40% записавшихся пациентов не доходят до клиники.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">488 800 ₽</div>
+                  <div class="quantitative-value">296 850 ₽</div>
                   <div class="number">6</div>
                 </div>
                 <div class="stage-description">
-                  <b>Общий оборотный доход со всех приемов.</b> Средний чек по
-                  пациенту 4 700 ₽.
+                  <b>Общий доход с приемов.</b> Средний чек покупки 3664.8 ₽
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value red">453 800 ₽</div>
+                  <div class="quantitative-value red">246 850 ₽</div>
                   <div class="number">7</div>
                 </div>
                 <div class="stage-description black">
@@ -251,7 +242,7 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">35.000 ₽</div>
+                  <div class="quantitative-value">200 000 ₽</div>
                   <div class="number">1</div>
                 </div>
                 <div class="stage-description">
@@ -263,70 +254,64 @@
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">5 402</div>
+                  <div class="quantitative-value">30 890</div>
                   <div class="number">2</div>
                 </div>
                 <div class="stage-description">
-                  <b>Общее количество визитов<br />на сайт в месяц</b> из
-                  поисковых запросов, контекстной рекламы, SMM. Средняя
-                  стоимость перехода на сайт 6,47 ₽.
+                  <b>Общее количество визитов на сайт в месяц</b> из поисковых запросов, контекстной рекламы и SMM каналов. Средняя стоимость перехода на сайт 6,5 ₽.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">356</div>
+                  <div class="quantitative-value">1 287</div>
                   <div class="number">3</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество обращений с сайта по запросам в месяц</b
-                  >(звонков и заявок). Средняя стоимость одного обращения 98 ₽.
-                  Конверсия посетителей сайта в обращения 3,2%.
+                  <b>Количество обращений с сайта по запросам в месяц</b> (звонков и заявок). Средняя стоимость одного обращения 155.40 ₽. Конверсия посетителей сайта в обращения 4,17%
+
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">162</div>
+                  <div class="quantitative-value">694</div>
                   <div class="number">4</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество записей на прием.</b> Конверсия от
-                  обрабатывающих администраторов клиники из обращений в запись
-                  на прием 55%. Средняя стоимость одного обращения 202 ₽.
+                  <b>Количество записей на прием.</b> Конверсия от обрабатывающих администраторов клиники из обращений в запись на прием 54%. Средняя стоимость одной записи 216.8 ₽.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">104</div>
+                  <div class="quantitative-value">498</div>
                   <div class="number">5</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество состоявшихся приемов</b> с учетом того, что 30%
-                  записавшихся пациентов не доходят до клиники.
+                  <b>Количество состоявшихся приемов</b> с учетом того, что более 28% записавшихся пациентов не доходят до клиники.
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value">488 800 ₽</div>
+                  <div class="quantitative-value">1 295 640 ₽</div>
                   <div class="number">6</div>
                 </div>
                 <div class="stage-description">
-                  <b>Общий оборотный доход со всех приемов.</b> Средний чек по
-                  пациенту 4 700 ₽.
+                  <b> Общий доход с приемов.</b> Средний чек покупки 2600 ₽
+
                 </div>
               </div>
             </div>
             <div class="stage">
               <div class="stage-content">
                 <div class="stage-title flex">
-                  <div class="quantitative-value red">453 800 ₽</div>
+                  <div class="quantitative-value red">1 095 640 ₽</div>
                   <div class="number">7</div>
                 </div>
                 <div class="stage-description black">
