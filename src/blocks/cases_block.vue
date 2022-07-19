@@ -546,7 +546,7 @@ export default {};
             .stage {
               flex-direction: column;
               gap: 40px;
-              .left  {
+              .left {
                 gap: 65px;
                 .decor-arrow {
                   position: relative;
@@ -561,6 +561,14 @@ export default {};
         padding: 60px 0px 100px;
         min-width: auto;
         width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &#block7 {
+      .wrapper {
+        width: 100%;
+        padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
       }
     }
   }

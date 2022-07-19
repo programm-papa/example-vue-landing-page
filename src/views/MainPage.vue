@@ -1,11 +1,11 @@
 <template>
   <welcomeBlock v-if="true"/>
-  <tableСontentsBlock v-if="false"/>
-  <servicesBlock v-if="false"/>
-  <consultationBlock v-if="false"/>
-  <blueInfoBlock v-if="false"/>
+  <tableСontentsBlock v-if="true"/>
+  <servicesBlock v-if="true"/>
+  <consultationBlock v-if="true"/>
+  <blueInfoBlock v-if="true"/>
   <scrollTrackingBlock v-if="false"/>
-  <casesBlock v-if="false"/>
+  <casesBlock v-if="true"/>
   <methodsAttractingCustomersBlock v-if="false"/>
   <stagesSalesFunnel v-if="false"/>
   <commentsSliderBlock v-if="false"/>

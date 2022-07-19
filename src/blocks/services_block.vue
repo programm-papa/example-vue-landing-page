@@ -206,6 +206,12 @@ export default {
           .description {
             width: 290px;
             padding-top: 10px;
+            //Стили текста
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #424c5c;
           }
         }
         .decor-img {
@@ -281,6 +287,9 @@ export default {
                 color: #424c5c;
               }
               img {
+                background: #ffffff;
+                box-shadow: 8px 8px 8px rgba(211, 165, 184, 0.2);
+                border-radius: 20px;
                 margin-bottom: 40px;
               }
               .name {
@@ -411,6 +420,126 @@ export default {
                 .rotate {
                   .back {
                     height: 386px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &#block3 {
+      .wrapper {
+        gap: 40px;
+        padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
+        .left {
+          height: fit-content;
+          padding: 0px;
+          .title {
+            font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+            line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+            margin-bottom: 10px;
+          }
+          .point-description {
+            margin-bottom: 40px;
+            .description {
+              font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+              line-height: calc(17px + 2 * (100vw - 320px) / (767 - 320));
+            }
+          }
+          .decor-img {
+            position: relative;
+            left: 0;
+            top: 0;
+            height: calc(252px + 165 * (100vw - 320px) / (767 - 320));
+            .circles {
+              .border-circle {
+                width: calc(239px + 164 * (100vw - 320px) / (767 - 320));
+                height: calc(239px + 164 * (100vw - 320px) / (767 - 320));
+                .painted-circle {
+                  width: calc(195px + 134 * (100vw - 320px) / (767 - 320));
+                  height: calc(195px + 134 * (100vw - 320px) / (767 - 320));
+                }
+              }
+            }
+            .chart {
+              width: calc(239px + 122 * (100vw - 320px) / (767 - 320));
+              left: calc(47px + 46 * (100vw - 320px) / (767 - 320));
+            }
+          }
+        }
+        .right {
+          padding: 0px;
+
+          grid-template-columns: repeat(2, 280px);
+          grid-template-rows: repeat(2, 280px);
+          gap: 30px 20px;
+          @media screen and (max-width: 649px) {
+            grid-template-columns: repeat(1, 280px);
+            grid-template-rows: repeat(4, 280px);
+            gap: 30px;
+          }
+          .card {
+            position: relative;
+            z-index: 1;
+            .rotate {
+              .item {
+                padding: 70px 10px 0px;
+                .name {
+                  font-size: 16px;
+                  line-height: 20px;
+                }
+              }
+              .back {
+                width: 280px;
+                .title {
+                  font-size: 16px;
+                  line-height: 20px;
+                }
+                .desc {
+                  font-size: 14px;
+                  line-height: 17px;
+                  * {
+                    font-size: 14px;
+                    line-height: 17px;
+                  }
+                }
+              }
+            }
+            &:hover {
+              .rotate {
+                .back {
+                  min-height: 280px;
+                }
+              }
+              &:nth-of-type(1) {
+                .rotate {
+                  .back {
+                    height: 392px;
+                  }
+                }
+              }
+              &:nth-of-type(2) {
+                .rotate {
+                  .back {
+                    height: 392px;
+                  }
+                }
+              }
+              &:nth-of-type(3) {
+                .rotate {
+                  .back {
+                    height: 360px;
+                  }
+                }
+              }
+              &:nth-of-type(4) {
+                .rotate {
+                  .back {
+                    height: 280px;
                   }
                 }
               }

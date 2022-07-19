@@ -54,6 +54,21 @@ export default {};
         .wrapper {
           width: 100%;
           padding: 15px 30px;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &#block5 {
+      .bacground-wrapper {
+        width: calc(100% - (20px + 10 * (100vw - 320px) / (767 - 320)));
+        .wrapper {
+          padding: 15px calc(20px + 10 * (100vw - 320px) / (767 - 320));
+          .title {
+            font-size: calc(24px + 18 * (100vw - 320px) / (767 - 320));
+            line-height: 150%;
+          }
         }
       }
     }

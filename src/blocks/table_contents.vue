@@ -219,12 +219,12 @@ export default {};
       }
     }
   }
-   @media screen and (max-width: 1365px) {
+  @media screen and (max-width: 1365px) {
     &#block2 {
       .bacground-wrapper {
         width: calc(100% - 100px);
         min-width: auto;
-         padding: 60px 0px;
+        padding: 60px 0px;
         .wrapper {
           width: 100%;
           flex-direction: column;
@@ -232,6 +232,38 @@ export default {};
         }
       }
     }
-   }
+  }
+  @media screen and (max-width: 767px) {
+    &#block2 {
+      .bacground-wrapper {
+        width: calc(100% - 20px);
+        padding: 60px 0px;
+        .wrapper {
+          gap: 30px;
+          .card {
+            max-width: 360px;
+            width: 100%;
+            height: fit-content;
+            .description {
+              padding: 30px;
+              .title {
+                font-size: calc(16px + 4 * (100vw - 320px) / (767 - 320));
+                line-height: calc(21px + 4 * (100vw - 320px) / (767 - 320));
+              }
+              .text {
+                font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                line-height: calc(22px + 2 * (100vw - 320px) / (767 - 320));
+              }
+            }
+            .go-btn {
+              position: relative;
+              left: 0px;
+              bottom: -3px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

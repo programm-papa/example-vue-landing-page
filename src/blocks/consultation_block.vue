@@ -10,6 +10,7 @@
         </div>
         <div class="decor-arrow">
           <img src="@/assets/image/block4/arrow.svg" alt="" />
+          <img src="@/assets/image/block4/arrow-adaptive.svg" alt="" />
         </div>
         <div class="left">
           <div class="title">Не можете определиться с необходимой услугой?</div>
@@ -82,6 +83,11 @@ export default {};
           position: absolute;
           top: 140px;
           left: 690px;
+          img {
+            &:nth-of-type(2) {
+              display: none;
+            }
+          }
         }
         .left {
           .title {
@@ -159,6 +165,81 @@ export default {};
               left: 340px;
               top: 134px;
               width: 316px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &#block4 {
+      .bacground-wrapper {
+        width: calc(100% - (0px + 100 * (100vw - 320px) / (767 - 320)));
+        height: fit-content;
+        padding: 40px 0px 120px;
+        .wrapper {
+          flex-direction: column;
+          align-items: center;
+          left: 0;
+          width: calc(320px + 100 * (100vw - 320px) / (767 - 320));
+          padding: 0 20px;
+          .decor-img {
+            width: fit-content;
+            height: fit-content;
+            .painted-circle {
+              position: relative;
+              top: 35px;
+              left: auto;
+            }
+            .border-circle {
+              top: 218px;
+            }
+          }
+          .decor-arrow {
+            transform: scale(1, 1);
+            top: 61%;
+            left: 73%;
+            img {
+              &:nth-of-type(1) {
+                display: none;
+              }
+              &:nth-of-type(2) {
+                display: block;
+                width: 82px;
+                height: auto;
+                transform: rotate(7deg);
+              }
+            }
+          }
+          .left {
+            padding-top: 58px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title {
+              width: 100%;
+              margin-bottom: 20px;
+              //Стили текста
+              font-size: calc(20px + 6 * (100vw - 320px) / (767 - 320));
+              line-height: 150%;
+            }
+            .pink-button {
+              left: auto;
+              top: 103%;
+              width: 100%;
+              max-width: 300px;
+            }
+          }
+          .right {
+            .description {
+              width: 100%;
+              position: relative;
+              left: 0px;
+              top: 0px;
+              //Стили текста
+              font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+              line-height: 150%;
             }
           }
         }
