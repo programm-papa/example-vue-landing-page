@@ -73,48 +73,49 @@
         <div class="cloud">
           <img src="@/assets/image/top_decor-img/cloud.png" alt="" />
         </div>
-        <div class="plant">
-          <img src="@/assets/image/top_decor-img/plant.png" alt="" />
-        </div>
+
         <div class="screen">
+          <div class="plant">
+            <img src="@/assets/image/top_decor-img/plant.png" alt="" />
+          </div>
           <img src="@/assets/image/top_decor-img/screen.png" alt="" />
-        </div>
-        <div class="screen_chart">
-          <div class="line-chart">
-            <!-- Круги -->
-            <div class="circle" id="circle1"></div>
-            <div class="circle" id="circle2"></div>
-            <div class="circle" id="circle3"></div>
-            <div class="circle" id="circle4"></div>
-            <!-- Линии -->
-            <div class="line" id="line1"></div>
-            <div class="line" id="line2"></div>
-            <div class="line" id="line3"></div>
+          <div class="screen_chart">
+            <div class="line-chart">
+              <!-- Круги -->
+              <div class="circle" id="circle1"></div>
+              <div class="circle" id="circle2"></div>
+              <div class="circle" id="circle3"></div>
+              <div class="circle" id="circle4"></div>
+              <!-- Линии -->
+              <div class="line" id="line1"></div>
+              <div class="line" id="line2"></div>
+              <div class="line" id="line3"></div>
+            </div>
+            <div class="segment-chart">
+              <div class="segment" id="segment1"></div>
+              <div class="segment" id="segment2"></div>
+              <div class="segment" id="segment3"></div>
+              <div class="segment" id="segment4"></div>
+            </div>
           </div>
-          <div class="segment-chart">
-            <div class="segment" id="segment1"></div>
-            <div class="segment" id="segment2"></div>
-            <div class="segment" id="segment3"></div>
-            <div class="segment" id="segment4"></div>
+          <div class="light_bulb">
+            <img src="@/assets/image/top_decor-img/light_bulb.png" alt="" />
           </div>
-        </div>
-        <div class="light_bulb">
-          <img src="@/assets/image/top_decor-img/light_bulb.png" alt="" />
-        </div>
-        <div class="chat1">
-          <img src="@/assets/image/top_decor-img/bubble_speech.png" alt="" />
-        </div>
-        <div class="chat2">
-          <img src="@/assets/image/top_decor-img/bubble_speech.png" alt="" />
-        </div>
-        <div class="stone">
-          <img src="@/assets/image/top_decor-img/stone.png" alt="" />
-        </div>
-        <div class="purpose">
-          <img src="@/assets/image/top_decor-img/target.png" alt="" />
-        </div>
-        <div class="arrow">
-          <img src="@/assets/image/top_decor-img/arrow.png" alt="" />
+          <div class="chat1">
+            <img src="@/assets/image/top_decor-img/bubble_speech.png" alt="" />
+          </div>
+          <div class="chat2">
+            <img src="@/assets/image/top_decor-img/bubble_speech.png" alt="" />
+          </div>
+          <div class="stone">
+            <img src="@/assets/image/top_decor-img/stone.png" alt="" />
+          </div>
+          <div class="purpose">
+            <img src="@/assets/image/top_decor-img/target.png" alt="" />
+          </div>
+          <div class="arrow">
+            <img src="@/assets/image/top_decor-img/arrow.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -566,8 +567,8 @@ export default {
           position: absolute;
           width: 96px;
           height: 146px;
-          top: 240px;
-          right: 38px;
+          top: -45px;
+          right: -36px;
         }
         .screen {
           position: absolute;
@@ -578,8 +579,8 @@ export default {
           width: 142px;
           height: 123px;
           position: absolute;
-          top: 398px;
-          left: 196px;
+          top: 114px;
+          left: 105px;
           .line-chart {
             position: relative;
             .circle {
@@ -783,46 +784,51 @@ export default {
         }
         .chat1 {
           position: absolute;
-          top: 369px;
-          left: 18px;
+          top: 84px;
+          left: -73px;
         }
         .chat2 {
           transform: scaleX(-1);
           position: absolute;
-          top: 430px;
-          left: 493px;
+          top: 146px;
+          right: -81px;
         }
         .plant {
           position: absolute;
-          top: 513px;
-          left: 549px;
+          bottom: 0px;
+          right: -28px;
+          z-index: -1;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
         .stone {
           position: absolute;
-          top: 581px;
-          left: 515px;
+          bottom: -10px;
+          right: -40px;
         }
         .purpose {
           position: absolute;
-          top: 499px;
-          left: 35px;
+          bottom: -13px;
+          left: -55px;
         }
         .arrow {
           position: absolute;
-          top: 476px;
-          left: 12px;
+          bottom: 40px;
+          left: -80px;
           transform-origin: 100% 100%;
           animation: arrow_purpose 2.3s 1s linear;
           animation-fill-mode: both;
           @keyframes arrow_purpose {
             0% {
-              top: -4000px;
+              bottom: 4000px;
               left: -4000px;
               transform: rotate(-10deg);
             }
             30% {
-              top: 476px;
-              left: 12px;
+              bottom: 40px;
+              left: -80px;
               transform: rotate(0deg);
             }
             32% {
@@ -861,6 +867,192 @@ export default {
         }
         .decor-img {
           width: 645px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &#block1 {
+      .wrapper {
+        padding: 0px 0px 60px;
+        .content {
+          margin-bottom: 30px;
+          padding: 0px 10px;
+          .description {
+            width: 100%;
+            height: fit-content;
+          }
+          .title {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          .pink-button {
+            margin: 0 auto;
+          }
+        }
+        .decor-img {
+          width: calc(320px + 325 * (100vw - 320px) / (767 - 320));
+           height:  calc(366px + 278 * (100vw - 320px) / (767 - 320));
+          max-width: 645px;
+          .input-efect-wrap {
+            left: auto;
+            right: 0px;
+            width: calc(200px + 50 * (100vw - 320px) / (767 - 320));
+            .input-efect-text {
+              font-size: calc(12px + 2 * (100vw - 320px) / (767 - 320));
+              line-height: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+              letter-spacing: 0.02em;
+            }
+          }
+          .phone-image {
+            width: calc(40px + 18 * (100vw - 320px) / (767 - 320));
+            height: calc(40px + 18 * (100vw - 320px) / (767 - 320));
+            left: calc(76px + 80 * (100vw - 320px) / (767 - 320));
+            top: calc(55px - 7 * (100vw - 320px) / (767 - 320));
+          }
+          .outer-circle {
+            display: none;
+          }
+          .internal-circle {
+            display: none;
+          }
+          .doctor {
+            width: calc(106px + 93 * (100vw - 320px) / (767 - 320));
+            height: calc(154px + 169 * (100vw - 320px) / (767 - 320));
+            top: calc(78px - 45 * (100vw - 320px) / (767 - 320));
+            left: calc(92px + 103 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+            .doctor__brow_left {
+              width: calc(8px + 2 * (100vw - 320px) / (767 - 320));
+            }
+            .doctor__brow_right {
+              width: calc(8px + 2 * (100vw - 320px) / (767 - 320));
+            }
+          }
+          .cloud {
+            width: calc(65px + 68 * (100vw - 320px) / (767 - 320));
+            height: calc(32px + 34 * (100vw - 320px) / (767 - 320));
+            left: calc(5px + 45 * (100vw - 320px) / (767 - 320));
+            top: calc(165px + 45 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .screen {
+            width: calc(233px + 241 * (100vw - 320px) / (767 - 320));
+            height: calc(154px + 161 * (100vw - 320px) / (767 - 320));
+            left: calc(46px + 46 * (100vw - 320px) / (767 - 320));
+            top: calc(202px + 82 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .screen_chart {
+            width: calc(68px + 74 * (100vw - 320px) / (767 - 320));
+            height: calc(60px + 63 * (100vw - 320px) / (767 - 320));
+            left: calc(51px + 54 * (100vw - 320px) / (767 - 320));
+            top: calc(56px + 58 * (100vw - 320px) / (767 - 320));
+            .line-chart {
+              .circle {
+                width: calc(6px + 7 * (100vw - 320px) / (767 - 320));
+                height: calc(6px + 7 * (100vw - 320px) / (767 - 320));
+              }
+            }
+          }
+          .light_bulb {
+            width: calc(47px + 49 * (100vw - 320px) / (767 - 320));
+            height: calc(71px + 75 * (100vw - 320px) / (767 - 320));
+            right: calc(-18px - 18 * (100vw - 320px) / (767 - 320));
+            top: calc(-22px - 23 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .chat1 {
+            width: calc(75px + 79 * (100vw - 320px) / (767 - 320));
+            height: calc(44px + 46 * (100vw - 320px) / (767 - 320));
+            left: calc(-36px - 37 * (100vw - 320px) / (767 - 320));
+            top: calc(41px + 43 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .chat2 {
+            width: calc(75px + 79 * (100vw - 320px) / (767 - 320));
+            height: calc(44px + 46 * (100vw - 320px) / (767 - 320));
+            right: calc(-35px - 46 * (100vw - 320px) / (767 - 320));
+            top: calc(72px + 74 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .stone {
+            width: calc(54px + 56 * (100vw - 320px) / (767 - 320));
+            height: calc(19px + 22 * (100vw - 320px) / (767 - 320));
+            right: calc(-26px - 29 * (100vw - 320px) / (767 - 320));
+            bottom: calc(-7px - 6 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .purpose {
+            width: calc(62px + 64 * (100vw - 320px) / (767 - 320));
+            height: calc(56px + 62 * (100vw - 320px) / (767 - 320));
+            left: calc(-26px - 29 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .arrow {
+            width: calc(40px + 43 * (100vw - 320px) / (767 - 320));
+            height: calc(41px + 48 * (100vw - 320px) / (767 - 320));
+            left: calc(-37px - 43 * (100vw - 320px) / (767 - 320));
+            bottom: calc(19px + 21 * (100vw - 320px) / (767 - 320));
+            img {
+              width: 100%;
+              height: auto;
+            }
+            @keyframes arrow_purpose {
+              0% {
+                bottom: 4000px;
+                left: -4000px;
+                transform: rotate(-10deg);
+              }
+              30% {
+                left: calc(-37px - 43 * (100vw - 320px) / (767 - 320));
+                bottom: calc(19px + 21 * (100vw - 320px) / (767 - 320));
+                transform: rotate(0deg);
+              }
+              32% {
+                transform: rotate(-4deg);
+              }
+              36% {
+                transform: rotate(4deg);
+              }
+              38% {
+                transform: rotate(0deg);
+              }
+              40% {
+                transform: rotate(-2deg);
+              }
+              44% {
+                transform: rotate(2deg);
+              }
+              46% {
+                transform: rotate(0deg);
+              }
+            }
+          }
         }
       }
     }

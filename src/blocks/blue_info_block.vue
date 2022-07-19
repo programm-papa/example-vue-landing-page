@@ -45,6 +45,9 @@ export default {};
   }
   @media screen and (max-width: 1365px) {
     &#block5 {
+      margin-bottom: -60px;
+      z-index: 1;
+      position: relative;
       .bacground-wrapper {
         width: calc(100% - 100px);
         min-width: auto;

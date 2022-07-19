@@ -94,6 +94,11 @@
               alt=""
               class="decor-line"
             />
+            <img
+              src="@/assets/image/block6/step1/decor-line-adaptive.svg"
+              alt=""
+              class="decor-line-adaptive"
+            />
           </div>
         </div>
         <div class="swiper-block">
@@ -239,6 +244,11 @@
                   alt=""
                   class="service-img"
                 />
+                <img
+                  src="@/assets/image/block6/step1/service1-adaptive.png"
+                  alt=""
+                  class="service-img-adaptive"
+                />
                 <div class="service-content">
                   <div class="service-title">Фирменный логотип и шрифты</div>
                   <div class="price">от 25.000 руб.</div>
@@ -296,12 +306,22 @@
                   alt=""
                   class="service-img"
                 />
+                <img
+                  src="@/assets/image/block6/step1/service2-adaptive.png"
+                  alt=""
+                  class="service-img-adaptive"
+                />
               </div>
               <div class="service flex">
                 <img
                   src="@/assets/image/block6/step1/service3.png"
                   alt=""
                   class="service-img"
+                />
+                <img
+                  src="@/assets/image/block6/step1/service3-adaptive.png"
+                  alt=""
+                  class="service-img-adaptive"
                 />
                 <div class="service-content">
                   <div class="service-title">
@@ -374,6 +394,11 @@
                   src="@/assets/image/block6/step1/service4.png"
                   alt=""
                   class="service-img"
+                />
+                <img
+                  src="@/assets/image/block6/step1/service4-adaptive.png"
+                  alt=""
+                  class="service-img-adaptive"
                 />
               </div>
             </div>
@@ -644,6 +669,11 @@
             class="decor-img_1"
           />
           <img
+            src="@/assets/image/block6/step2/bref_2_decor_1-adaptive.png"
+            alt=""
+            class="decor-img_1-adaptive"
+          />
+          <img
             src="@/assets/image/block6/step2/bref_2_decor_2.svg"
             alt=""
             class="decor-img_2"
@@ -704,757 +734,805 @@
               <div
                 class="btn"
                 :class="activeIndicatorsTab.indicatorsTab1 ? 'select' : ''"
+                @click="changeActiveIndicatorsTab(1)"
               >
                 До старта наших работ
               </div>
               <div
                 class="btn"
                 :class="activeIndicatorsTab.indicatorsTab2 ? 'select' : ''"
+                @click="changeActiveIndicatorsTab(2)"
               >
                 Через месяц
               </div>
               <div
                 class="btn"
                 :class="activeIndicatorsTab.indicatorsTab3 ? 'select' : ''"
+                @click="changeActiveIndicatorsTab(3)"
               >
                 Через 4 месяца
               </div>
             </div>
             <div class="indicators-tabs">
-              <div class="tab" v-if="activeIndicatorsTab.indicatorsTab1">
-                <div class="values-main-indicators flex">
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Переходы на сайт</div>
-                    <div class="indicator__value">108</div>
-                    <div class="indicator__changing-type">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+3,4%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Переходы на сайт</div>
-                    <div class="indicator__value">-</div>
-                    <div class="indicator__changing-type">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+3,4%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Время на сайте</div>
-                    <div class="indicator__value">01:16</div>
-                    <div class="indicator__changing-type">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+3,4%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Новые посетители</div>
-                    <div class="indicator__value">14%</div>
-                    <div class="indicator__changing-type">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+3,4%</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="description flex">
-                  <div class="left">
-                    <p>
-                      Здесь мы приводим наиболее распространенный пример, когда
-                      клиент в момент обращения в нашу студию не смог
-                      предоставить полную статистику продаж и маркетинговых
-                      показателей по своей клинике, в связи с отсутствием
-                      рекламной кампании и скудных показателей с метрики сайта.
-                    </p>
-                    <p>
-                      Наша задача – подготовить и запустить эффективную
-                      контекстную рекламу на новый, специально подготовленный
-                      для этих целей конверсионный сайт и сделать первый срез
-                      показателей уже через месяц.
-                    </p>
-                  </div>
-                  <div class="right">
-                    <p>
-                      Как правило уже
-                      <span class="blue">через 3 - 4 месяца</span> грамотно
-                      настроенная реклама дает кратное увеличение показателей, в
-                      том числе благодаря регулярному анализу показателей,
-                      оптимизации стоимости кликов и объявлений, выделяя из них
-                      и прорабатывая далее наиболее эффективные с точки зрения
-                      конверсии.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="tab" v-else-if="activeIndicatorsTab.indicatorsTab2">
-                <div class="values-main-indicators flex">
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Переходы на сайт</div>
-                    <div class="indicator__value">286</div>
-                    <div class="indicator__changing-type positive">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+164,8%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Переходы на сайт</div>
-                    <div class="indicator__value">2765</div>
-                    <div class="indicator__changing-type">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+3,4%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Время на сайте</div>
-                    <div class="indicator__value">02:05</div>
-                    <div class="indicator__changing-type positive">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+64,4%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Новые посетители</div>
-                    <div class="indicator__value">32%</div>
-                    <div class="indicator__changing-type positive">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+128,6%</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="dropdown-description">
-                  <div class="dropdown-open">
-                    <div class="text">Развернуть подробные показатели</div>
-                    <div class="dropdown-open__btn flex">
-                      <div class="line"></div>
-                      <div class="corner">
+              <transition
+                name="fade"
+                mode="out-in"
+                :duration="{ enter: 300, leave: 300 }"
+              >
+                <div class="tab" v-if="activeIndicatorsTab.indicatorsTab1">
+                  <div class="values-main-indicators flex">
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__value">108</div>
+                      <div class="indicator__changing-type">
                         <svg
-                          width="320"
-                          height="20"
-                          viewBox="0 0 320 20"
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M0 2H140L160 17L180 2H320"
-                            stroke="#696FE6"
-                            stroke-width="4"
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
                           />
                         </svg>
-                      </div>
-                      <div class="line"></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-content flex">
-                    <div class="left flex-column">
-                      <div class="condition">
-                        <div class="condition__name">
-                          Стоимость рекламной кампании
-                        </div>
-                        <div class="condition__value">35.000 ₽</div>
-                      </div>
-                      <div class="condition">
-                        <div class="condition__name">
-                          Доход по итогам проведения кампании
-                        </div>
-                        <div class="condition__value">79.657 ₽</div>
-                      </div>
-                      <div class="condition">
-                        <div class="condition__name">
-                          Число обращений (звонков, заявок)
-                        </div>
-                        <div class="condition__value">43</div>
-                      </div>
-                      <div class="condition">
-                        <div class="condition__name">
-                          Людей, совершивших покупку
-                        </div>
-                        <div class="condition__value">17</div>
+                        <div class="value">+3,4%</div>
                       </div>
                     </div>
-                    <div class="right">
-                      <div class="indicator">
-                        <div class="indicator__name">CTR, %</div>
-                        <div class="indicator__value">10,34</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            CTR определяется как отношение числа кликов на
-                            баннер или рекламное объявление к числу показов,
-                            измеряется в процентах.
-                            <div class="corner"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">CPS, ₽ (цена продажи)</div>
-                        <div class="indicator__value">2058,52</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            CPS (Cost Per Salе) – плата за продажу. Оплата
-                            производится после совершения подтверждённой
-                            покупки.<br /><br />Также есть понятие CPO (cost per
-                            order) — стоимость 1 заказа товара/услуги. Отличие
-                            состоит в том, что как правило, в CPO учитываются
-                            все заказы, в том числе и не оплаченные и эти данные
-                            можно фиксировать сразу при оформлении услуги
-                            клиентом.
-                            <div class="corner"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">CPC, ₽ (цена клика)</div>
-                        <div class="indicator__value">82,64</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            CPC (cost per click) — это цена клика, сумма,
-                            которую рекламодатель платит контекстной системе за
-                            клик по объявлению, сделанный пользователем.
-                            <div class="corner"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">
-                          LTV, ₽ (доход с одного покупателя)
-                        </div>
-                        <div class="indicator__value">3210,71</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            LTV (lifetime value) – доход с одного покупателя.
-                            Измеряет совокупный денежный поток от каждого
-                            клиента.<br /><br />
-                            С одной стороны, он оказывается отличным параметром
-                            разных сегментов аудитории наряду с их
-                            демографическими и поведенческими
-                            характеристиками.<br /><br />
-                            С другой стороны, его удобно сравнивать с рекламными
-                            расходами, оценивая их целесообразность.
-                            <div class="corner"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">
-                          CPA, ₽ (цена обращения)
-                        </div>
-                        <div class="indicator__value">485,44</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            CPA (Cost per Action) — стоимость обращения:
-                            показатель, с помощью которого рекламодатель может
-                            рассчитать, во сколько ему обошлось целевое действие
-                            пользователя на сайте.<br /><br />
-                            Также можно использовать понятие CPL. Основное
-                            отличие CPA и CPL в том, что во время CPA
-                            рекламодатель получает простого, анонимного,
-                            пользователя, в случае в CPL это уже практически
-                            клиент с более конкретными данными.
-                            <div class="corner"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">
-                          ROI, % (коэффициент возврата инвестиций)
-                        </div>
-                        <div class="indicator__value">269,70%</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip roi">
-                            <div class="text"><b>Прибыль - расходы на рекламу</b> / Расходы на рекламу * 100%</div>
-                            <div class="line"></div>
-                            <div class="text"><b>184.850 руб. - 50.000 руб.</b> / 50000 руб. * 100% <b class="result">= 269,70%</b> </div>
-                            <div class="corner"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab" v-else-if="activeIndicatorsTab.indicatorsTab3">
-                <div class="values-main-indicators flex">
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Переходы на сайт</div>
-                    <div class="indicator__value">286</div>
-                    <div class="indicator__changing-type positive">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+164,8%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Переходы на сайт</div>
-                    <div class="indicator__value">2765</div>
-                    <div class="indicator__changing-type">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+3,4%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Время на сайте</div>
-                    <div class="indicator__value">02:05</div>
-                    <div class="indicator__changing-type positive">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+64,4%</div>
-                    </div>
-                  </div>
-                  <div class="indicator flex-column">
-                    <div class="indicator__decor"></div>
-                    <div class="indicator__title">Новые посетители</div>
-                    <div class="indicator__value">32%</div>
-                    <div class="indicator__changing-type positive">
-                      <svg
-                        class="corner"
-                        width="16"
-                        height="10"
-                        viewBox="0 0 16 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
-                          fill="#12AB44"
-                        />
-                      </svg>
-                      <div class="value">+128,6%</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="dropdown-description">
-                  <div class="dropdown-open">
-                    <div class="text">Развернуть подробные показатели</div>
-                    <div class="dropdown-open__btn flex">
-                      <div class="line"></div>
-                      <div class="corner">
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__value">-</div>
+                      <div class="indicator__changing-type">
                         <svg
-                          width="320"
-                          height="20"
-                          viewBox="0 0 320 20"
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M0 2H140L160 17L180 2H320"
-                            stroke="#696FE6"
-                            stroke-width="4"
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
                           />
                         </svg>
+                        <div class="value">+3,4%</div>
                       </div>
-                      <div class="line"></div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Время на сайте</div>
+                      <div class="indicator__value">01:16</div>
+                      <div class="indicator__changing-type">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+3,4%</div>
+                      </div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Новые посетители</div>
+                      <div class="indicator__value">14%</div>
+                      <div class="indicator__changing-type">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+3,4%</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="dropdown-content flex">
-                    <div class="left flex-column">
-                      <div class="condition">
-                        <div class="condition__name">
-                          Стоимость рекламной кампании
-                        </div>
-                        <div class="condition__value">35.000 ₽</div>
-                      </div>
-                      <div class="condition">
-                        <div class="condition__name">
-                          Доход по итогам проведения кампании
-                        </div>
-                        <div class="condition__value">79.657 ₽</div>
-                      </div>
-                      <div class="condition">
-                        <div class="condition__name">
-                          Число обращений (звонков, заявок)
-                        </div>
-                        <div class="condition__value">43</div>
-                      </div>
-                      <div class="condition">
-                        <div class="condition__name">
-                          Людей, совершивших покупку
-                        </div>
-                        <div class="condition__value">17</div>
-                      </div>
+                  <div class="description flex">
+                    <div class="left">
+                      <p>
+                        Здесь мы приводим наиболее распространенный пример,
+                        когда клиент в момент обращения в нашу студию не смог
+                        предоставить полную статистику продаж и маркетинговых
+                        показателей по своей клинике, в связи с отсутствием
+                        рекламной кампании и скудных показателей с метрики
+                        сайта.
+                      </p>
+                      <p>
+                        Наша задача – подготовить и запустить эффективную
+                        контекстную рекламу на новый, специально подготовленный
+                        для этих целей конверсионный сайт и сделать первый срез
+                        показателей уже через месяц.
+                      </p>
                     </div>
                     <div class="right">
-                      <div class="indicator">
-                        <div class="indicator__name">CTR, %</div>
-                        <div class="indicator__value">10,34</div>
-                        <div class="indicator__description_btn">
+                      <p>
+                        Как правило уже
+                        <span class="blue">через 3 - 4 месяца</span> грамотно
+                        настроенная реклама дает кратное увеличение показателей,
+                        в том числе благодаря регулярному анализу показателей,
+                        оптимизации стоимости кликов и объявлений, выделяя из
+                        них и прорабатывая далее наиболее эффективные с точки
+                        зрения конверсии.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab" v-else-if="activeIndicatorsTab.indicatorsTab2">
+                  <div class="values-main-indicators flex">
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__value">286</div>
+                      <div class="indicator__changing-type positive">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+164,8%</div>
+                      </div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__value">2765</div>
+                      <div class="indicator__changing-type">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+3,4%</div>
+                      </div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Время на сайте</div>
+                      <div class="indicator__value">02:05</div>
+                      <div class="indicator__changing-type positive">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+64,4%</div>
+                      </div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Новые посетители</div>
+                      <div class="indicator__value">32%</div>
+                      <div class="indicator__changing-type positive">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+128,6%</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-description">
+                    <div
+                      class="dropdown-open"
+                      @click="openDetailedMetrics = !openDetailedMetrics"
+                    >
+                      <div class="text">Развернуть подробные показатели</div>
+                      <div class="dropdown-open__btn flex">
+                        <div class="line"></div>
+                        <div class="corner">
                           <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
+                            width="320"
+                            height="20"
+                            viewBox="0 0 320 20"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
+                              d="M0 2H140L160 17L180 2H320"
+                              stroke="#696FE6"
+                              stroke-width="4"
                             />
                           </svg>
-                          <div class="tooltip">
-                            CTR определяется как отношение числа кликов на
-                            баннер или рекламное объявление к числу показов,
-                            измеряется в процентах.
-                            <div class="corner"></div>
+                        </div>
+                        <div class="line"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="dropdown-content"
+                      :class="openDetailedMetrics ? 'open' : ''"
+                    >
+                      <div class="container flex">
+                        <div class="left flex-column">
+                          <div class="condition">
+                            <div class="condition__name">
+                              Стоимость рекламной кампании
+                            </div>
+                            <div class="condition__value">35.000 ₽</div>
+                          </div>
+                          <div class="condition">
+                            <div class="condition__name">
+                              Доход по итогам проведения кампании
+                            </div>
+                            <div class="condition__value">79.657 ₽</div>
+                          </div>
+                          <div class="condition">
+                            <div class="condition__name">
+                              Число обращений (звонков, заявок)
+                            </div>
+                            <div class="condition__value">43</div>
+                          </div>
+                          <div class="condition">
+                            <div class="condition__name">
+                              Людей, совершивших покупку
+                            </div>
+                            <div class="condition__value">17</div>
                           </div>
                         </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">CPS, ₽ (цена продажи)</div>
-                        <div class="indicator__value">2058,52</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            CPS (Cost Per Salе) – плата за продажу. Оплата
-                            производится после совершения подтверждённой
-                            покупки.<br /><br />Также есть понятие CPO (cost per
-                            order) — стоимость 1 заказа товара/услуги. Отличие
-                            состоит в том, что как правило, в CPO учитываются
-                            все заказы, в том числе и не оплаченные и эти данные
-                            можно фиксировать сразу при оформлении услуги
-                            клиентом.
-                            <div class="corner"></div>
+                        <div class="right">
+                          <div class="indicator">
+                            <div class="indicator__name">CTR, %</div>
+                            <div class="indicator__value">10,34</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CTR определяется как отношение числа кликов на
+                                баннер или рекламное объявление к числу показов,
+                                измеряется в процентах.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">CPC, ₽ (цена клика)</div>
-                        <div class="indicator__value">82,64</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            CPC (cost per click) — это цена клика, сумма,
-                            которую рекламодатель платит контекстной системе за
-                            клик по объявлению, сделанный пользователем.
-                            <div class="corner"></div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              CPS, ₽ (цена продажи)
+                            </div>
+                            <div class="indicator__value">2058,52</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CPS (Cost Per Salе) – плата за продажу. Оплата
+                                производится после совершения подтверждённой
+                                покупки.<br /><br />Также есть понятие CPO (cost
+                                per order) — стоимость 1 заказа товара/услуги.
+                                Отличие состоит в том, что как правило, в CPO
+                                учитываются все заказы, в том числе и не
+                                оплаченные и эти данные можно фиксировать сразу
+                                при оформлении услуги клиентом.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">
-                          LTV, ₽ (доход с одного покупателя)
-                        </div>
-                        <div class="indicator__value">3210,71</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            LTV (lifetime value) – доход с одного покупателя.
-                            Измеряет совокупный денежный поток от каждого
-                            клиента.<br /><br />
-                            С одной стороны, он оказывается отличным параметром
-                            разных сегментов аудитории наряду с их
-                            демографическими и поведенческими
-                            характеристиками.<br /><br />
-                            С другой стороны, его удобно сравнивать с рекламными
-                            расходами, оценивая их целесообразность.
-                            <div class="corner"></div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              CPC, ₽ (цена клика)
+                            </div>
+                            <div class="indicator__value">122,38</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CPC (cost per click) — это цена клика, сумма,
+                                которую рекламодатель платит контекстной системе
+                                за клик по объявлению, сделанный пользователем.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">
-                          CPA, ₽ (цена обращения)
-                        </div>
-                        <div class="indicator__value">485,44</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip">
-                            CPA (Cost per Action) — стоимость обращения:
-                            показатель, с помощью которого рекламодатель может
-                            рассчитать, во сколько ему обошлось целевое действие
-                            пользователя на сайте.<br /><br />
-                            Также можно использовать понятие CPL. Основное
-                            отличие CPA и CPL в том, что во время CPA
-                            рекламодатель получает простого, анонимного,
-                            пользователя, в случае в CPL это уже практически
-                            клиент с более конкретными данными.
-                            <div class="corner"></div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              LTV, ₽ (доход с одного покупателя)
+                            </div>
+                            <div class="indicator__value">2626,88</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                LTV (lifetime value) – доход с одного
+                                покупателя. Измеряет совокупный денежный поток
+                                от каждого клиента.<br /><br />
+                                С одной стороны, он оказывается отличным
+                                параметром разных сегментов аудитории наряду с
+                                их демографическими и поведенческими
+                                характеристиками.<br /><br />
+                                С другой стороны, его удобно сравнивать с
+                                рекламными расходами, оценивая их
+                                целесообразность.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="indicator">
-                        <div class="indicator__name">
-                          ROI, % (коэффициент возврата инвестиций)
-                        </div>
-                        <div class="indicator__value">269,70%</div>
-                        <div class="indicator__description_btn">
-                          <svg
-                            width="8"
-                            height="13"
-                            viewBox="0 0 8 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
-                              fill="#696FE6"
-                            />
-                          </svg>
-                          <div class="tooltip roi">
-                            <div class="text"><b>Прибыль - расходы на рекламу</b> / Расходы на рекламу * 100%</div>
-                            <div class="line"></div>
-                            <div class="text"><b>184.850 руб. - 50.000 руб.</b> / 50000 руб. * 100% <b class="result">= 269,70%</b> </div>
-                            <div class="corner"></div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              CPA, ₽ (цена обращения)
+                            </div>
+                            <div class="indicator__value">813,95</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CPA (Cost per Action) — стоимость обращения:
+                                показатель, с помощью которого рекламодатель
+                                может рассчитать, во сколько ему обошлось
+                                целевое действие пользователя на сайте.<br /><br />
+                                Также можно использовать понятие CPL. Основное
+                                отличие CPA и CPL в том, что во время CPA
+                                рекламодатель получает простого, анонимного,
+                                пользователя, в случае в CPL это уже практически
+                                клиент с более конкретными данными.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              ROI, % (коэффициент возврата инвестиций)
+                            </div>
+                            <div class="indicator__value">127,59%</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip roi">
+                                <div class="text">
+                                  <b>Прибыль - расходы на рекламу</b> / Расходы
+                                  на рекламу * 100%
+                                </div>
+                                <div class="line"></div>
+                                <div class="text">
+                                  <b>184.850 руб. - 50.000 руб.</b> / 50000 руб.
+                                  * 100% <b class="result">= 269,70%</b>
+                                </div>
+                                <div class="corner"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                <div class="tab" v-else-if="activeIndicatorsTab.indicatorsTab3">
+                  <div class="values-main-indicators flex">
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__value">798</div>
+                      <div class="indicator__changing-type positive">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+638,8%</div>
+                      </div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__value">5812</div>
+                      <div class="indicator__changing-type">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+110,2%</div>
+                      </div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Время на сайте</div>
+                      <div class="indicator__value">03:18</div>
+                      <div class="indicator__changing-type positive">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+160,5%</div>
+                      </div>
+                    </div>
+                    <div class="indicator flex-column">
+                      <div class="indicator__decor"></div>
+                      <div class="indicator__title">Новые посетители</div>
+                      <div class="indicator__value">59%</div>
+                      <div class="indicator__changing-type positive">
+                        <svg
+                          class="corner"
+                          width="16"
+                          height="10"
+                          viewBox="0 0 16 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.86074 0.495299C7.46173 -0.1651 8.53827 -0.1651 9.13926 0.4953L15.6292 7.62688C16.4745 8.55574 15.7812 10 14.49 10H1.51002C0.218809 10 -0.474532 8.55573 0.370761 7.62688L6.86074 0.495299Z"
+                            fill="#12AB44"
+                          />
+                        </svg>
+                        <div class="value">+321,4%</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-description">
+                    <div
+                      class="dropdown-open"
+                      @click="openDetailedMetrics = !openDetailedMetrics"
+                    >
+                      <div class="text">Развернуть подробные показатели</div>
+                      <div class="dropdown-open__btn flex">
+                        <div class="line"></div>
+                        <div class="corner">
+                          <svg
+                            width="320"
+                            height="20"
+                            viewBox="0 0 320 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 2H140L160 17L180 2H320"
+                              stroke="#696FE6"
+                              stroke-width="4"
+                            />
+                          </svg>
+                        </div>
+                        <div class="line"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="dropdown-content"
+                      :class="openDetailedMetrics ? 'open' : ''"
+                    >
+                      <div class="container flex">
+                        <div class="left flex-column">
+                          <div class="condition">
+                            <div class="condition__name">
+                              Стоимость рекламной кампании
+                            </div>
+                            <div class="condition__value">50.000 ₽</div>
+                          </div>
+                          <div class="condition">
+                            <div class="condition__name">
+                              Доход по итогам проведения кампании
+                            </div>
+                            <div class="condition__value">241.485 ₽</div>
+                          </div>
+                          <div class="condition">
+                            <div class="condition__name">
+                              Число обращений (звонков, заявок)
+                            </div>
+                            <div class="condition__value">149</div>
+                          </div>
+                          <div class="condition">
+                            <div class="condition__name">
+                              Людей, совершивших покупку
+                            </div>
+                            <div class="condition__value">59</div>
+                          </div>
+                        </div>
+                        <div class="right">
+                          <div class="indicator">
+                            <div class="indicator__name">CTR, %</div>
+                            <div class="indicator__value">10,34</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CTR определяется как отношение числа кликов на
+                                баннер или рекламное объявление к числу показов,
+                                измеряется в процентах.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              CPS, ₽ (цена продажи)
+                            </div>
+                            <div class="indicator__value">2058,52</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CPS (Cost Per Salе) – плата за продажу. Оплата
+                                производится после совершения подтверждённой
+                                покупки.<br /><br />Также есть понятие CPO (cost
+                                per order) — стоимость 1 заказа товара/услуги.
+                                Отличие состоит в том, что как правило, в CPO
+                                учитываются все заказы, в том числе и не
+                                оплаченные и эти данные можно фиксировать сразу
+                                при оформлении услуги клиентом.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              CPC, ₽ (цена клика)
+                            </div>
+                            <div class="indicator__value">82,64</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CPC (cost per click) — это цена клика, сумма,
+                                которую рекламодатель платит контекстной системе
+                                за клик по объявлению, сделанный пользователем.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              LTV, ₽ (доход с одного покупателя)
+                            </div>
+                            <div class="indicator__value">3210,71</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                LTV (lifetime value) – доход с одного
+                                покупателя. Измеряет совокупный денежный поток
+                                от каждого клиента.<br /><br />
+                                С одной стороны, он оказывается отличным
+                                параметром разных сегментов аудитории наряду с
+                                их демографическими и поведенческими
+                                характеристиками.<br /><br />
+                                С другой стороны, его удобно сравнивать с
+                                рекламными расходами, оценивая их
+                                целесообразность.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              CPA, ₽ (цена обращения)
+                            </div>
+                            <div class="indicator__value">485,44</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip">
+                                CPA (Cost per Action) — стоимость обращения:
+                                показатель, с помощью которого рекламодатель
+                                может рассчитать, во сколько ему обошлось
+                                целевое действие пользователя на сайте.<br /><br />
+                                Также можно использовать понятие CPL. Основное
+                                отличие CPA и CPL в том, что во время CPA
+                                рекламодатель получает простого, анонимного,
+                                пользователя, в случае в CPL это уже практически
+                                клиент с более конкретными данными.
+                                <div class="corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="indicator">
+                            <div class="indicator__name">
+                              ROI, % (коэффициент возврата инвестиций)
+                            </div>
+                            <div class="indicator__value">269,70%</div>
+                            <div class="indicator__description_btn">
+                              <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M4.4 8.4798H2.56C2.56 8.05313 2.656 7.65313 2.848 7.2798C3.04 6.8958 3.27467 6.57046 3.552 6.3038C3.82933 6.02646 4.10667 5.76513 4.384 5.5198C4.66133 5.2638 4.896 4.98646 5.088 4.6878C5.28 4.38913 5.376 4.08513 5.376 3.7758C5.376 3.33846 5.22133 2.99713 4.912 2.7518C4.60267 2.50646 4.18667 2.3838 3.664 2.3838C3.16267 2.3838 2.73067 2.5118 2.368 2.7678C2.00533 3.0238 1.744 3.38646 1.584 3.8558L0 2.9598C0.288 2.21313 0.762667 1.6318 1.424 1.2158C2.096 0.799797 2.85867 0.591797 3.712 0.591797C4.672 0.591797 5.49333 0.863797 6.176 1.4078C6.86933 1.9518 7.216 2.7038 7.216 3.6638C7.216 4.10113 7.12 4.51713 6.928 4.9118C6.736 5.30646 6.50133 5.64246 6.224 5.9198C5.94667 6.19713 5.66933 6.46913 5.392 6.7358C5.11467 6.9918 4.88 7.26913 4.688 7.5678C4.496 7.86646 4.4 8.17046 4.4 8.4798ZM3.488 9.7918C3.81867 9.7918 4.10133 9.90913 4.336 10.1438C4.57067 10.3785 4.688 10.6611 4.688 10.9918C4.688 11.3225 4.57067 11.6051 4.336 11.8398C4.10133 12.0745 3.81867 12.1918 3.488 12.1918C3.15733 12.1918 2.87467 12.0745 2.64 11.8398C2.40533 11.6051 2.288 11.3225 2.288 10.9918C2.288 10.6611 2.4 10.3785 2.624 10.1438C2.85867 9.90913 3.14667 9.7918 3.488 9.7918Z"
+                                  fill="#696FE6"
+                                />
+                              </svg>
+                              <div class="tooltip roi">
+                                <div class="text">
+                                  <b>Прибыль - расходы на рекламу</b> / Расходы
+                                  на рекламу * 100%
+                                </div>
+                                <div class="line"></div>
+                                <div class="text">
+                                  <b>184.850 руб. - 50.000 руб.</b> / 50000 руб.
+                                  * 100% <b class="result">= 269,70%</b>
+                                </div>
+                                <div class="corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </transition>
             </div>
           </div>
           <div class="step-description flex" id="step-description_2">
@@ -1545,10 +1623,12 @@ export default {
       step3: "",
       //Табы результатов по ключевым показателям
       activeIndicatorsTab: {
-        indicatorsTab1: false,
-        indicatorsTab2: false ,
-        indicatorsTab3: true ,
+        indicatorsTab1: true,
+        indicatorsTab2: false,
+        indicatorsTab3: false,
       },
+      //Открыт ли блок подробных показателей
+      openDetailedMetrics: false,
       //Табы воронок
       activeStepList: {
         step1Active: false,
@@ -1696,11 +1776,18 @@ export default {
       }
       this.prevScrollPosition = window.scrollY;
     },
+    changeActiveIndicatorsTab(tabId) {
+      Object.keys(this.activeIndicatorsTab).forEach((key) => {
+        if ("indicatorsTab" + tabId == key) {
+          this.activeIndicatorsTab[key] = true;
+        } else {
+          this.activeIndicatorsTab[key] = false;
+        }
+        this.scrollProgress();
+      });
+    },
   },
   computed: {
-    // height: () => {
-    //   return;
-    // },
     openSpecialMenu: {
       get() {
         return this.$store.state.openSpecialMenuStatus;
@@ -1743,6 +1830,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fade-enter {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.fade-leave-to {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
 .block {
   position: relative;
   overflow: hidden;
@@ -1927,6 +2022,9 @@ export default {
           left: calc(-170px + 170 * (100vw - 1366px) / (1920 - 1366));
           top: 0px;
         }
+        .decor-img_1-adaptive {
+          display: none;
+        }
         .decor-img_2 {
           position: absolute;
           left: 43%;
@@ -2051,6 +2149,9 @@ export default {
             position: absolute;
             top: 91px;
           }
+          .decor-line-adaptive {
+            display: none;
+          }
         }
         .swiper-block {
           margin-top: -40px;
@@ -2138,6 +2239,9 @@ export default {
             gap: 40px;
             .service-img {
               height: 100%;
+            }
+            .service-img-adaptive {
+              display: none;
             }
             .service-content {
               padding: 40px 0px;
@@ -2394,6 +2498,13 @@ export default {
                 &:nth-of-type(3) {
                   .deployable-content-wrapper {
                     max-height: 105px;
+                  }
+                }
+                .deployable-title {
+                  .indicator {
+                    .triangle {
+                      transform: rotate(180deg);
+                    }
                   }
                 }
               }
@@ -2688,151 +2799,170 @@ export default {
                   }
                 }
                 .dropdown-content {
-                  padding: 40px 0px;
-                  border-bottom: 4px solid #696fe6;
-                  gap: 40px;
-                  .left {
-                    gap: 50px;
-                    min-width: 360px;
-                    .condition {
-                      .condition__name {
-                        font-style: normal;
-                        font-weight: 800;
-                        font-size: 16px;
-                        line-height: 150%;
-                        color: #696fe6;
-                      }
-                      .condition__value {
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 36px;
-                        line-height: 45px;
-                        letter-spacing: 0.02em;
-                        text-transform: uppercase;
-                        color: #424c5c;
+                  max-height: 0px;
+                  overflow: hidden;
+                  transition: max-height 0.5s;
+                  .container {
+                    padding: 40px 0px;
+                    border-bottom: 4px solid #696fe6;
+                    gap: 40px;
+                    .left {
+                      gap: 50px;
+                      min-width: 360px;
+                      .condition {
+                        .condition__name {
+                          font-style: normal;
+                          font-weight: 800;
+                          font-size: 16px;
+                          line-height: 150%;
+                          color: #696fe6;
+                        }
+                        .condition__value {
+                          font-style: normal;
+                          font-weight: 700;
+                          font-size: 36px;
+                          line-height: 45px;
+                          letter-spacing: 0.02em;
+                          text-transform: uppercase;
+                          color: #424c5c;
+                        }
                       }
                     }
-                  }
-                  .right {
-                    flex: 1;
-                    display: grid;
-                    gap: 30px 40px;
-                    grid-template-columns: repeat(2, 360px);
-                    grid-template-rows: repeat(3, 160px);
-                    .indicator {
-                      position: relative;
-                      padding: 20px 30px;
-                      width: 100%;
-                      height: 100%;
-                      border: 1px solid #cbcdf4;
-                      display: flex;
-                      flex-direction: column;
-                      border-radius: 20px;
-                      .indicator__name {
-                        padding-right: 40px;
-                        //Стили текста
-                        font-style: normal;
-                        font-weight: 800;
-                        font-size: 16px;
-                        line-height: 150%;
-                        color: #696fe6;
-                      }
-                      .indicator__value {
-                        //Стили текста
-                        margin-top: auto;
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 48px;
-                        line-height: 59px;
+                    .right {
+                      flex: 1;
+                      display: grid;
+                      gap: 30px 40px;
+                      grid-template-columns: repeat(2, 360px);
+                      grid-template-rows: repeat(3, 160px);
+                      .indicator {
+                        position: relative;
+                        padding: 20px 30px;
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid #cbcdf4;
                         display: flex;
-                        align-items: flex-end;
-                        letter-spacing: 0.02em;
-                        text-transform: uppercase;
-                        color: #696fe6;
-                      }
-                      .indicator__description_btn {
-                        cursor: pointer;
-                        position: absolute;
-                        right: 30px;
-                        top: 20px;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 100%;
-                        background-color: #dfe0f7;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        .tooltip {
-                          display: none;
-                          position: absolute;
-                          width: 380px;
-                          height: fit-content;
-                          padding: 20px 30px;
-                          background: #ffffff;
-                          box-shadow: 0px 14px 30px rgba(105, 111, 229, 0.14);
-                          border-radius: 20px;
-                          z-index: 1;
-                          transform: translateY(calc(-100% - 15px));
-                          left: -320px;
-                          top: 0px;
+                        flex-direction: column;
+                        border-radius: 20px;
+                        .indicator__name {
+                          padding-right: 40px;
                           //Стили текста
                           font-style: normal;
-                          font-weight: 500;
-                          font-size: 14px;
-                          line-height: 17px;
-                          color: #424c5c;
-                          .corner {
-                            border-left: 70px solid transparent;
-                            border-right: 0px solid transparent;
-                            border-top: 30px solid #ffffff;
-                            width: 70px;
-                            transform: skew(20deg);
+                          font-weight: 800;
+                          font-size: 16px;
+                          line-height: 150%;
+                          color: #696fe6;
+                        }
+                        .indicator__value {
+                          //Стили текста
+                          margin-top: auto;
+                          font-style: normal;
+                          font-weight: 700;
+                          font-size: 48px;
+                          line-height: 59px;
+                          display: flex;
+                          align-items: flex-end;
+                          letter-spacing: 0.02em;
+                          text-transform: uppercase;
+                          color: #696fe6;
+                        }
+                        .indicator__description_btn {
+                          cursor: pointer;
+                          position: absolute;
+                          right: 30px;
+                          top: 20px;
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 100%;
+                          background-color: #dfe0f7;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          .tooltip {
+                            display: none;
                             position: absolute;
-                            right: 54px;
-                            bottom: -20px;
-                          }
-                          &.roi {
-                            left: -410px;
-                            width: 468px;
-                            flex-direction: column;
-                            align-items: flex-end;
-                            gap: 10px;
-                            .text {
-                              font-size: 14px;
-                              font-weight: 400;
-                              line-height: 21px;
-                              letter-spacing: 0em;
-                              text-align: left;
-                              color: #424c5c;
-                              b {
-                                color: #696fe6;
-                                &.result {
-                                  font-weight: 800;
+                            width: 380px;
+                            height: fit-content;
+                            padding: 20px 30px;
+                            background: #ffffff;
+                            box-shadow: 0px 14px 30px rgba(105, 111, 229, 0.14);
+                            border-radius: 20px;
+                            z-index: 1;
+                            transform: translateY(calc(-100% - 15px));
+                            left: -320px;
+                            top: 0px;
+                            //Стили текста
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #424c5c;
+                            .corner {
+                              border-left: 70px solid transparent;
+                              border-right: 0px solid transparent;
+                              border-top: 30px solid #ffffff;
+                              width: 70px;
+                              transform: skew(20deg);
+                              position: absolute;
+                              right: 54px;
+                              bottom: -20px;
+                            }
+                            &.roi {
+                              left: -410px;
+                              width: 468px;
+                              flex-direction: column;
+                              align-items: flex-end;
+                              gap: 10px;
+                              .text {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 21px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                color: #424c5c;
+                                b {
                                   color: #696fe6;
+                                  &.result {
+                                    font-weight: 800;
+                                    color: #696fe6;
+                                  }
                                 }
                               }
+                              .line {
+                                width: 100%;
+                                height: 1px;
+                                background: #cbcdf4;
+                              }
                             }
-                            .line {
-                              width: 100%;
-                              height: 1px;
-                              background: #CBCDF4;
+                          }
+                          &:hover {
+                            .tooltip {
+                              display: block;
+                              &.roi {
+                                display: flex;
+                              }
                             }
                           }
                         }
                         &:hover {
-                          .tooltip {
-                            display: block;
-                            &.roi {
-                              display: flex;
-                            }
+                          background-color: #696fe6;
+                          * {
+                            color: #ffffff;
                           }
                         }
                       }
-                      &:hover {
-                        background-color: #696fe6;
-                        * {
-                          color: #ffffff;
-                        }
+                    }
+                  }
+                  &.open {
+                    max-height: 624px;
+                    overflow: visible;
+                    animation: overflowDuration 0.6s linear;
+                    @keyframes overflowDuration {
+                      0% {
+                        overflow: hidden;
+                      }
+
+                      100% {
+                        overflow: hidden;
                       }
                     }
                   }
@@ -2897,6 +3027,255 @@ export default {
         .title {
           .step-number {
             left: -85px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1365px) {
+  .viewing-status {
+    display: none;
+  }
+  .steps-way {
+    display: none;
+  }
+  .block {
+    &#block6 {
+      .breaf {
+        &#breaf-one {
+          .decor {
+            left: 0px;
+            .circle {
+              display: none;
+            }
+            .special-decor {
+              left: 50px;
+            }
+          }
+          .bacground-wrapper {
+            width: calc(100% - 100px);
+            .wrapper {
+              gap: 33px;
+            }
+            .decor-img_1 {
+              right: -350px;
+            }
+          }
+        }
+        &#breaf-two {
+          .decor-img_1 {
+            display: none;
+          }
+          .decor-img_1-adaptive {
+            display: block;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+      .step {
+        .title {
+          .step-number {
+            display: none;
+          }
+        }
+        &#step-one {
+          .wrapper {
+            background-size: cover;
+            width: 768px;
+            padding: 0px 50px;
+            .rebranding-comprehensive {
+              .rebranding-comprehensive__description {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+                .row {
+                  left: 0px !important;
+                  .circles {
+                    .border-circle {
+                      &.external {
+                        width: 180px;
+                        height: 180px;
+                      }
+                      &.internal {
+                        width: 150px;
+                        height: 150px;
+                      }
+                    }
+                  }
+                  .description-text {
+                    width: fit-content;
+                  }
+                  &#rebranding-comprehensive__description_row1 {
+                    img {
+                      width: 90px;
+                      height: auto;
+                    }
+                  }
+                  &#rebranding-comprehensive__description_row2 {
+                    img {
+                      width: 62px;
+                      height: auto;
+                    }
+                  }
+                  &#rebranding-comprehensive__description_row3 {
+                    img {
+                      width: 148px;
+                      height: auto;
+                    }
+                  }
+                }
+              }
+              .decor-line {
+                display: none;
+              }
+              .decor-line-adaptive {
+                display: block;
+                position: absolute;
+                top: 230px;
+              }
+            }
+            .complex-services {
+              .services-list {
+                .service {
+                  gap: 0px;
+                  width: 100%;
+                  height: fit-content;
+                  flex-direction: column;
+                  .service-img {
+                    display: none;
+                  }
+                  .service-img-adaptive {
+                    display: block;
+                    height: auto;
+                    width: 570px;
+                  }
+                  .service-content {
+                    width: 100%;
+                    padding: 40px 110px 50px 55px;
+                  }
+                  &:nth-of-type(2n) {
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#step-two {
+          .wrapper {
+            width: 758px;
+            padding: 0px 50px;
+            .step-description {
+              img {
+                position: relative;
+                left: -50px;
+                margin-right: -50px;
+              }
+            }
+          }
+          .site-features-container {
+            width: calc(758px - 100px);
+            margin: 0px auto;
+            padding: 60px 50px;
+            overflow: hidden;
+            .decor-img {
+              &#decor-img_1 {
+                display: none;
+              }
+              &#decor-img_2 {
+                height: 300px;
+                right: -77px;
+                top: -9px;
+                transform: rotate(317deg);
+              }
+            }
+            .deployable-blocks-list {
+              .deployable-item {
+                width: 100%;
+                .deployable-title {
+                  .indicator {
+                    width: 60px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#step-three {
+          .wrapper {
+            width: 768px;
+            padding: 0px 50px;
+            .title {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 40px;
+            }
+            .step-description {
+              align-items: flex-start;
+              .content {
+                .description__text {
+                  width: fit-content;
+                }
+              }
+            }
+            .indicators-change-block {
+              .title {
+                width: 400px;
+              }
+              .indicators-change-tabs-btn {
+                .btn {
+                  width: 210px;
+                }
+              }
+              .indicators-tabs {
+                .tab {
+                  .values-main-indicators {
+                    display: grid;
+                    gap: 30px;
+                    grid-template-columns: 320px 320px;
+                    grid-template-rows: 180px 180px;
+                    .indicator {
+                      width: 100%;
+                      height: 100%;
+                      padding: 30px 30px 10px;
+                    }
+                  }
+                  .dropdown-description {
+                    .dropdown-content {
+                      .container {
+                        flex-direction: column;
+                        .left {
+                          display: grid;
+                          grid-template-columns: 320px 320px;
+                        }
+                        .right {
+                          gap: 30px 30px;
+                          grid-template-columns: repeat(2, 320px);
+                          .indicator {
+                            .indicator__description_btn {
+                              .tooltip {
+                                width: 320px;
+                                left: -259px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      &.open {
+                        max-height: 863px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .stages-marketing-list {
+              width: 100%;
+              gap: 30px;
+            }
           }
         }
       }
