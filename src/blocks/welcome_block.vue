@@ -50,15 +50,16 @@
           <div class="eye img-wrap">
             <img src="@/assets/image/top_decor-img/eye.png" alt="" />
           </div>
-        </div>
-        <div class="internal-circle">
-          <div class="animated-bell">
-            <div class="bell img-wrap">
-              <img src="@/assets/image/top_decor-img/bell.png" alt="" />
+          <div class="internal-circle">
+            <div class="animated-bell">
+              <div class="bell img-wrap">
+                <img src="@/assets/image/top_decor-img/bell.png" alt="" />
+              </div>
+              <div class="notification">{{ notificationNumber }}</div>
             </div>
-            <div class="notification">{{ notificationNumber }}</div>
           </div>
         </div>
+
         <div class="doctor">
           <img src="@/assets/image/top_decor-img/doctor.png" alt="" />
           <img
@@ -415,8 +416,6 @@ export default {
         }
         .internal-circle {
           position: absolute;
-          top: 182px;
-          left: 254px;
           width: 236px;
           height: 236px;
           border: 1px solid #e7e7e7;
@@ -874,17 +873,21 @@ export default {
   @media screen and (max-width: 767px) {
     &#block1 {
       .wrapper {
-        padding: 0px 0px 60px;
+        padding: 40px 0px 60px;
         .content {
           margin-bottom: 30px;
-          padding: 0px 10px;
+          padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
           .description {
             width: 100%;
             height: fit-content;
+            font-size: calc(16px + 4 * (100vw - 320px) / (767 - 320));
+            line-height: calc(19px + 5 * (100vw - 320px) / (767 - 320));
           }
           .title {
             width: 100%;
             margin-bottom: 30px;
+            font-size: calc(30px + 15 * (100vw - 320px) / (767 - 320));
+            line-height: calc(37px + 19 * (100vw - 320px) / (767 - 320));
           }
           .pink-button {
             margin: 0 auto;
@@ -892,7 +895,7 @@ export default {
         }
         .decor-img {
           width: calc(320px + 325 * (100vw - 320px) / (767 - 320));
-           height:  calc(366px + 278 * (100vw - 320px) / (767 - 320));
+          height: calc(366px + 278 * (100vw - 320px) / (767 - 320));
           max-width: 645px;
           .input-efect-wrap {
             left: auto;
@@ -911,10 +914,93 @@ export default {
             top: calc(55px - 7 * (100vw - 320px) / (767 - 320));
           }
           .outer-circle {
-            display: none;
+            width: calc(220px + 228 * (100vw - 320px) / (767 - 320));
+            height: calc(220px + 228 * (100vw - 320px) / (767 - 320));
+            left: calc(72px + 76 * (100vw - 320px) / (767 - 320));
+            top: calc(99px - 23 * (100vw - 320px) / (767 - 320));
+            .img-wrap {
+              width: calc(30px + 30 * (100vw - 320px) / (767 - 320));
+              height: calc(30px + 30 * (100vw - 320px) / (767 - 320));
+              &.heart {
+                img {
+                  max-width: 57px;
+                  width: 100%;
+                  height: auto;
+                }
+                @keyframes rotate1 {
+                  from {
+                    transform: rotate(0deg) translateY(-360%) translateX(72%)
+                      rotate(0deg);
+                  }
+                  to {
+                    transform: rotate(360deg) translateY(-360%) translateX(72%)
+                      rotate(-360deg);
+                  }
+                }
+              }
+              &.tooth {
+                width: calc(25px + 30 * (100vw - 320px) / (767 - 320));
+                img {
+                  max-width: 37px;
+
+                  width: 100%;
+                  height: auto;
+                  @keyframes rotate2 {
+                    from {
+                      transform: rotate(0deg) translateY(-300%) translateX(236%)
+                        rotate(0deg);
+                    }
+                    to {
+                      transform: rotate(360deg) translateY(-300%)
+                        translateX(236%) rotate(-360deg);
+                    }
+                  }
+                }
+              }
+              &.eye {
+                img {
+                  max-width: 54px;
+                  width: 100%;
+                  height: auto;
+                }
+                @keyframes rotate3 {
+                  from {
+                    transform: rotate(0deg) translateY(-194%) translateX(325%)
+                      rotate(0deg);
+                  }
+                  to {
+                    transform: rotate(360deg) translateY(-194%) translateX(325%)
+                      rotate(-360deg);
+                  }
+                }
+              }
+            }
           }
           .internal-circle {
-            display: none;
+            width: calc(116px + 120 * (100vw - 320px) / (767 - 320));
+            height: calc(116px + 120 * (100vw - 320px) / (767 - 320));
+            .animated-bell {
+              width: calc(27px + 37 * (100vw - 320px) / (767 - 320));
+              height: calc(27px + 37 * (100vw - 320px) / (767 - 320));
+              transform: rotate(0deg) translateY(-133%) translateX(126%)
+                rotate(0deg);
+              .img-wrap {
+                width: calc(27px + 37 * (100vw - 320px) / (767 - 320));
+                height: calc(27px + 37 * (100vw - 320px) / (767 - 320));
+                img {
+                  width: 100% !important;
+                  max-width: 45px !important;
+                  height: auto !important;
+                }
+              }
+              .notification {
+                width: calc(14px + 16 * (100vw - 320px) / (767 - 320));
+                height: calc(14px + 16 * (100vw - 320px) / (767 - 320));
+                font-size: calc(8px + 6 * (100vw - 320px) / (767 - 320));
+                line-height: calc(13px + 4 * (100vw - 320px) / (767 - 320));
+                background-size: cover;
+              }
+            }
           }
           .doctor {
             width: calc(106px + 93 * (100vw - 320px) / (767 - 320));
@@ -953,7 +1039,7 @@ export default {
             }
           }
           .screen_chart {
-            width: calc(68px + 74 * (100vw - 320px) / (767 - 320));
+            width: calc(69px + 73 * (100vw - 320px) / (767 - 320));
             height: calc(60px + 63 * (100vw - 320px) / (767 - 320));
             left: calc(51px + 54 * (100vw - 320px) / (767 - 320));
             top: calc(56px + 58 * (100vw - 320px) / (767 - 320));
@@ -961,6 +1047,131 @@ export default {
               .circle {
                 width: calc(6px + 7 * (100vw - 320px) / (767 - 320));
                 height: calc(6px + 7 * (100vw - 320px) / (767 - 320));
+
+                &#circle1 {
+                  top: calc(23px + 24 * (100vw - 320px) / (767 - 320));
+                  left: calc(2px + 2 * (100vw - 320px) / (767 - 320));
+                  @keyframes cirkle1 {
+                    0% {
+                      top: calc(11px + 13 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      top: calc(23px + 24 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+                &#circle2 {
+                  top: calc(11px + 13 * (100vw - 320px) / (767 - 320));
+                  left: calc(21px + 23 * (100vw - 320px) / (767 - 320));
+                  @keyframes cirkle2 {
+                    0% {
+                      top: calc(11px + 13 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      top: calc(11px + 13 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+                &#circle3 {
+                  top: calc(17px + 18 * (100vw - 320px) / (767 - 320));
+                  left: calc(40px + 44 * (100vw - 320px) / (767 - 320));
+                  @keyframes cirkle3 {
+                    0% {
+                      top: calc(11px + 13 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      top: calc(17px + 18 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+                &#circle4 {
+                  top: 0px;
+                  left: calc(60px + 63 * (100vw - 320px) / (767 - 320));
+                  @keyframes cirkle4 {
+                    0% {
+                      top: calc(11px + 13 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      top: 0;
+                    }
+                  }
+                }
+              }
+              .line {
+                height: calc(2px + 1 * (100vw - 320px) / (767 - 320));
+                &#line1 {
+                  width: calc(21px + 19 * (100vw - 320px) / (767 - 320));
+                  top: calc(14px + 14 * (100vw - 320px) / (767 - 320));
+                  left: calc(3px + 8 * (100vw - 320px) / (767 - 320));
+                }
+                &#line2 {
+                  width: calc(21px + 19 * (100vw - 320px) / (767 - 320));
+                  top: calc(14px + 14 * (100vw - 320px) / (767 - 320));
+                  left: calc(23px + 24 * (100vw - 320px) / (767 - 320));
+                }
+                &#line3 {
+                  width: calc(21px + 19 * (100vw - 320px) / (767 - 320));
+                  top: calc(14px + 14 * (100vw - 320px) / (767 - 320));
+                  left: calc(45px + 45 * (100vw - 320px) / (767 - 320));
+                  @keyframes line3 {
+                    0% {
+                      transform: rotate(0deg);
+                      top: calc(14px + 14 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      transform: rotate(-43deg);
+                      top: calc(19px + 21 * (100vw - 320px) / (767 - 320));
+                      width: calc(26px + 17 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+              }
+            }
+            .segment-chart {
+              gap: calc(10px + 10 * (100vw - 320px) / (767 - 320));
+              .segment {
+                width: calc(10px + 10 * (100vw - 320px) / (767 - 320));
+                height: calc(32px + 48 * (100vw - 320px) / (767 - 320));
+                &#segment1 {
+                  @keyframes segment1 {
+                    0% {
+                      height: calc(32px + 48 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      height: calc(20px + 20 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+                &#segment2 {
+                  @keyframes segment2 {
+                    0% {
+                      height: calc(32px + 48 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      height: calc(32px + 33 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+                &#segment3 {
+                  @keyframes segment3 {
+                    0% {
+                      height: calc(32px + 48 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      height: calc(27px + 18 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+                &#segment4 {
+                  @keyframes segment4 {
+                    0% {
+                      height: calc(32px + 48 * (100vw - 320px) / (767 - 320));
+                    }
+                    100% {
+                      height: calc(44px + 46 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
               }
             }
           }
@@ -993,6 +1204,11 @@ export default {
               width: 100%;
               height: auto;
             }
+          }
+          .plant {
+            width: calc(24px + 26 * (100vw - 320px) / (767 - 320));
+            height: calc(41px + 47 * (100vw - 320px) / (767 - 320));
+            right: calc(-17px - 11 * (100vw - 320px) / (767 - 320));
           }
           .stone {
             width: calc(54px + 56 * (100vw - 320px) / (767 - 320));
