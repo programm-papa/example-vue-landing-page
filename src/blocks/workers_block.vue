@@ -354,5 +354,52 @@ export default {};
       }
     }
   }
+  @media screen and (max-width: 767px) {
+    &#block11 {
+      .bacground-color {
+        padding: 60px 0px;
+        .wrapper {
+          width: 100%;
+          padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
+          .title {
+            max-width: 660px;
+            width: 100%;
+            gap: 20px;
+            .text {
+              width: 100%;
+              font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+              line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+            }
+            .description {
+              font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+            }
+            .decor-img {
+              display: block;
+              position: absolute;
+              left: auto;
+              top: -28px;
+            }
+          }
+          .studio-employees {
+            grid-template-columns: repeat(1, 260px);
+            grid-template-rows: repeat(8, 323px);
+            .employee {
+              .employee__description {
+                .content {
+                  .name {
+                    font-size: calc(16px + 4 * (100vw - 320px) / (767 - 320));
+                    line-height: calc(21px + 4 * (100vw - 320px) / (767 - 320));
+                  }
+                  .post {
+                    font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

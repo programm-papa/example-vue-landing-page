@@ -1120,6 +1120,9 @@ export default {
     &::after {
       display: none;
     }
+    &.scroll {
+      position: fixed;
+    }
     .header-wrapper {
     }
     .desctop {

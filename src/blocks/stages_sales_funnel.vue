@@ -7,12 +7,10 @@
       <div class="wrapper">
         <div class="title flex">
           <div class="text">
-            Разберём наглядный пример воронки продаж для небольшой стоматологии
+            Разберём наглядный пример воронки продаж для {{ selectName }}
           </div>
           <div class="description">
-            Мы привели среднестатистические цифры исходя из зафиксированного
-            выделенного бюджета на рекламу клиники, расположенной в городе с
-            населением 450.000 человек.
+            {{ selectDescription }}
           </div>
           <div class="decor-img"></div>
         </div>
@@ -97,7 +95,9 @@
                   <div class="number">4</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество записей на прием.</b> Конверсия от обрабатывающих администраторов клиники из обращений в запись на прием 55%. Средняя стоимость одной записи 432.1 ₽.
+                  <b>Количество записей на прием.</b> Конверсия от
+                  обрабатывающих администраторов клиники из обращений в запись
+                  на прием 55%. Средняя стоимость одной записи 432.1 ₽.
                 </div>
               </div>
             </div>
@@ -166,7 +166,9 @@
                   <div class="number">2</div>
                 </div>
                 <div class="stage-description">
-                  <b> Общее количество визитов</b> на сайт в месяц из поисковых запросов, контекстной рекламы и SMM каналов. Средняя стоимость перехода на сайт 12,5 ₽.
+                  <b> Общее количество визитов</b> на сайт в месяц из поисковых
+                  запросов, контекстной рекламы и SMM каналов. Средняя стоимость
+                  перехода на сайт 12,5 ₽.
                 </div>
               </div>
             </div>
@@ -177,7 +179,9 @@
                   <div class="number">3</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество обращений с сайта по запросам в месяц</b> (звонков и заявок). Средняя стоимость одного обращения 206.6 ₽. Конверсия посетителей сайта в обращения 6,07%
+                  <b>Количество обращений с сайта по запросам в месяц</b>
+                  (звонков и заявок). Средняя стоимость одного обращения 206.6
+                  ₽. Конверсия посетителей сайта в обращения 6,07%
                 </div>
               </div>
             </div>
@@ -201,7 +205,8 @@
                   <div class="number">5</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество состоявшихся приемов</b> с учетом того, что 40% записавшихся пациентов не доходят до клиники.
+                  <b>Количество состоявшихся приемов</b> с учетом того, что 40%
+                  записавшихся пациентов не доходят до клиники.
                 </div>
               </div>
             </div>
@@ -258,7 +263,9 @@
                   <div class="number">2</div>
                 </div>
                 <div class="stage-description">
-                  <b>Общее количество визитов на сайт в месяц</b> из поисковых запросов, контекстной рекламы и SMM каналов. Средняя стоимость перехода на сайт 6,5 ₽.
+                  <b>Общее количество визитов на сайт в месяц</b> из поисковых
+                  запросов, контекстной рекламы и SMM каналов. Средняя стоимость
+                  перехода на сайт 6,5 ₽.
                 </div>
               </div>
             </div>
@@ -269,8 +276,9 @@
                   <div class="number">3</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество обращений с сайта по запросам в месяц</b> (звонков и заявок). Средняя стоимость одного обращения 155.40 ₽. Конверсия посетителей сайта в обращения 4,17%
-
+                  <b>Количество обращений с сайта по запросам в месяц</b>
+                  (звонков и заявок). Средняя стоимость одного обращения 155.40
+                  ₽. Конверсия посетителей сайта в обращения 4,17%
                 </div>
               </div>
             </div>
@@ -281,7 +289,9 @@
                   <div class="number">4</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество записей на прием.</b> Конверсия от обрабатывающих администраторов клиники из обращений в запись на прием 54%. Средняя стоимость одной записи 216.8 ₽.
+                  <b>Количество записей на прием.</b> Конверсия от
+                  обрабатывающих администраторов клиники из обращений в запись
+                  на прием 54%. Средняя стоимость одной записи 216.8 ₽.
                 </div>
               </div>
             </div>
@@ -292,7 +302,8 @@
                   <div class="number">5</div>
                 </div>
                 <div class="stage-description">
-                  <b>Количество состоявшихся приемов</b> с учетом того, что более 28% записавшихся пациентов не доходят до клиники.
+                  <b>Количество состоявшихся приемов</b> с учетом того, что
+                  более 28% записавшихся пациентов не доходят до клиники.
                 </div>
               </div>
             </div>
@@ -304,7 +315,6 @@
                 </div>
                 <div class="stage-description">
                   <b> Общий доход с приемов.</b> Средний чек покупки 2600 ₽
-
                 </div>
               </div>
             </div>
@@ -352,6 +362,26 @@ export default {
         tab3: false,
       },
     };
+  },
+  computed: {
+    selectName() {
+      if (this.tabsList.tab1) {
+        return "небольшой клиники";
+      } else if (this.tabsList.tab2) {
+        return "средней клиники";
+      } else {
+        return "крупной клиники";
+      }
+    },
+    selectDescription() {
+      if (this.tabsList.tab1) {
+        return "*Мы привели среднепрогнозируемые цифры дополнительного дохода исходя из зафиксированного выделенного бюджета на рекламу клиники с медицинским персоналом в размере 5 - 20 человек в штате, расположенной в городе с населением порядка 250 - 300 тыс. человек.";
+      } else if (this.tabsList.tab2) {
+        return "*Мы привели среднепрогнозируемые цифры дополнительного дохода исходя из зафиксированного выделенного бюджета на рекламу клиники с медицинским персоналом в размере 20 - 40 человек в штате, расположенной в городе с населением порядка 400 - 600 тыс. человек.";
+      } else {
+        return "*Мы привели среднепрогнозируемые цифры дополнительного дохода исходя из зафиксированного выделенного бюджета на рекламу клиники с медицинским персоналом в размере 40 - 100 человек в штате, расположенной в городе с населением более 1 млн. человек";
+      }
+    },
   },
   methods: {
     changeSelectTab(selectTabName) {
@@ -431,6 +461,8 @@ export default {
       margin: 0px auto 100px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      position: relative;
+      z-index: 1;
       .tab {
         display: flex;
         flex-direction: column;
@@ -506,10 +538,10 @@ export default {
         display: flex;
         position: relative;
         z-index: 1;
-        &:nth-of-type(n) {
+        &:nth-of-type(odd) {
           justify-content: flex-start;
         }
-        &:nth-of-type(2n) {
+        &:nth-of-type(even) {
           justify-content: flex-end;
           .stage-content {
             display: flex;
@@ -635,6 +667,96 @@ export default {
           .tab {
             .name {
               padding: 0px 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .block {
+    &#block9 {
+      .bacground-color {
+        padding: 60px 0px;
+        .wrapper {
+          width: 100%;
+          padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
+          .title {
+            max-width: 660px;
+            width: 100%;
+            gap: 20px;
+            .text {
+              width: 100%;
+              font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+              line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+            }
+            .description {
+              font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+            }
+            .decor-img {
+              display: block;
+              position: absolute;
+              left: auto;
+              top: -28px;
+            }
+          }
+          .funnels-variants {
+            // max-width: 400px;
+            height: 300px;
+            grid-template-columns: 1fr;
+            .tab {
+              &.selected {
+                background: #696fe5;
+                * {
+                  color: #ffffff;
+                }
+              }
+            }
+          }
+          .stages-sales-funnel {
+            width: fit-content;
+            min-width: 320px;
+            max-width: 680px;
+            .stage {
+              .stage-content {
+                max-width: 360px;
+                min-width: 320px;
+                width: 100%;
+                .stage-title {
+                  .quantitative-value {
+                    width: calc(240px + 20 * (100vw - 320px) / (767 - 320));
+                    height: 70px;
+                  }
+                }
+              }
+              &:nth-of-type(odd) {
+                .stage-content {
+                  .stage-title {
+                    flex-direction: row-reverse;
+                  }
+                  .stage-description {
+                    margin-left: auto;
+                  }
+                }
+              }
+              &:nth-of-type(even) {
+                justify-content: flex-start;
+                .stage-content {
+                  .stage-description {
+                    margin-left: auto;
+                  }
+                }
+              }
+            }
+            .decor-arrow {
+              left: 19px;
+            }
+          }
+          .want {
+            width: 100%;
+            .description {
+              font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
             }
           }
         }

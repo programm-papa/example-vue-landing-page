@@ -2,7 +2,8 @@
   <div class="block" id="block10">
     <div class="wrapper">
       <div class="title flex">
-        Честные <span class="decor-line">отзывы</span> наших клиентов
+        <span>Честные </span><span>отзывы </span> <span>наших </span>
+        <span>клиентов</span>
         <!-- <div class="decor-line"></div> -->
       </div>
       <div class="decor-img" id="decor-img1">
@@ -40,38 +41,40 @@
         >
           <swiper-slide>
             <div class="swiper-content">
-              <div class="top flex">
-                <div class="avatar-block"></div>
-                <div class="comment">
-                  <svg
-                    width="107"
-                    height="47"
-                    viewBox="0 0 107 47"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="triangle"
-                  >
-                    <path
-                      d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
-                      fill="white"
-                      stroke="#5356AE"
-                      stroke-width="3"
-                    />
-                    <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
-                    <rect y="36" width="83" height="5" fill="white" />
-                  </svg>
-                  В студию <b>АРТ</b> горка мне посоветовал обратиться близкий
-                  человек, и это тот случай когда от сотрудничества были
-                  превзойдены самые смелые ожидания!<br /><br />Коллеги сделали
-                  полный ребрендинг нашей цифровой стоматологии и запустили
-                  лучший сайт в городе. Им так понравилось работать с нами, что
-                  они решили отдельно заняться медицинским маркетингом и
-                  запустили нишевый проект «АРТ клиника».<br /><br />Прошлым
-                  летом даже сложилась ситуация, когда мы не могли без потери
-                  качества в сервисе справляться с текущим потоком пациентов и
-                  попросили временно уменьшить объем рекламы. Однозначно
-                  рекомендую!
-                </div>
+              <div class="avatar-block">
+                <img
+                  src="@/assets/image/block10/AlexandrGrivkov.png"
+                  alt="avatar"
+                />
+              </div>
+              <div class="comment">
+                <svg
+                  width="107"
+                  height="47"
+                  viewBox="0 0 107 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="triangle"
+                >
+                  <path
+                    d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                    fill="white"
+                    stroke="#5356AE"
+                    stroke-width="3"
+                  />
+                  <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                  <rect y="36" width="83" height="5" fill="white" />
+                </svg>
+                В студию <b>АРТ</b> горка мне посоветовал обратиться близкий
+                человек, и это тот случай когда от сотрудничества были
+                превзойдены самые смелые ожидания!<br /><br />Коллеги сделали
+                полный ребрендинг нашей цифровой стоматологии и запустили лучший
+                сайт в городе. Им так понравилось работать с нами, что они
+                решили отдельно заняться медицинским маркетингом и запустили
+                нишевый проект «АРТ клиника».<br /><br />Прошлым летом даже
+                сложилась ситуация, когда мы не могли без потери качества в
+                сервисе справляться с текущим потоком пациентов и попросили
+                временно уменьшить объем рекламы. Однозначно рекомендую!
               </div>
               <div class="commentator-name">Гривков Алексей Сергеевич</div>
               <div class="commentator-post">
@@ -80,8 +83,97 @@
               </div>
             </div>
           </swiper-slide>
-          <swiper-slide> <div class="swiper-content">2</div> </swiper-slide>
-          <swiper-slide> <div class="swiper-content">3</div> </swiper-slide>
+          <swiper-slide>
+            <div class="swiper-content">
+              <div class="avatar-block">
+                <img
+                  src="@/assets/image/block10/OlgaVinogradova.png"
+                  alt="avatar"
+                />
+              </div>
+              <div class="comment">
+                <svg
+                  width="107"
+                  height="47"
+                  viewBox="0 0 107 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="triangle"
+                >
+                  <path
+                    d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                    fill="white"
+                    stroke="#5356AE"
+                    stroke-width="3"
+                  />
+                  <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                  <rect y="36" width="83" height="5" fill="white" />
+                </svg>
+                С «Артгоркой» знакомы уже более шести лет, они помогли нам
+                по-другому взглянуть на стиль нашей клиники. Сейчас наша клиника
+                находится на том уровне развития, когда нам просто нужно
+                поддерживать спрос на себя без громких рекламных кампаний!
+                Ребята создали отдельное направление
+                <b>«Артклиника»</b> и мы продолжаем сотрудничать с ними в части
+                SMM. Благодаря их работе в нашу группу постоянно присоединяются
+                новые подписчики! Сотрудники всегда на связи, у них море новых
+                идей и концепций для продвижения! Все быстро, четко и всегда
+                предвосхищает наши ожидания!
+              </div>
+              <div class="commentator-name">Виноградова Ольга</div>
+              <div class="commentator-post">
+                Семейная стоматология «Новый Стандарт 32»
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="swiper-content">
+              <div class="avatar-block">
+                <img
+                  src="@/assets/image/block10/IlyaAndrushkiv.png"
+                  alt="avatar"
+                />
+              </div>
+              <div class="comment">
+                <svg
+                  width="107"
+                  height="47"
+                  viewBox="0 0 107 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="triangle"
+                >
+                  <path
+                    d="M16.5917 36.5164L16.9523 37.5H18H80.5L81.0668 34.6112L7.56685 4.61123L4.42256 3.32784L5.59169 6.51638L16.5917 36.5164Z"
+                    fill="white"
+                    stroke="#5356AE"
+                    stroke-width="3"
+                  />
+                  <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
+                  <rect y="36" width="83" height="5" fill="white" />
+                </svg>
+                3 года назад услышал рекламу студии АРТ горка на радио.<br /><br />
+                Мне предложили начать с продвижения группы вк, так как в нашем
+                городе это был хороший и недорогой способ привлечь новую
+                аудиторию. Смело скажу, что доволен результатами продвижения
+                группы и мы продолжаем работу по сегодняшний день. На тот момент
+                задумывался и о сайте, но несколько повременил. Поступали
+                предложения от сторонних разработчиков, в том числе и недорогие
+                варианты. Конечно, можно было сэкономить, но в столь
+                конкурентной нише (сфере медицинских услуг) упаковка – это
+                далеко не последний инструмент продаж. После запуска сайта
+                заявки стали поступать чаще: удобный и красивый инструмент
+                регистрации и полезный ресурс в целом дал мощное конкурентное
+                преимущество. Поначалу меня отпугивала стоимость, казалось что
+                услуги дорогие, но сейчас скажу, что эти работы однозначно стоят
+                своих денег.
+              </div>
+              <div class="commentator-name">Андрушкив Илья Юрьевич</div>
+              <div class="commentator-post">
+                Стоматология «Смайл», гендиректор
+              </div>
+            </div>
+          </swiper-slide>
         </swiper>
       </div>
     </div>
@@ -126,14 +218,12 @@ export default {
         text-transform: uppercase;
         color: #424c5c;
         display: flex;
-        .decor-line {
+        flex-wrap: wrap;
+        gap: 7px;
+        span:nth-child(2) {
           display: inline;
           border-bottom: 10px solid #696fe6;
           margin-top: 0px;
-          padding: 0px 5px;
-          // width: 130px;
-          // height: 10px;
-          // background: #696fe6;
         }
       }
       .decor-img {
@@ -181,35 +271,39 @@ export default {
           }
         }
         .swiper-content {
-          .top {
-            gap: 60px;
-            .avatar-block {
-              width: 200px;
-              height: 200px;
-              border-radius: 100%;
-              background: #f3f4f9;
+          display: grid;
+          grid-template-columns: 200px 1fr;
+          gap: 0px 60px;
+          .avatar-block {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background: #f3f4f9;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: auto;
             }
-            .comment {
-              background-color: #ffffff;
-              padding: 25px 30px;
-              height: fit-content;
-              border: 3px solid #5356ae;
-              border-radius: 20px;
-              flex: 1;
-              position: relative;
-              margin-bottom: 50px;
-              //Стили текста
-              font-style: normal;
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 17px;
-              color: #424c5c;
-              .triangle {
-                position: absolute;
-                bottom: -35.8px;
-                transform: scale(1, -1);
-                left: 121px;
-              }
+          }
+          .comment {
+            background-color: #ffffff;
+            padding: 25px 30px;
+            height: fit-content;
+            border: 3px solid #5356ae;
+            border-radius: 20px;
+            position: relative;
+            margin-bottom: 50px;
+            //Стили текста
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #424c5c;
+            .triangle {
+              position: absolute;
+              bottom: -35.8px;
+              transform: scale(1, -1);
+              left: 121px;
             }
           }
           .commentator-name {
@@ -220,6 +314,8 @@ export default {
             letter-spacing: 0.02em;
             color: #696fe6;
             margin-bottom: 10px;
+            grid-row: 2;
+            grid-column: 1/3;
           }
           .commentator-post {
             font-style: normal;
@@ -227,6 +323,8 @@ export default {
             font-size: 16px;
             line-height: 19px;
             color: #424c5c;
+            grid-row: 3;
+            grid-column: 1/3;
           }
         }
       }
@@ -234,6 +332,7 @@ export default {
       //Отдельно стили для свайпера
       .swiper-container {
         // overflow: visible !important;
+        padding: 20px;
         padding-bottom: 120px;
       }
       .swiper {
@@ -277,13 +376,84 @@ export default {
             }
           }
           .swiper-content {
-            .top {
-              gap: 20px;
+            gap: 0 20px;
+          }
+        }
+        .swiper-slide {
+          width: 100%;
+          padding: 30px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &#block10 {
+      .wrapper {
+        width: 100%;
+        padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
+        .title {
+          margin-bottom: 40px;
+          max-width: 660px;
+          width: 100%;
+          font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+          line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+          span:nth-child(2) {
+            display: inline;
+            border-bottom: 0px solid #696fe6;
+            margin-top: 0px;
+          }
+          span:nth-child(4) {
+            display: inline;
+            border-bottom: 10px solid #696fe6;
+            margin-top: 0px;
+          }
+        }
+        .decor-img {
+          &#decor-img1 {
+            top: 349px;
+          }
+          &#decor-img2 {
+            top: -1px;
+            left: auto;
+            right: -61px;
+          }
+        }
+        .swiper-block {
+          .swiper-pagination-btn-container {
+            left: auto;
+            right: 0;
+            top: auto;
+          }
+          .swiper-content {
+            grid-template-columns: 1fr;
+            gap: 0px 0px;
+            .avatar-block {
+              grid-row: 1;
+              margin-bottom: 20px;
+            }
+            .commentator-name {
+              grid-row: 2;
+              grid-column: 1;
+            }
+            .commentator-post {
+              grid-row: 3;
+              grid-column: 1;
+              margin-bottom: 30px;
+            }
+            .comment {
+              grid-row: 4;
+              .triangle {
+                transform: scale(1, 1);
+                bottom: auto;
+                width: 83px;
+                top: -33px;
+              }
             }
           }
         }
         .swiper-slide {
-          width: 670px;
+          max-width: 670px;
+          width: 100%;
           padding: 30px;
         }
       }

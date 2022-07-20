@@ -6,11 +6,11 @@
   <blueInfoBlock v-if="true"/>
   <scrollTrackingBlock v-if="false"/>
   <casesBlock v-if="true"/>
-  <methodsAttractingCustomersBlock v-if="false"/>
-  <stagesSalesFunnel v-if="false"/>
-  <commentsSliderBlock v-if="false"/>
-  <workersBlock v-if="false"/>
-  <completedWorks v-if="false"/>
+  <methodsAttractingCustomersBlock v-if="true"/>
+  <stagesSalesFunnel v-if="true"/>
+  <commentsSliderBlock v-if="true"/>
+  <workersBlock v-if="true"/>
+  <completedWorks v-if="true"/>
 </template>
 
 <script>

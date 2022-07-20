@@ -550,22 +550,28 @@ export default {
         width: 768px;
         .methods-attracting-customers {
           height: fit-content;
+          margin-bottom: 160px;
           .circles {
             position: relative;
             width: fit-content;
             height: fit-content;
             display: grid;
             grid-template-columns: repeat(3, 150px);
-            grid-template-rows: repeat(3, 150px);
+            grid-template-rows: repeat(2, 150px);
             gap: 10px;
-            .big-circle{
+            .big-circle {
               display: none;
             }
             .method {
               position: relative;
-               &#method_1, &#method_2, &#method_3, &#method_4, &#method_5, &#method_6 {
+              &#method_1,
+              &#method_2,
+              &#method_3,
+              &#method_4,
+              &#method_5,
+              &#method_6 {
                 animation: none;
-               }
+              }
             }
           }
           .decor-img {
@@ -573,12 +579,70 @@ export default {
           }
           .decor-img_adaptive {
             &#decor-img_1_1 {
-            top: -140px;
-            left: -130px;
-            position: absolute;
-            display: block;
+              top: -170px;
+              left: -130px;
+              position: absolute;
+              display: block;
+            }
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &#block8 {
+      padding: 60px 0px;
+      .wrapper {
+        width: 100%;
+        padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
+        .title {
+          max-width: 426px;
+          width: 100%;
+          font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+          line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+        }
+        .methods-attracting-customers {
+          .circles {
+            grid-template-columns: repeat(1, 280px);
+            grid-template-rows: repeat(6, 150px);
+            .method {
+              &:nth-child(odd) {
+                margin-left: auto;
+              }
+              .method-description {
+                width: 280px;
+                padding: 20px 30px;
+                transform: translateY(0);
+                top: 146px;
+              }
+              &.method_left {
+                .method-description {
+                  left: 0px;
+                }
+              }
+              &.method_right {
+                .method-description {
+                  left: -130px;
+                }
+              }
+              &.method_bottom {
+                .method-description {
+                  top: 0;
+                }
+              }
+            }
           }
+          .decor-img_adaptive {
+            &#decor-img_1_1 {
+              top: auto !important;
+              left: auto !important;
+            }
+          }
+        }
+        .button-block {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
         }
       }
     }

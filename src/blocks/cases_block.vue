@@ -6,10 +6,10 @@
         Кейсы от нашей студии
         <div class="title__decor">
           <div class="text">
-            Приведём несколько примеров проектов, выполненных нашей студией.<br />В
-            первую очередь при разработке мы отталкивались от поставленных
-            задач, объемов индивидуальной работы в каждом проекте и от бюджета,
-            выделенного на проект.
+            Приведём несколько примеров проектов, выполненных нашей студией.
+            <br />В первую очередь при разработке мы отталкивались от
+            поставленных задач, объемов индивидуальной работы в каждом проекте и
+            от бюджета, выделенного на проект.
           </div>
         </div>
       </div>
@@ -335,7 +335,6 @@ export default {};
           height: 230px;
           border-radius: 20px;
           overflow: hidden;
-          background-color: #c8c8c8;
           .case-number {
             position: absolute;
             font-style: normal;
@@ -569,6 +568,103 @@ export default {};
       .wrapper {
         width: 100%;
         padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
+        .decor-img {
+          &#decor-img_1 {
+            left: calc(42px + 40 * (100vw - 320px) / (767 - 320));
+            top: -32px;
+          }
+        }
+        .title {
+          font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+          line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+          gap: 20px;
+          margin-bottom: 40px;
+          .title__decor {
+            .text {
+              font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+        .case {
+          .case__header {
+            margin-bottom: 40px;
+            .img-wrapper {
+              width: 100%;
+              max-width: 660px;
+              img {
+                position: absolute;
+                top: 0;
+                left: auto;
+              }
+              .case-number {
+                font-size: calc(100px + 47 * (100vw - 320px) / (767 - 320));
+                line-height: 100%;
+                bottom: -20px;
+              }
+            }
+            .case-title {
+              .name {
+                font-size: calc(20px + 4 * (100vw - 320px) / (767 - 320));
+                line-height: calc(26px + 4 * (100vw - 320px) / (767 - 320));
+              }
+              .description {
+                font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                line-height: calc(18px + 2 * (100vw - 320px) / (767 - 320));
+              }
+            }
+          }
+          .casse__content {
+            gap: 30px;
+            .stage {
+              gap: 30px;
+              align-items: center;
+              .left {
+                gap: 25px;
+                .stage-name {
+                  .stage-name__wrapper {
+                    font-size: calc(16px + 4 * (100vw - 320px) / (767 - 320));
+                    line-height: calc(21px + 4 * (100vw - 320px) / (767 - 320));
+                  }
+                }
+              }
+              .right {
+                .text {
+                  font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                  line-height: calc(18px + 2 * (100vw - 320px) / (767 - 320));
+                }
+              }
+            }
+            .case__buttons {
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 20px;
+            }
+          }
+          &#case_1 {
+            .case__header {
+              .img-wrapper {
+                img {
+                  right: calc(-94px + 94 * (100vw - 320px) / (767 - 320));
+                }
+              }
+            }
+          }
+          &#case_2 {
+            .case__header {
+              .img-wrapper {
+                img {
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .bacground-wrapper {
+        padding: 60px 0px 70px;
       }
     }
   }

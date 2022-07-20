@@ -2,9 +2,9 @@
   <div class="block" id="block12">
     <div class="wrapper">
       <div class="title flex">
-        <div class="text flex-column">
-          Почему ArtGorka можно довериться
-          <div class="decor-border"></div>
+        <div class="text">
+          Почему ArtGorka <span>можно&nbsp;довериться</span>
+          <!-- <div class="decor-border"></div> -->
         </div>
         <div class="description">
           ArtGorka уже 10 лет разрабатывает проекты для крупных организаций и
@@ -711,11 +711,16 @@ export default {};
         position: relative;
         .text {
           max-width: 660px;
-          .decor-border {
-            margin-left: auto;
-            width: 323px;
-            height: 10px;
-            background: #696fe6;
+          // .decor-border {
+          //   margin-left: auto;
+          //   width: 323px;
+          //   height: 10px;
+          //   background: #696fe6;
+          // }
+          span {
+            display: inline;
+            width: fit-content;
+            border-bottom: 10px solid #696fe6;
           }
           //Стили текста
           font-style: normal;
@@ -806,6 +811,34 @@ export default {};
           gap: 19px;
           flex-wrap: wrap;
           justify-content: space-around;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &#block12 {
+      padding: 60px 0px;
+      .wrapper {
+        width: 100%;
+        padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320));
+        .title {
+          max-width: 660px;
+          width: 100%;
+          gap: 20px;
+          .text {
+            width: 100%;
+            font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+            line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+          }
+          .description {
+            font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+          }
+          .decor-img {
+            display: block;
+            position: absolute;
+            left: auto;
+            top: -28px;
+          }
         }
       }
     }
