@@ -716,14 +716,17 @@ export default {
           }
           .stages-sales-funnel {
             width: fit-content;
-            min-width: 320px;
+            min-width: 300px;
             max-width: 680px;
             .stage {
               .stage-content {
                 max-width: 360px;
-                min-width: 320px;
-                width: 100%;
+                min-width: 300px;
+                width: fit-content;
                 .stage-title {
+                  max-width: 360px;
+                  min-width: 300px;
+                  gap: 20px;
                   .quantitative-value {
                     width: calc(240px + 20 * (100vw - 320px) / (767 - 320));
                     height: 70px;

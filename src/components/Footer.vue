@@ -71,12 +71,19 @@
           <a href="" class="phone">+7 (921) 697-30-02</a>
           <a href="" class="email">info@artgorka.ru</a>
         </div>
-        <a class="adress" href="https://yandex.ru/maps/24/veliky-novgorod/?ll=31.304035%2C58.534311&mode=whatshere&whatshere%5Bpoint%5D=31.303955%2C58.534305&whatshere%5Bzoom%5D=21&z=21" target="_blank">Великий Новгород, ул. Студенческая, 14</a>
+        <a
+          class="adress"
+          href="https://yandex.ru/maps/24/veliky-novgorod/?ll=31.304035%2C58.534311&mode=whatshere&whatshere%5Bpoint%5D=31.303955%2C58.534305&whatshere%5Bzoom%5D=21&z=21"
+          target="_blank"
+          >Великий Новгород, ул. Студенческая, 14</a
+        >
       </div>
       <div class="bottom flex">
         <p class="description">студия дизайна, веб-разработок и маркетинга</p>
-        <p>© 2022, Art gorka </p>
-        <a href="" class="privacy-policy">Политика обработки персональных данных</a>
+        <p>© 2022, Art gorka</p>
+        <a href="" class="privacy-policy"
+          >Политика обработки персональных данных</a
+        >
       </div>
     </div>
   </div>
@@ -94,7 +101,7 @@ export default {};
     .top {
       justify-content: space-between;
       padding-bottom: 120px;
-      border-bottom: 1px solid #E7E7E7;
+      border-bottom: 1px solid #e7e7e7;
       .contacts {
         gap: 64px;
       }
@@ -129,6 +136,47 @@ export default {};
             text-decoration: underline;
             text-align: right;
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .wrapper {
+      width: 100%;
+      padding: 0px calc(10px + 10 * (100vw - 320px) / (767 - 320));
+      .top {
+        gap: 40px;
+        justify-content: center;
+        .logo {
+          margin: 0;
+        }
+        .contacts {
+          margin: 0;
+          gap: 20px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .adress {
+          text-align: center;
+        }
+      }
+      .bottom {
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        * {
+          margin: 0;
+          text-align: center;
+        }
+        .description {
+          margin-right: 0;
+          width: auto;
+          text-align: center;
+        }
+        .privacy-policy {
+          margin: 0;
+          width: auto;
+          text-align: center;
         }
       }
     }

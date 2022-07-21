@@ -331,9 +331,11 @@
                 <div
                   class="dropdown-link link"
                   :class="adaptiveMenuDropDown ? 'open' : ''"
-                  @click="adaptiveMenuDropDown = !adaptiveMenuDropDown"
                 >
-                  <div class="top flex">
+                  <div
+                    class="top flex"
+                    @click="adaptiveMenuDropDown = !adaptiveMenuDropDown"
+                  >
                     <div class="dropdown-link__title">Услуги</div>
                     <div class="dropdown-link__decor">
                       <svg
@@ -352,9 +354,9 @@
                     </div>
                   </div>
                   <div class="dropdown-link__content">
-                    <a href="" class="link">Ребрендинг</a
-                    ><a href="" class="link">Веб-разработка</a
-                    ><a href="" class="link">Маркетинг</a>
+                    <a href="#step-one" class="link" @click="{openMenu = false; adaptiveMenuDropDown = !adaptiveMenuDropDown}">Ребрендинг</a
+                    ><a href="#step-two" class="link" @click="{openMenu = false; adaptiveMenuDropDown = !adaptiveMenuDropDown}">Веб-разработка</a
+                    ><a href="#step-three" class="link" @click="{openMenu = false; adaptiveMenuDropDown = !adaptiveMenuDropDown}">Маркетинг</a>
                   </div>
                 </div>
                 <a href="#block7" class="link" @click="openMenu = false"

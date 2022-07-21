@@ -65,7 +65,7 @@
                   <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
                   <rect y="36" width="83" height="5" fill="white" />
                 </svg>
-                В студию <b>АРТ</b> горка мне посоветовал обратиться близкий
+                В студию <b>ART gorka</b> мне посоветовал обратиться близкий
                 человек, и это тот случай когда от сотрудничества были
                 превзойдены самые смелые ожидания!<br /><br />Коллеги сделали
                 полный ребрендинг нашей цифровой стоматологии и запустили лучший
@@ -419,10 +419,21 @@ export default {
           }
         }
         .swiper-block {
-          .swiper-pagination-btn-container {
-            left: auto;
-            right: 0;
-            top: auto;
+          .wrapper {
+            .swiper-pagination-btn-container {
+              z-index: 2;
+              left: auto;
+              right: calc(15px + 10 * (100vw - 320px) / (767 - 320));
+              top: calc(10px + 20 * (100vw - 320px) / (767 - 320));
+              bottom: auto;
+              width: calc(110px + 30 * (100vw - 320px) / (767 - 320));
+              .pagination-btn {
+                &:hover {
+                  width: 45px;
+                  height: 45px;
+                }
+              }
+            }
           }
           .swiper-content {
             grid-template-columns: 1fr;
@@ -430,6 +441,8 @@ export default {
             .avatar-block {
               grid-row: 1;
               margin-bottom: 20px;
+              width: calc(150px + 50 * (100vw - 320px) / (767 - 320));
+              height: calc(150px + 50 * (100vw - 320px) / (767 - 320));
             }
             .commentator-name {
               grid-row: 2;
@@ -447,6 +460,7 @@ export default {
                 bottom: auto;
                 width: 83px;
                 top: -33px;
+                left: 100px;
               }
             }
           }
@@ -454,7 +468,9 @@ export default {
         .swiper-slide {
           max-width: 670px;
           width: 100%;
-          padding: 30px;
+          padding: 25px;
+          .swiper-content {
+          }
         }
       }
     }

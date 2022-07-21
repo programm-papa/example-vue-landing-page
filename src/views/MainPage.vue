@@ -4,7 +4,7 @@
   <servicesBlock v-if="true"/>
   <consultationBlock v-if="true"/>
   <blueInfoBlock v-if="true"/>
-  <scrollTrackingBlock v-if="false"/>
+  <scrollTrackingBlock v-if="true"/>
   <casesBlock v-if="true"/>
   <methodsAttractingCustomersBlock v-if="true"/>
   <stagesSalesFunnel v-if="true"/>

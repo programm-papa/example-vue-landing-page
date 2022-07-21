@@ -234,8 +234,8 @@
         <div class="wrapper">
           <div class="complex-services">
             <div class="title">
-              Предлагаем комплекс услуг по ребрендингу
-              <div class="decor-line"></div>
+              Предлагаем комплекс услуг
+              <span class="decor-line">по ребрендингу</span>
             </div>
             <div class="services-list flex-column">
               <div class="service flex">
@@ -2050,11 +2050,10 @@ export default {
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #424c5c;
-        .decor-line {
-          margin-top: 3px;
-          width: 257px;
-          height: 10px;
-          background: #696fe6;
+        span.decor-line {
+          display: inline;
+          border-bottom: 10px solid #696fe5;
+          width: fit-content;
         }
         .step-number {
           width: 60px;
@@ -3075,6 +3074,7 @@ export default {
         }
       }
       .step {
+        padding: 60px 0px;
         .title {
           .step-number {
             display: none;
@@ -3275,6 +3275,258 @@ export default {
             .stages-marketing-list {
               width: 100%;
               gap: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .block {
+    .wrapper {
+      width: 100% !important;
+      padding: 0px calc(10px + 40 * (100vw - 320px) / (767 - 320)) !important;
+    }
+    &#block6 {
+      .breaf {
+        &#breaf-one {
+          .decor {
+            width: 444px;
+            height: 444px;
+            top: 0;
+            overflow: hidden;
+            .special-decor {
+              width: 444px;
+              height: 444px;
+              left: -243px;
+              top: -26px;
+              .circle {
+                &.circle_one {
+                  width: 100%;
+                  height: 100%;
+                  left: 0;
+                  top: 0;
+                }
+              }
+            }
+          }
+          .bacground-wrapper {
+            width: 100%;
+            .wrapper {
+              flex-direction: column;
+              align-items: self-start;
+              width: 320px !important;
+              padding: 40px 0px !important;
+              .right {
+                .breaf-title {
+                  font-size: calc(20px + 6 * (100vw - 320px) / (767 - 320));
+                }
+              }
+            }
+            .decor-img_1 {
+              display: none;
+            }
+            .decor-img_2 {
+              top: 200px;
+              left: 100px;
+              width: 100%;
+            }
+          }
+        }
+        &#breaf-two {
+          .decor-img_1 {
+            display: none;
+          }
+          .decor-img_1-adaptive {
+            display: block;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+      .step {
+        gap: 70px;
+        .title {
+          width: 100%;
+          font-size: calc(24px + 6 * (100vw - 320px) / (767 - 320));
+          line-height: calc(32px + 6 * (100vw - 320px) / (767 - 320));
+        }
+        &#step-one {
+          .wrapper {
+            .rebranding-comprehensive {
+              .decor-line-adaptive {
+                display: none;
+              }
+              .rebranding-comprehensive__description {
+                gap: 40px;
+                .row {
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  .circles {
+                    .border-circle {
+                      &.external {
+                        width: 150px;
+                        height: 150px;
+                      }
+                      &.internal {
+                        width: 125px;
+                        height: 125px;
+                      }
+                    }
+                  }
+                  .description-text {
+                    font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                  }
+                  &#rebranding-comprehensive__description_row1 {
+                    img {
+                      width: 75px;
+                      height: auto;
+                    }
+                  }
+                  &#rebranding-comprehensive__description_row2 {
+                    img {
+                      width: 54px;
+                      height: auto;
+                    }
+                  }
+                  &#rebranding-comprehensive__description_row3 {
+                    img {
+                      width: 125px;
+                      height: auto;
+                    }
+                  }
+                }
+              }
+            }
+            .complex-services {
+              .services-list {
+                .service {
+                  .service-img-adaptive {
+                    width: calc(
+                      100% - (24px + 64 * (100vw - 320px) / (767 - 320))
+                    );
+                    height: auto;
+                  }
+                  .service-content {
+                    padding: calc(26px + 20 * (100vw - 320px) / (767 - 320))
+                      calc(16px + 24 * (100vw - 320px) / (767 - 320)) 40px;
+                    .service-title {
+                      font-size: calc(20px + 4 * (100vw - 320px) / (767 - 320));
+                      line-height: calc(
+                        26px + 4 * (100vw - 320px) / (767 - 320)
+                      );
+                    }
+                    .price {
+                      font-size: calc(16px + 4 * (100vw - 320px) / (767 - 320));
+                    }
+                    .list {
+                      * {
+                        font-size: calc(
+                          14px + 2 * (100vw - 320px) / (767 - 320)
+                        );
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .swiper-block {
+            padding: 40px 20px 0px;
+            margin: 0px;
+            .swiper {
+              height: fit-content;
+              .swiper-wrapper {
+                .swiper-slide {
+                  //Некоторые стили слайдера вынесены в отдельный файл (assets/styles/slider-styles.scss)
+                  img {
+                    background-color: #f3f4f9;
+                    width: calc(100vw - 40px) !important;
+                    // max-width: 600px !important;
+                    height: auto !important;
+                    border: 1px solid #cbcdf4;
+                    border-radius: 20px;
+                    padding: 10px !important;
+                    margin-left: 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#step-two {
+          .decor-img {
+            display: none;
+          }
+          .wrapper {
+            .step-description {
+              flex-direction: column;
+              align-items: center;
+              img {
+                left: 0px;
+                margin-right: 0px;
+              }
+              .text {
+                width: 100%;
+                font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+              }
+            }
+            .features-website-development {
+              .feature-item {
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+                .text {
+                  font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                }
+              }
+            }
+          }
+          .site-features-container {
+            width: 100%;
+            padding: 60px 20px;
+            .title {
+              text-align: center;
+              width: 100%;
+            }
+            .deployable-blocks-list {
+              .deployable-item {
+                &.selected:nth-of-type(1) {
+                  .deployable-content-wrapper {
+                    max-height: calc(
+                      410px - 110 * (100vw - 320px) / (767 - 320)
+                    ) !important;
+                  }
+                }
+                &.selected:nth-of-type(2), &.selected:nth-of-type(3) {
+                  .deployable-content-wrapper {
+                    max-height: calc(
+                      194px - 89 * (100vw - 320px) / (767 - 320)
+                    ) !important;
+                  }
+                }
+                .deployable-title {
+                  .text {
+                    font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                    flex: 1;
+                  }
+                  .indicator {
+                    width: 40px;
+                    
+                  }
+                }
+                .deployable-content-wrapper {
+                  .deployable-content {
+                    padding: 30px 10px;
+                    p {
+                      font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                    }
+                  }
+                }
+              }
             }
           }
         }
