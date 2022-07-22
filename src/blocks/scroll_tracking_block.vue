@@ -663,21 +663,20 @@
               <div class="pink-button">Заполнить бриф</div>
             </div>
           </div>
-          <img
-            src="@/assets/image/block6/step2/bref_2_decor_1.png"
-            alt=""
-            class="decor-img_1"
-          />
-          <img
-            src="@/assets/image/block6/step2/bref_2_decor_1-adaptive.png"
-            alt=""
-            class="decor-img_1-adaptive"
-          />
-          <img
-            src="@/assets/image/block6/step2/bref_2_decor_2.svg"
-            alt=""
-            class="decor-img_2"
-          />
+          <div class="decor-img_1">
+            <div class="img-wrapper">
+              <img
+                src="@/assets/image/block6/step2/bref_2_decor_1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="decor-img_2">
+            <div class="circle" id="circle_1"></div>
+            <div class="circle" id="circle_2"></div>
+            <div class="triangle"></div>
+            <div class="square"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -2018,17 +2017,74 @@ export default {
           }
         }
         .decor-img_1 {
+          width: 863px;
+          height: 863px;
+          border-radius: 100%;
+          background-color: #ecc0c7;
           position: absolute;
-          left: calc(-170px + 170 * (100vw - 1366px) / (1920 - 1366));
-          top: 0px;
-        }
-        .decor-img_1-adaptive {
-          display: none;
+          z-index: 1;
+          top: -270px;
+          left: calc(-338px + 180 * (100vw - 1366px) / (1920 - 1366));
+          .img-wrapper {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            img {
+              position: absolute;
+              right: -133px;
+              bottom: -20px;
+              transform: rotate(-9deg);
+            }
+          }
         }
         .decor-img_2 {
+          width: 688px;
+          height: 228px;
           position: absolute;
           left: 43%;
           top: 40px;
+          .circle {
+            &#circle_1 {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              background-color: #cbcdf4;
+            }
+            &#circle_2 {
+              position: absolute;
+              right: 178px;
+              top: 168px;
+              width: 60px;
+              height: 60px;
+              border-radius: 100%;
+              background-color: #cbcdf4;
+            }
+          }
+          .triangle {
+            width: 0;
+            height: 0;
+            border-bottom: 15px solid transparent;
+            border-right: 30px solid #ecc0c7;
+            border-top: 15px solid transparent;
+            position: absolute;
+            top: 10px;
+            right: 135px;
+          }
+          .square {
+            width: 20px;
+            height: 20px;
+            background-color: #696fe5;
+            position: absolute;
+            top: 92px;
+            right: 0px;
+          }
         }
       }
     }
@@ -3063,13 +3119,66 @@ export default {
           }
         }
         &#breaf-two {
-          .decor-img_1 {
-            display: none;
-          }
-          .decor-img_1-adaptive {
-            display: block;
-            position: absolute;
-            top: 0;
+          min-width: auto;
+          .bacground-wrapper {
+            width: calc(100% - 100px);
+            min-width: auto;
+            .wrapper {
+              width: 100%;
+              .right {
+                margin-left: auto;
+              }
+            }
+            .decor-img_1 {
+              width: 402px;
+              height: 402px;
+              top: -32px;
+              left: -145px;
+              img {
+                width: 125%;
+                right: -99px;
+                bottom: -125px;
+                transform: rotate(39deg);
+              }
+              &::before {
+                width: 116px;
+                height: 116px;
+                border-radius: 100%;
+                position: absolute;
+                border: 2px solid #ecc0c7;
+                content: "";
+                right: -24px;
+                bottom: 0px;
+              }
+            }
+            .decor-img_2 {
+              left: auto;
+              right: 0;
+              top: 0;
+              width: 394px;
+              height: 100%;
+              .circle {
+                &#circle_1 {
+                  left: auto;
+                  right: 394px;
+                  top: 48px;
+                }
+                &#circle_2 {
+                  left: auto;
+                  right: 99px;
+                  top: auto;
+                  bottom: -26px;
+                }
+              }
+              .triangle {
+                top: 25px;
+                right: 190px;
+              }
+              .square {
+                top: 28px;
+                right: 20px;
+              }
+            }
           }
         }
       }
@@ -3282,7 +3391,7 @@ export default {
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .block {
     .wrapper {
       width: 100% !important;
@@ -3335,13 +3444,57 @@ export default {
           }
         }
         &#breaf-two {
-          .decor-img_1 {
-            display: none;
-          }
-          .decor-img_1-adaptive {
-            display: block;
-            position: absolute;
-            top: 0;
+          .bacground-wrapper {
+            width: 100%;
+            min-width: auto;
+            .wrapper {
+              width: 320px !important;
+              padding: 0px !important;
+              height: 534px;
+              justify-content: center;
+              .right {
+                margin-left: 0px;
+                padding: 0px 0px 30px;
+                height: fit-content;
+                margin-top: auto;
+                .breaf-title {
+                  font-size: calc(20px + 6 * (100vw - 320px) / (767 - 320));
+                  line-height: calc(26px + 6 * (100vw - 320px) / (767 - 320));
+                  margin-bottom: calc(30px - 10 * (100vw - 320px) / (767 - 320));
+                }
+              }
+            }
+            .decor-img_1 {
+              top: -84px;
+              left: -167px;
+              .img-wrapper {
+                img {
+                  bottom: -159px;
+                }
+              }
+            }
+            .decor-img_2 {
+              .circle {
+                &#circle_1 {
+                  background-color: #696FE5;
+                  right: 22px;
+                  top: 22px;
+                }
+                 &#circle_2 {
+                  right: 20px;
+                  top: 200px;
+                }
+              }
+              .triangle {
+                right: auto;
+                left: 0;
+                top: 150px;
+              }
+              .square {
+                right: 76px;
+                top: 113px
+              }
+            }
           }
         }
       }
@@ -3501,7 +3654,8 @@ export default {
                     ) !important;
                   }
                 }
-                &.selected:nth-of-type(2), &.selected:nth-of-type(3) {
+                &.selected:nth-of-type(2),
+                &.selected:nth-of-type(3) {
                   .deployable-content-wrapper {
                     max-height: calc(
                       194px - 89 * (100vw - 320px) / (767 - 320)
@@ -3515,7 +3669,6 @@ export default {
                   }
                   .indicator {
                     width: 40px;
-                    
                   }
                 }
                 .deployable-content-wrapper {
