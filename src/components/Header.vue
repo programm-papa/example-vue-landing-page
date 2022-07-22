@@ -155,7 +155,7 @@
       </div> -->
       <div class="contact">
         <a href="" class="phone"> +7 921 0 250-250</a>
-        <div class="order-call"><div class="text">Заказать звонок</div></div>
+        <div class="order-call" @click="{this.$store.dispatch('updateCallBackPopUpType', 'call');this.$store.dispatch('updateOpenCallBackPopUp', true);}"><div class="text">Заказать звонок</div></div>
         <!-- <div class="order-call flex">
           <div class="phone-icon">
             <svg

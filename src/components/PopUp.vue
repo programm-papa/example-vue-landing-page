@@ -1,7 +1,7 @@
 <template>
   <div class="popup-wrapper">
     <div class="popup">
-      <div class="close-btn">
+      <div class="close-btn" @click="openCallBackPopUp = false">
         <div class="line"></div>
         <div class="line"></div>
       </div>
@@ -90,6 +90,19 @@ export default {
       },
     };
   },
+  computed: {
+    openCallBackPopUp: {
+      get() {
+        return this.$store.state.openCallBackPopUp;
+      },
+      set(value) {
+        this.$store.dispatch("updateOpenCallBackPopUp", value);
+      },
+    },
+    callBackPopUpType() {
+      return this.$store.state.callBackPopUpType; 
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

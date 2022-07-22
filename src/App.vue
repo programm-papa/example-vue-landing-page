@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <PopUp />
+  <PopUp v-if="openCallBackPopUp" />
   <router-view />
   <Footer />
 </template>
@@ -14,6 +14,16 @@ export default {
     Header,
     Footer,
     PopUp,
+  },
+  computed: {
+    openCallBackPopUp: {
+      get() {
+        return this.$store.state.openCallBackPopUp;
+      },
+      set(value) {
+        this.$store.dispatch("updateOpenCallBackPopUp", value);
+      },
+    },
   },
   mounted() {},
 };

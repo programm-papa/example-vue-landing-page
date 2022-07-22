@@ -9,13 +9,22 @@ export default createStore({
     },
     //Открытие меню со списком услуг и прогрессом просмотра
     openSpecialMenuStatus: false,
+    //Открытие попап обратной связи
+    openCallBackPopUp: false,
+    callBackPopUpType: 'call',
   },
   mutations: {
     changeActiveStepList(state, newValueObj) {
       state.scrollTrackung_ActiveStepList = { ...newValueObj };
     },
     changeOpenSpecialMenuStatus(state, newValue) {
-      state.openSpecialMenuStatus = newValue;
+      state.openCallBackPopUp = !!newValue;
+    },
+    changeOpenCallBackPopUp(state, newValue) {
+      state.openCallBackPopUp = !!newValue;
+    },
+    changeCallBackPopUpType(state, newValue) {
+      state.callBackPopUpType = newValue;
     },
   },
   actions: {
@@ -24,6 +33,12 @@ export default createStore({
     },
     updateOpenSpecialMenuStatus(ctx, newValue) {
       ctx.commit("changeOpenSpecialMenuStatus", newValue);
+    },
+    updateOpenCallBackPopUp(ctx, newValue) {
+      ctx.commit("changeOpenCallBackPopUp", newValue);
+    },
+    updateCallBackPopUpType(ctx, newValue) {
+      ctx.commit("changeCallBackPopUpType", newValue);
     },
   },
   getters: {

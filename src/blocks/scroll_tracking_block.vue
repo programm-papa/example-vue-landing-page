@@ -838,7 +838,7 @@
                     </div>
                     <div class="indicator flex-column">
                       <div class="indicator__decor"></div>
-                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__title">Просмотры рекламы</div>
                       <div class="indicator__value">-</div>
                       <div class="indicator__changing-type">
                         <svg
@@ -955,7 +955,7 @@
                     </div>
                     <div class="indicator flex-column">
                       <div class="indicator__decor"></div>
-                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__title">Просмотры рекламы</div>
                       <div class="indicator__value">2765</div>
                       <div class="indicator__changing-type">
                         <svg
@@ -1283,7 +1283,7 @@
                     </div>
                     <div class="indicator flex-column">
                       <div class="indicator__decor"></div>
-                      <div class="indicator__title">Переходы на сайт</div>
+                      <div class="indicator__title">Просмотры рекламы</div>
                       <div class="indicator__value">5812</div>
                       <div class="indicator__changing-type">
                         <svg
