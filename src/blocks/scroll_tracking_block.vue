@@ -442,11 +442,12 @@
               alt=""
               class="decor-img_1"
             />
-            <img
-              src="@/assets/image/block6/step1/breaf_1_decor_2.svg"
-              alt=""
-              class="decor-img_2"
-            />
+            <div class="decor-img_2" data-v-2ff20447="">
+              <div class="circle" id="circle_1"></div>
+              <div class="circle" id="circle_2"></div>
+              <div class="triangle"></div>
+              <div class="square"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -750,6 +751,60 @@
                 @click="changeActiveIndicatorsTab(3)"
               >
                 Через 4 месяца
+              </div>
+            </div>
+            <div class="indicators-change-tabs-btn_adaptive">
+              <div
+                class="dropdown"
+                :class="mobileActiveIndicatorsOpen ? 'open' : ''"
+              >
+                <div
+                  class="selectName"
+                  @click="
+                    mobileActiveIndicatorsOpen = !mobileActiveIndicatorsOpen
+                  "
+                >
+                  {{ mobileActiveIndicatorsText }}
+                  <div class="decor-triangle"></div>
+                </div>
+                <div class="dropdown-list">
+                  <div
+                    class="btn"
+                    v-if="!activeIndicatorsTab.indicatorsTab1"
+                    @click="
+                      {
+                        changeActiveIndicatorsTab(1);
+                        mobileActiveIndicatorsOpen = false;
+                      }
+                    "
+                  >
+                    До старта наших работ
+                  </div>
+                  <div
+                    class="btn"
+                    v-if="!activeIndicatorsTab.indicatorsTab2"
+                    @click="
+                      {
+                        changeActiveIndicatorsTab(2);
+                        mobileActiveIndicatorsOpen = false;
+                      }
+                    "
+                  >
+                    Через месяц
+                  </div>
+                  <div
+                    class="btn"
+                    v-if="!activeIndicatorsTab.indicatorsTab3"
+                    @click="
+                      {
+                        changeActiveIndicatorsTab(3);
+                        mobileActiveIndicatorsOpen = false;
+                      }
+                    "
+                  >
+                    Через 4 месяца
+                  </div>
+                </div>
               </div>
             </div>
             <div class="indicators-tabs">
@@ -1620,6 +1675,7 @@ export default {
       step1: "",
       step2: "",
       step3: "",
+      mobileActiveIndicatorsOpen: false,
       //Табы результатов по ключевым показателям
       activeIndicatorsTab: {
         indicatorsTab1: true,
@@ -1794,6 +1850,15 @@ export default {
       set(value) {
         this.$store.dispatch("updateOpenSpecialMenuStatus", value);
       },
+    },
+    mobileActiveIndicatorsText() {
+      if (this.activeIndicatorsTab.indicatorsTab1) {
+        return "До старта наших работ";
+      } else if (this.activeIndicatorsTab.indicatorsTab2) {
+        return "Через месяц";
+      } else {
+        return "Через 4 месяца";
+      }
     },
   },
   watch: {
@@ -1987,9 +2052,50 @@ export default {
           top: 0px;
         }
         .decor-img_2 {
+          width: 753px;
+          height: 228px;
           position: absolute;
-          left: 37%;
+          left: 36%;
           top: 40px;
+          .circle {
+            &#circle_1 {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              background-color: #5356ae;
+            }
+            &#circle_2 {
+              position: absolute;
+              right: 224px;
+              top: auto;
+              bottom: 0;
+              width: 60px;
+              height: 60px;
+              border-radius: 100%;
+              background-color: #cbcdf4;
+            }
+          }
+          .triangle {
+            width: 0;
+            height: 0;
+            border-bottom: 15px solid transparent;
+            border-right: 30px solid #ecc0c7;
+            border-top: 15px solid transparent;
+            position: absolute;
+            top: 30px;
+            right: 230px;
+          }
+          .square {
+            width: 20px;
+            height: 20px;
+            background-color: #424c5c;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+          }
         }
       }
       &#breaf-two {
@@ -2702,6 +2808,9 @@ export default {
               }
             }
           }
+          .indicators-change-tabs-btn_adaptive {
+            display: none;
+          }
           .indicators-tabs {
             .tab {
               .values-main-indicators {
@@ -3111,10 +3220,42 @@ export default {
           .bacground-wrapper {
             width: calc(100% - 100px);
             .wrapper {
+              width: 100%;
+              padding: 0px 20px;
+              justify-content: center;
               gap: 33px;
             }
             .decor-img_1 {
               right: -350px;
+            }
+            .decor-img_2 {
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              .circle {
+                &#circle_1 {
+                  left: auto;
+                  right: auto;
+                  left: 276px;
+                  top: 21px;
+                }
+                &#circle_2 {
+                  left: 47%;
+                  right: auto;
+                  top: auto;
+                  bottom: -21px;
+                }
+              }
+              .triangle {
+                top: 15px;
+                right: auto;
+                left: 29px;
+              }
+              .square {
+                top: 38px;
+                right: 46px;
+              }
             }
           }
         }
@@ -3429,6 +3570,7 @@ export default {
               padding: 40px 0px !important;
               .right {
                 .breaf-title {
+                  width: calc(300px + 20 * (100vw - 320px) / (767 - 320));
                   font-size: calc(20px + 6 * (100vw - 320px) / (767 - 320));
                 }
               }
@@ -3437,9 +3579,32 @@ export default {
               display: none;
             }
             .decor-img_2 {
-              top: 200px;
-              left: 100px;
+              top: 0px;
+              left: 0px;
               width: 100%;
+              .circle {
+                &#circle_1 {
+                  left: auto;
+                  right: 22px;
+                  left: auto;
+                  top: 21px;
+                }
+                &#circle_2 {
+                  left: auto;
+                  right: -4px;
+                  top: 230px;
+                  bottom: auto;
+                }
+              }
+              .triangle {
+                top: 15px;
+                right: auto;
+                left: 29px;
+              }
+              .square {
+                top: 148px;
+                right: 56px;
+              }
             }
           }
         }
@@ -3460,7 +3625,9 @@ export default {
                 .breaf-title {
                   font-size: calc(20px + 6 * (100vw - 320px) / (767 - 320));
                   line-height: calc(26px + 6 * (100vw - 320px) / (767 - 320));
-                  margin-bottom: calc(30px - 10 * (100vw - 320px) / (767 - 320));
+                  margin-bottom: calc(
+                    30px - 10 * (100vw - 320px) / (767 - 320)
+                  );
                 }
               }
             }
@@ -3476,11 +3643,11 @@ export default {
             .decor-img_2 {
               .circle {
                 &#circle_1 {
-                  background-color: #696FE5;
+                  background-color: #696fe5;
                   right: 22px;
                   top: 22px;
                 }
-                 &#circle_2 {
+                &#circle_2 {
                   right: 20px;
                   top: 200px;
                 }
@@ -3492,7 +3659,7 @@ export default {
               }
               .square {
                 right: 76px;
-                top: 113px
+                top: 113px;
               }
             }
           }
@@ -3680,6 +3847,215 @@ export default {
                   }
                 }
               }
+            }
+          }
+        }
+        &#step-three {
+          .wrapper {
+            .title {
+              .title__decor {
+                width: 100%;
+                align-items: flex-end;
+                gap: 20px;
+                .avatar {
+                  flex: 1;
+                }
+                .comment {
+                  width: 100%;
+                  height: fit-content;
+                  background: none;
+                  border: 1px solid #e7e7e7;
+                  border-radius: 20px;
+                  padding: 20px;
+                }
+              }
+            }
+            .step-description {
+              flex-direction: column;
+              .content {
+                .description__title {
+                  font-size: calc(16px + 4 * (100vw - 320px) / (767 - 320));
+                  line-height: calc(20px + 4 * (100vw - 320px) / (767 - 320));
+                  margin-bottom: 20px;
+                }
+                .description__text {
+                  font-size: calc(14px + 2 * (100vw - 320px) / (767 - 320));
+                }
+              }
+            }
+            .indicators-change-block {
+              margin-bottom: 60px;
+              .title {
+                font-size: calc(16px + 4 * (100vw - 320px) / (767 - 320));
+                line-height: calc(20px + 4 * (100vw - 320px) / (767 - 320));
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 20px;
+              }
+              .indicators-change-tabs-btn {
+                display: none;
+              }
+              .indicators-change-tabs-btn_adaptive {
+                display: block;
+                position: relative;
+                z-index: 1;
+                height: 60px;
+                margin-bottom: 60px;
+                .dropdown {
+                  width: 100%;
+                  max-height: 60px;
+                  transition: max-height 0.3s;
+                  max-width: 400px;
+                  margin: 0px auto;
+                  border-radius: 20px;
+                  overflow: hidden;
+                  .selectName {
+                    width: 100%;
+                    height: 62px;
+                    background-color: #696fe5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    //Стили текста
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 135%;
+                    color: #ffffff;
+                  }
+                  .btn {
+                    position: relative;
+                    width: 100%;
+                    height: 62px;
+                    background-color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    //Стили текста
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 135%;
+                    color: #696fe5;
+                    &:nth-child(1) {
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        width: 78%;
+                        height: 1px;
+                        background-color: #cbcdf4;
+                      }
+                    }
+                    &:active,
+                    &:hover {
+                      background: #eaebfb;
+                    }
+                  }
+                  &.open {
+                    max-height: 186px;
+                    filter: drop-shadow(
+                      8px 16px 18px rgba(105, 111, 229, 0.18)
+                    );
+                  }
+                }
+              }
+              .indicators-tabs {
+                .tab {
+                  .values-main-indicators {
+                    width: 100%;
+                    max-width: 320px;
+                    min-width: 280px;
+                    margin: 0px auto 60px;
+                    grid-template-rows: none;
+                    grid-template-columns: 1fr;
+                    grid-auto-rows: calc(
+                      140px + 40 * (100vw - 320px) / (767 - 320)
+                    );
+                    .indicator {
+                      .indicator__value {
+                        font-size: calc(
+                          24px + 24 * (100vw - 320px) / (767 - 320)
+                        );
+                        line-height: calc(
+                          30px + 29 * (100vw - 320px) / (767 - 320)
+                        );
+                      }
+                      .indicator__changing-type {
+                        .value {
+                          font-size: calc(
+                            14px + 6 * (100vw - 320px) / (767 - 320)
+                          );
+                        }
+                      }
+                    }
+                  }
+                  .description {
+                    flex-direction: column;
+                    p {
+                      font-size: calc(
+                        14px + 2 * (100vw - 320px) / (767 - 320)
+                      ) !important;
+                    }
+                  }
+                  .dropdown-description {
+                    .dropdown-content {
+                      &.open {
+                        max-height: 1445px;
+                      }
+                      .container {
+                        .left {
+                          min-width: auto;
+                          grid-template-columns: 1fr 1fr;
+                          gap: 20px;
+                          .condition {
+                            .condition__name {
+                              padding-right: 20px;
+                              font-size: calc(
+                                14px + 2 * (100vw - 320px) / (767 - 320)
+                              );
+                            }
+                            .condition__value {
+                              font-size: calc(
+                                24px + 12 * (100vw - 320px) / (767 - 320)
+                              );
+                              line-height: calc(
+                                30px + 15 * (100vw - 320px) / (767 - 320)
+                              );
+                            }
+                          }
+                        }
+                        .right {
+                          margin: 0px auto;
+                          width: 100%;
+                          max-width: 320px;
+                          min-width: 280px;
+                          grid-template-columns: 1fr;
+                          .indicator {
+                            width: 100%;
+                            // height: calc(
+                            //   130px + 30 * (100vw - 320px) / (767 - 320)
+                            // );
+                            height: 160px;
+                            .indicator__value {
+                              font-size: calc(
+                                24px + 12 * (100vw - 320px) / (767 - 320)
+                              );
+                              line-height: calc(
+                                30px + 15 * (100vw - 320px) / (767 - 320)
+                              );
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .stages-marketing-list {
+              flex-direction: column;
+              align-items: center;
             }
           }
         }

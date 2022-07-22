@@ -956,7 +956,7 @@ export default {
             position: relative;
             display: flex;
             justify-content: center;
-            align-content: center;
+            align-items: center;
             margin-left: auto;
             padding-top: 19px;
             width: 40px;

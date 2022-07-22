@@ -1,16 +1,19 @@
 <template>
   <Header />
+  <PopUp />
   <router-view />
   <Footer />
 </template>
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import PopUp from "@/components/PopUp.vue";
 import "@/assets/styles/slider-styles.css";
 export default {
   components: {
     Header,
     Footer,
+    PopUp,
   },
   mounted() {},
 };
@@ -99,6 +102,9 @@ a {
     background: #ff5555;
     //Стили текста
     color: #ffffff;
+  }
+  &:active {
+    opacity: .7;
   }
 }
 .blue-border-button {
