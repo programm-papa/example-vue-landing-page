@@ -238,8 +238,8 @@
         />
       </div>
       <div class="button-block flex">
-        <div class="pink-button">Узнать больше</div>
-        <div class="blue-border-button">Оставить заявку</div>
+        <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'dialogue');this.$store.dispatch('updateOpenCallBackPopUp', true);}">Узнать больше</div>
+        <div class="blue-border-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'call');this.$store.dispatch('updateOpenCallBackPopUp', true);}">Оставить заявку</div>
       </div>
     </div>
   </div>

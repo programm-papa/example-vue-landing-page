@@ -338,7 +338,7 @@
           </div>
         </transition>
         <div class="want flex-column">
-          <div class="pink-button">хочу так же!</div>
+          <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'consultationV3');this.$store.dispatch('updateOpenCallBackPopUp', true);}">хочу так же!</div>
           <div class="description">
             *В итоговом результате не учитывается часть оборота клиники от
             постоянных клиентов, которые регулярно самостоятельно записываются к

@@ -10,7 +10,7 @@
           <span class="stroke-text">для </span>
           <span class="stroke-text">вашей</span> клиники?
         </div>
-        <div class="pink-button">Да, мне нужны пациенты</div>
+        <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'consultationV1');this.$store.dispatch('updateOpenCallBackPopUp', true);}">Да, мне нужны пациенты</div>
       </div>
       <div class="decor-img">
         <div class="input-efect-wrap flex">

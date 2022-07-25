@@ -10,7 +10,12 @@
         <div class="popup__title_description">
           {{ popUpSelectPatern.title_description }}
         </div>
-        <form class="popup__form flex-column">
+        <form
+          class="popup__form flex-column"
+          @submit.prevent="customSubmitForm"
+          novalidate
+          :class="validationFormClass"
+        >
           <template
             v-for="(field, index) in popUpSelectPatern.fields"
             :key="index"
@@ -24,6 +29,7 @@
                 :name="field.name"
                 :placeholder="field.placeholder"
                 :required="field.required"
+                @input="field.required ? validationFormClass = '':''"
               />
             </div>
           </template>
@@ -38,7 +44,21 @@
             <a href="" tabindex="_blank">Политикой конфиденциальности</a>
           </p>
         </form>
-        <a href="https://t.me/ArtGorka" class="telegram" target="_blank">Связаться в Телеграм</a>
+        <a href="https://t.me/ArtGorka" class="telegram" target="_blank"
+          ><svg
+            width="19"
+            height="18"
+            viewBox="0 0 19 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 1.10223L15.9946 16.7923C15.9946 16.7923 15.5741 17.8801 14.4189 17.3584L7.48458 11.8526L7.45242 11.8364C8.38909 10.9654 15.6524 4.20266 15.9698 3.89612C16.4613 3.42136 16.1562 3.13873 15.5856 3.49736L4.85679 10.553L0.717638 9.11077C0.717638 9.11077 0.0662573 8.87083 0.00359284 8.34911C-0.0598962 7.82653 0.739076 7.5439 0.739076 7.5439L17.6131 0.688948C17.6131 0.688948 19 0.05793 19 1.10223V1.10223Z"
+              fill="#5356AE"
+            />
+          </svg>
+          Связаться в Телеграм</a
+        >
       </div>
     </div>
   </div>
@@ -47,6 +67,7 @@
 export default {
   data() {
     return {
+      validationFormClass: '',
       popUpSelectPatern: {
         title: "Оставьте заявку на звонок",
         title_description: "Наш специалист свяжется с вами и проконсультирует",
@@ -87,6 +108,151 @@ export default {
           ],
           button: "Отправить заявку",
         },
+        consultationV1: {
+          title: "Оставьте заявку для обсуждения деталей",
+          title_description:
+            "Оценим Вашу ситуацию и предложим варианты решения",
+          fields: [
+            {
+              type: "text",
+              name: "name",
+              placeholder: "Ваше имя",
+              required: false,
+            },
+            {
+              type: "text",
+              name: "phone",
+              placeholder: "+7 (900) 000 00 00",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "mail",
+              placeholder: "Ваш e-mail",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "link",
+              placeholder: "Ссылка на ваш сайт",
+            },
+          ],
+          button: "Отправить заявку",
+        },
+        consultationV2: {
+          title: "Запишитесь на диагностическую консультацию",
+          title_description:
+            "Оценим Вашу ситуацию и предложим варианты решения",
+          fields: [
+            {
+              type: "text",
+              name: "name",
+              placeholder: "Ваше имя",
+              required: false,
+            },
+            {
+              type: "text",
+              name: "phone",
+              placeholder: "+7 (900) 000 00 00",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "mail",
+              placeholder: "Ваш e-mail",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "link",
+              placeholder: "Ссылка на ваш сайт",
+            },
+          ],
+          button: "Отправить заявку",
+        },
+        consultationV3: {
+          title: "Необходим качественный прирост клиентуры?",
+          title_description:
+            "Оценим Вашу ситуацию и предложим варианты решения",
+          fields: [
+            {
+              type: "text",
+              name: "name",
+              placeholder: "Ваше имя",
+              required: false,
+            },
+            {
+              type: "text",
+              name: "phone",
+              placeholder: "+7 (900) 000 00 00",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "mail",
+              placeholder: "Ваш e-mail",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "link",
+              placeholder: "Ссылка на ваш сайт",
+            },
+          ],
+          button: "Отправить заявку",
+        },
+        case: {
+          title:
+            "Понравился кейс и хотите не менее успешный результат для себя?",
+          title_description: "Смело заполняйте форму обратной связи!",
+          fields: [
+            {
+              type: "text",
+              name: "name",
+              placeholder: "Ваше имя",
+              required: false,
+            },
+            {
+              type: "text",
+              name: "phone",
+              placeholder: "+7 (900) 000 00 00",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "mail",
+              placeholder: "Ваш e-mail",
+              required: true,
+            },
+          ],
+          button: "Получить предложение",
+        },
+        dialogue: {
+          title: "Мы готовы к предметному диалогу",
+          title_description:
+            "Оценим Вашу ситуацию и предложим варианты решения",
+          fields: [
+            {
+              type: "text",
+              name: "name",
+              placeholder: "Ваше имя",
+              required: false,
+            },
+            {
+              type: "text",
+              name: "phone",
+              placeholder: "+7 (900) 000 00 00",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "mail",
+              placeholder: "Ваш e-mail",
+              required: true,
+            },
+          ],
+          button: "Получить предложение",
+        },
       },
     };
   },
@@ -100,9 +266,36 @@ export default {
       },
     },
     callBackPopUpType() {
-      return this.$store.state.callBackPopUpType; 
-    }
-  }
+      return this.$store.state.callBackPopUpType;
+    },
+  },
+  methods: {
+    customSubmitForm(e) {
+      this.validationFormClass = '';
+      let formData = new FormData();
+      const form = document.querySelector("form.popup__form.flex-column");
+      const inputs = Array.from(form.elements).filter((tag) =>
+        ["input"].includes(tag.tagName.toLowerCase())
+      );
+      for (const input of inputs) {
+        if (input.required) {
+          if (input.value != "" && input.value != ' ') {
+            formData.set(input.name, input.value);
+          } else {
+            this.validationFormClass += ' empty-' + input.name;
+          }
+        } else {
+          formData.set(input.name, input.value);
+        }
+      }
+      if(this.validationFormClass == '') {
+        console.log(formData);
+      }
+    },
+  },
+  mounted() {
+    this.popUpSelectPatern = this.popUpPaterns[this.callBackPopUpType];
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -135,7 +328,6 @@ export default {
       height: 155px;
       background: #5356ae;
       border-radius: 20px;
-      display: none;
     }
     .close-btn {
       width: 40px;
@@ -253,19 +445,37 @@ export default {
             text-decoration: underline;
           }
         }
+        &.empty-phone {
+          input[name="phone"] {
+            border: 1px solid #ff5555;
+          }
+        }
+         &.empty-mail {
+           input[name="mail"] {
+            border: 1px solid #ff5555;
+          }
+         }
       }
       .telegram {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 2;
+        gap: 15px;
         width: 100%;
         max-width: 360px;
         height: 60px;
         background: #cbcdf4;
         border-radius: 20px;
         &:hover {
-            background-color: #F4DCE6;
-            
+          background-color: #696fe5;
+          color: #ffffff;
+          svg {
+            path {
+              fill: #ffffff;
+            }
+          }
         }
         //Стили текста
         font-style: normal;

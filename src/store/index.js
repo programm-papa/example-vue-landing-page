@@ -18,7 +18,7 @@ export default createStore({
       state.scrollTrackung_ActiveStepList = { ...newValueObj };
     },
     changeOpenSpecialMenuStatus(state, newValue) {
-      state.openCallBackPopUp = !!newValue;
+      state.openSpecialMenuStatus = !!newValue;
     },
     changeOpenCallBackPopUp(state, newValue) {
       state.openCallBackPopUp = !!newValue;

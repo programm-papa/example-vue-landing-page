@@ -135,7 +135,7 @@
             </div>
           </div>
           <div class="case__buttons flex">
-            <div class="pink-button">Хочу так же!</div>
+            <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'case');this.$store.dispatch('updateOpenCallBackPopUp', true);}">Хочу так же!</div>
             <a
               class="blue-border-button"
               href="https://dodoktor.ru/"
@@ -280,7 +280,7 @@
               </div>
             </div>
             <div class="case__buttons flex">
-              <div class="pink-button">Хочу так же!</div>
+              <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'case');this.$store.dispatch('updateOpenCallBackPopUp', true);}">Хочу так же!</div>
               <a
                 class="blue-border-button"
                 href="https://smile53.ru/"
