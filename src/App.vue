@@ -1,6 +1,8 @@
 <template>
   <Header />
-  <PopUp v-if="openCallBackPopUp" />
+  <PopUp v-if="openCallBackPopUp" key="allPopUp"/>
+  <BreafSiteCreate v-if="openBreaf && breafType == 'site'" />
+  <BreafBrending v-if="openBreaf && breafType == 'brending'" />
   <router-view />
   <Footer />
 </template>
@@ -8,12 +10,16 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import PopUp from "@/components/PopUp.vue";
+import BreafSiteCreate from "@/components/BreafSiteCreate.vue";
+import BreafBrending from "@/components/BreafBrending.vue";
 import "@/assets/styles/slider-styles.css";
 export default {
   components: {
     Header,
     Footer,
     PopUp,
+    BreafSiteCreate,
+    BreafBrending,
   },
   computed: {
     openCallBackPopUp: {
@@ -23,6 +29,17 @@ export default {
       set(value) {
         this.$store.dispatch("updateOpenCallBackPopUp", value);
       },
+    },
+    openBreaf: {
+      get() {
+        return this.$store.state.openBreaf;
+      },
+      set(value) {
+        this.$store.dispatch("updateOpenBreaf", value);
+      },
+    },
+    breafType() {
+      return this.$store.state.breafType;
     },
   },
   mounted() {},
@@ -114,7 +131,7 @@ a {
     color: #ffffff;
   }
   &:active {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 .blue-border-button {

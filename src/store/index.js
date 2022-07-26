@@ -12,6 +12,9 @@ export default createStore({
     //Открытие попап обратной связи
     openCallBackPopUp: false,
     callBackPopUpType: 'call',
+    //Открытие попап обратной связи
+    openBreaf: false,
+    breafType: 'site',
   },
   mutations: {
     changeActiveStepList(state, newValueObj) {
@@ -26,6 +29,12 @@ export default createStore({
     changeCallBackPopUpType(state, newValue) {
       state.callBackPopUpType = newValue;
     },
+    changeOpenBreaf(state, newValue) {
+      state.openBreaf = !!newValue;
+    },
+    changeBreafType(state, newValue) {
+      state.breafType = newValue;
+    },
   },
   actions: {
     updatedActiveStepList(ctx, newValueObj) {
@@ -39,6 +48,12 @@ export default createStore({
     },
     updateCallBackPopUpType(ctx, newValue) {
       ctx.commit("changeCallBackPopUpType", newValue);
+    },
+    updateOpenBreaf(ctx, newValue) {
+      ctx.commit("changeOpenBreaf", newValue);
+    },
+    updateBreafType(ctx, newValue) {
+      ctx.commit("changeBreafType", newValue);
     },
   },
   getters: {

@@ -11,6 +11,7 @@
           {{ popUpSelectPatern.title_description }}
         </div>
         <form
+          ref="form"
           class="popup__form flex-column"
           @submit.prevent="customSubmitForm"
           novalidate
@@ -29,13 +30,22 @@
                 :name="field.name"
                 :placeholder="field.placeholder"
                 :required="field.required"
-                @input="field.required ? validationFormClass = '':''"
+                @input="
+                  field.required ? changeValidationFormClass(field.name) : ''
+                "
               />
             </div>
           </template>
           <p class="req-description">
             <span class="red">*</span> - поля, обязательные для заполнения
           </p>
+          <vue-recaptcha
+            ref="recaptcha"
+            size="invisible"
+            :sitekey="sitekey"
+            @verify="sendMail"
+            @expired="onCaptchaExpired"
+          />
           <button class="pink-button" type="submit">
             {{ popUpSelectPatern.button }}
           </button>
@@ -64,10 +74,14 @@
   </div>
 </template>
 <script>
+import { VueRecaptcha } from "vue-recaptcha";
+import axios from "axios";
 export default {
+  components: { VueRecaptcha },
   data() {
     return {
-      validationFormClass: '',
+      sitekey: "6Leb2w8hAAAAAJU6tatt0pLakroQRrTWM2HMAcPZ",
+      validationFormClass: [],
       popUpSelectPatern: {
         title: "Оставьте заявку на звонок",
         title_description: "Наш специалист свяжется с вами и проконсультирует",
@@ -254,6 +268,8 @@ export default {
           button: "Получить предложение",
         },
       },
+      rePhone: /^[\d\+][\d\(\)\ -]{4,14}\d$/,
+      reMail: /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i,
     };
   },
   computed: {
@@ -271,26 +287,52 @@ export default {
   },
   methods: {
     customSubmitForm(e) {
-      this.validationFormClass = '';
-      let formData = new FormData();
-      const form = document.querySelector("form.popup__form.flex-column");
+      this.validationFormClass = [];
+      const form = this.$refs.form;
       const inputs = Array.from(form.elements).filter((tag) =>
         ["input"].includes(tag.tagName.toLowerCase())
       );
       for (const input of inputs) {
-        if (input.required) {
-          if (input.value != "" && input.value != ' ') {
-            formData.set(input.name, input.value);
-          } else {
-            this.validationFormClass += ' empty-' + input.name;
-          }
-        } else {
-          formData.set(input.name, input.value);
+        if (
+          input.required &&
+          input.name == "phone" &&
+          !this.rePhone.test(input.value)
+        ) {
+          this.validationFormClass.push("empty-" + input.name);
+          continue;
+        }
+        if (
+          input.required &&
+          input.name == "mail" &&
+          !this.reMail.test(input.value)
+        ) {
+          this.validationFormClass.push("empty-" + input.name);
+          continue;
         }
       }
-      if(this.validationFormClass == '') {
-        console.log(formData);
+      if (!this.validationFormClass.length) {
+        this.$refs.recaptcha.execute();
       }
+    },
+    changeValidationFormClass(fieldName) {
+      if (this.validationFormClass.includes("empty-" + fieldName)) {
+        this.validationFormClass.splice(
+          this.validationFormClass.indexOf("empty-" + fieldName),
+          1
+        );
+      }
+    },
+    onCaptchaExpired() {
+      console.log('recaptcha not wrk')
+      this.$refs.recaptcha.reset();
+    },
+    sendMail(recaptchaToken) {
+      console.log('recaptcha wrk')
+      const formData = new FormData(this.$refs.form);
+      axios.post("http://med.artgorka.com/api/mail.php", {
+        formData,
+        recaptchaToken,
+      });
     },
   },
   mounted() {
@@ -450,11 +492,11 @@ export default {
             border: 1px solid #ff5555;
           }
         }
-         &.empty-mail {
-           input[name="mail"] {
+        &.empty-mail {
+          input[name="mail"] {
             border: 1px solid #ff5555;
           }
-         }
+        }
       }
       .telegram {
         display: flex;

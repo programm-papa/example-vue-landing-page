@@ -434,7 +434,7 @@
                 <div class="breaf-title">
                   Заполните бриф на комплексный брендинг вашей клиники
                 </div>
-                <div class="pink-button">Заполнить бриф</div>
+                <div class="pink-button" @click="{this.$store.dispatch('updateBreafType', 'brending');this.$store.dispatch('updateOpenBreaf', true);}">Заполнить бриф</div>
               </div>
             </div>
             <img
@@ -661,7 +661,7 @@
                 Нужен новый сайт?<br />Мы хотим ознакомиться с вашими
                 пожеланиями
               </div>
-              <div class="pink-button">Заполнить бриф</div>
+              <div class="pink-button" @click="{this.$store.dispatch('updateBreafType', 'site');this.$store.dispatch('updateOpenBreaf', true);}">Заполнить бриф</div>
             </div>
           </div>
           <div class="decor-img_1">
