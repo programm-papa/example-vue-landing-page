@@ -958,7 +958,7 @@ export default {
             justify-content: center;
             align-items: center;
             margin-left: auto;
-            padding-top: 19px;
+            // padding-top: 19px;
             width: 40px;
             height: 40px;
             border-radius: 100%;

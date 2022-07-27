@@ -40,6 +40,7 @@
             <span class="red">*</span> - поля, обязательные для заполнения
           </p>
           <vue-recaptcha
+            class="captcha"
             ref="recaptcha"
             size="invisible"
             :sitekey="sitekey"
@@ -76,6 +77,7 @@
 <script>
 import { VueRecaptcha } from "vue-recaptcha";
 import axios from "axios";
+// import api from "@/api";
 export default {
   components: { VueRecaptcha },
   data() {
@@ -323,16 +325,28 @@ export default {
       }
     },
     onCaptchaExpired() {
-      console.log('recaptcha not wrk')
       this.$refs.recaptcha.reset();
     },
-    sendMail(recaptchaToken) {
-      console.log('recaptcha wrk')
-      const formData = new FormData(this.$refs.form);
-      axios.post("http://med.artgorka.com/api/mail.php", {
-        formData,
-        recaptchaToken,
+    async sendMail() {
+      let formData = new FormData(this.$refs.form);
+      formData.append("popUpType", this.callBackPopUpType);
+      const response = await axios({
+        method: "post",
+        url: "https://artclinik.ru/api/mail.php",
+        withCredentials: false,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+          "Content-Type": "multipart/form-data",
+          "Accept": "*/*",
+        },
+        data: formData,
       });
+      console.log(response);
+      // axios.defaults.headers.common['Content-Type'] = 'multipart/form-data';
+      // api.mail.sendMail({formData}).catch((err) => {
+      //   console.log(err);
+      // });
     },
   },
   mounted() {
@@ -358,7 +372,7 @@ export default {
     position: relative;
     height: fit-content;
     width: 670px;
-    padding: 60px 0px;
+    padding: 50px 0px;
     background: #696fe6;
     border-radius: 20px;
     &::before {
@@ -398,7 +412,7 @@ export default {
       }
     }
     .content {
-      width: 460px;
+      width: 560px;
       margin: 0 auto;
       align-items: center;
       .popup__title {
@@ -415,19 +429,19 @@ export default {
           line-height: 19px;
           text-align: center;
           color: #ffffff;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
         }
       }
       .popup__form {
-        gap: 30px;
-        margin-bottom: 80px;
+        gap: 20px;
+        margin-bottom: 60px;
         .input-container {
           position: relative;
           input {
             outline: none;
             border: none;
             width: 360px;
-            height: 59px;
+            height: 49px;
             background: #ffffff;
             border: 1px solid #ffffff;
             border-radius: 20px;
@@ -446,7 +460,7 @@ export default {
           &.required {
             &::before {
               right: 10px;
-              top: 15px;
+              top: 10px;
               position: absolute;
               content: "*";
               color: #ff5555;
@@ -496,6 +510,9 @@ export default {
           input[name="mail"] {
             border: 1px solid #ff5555;
           }
+        }
+        .captcha {
+          margin: -10px 0px;
         }
       }
       .telegram {
