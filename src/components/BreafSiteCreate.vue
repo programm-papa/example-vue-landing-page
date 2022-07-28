@@ -56,7 +56,6 @@ export default {
       rounded: true,
       shadow: "rgba(105, 111, 229, 0.5)",
       blicked: true,
-      buttonOnMobile: true,
     });
   },
 };
@@ -107,5 +106,15 @@ export default {
       }
     }
   }
+   @media screen and (max-width: 819px) {
+    .marquiz__container {
+      .close-btn {
+        border-radius: 100%;
+            top: 5px;
+
+        background-color: #696fe6;
+      }
+    }
+   }
 }
 </style>

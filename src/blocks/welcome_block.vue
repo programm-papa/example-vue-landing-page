@@ -38,22 +38,22 @@
           <div class="input-line"></div>
         </div>
         <div class="phone-image">
-          <img src="@/assets/image/top_decor-img/phone.png" alt="" />
+          <img src="@/assets/image/top_decor-img/phone.webp" alt="" />
         </div>
         <div class="outer-circle">
           <div class="heart img-wrap">
-            <img src="@/assets/image/top_decor-img/heart.png" alt="" />
+            <img src="@/assets/image/top_decor-img/heart.webp" alt="" />
           </div>
           <div class="tooth img-wrap">
-            <img src="@/assets/image/top_decor-img/tooth.png" alt="" />
+            <img src="@/assets/image/top_decor-img/tooth.webp" alt="" />
           </div>
           <div class="eye img-wrap">
-            <img src="@/assets/image/top_decor-img/eye.png" alt="" />
+            <img src="@/assets/image/top_decor-img/eye.webp" alt="" />
           </div>
           <div class="internal-circle">
             <div class="animated-bell">
               <div class="bell img-wrap">
-                <img src="@/assets/image/top_decor-img/bell.png" alt="" />
+                <img src="@/assets/image/top_decor-img/bell.webp" alt="" />
               </div>
               <div class="notification">{{ notificationNumber }}</div>
             </div>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="doctor">
-          <img src="@/assets/image/top_decor-img/doctor.png" alt="" />
+          <img src="@/assets/image/top_decor-img/doctor.webp" alt="" />
           <img
             class="doctor__brow_left"
             src="@/assets/image/top_decor-img/brow.svg"
@@ -72,14 +72,14 @@
           />
         </div>
         <div class="cloud">
-          <img src="@/assets/image/top_decor-img/cloud.png" alt="" />
+          <img src="@/assets/image/top_decor-img/cloud.webp" alt="" />
         </div>
 
         <div class="screen">
           <div class="plant">
-            <img src="@/assets/image/top_decor-img/plant.png" alt="" />
+            <img src="@/assets/image/top_decor-img/plant.webp" alt="" />
           </div>
-          <img src="@/assets/image/top_decor-img/screen.png" alt="" />
+          <img src="@/assets/image/top_decor-img/screen.webp" alt="" />
           <div class="screen_chart">
             <div class="line-chart">
               <!-- Круги -->
@@ -100,22 +100,22 @@
             </div>
           </div>
           <div class="light_bulb">
-            <img src="@/assets/image/top_decor-img/light_bulb.png" alt="" />
+            <img src="@/assets/image/top_decor-img/light_bulb.webp" alt="" />
           </div>
           <div class="chat1">
-            <img src="@/assets/image/top_decor-img/bubble_speech.png" alt="" />
+            <img src="@/assets/image/top_decor-img/bubble_speech.webp" alt="" />
           </div>
           <div class="chat2">
-            <img src="@/assets/image/top_decor-img/bubble_speech.png" alt="" />
+            <img src="@/assets/image/top_decor-img/bubble_speech.webp" alt="" />
           </div>
           <div class="stone">
-            <img src="@/assets/image/top_decor-img/stone.png" alt="" />
+            <img src="@/assets/image/top_decor-img/stone.webp" alt="" />
           </div>
           <div class="purpose">
-            <img src="@/assets/image/top_decor-img/target.png" alt="" />
+            <img src="@/assets/image/top_decor-img/target.webp" alt="" />
           </div>
           <div class="arrow">
-            <img src="@/assets/image/top_decor-img/arrow.png" alt="" />
+            <img src="@/assets/image/top_decor-img/arrow.webp" alt="" />
           </div>
         </div>
       </div>
@@ -242,6 +242,7 @@ export default {
 <style lang="scss" scoped>
 .block {
   &#block1 {
+        padding: 100px 0px 0px;
     .wrapper {
       width: 1190px;
       padding: 80px 0px 85px;
@@ -465,7 +466,7 @@ export default {
               position: absolute;
               width: 30px;
               height: 30px;
-              background: url(../assets/image/top_decor-img/bell_notification.png);
+              background: url(../assets/image/top_decor-img/bell_notification.webp);
               top: 0;
               right: 0;
               display: flex;
@@ -1271,6 +1272,11 @@ export default {
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    &#block1 {
+        padding: 60px 0px 0px;
     }
   }
 }

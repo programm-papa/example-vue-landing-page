@@ -5,7 +5,7 @@
         <a class="card" href="#block3" @click="openSpecialMenu = true">
           <div class="card-img-circle">
             <div class="bacground-circle">
-              <img src="@/assets/image/block2/services.png" alt="" />
+              <img src="@/assets/image/block2/services.webp" alt="" />
             </div>
           </div>
           <div class="description">
@@ -37,7 +37,7 @@
         <a class="card" href="#block7">
           <div class="card-img-circle">
             <div class="bacground-circle">
-              <img src="@/assets/image/block2/cases.png" alt="" />
+              <img src="@/assets/image/block2/cases.webp" alt="" />
             </div>
           </div>
           <div class="description">
@@ -65,10 +65,15 @@
             </div>
           </div>
         </a>
-        <div class="card">
+        <div class="card" @click="
+            {
+              this.$store.dispatch('updateCallBackPopUpType', 'price');
+              this.$store.dispatch('updateOpenCallBackPopUp', true);
+            }
+          ">
           <div class="card-img-circle">
             <div class="bacground-circle">
-              <img src="@/assets/image/block2/calculate.png" alt="" />
+              <img src="@/assets/image/block2/calculate.webp" alt="" />
             </div>
           </div>
           <div class="description">
@@ -80,7 +85,7 @@
             </div>
           </div>
           <div class="go-btn">
-            <div class="text">Рассчитать стоимость</div>
+            <div class="text"  >Рассчитать стоимость</div>
             <div class="arrow">
               <svg
                 width="31"

@@ -78,7 +78,7 @@
       </div>
       <div class="footer-line flex">
         <div class="line"></div>
-        <div class="artgorka-logo ">
+        <div class="artgorka-logo">
           <svg
             width="65"
             height="38"
@@ -147,8 +147,11 @@
       <div class="bottom flex">
         <p class="description">студия дизайна, веб-разработок и маркетинга</p>
         <p>© 2022, Art gorka</p>
-        <a href="" class="privacy-policy"
-          >Политика обработки персональных данных</a
+        <router-link
+          :to="{ path: '/privacy', hash: '#privacy-page' }"
+          @click="openCallBackPopUp = false"
+          class="privacy-policy"
+          >Политика обработки персональных данных</router-link
         >
       </div>
     </div>
@@ -170,6 +173,9 @@ export default {};
       // border-bottom: 1px solid #e7e7e7;
       .contacts {
         gap: 64px;
+        a {
+          color: #696fe5;
+        }
       }
       .logo {
         height: 50px;
@@ -189,7 +195,7 @@ export default {};
       }
       .line {
         width: 100%;
-        background: #E7E7E7;
+        background: #e7e7e7;
         height: 1px;
       }
     }

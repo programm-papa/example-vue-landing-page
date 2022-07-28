@@ -89,13 +89,19 @@
           :class="scroll_tracking__linksClass"
         >
           <div class="links_row" ref="links_row">
-            <router-link class="scroll_tracking__link" :to="{ path: '/', hash: '#step-one' }"
+            <router-link
+              class="scroll_tracking__link"
+              :to="{ path: '/', hash: '#step-one' }"
               >Ребрендинг</router-link
             >
-            <router-link class="scroll_tracking__link" :to="{ path: '/', hash: '#step-two' }"
+            <router-link
+              class="scroll_tracking__link"
+              :to="{ path: '/', hash: '#step-two' }"
               >Веб-разработка</router-link
             >
-            <router-link class="scroll_tracking__link" :to="{ path: '/', hash: '#step-three' }"
+            <router-link
+              class="scroll_tracking__link"
+              :to="{ path: '/', hash: '#step-three' }"
               >Маркетинг</router-link
             >
           </div>
@@ -130,43 +136,8 @@
           >Контакты</router-link
         >
       </div>
-      <!-- <div class="links">
-        <a href="#block3">Услуги</a>
-        <div
-          class="scroll_tracking__links"
-          :class="scroll_tracking__linksClass"
-        >
-          <div class="links_row" ref="links_row">
-            <a href="#step-one">Ребрендинг</a>
-            <a href="#step-two">Разработка сайта</a>
-            <a href="#step-three">Маркетинг</a>
-          </div>
-          <div
-            class="prograss_row"
-            :style="
-              'padding-left:' +
-              scrollTrackingLinksWidth.firstElement / 2 +
-              'px; padding-right:' +
-              scrollTrackingLinksWidth.thirdElement / 2 +
-              'px;'
-            "
-          >
-            <div class="progress">
-              <div
-                class="progress-active"
-                :style="'width:' + progressWidth"
-              ></div>
-            </div>
-          </div>
-        </div>
-        <a href="#block7">Кейсы</a>
-        <a href="#block8">Методы</a>
-        <a href="#block9">Пример</a>
-        <a href="#block10">Отзывы</a>
-        <a href="#contacts">Контакты</a>
-      </div> -->
       <div class="contact">
-        <a href="" class="phone"> +7 921 0 250-250</a>
+        <a href="tel:89210250250" class="phone"> +7 921 0 250-250</a>
         <div
           class="order-call"
           @click="
@@ -178,28 +149,11 @@
         >
           <div class="text">Заказать звонок</div>
         </div>
-        <!-- <div class="order-call flex">
-          <div class="phone-icon">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.5 11.6833V14.63C15.5001 14.841 15.4202 15.0441 15.2763 15.1985C15.1325 15.3528 14.9355 15.4469 14.725 15.4617C14.3608 15.4867 14.0633 15.5 13.8333 15.5C6.46917 15.5 0.5 9.53083 0.5 2.16667C0.5 1.93667 0.5125 1.63917 0.538333 1.275C0.553102 1.06454 0.647151 0.867509 0.801503 0.723674C0.955855 0.579839 1.15902 0.499905 1.37 0.5H4.31667C4.42003 0.499896 4.51975 0.538216 4.59644 0.607517C4.67313 0.676818 4.72133 0.772152 4.73167 0.875C4.75083 1.06667 4.76833 1.21917 4.785 1.335C4.95061 2.49077 5.29 3.61486 5.79167 4.66917C5.87083 4.83583 5.81917 5.035 5.66917 5.14167L3.87083 6.42667C4.97038 8.98871 7.01212 11.0305 9.57417 12.13L10.8575 10.335C10.91 10.2617 10.9865 10.2091 11.0737 10.1864C11.161 10.1637 11.2535 10.1723 11.335 10.2108C12.3892 10.7116 13.513 11.0501 14.6683 11.215C14.7842 11.2317 14.9367 11.25 15.1267 11.2683C15.2294 11.2789 15.3245 11.3271 15.3936 11.4038C15.4628 11.4805 15.501 11.5801 15.5008 11.6833H15.5Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-          <div class="text">Заказать звонок</div>
-        </div> -->
       </div>
     </div>
     <div class="adaptive flex">
       <div class="decor">
-        <a href="#" class="logo">
+        <router-link :to="{ path: '/', hash: '#block1' }" class="logo">
           <svg
             width="90"
             height="65"
@@ -260,7 +214,7 @@
               fill="#696FE6"
             />
           </svg>
-        </a>
+        </router-link>
         <div class="dot-arrow">
           <div class="dot"></div>
           <div class="dot"></div>
@@ -283,6 +237,7 @@
         <div class="menu-wrapper" v-if="openMenu" key="menu-wrapper">
           <div class="menu">
             <div class="menu-header flex">
+               <router-link :to="{ path: '/', hash: '#block1' }">
               <svg
                 width="69"
                 height="50"
@@ -343,6 +298,7 @@
                   fill="white"
                 />
               </svg>
+              </router-link>
               <div class="close-btn" @click="openMenu = false">
                 <div class="close-btn__line"></div>
                 <div class="close-btn__line"></div>
@@ -376,8 +332,8 @@
                     </div>
                   </div>
                   <div class="dropdown-link__content">
-                    <a
-                      href="#step-one"
+                    <router-link
+                      :to="{ path: '/', hash: '#step-one' }"
                       class="link"
                       @click="
                         {
@@ -385,9 +341,9 @@
                           adaptiveMenuDropDown = !adaptiveMenuDropDown;
                         }
                       "
-                      >Ребрендинг</a
-                    ><a
-                      href="#step-two"
+                      >Ребрендинг</router-link
+                    ><router-link
+                      :to="{ path: '/', hash: '#step-two' }"
                       class="link"
                       @click="
                         {
@@ -395,9 +351,9 @@
                           adaptiveMenuDropDown = !adaptiveMenuDropDown;
                         }
                       "
-                      >Веб-разработка</a
-                    ><a
-                      href="#step-three"
+                      >Веб-разработка</router-link
+                    ><router-link
+                      :to="{ path: '/', hash: '#step-three' }"
                       class="link"
                       @click="
                         {
@@ -405,33 +361,64 @@
                           adaptiveMenuDropDown = !adaptiveMenuDropDown;
                         }
                       "
-                      >Маркетинг</a
+                      >Маркетинг</router-link
                     >
                   </div>
                 </div>
-                <a href="#block7" class="link" @click="openMenu = false"
-                  >Кейсы</a
+                <router-link
+                  :to="{ path: '/', hash: '#block7' }"
+                  class="link"
+                  @click="openMenu = false"
+                  >Кейсы</router-link
                 >
-                <a href="#block8" class="link" @click="openMenu = false"
-                  >Наши методики</a
+                <router-link
+                  :to="{ path: '/', hash: '#block8' }"
+                  class="link"
+                  @click="openMenu = false"
+                  >Наши методики</router-link
                 >
-                <a href="#block9" class="link" @click="openMenu = false"
-                  >Результативность</a
+                <router-link
+                  :to="{ path: '/', hash: '#block9' }"
+                  class="link"
+                  @click="openMenu = false"
+                  >Результативность</router-link
                 >
               </div>
               <div class="right">
-                <a href="#block10" class="link" @click="openMenu = false"
-                  >Отзывы</a
+                <router-link
+                  :to="{ path: '/', hash: '#block10' }"
+                  class="link"
+                  @click="openMenu = false"
+                  >Отзывы</router-link
                 >
-                <a href="#block11" class="link" @click="openMenu = false"
-                  >Кто мы</a
+                <router-link
+                  :to="{ path: '/', hash: '#block11' }"
+                  class="link"
+                  @click="openMenu = false"
+                  >Кто мы</router-link
                 >
-                <a href="" class="link" @click="openMenu = false">Контакты</a>
+                <router-link
+                  :to="{ path: '/', hash: '#contacts' }"
+                  class="link"
+                  @click="openMenu = false"
+                  >Контакты</router-link
+                >
               </div>
             </div>
             <div class="contact flex">
-              <div class="pink-button">Заказать звонок</div>
-              <a class="phone flex">
+              <div
+                class="pink-button"
+                @click="
+                  {
+                    this.$store.dispatch('updateCallBackPopUpType', 'call');
+                    this.$store.dispatch('updateOpenCallBackPopUp', true);
+                    openMenu = false;
+                  }
+                "
+              >
+                Заказать звонок
+              </div>
+              <a href="tel:89210250250" class="phone flex">
                 <svg
                   class="icon"
                   width="16"
@@ -511,6 +498,23 @@ export default {
     this.scrollTrackingLinksWidth.thirdElement =
       scrollTracking_linksChild[2].offsetWidth;
 
+    window.addEventListener(
+      "resize",
+      function (event) {
+        // const scrollTracking_linksRowSize = this.$refs.links_row.offsetWidth;
+        const scrollTracking_linksChild = this.$refs.links_row.children;
+        //Длинна первой ссылки
+        this.scrollTrackingLinksWidth.firstElement =
+          scrollTracking_linksChild[0].offsetWidth;
+        //Длинна второй ссылки
+        this.scrollTrackingLinksWidth.secondElement =
+          scrollTracking_linksChild[1].offsetWidth;
+        //Длинна третей ссылки
+        this.scrollTrackingLinksWidth.thirdElement =
+          scrollTracking_linksChild[2].offsetWidth;
+      },
+      true
+    );
     //Прикрепление шапки при скроле
     let scrollAmount = window.innerWidth <= 768 ? 0 : 120;
     window.addEventListener("resize", function () {});
@@ -525,16 +529,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header-place {
-  height: 120px;
+  height: 100px;
   width: 100%;
-  position: relative;
-  margin-bottom: -120px;
+  display: none;
 }
 .header {
   width: 100%;
   height: 100px;
   transition: 0.5s;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: #ffffff;
   z-index: 10;
@@ -1168,6 +1171,8 @@ export default {
 }
 
 @media screen and (max-width: 1365px) {
+  .header-place {
+  }
   .header {
     &::before,
     &::after {
@@ -1214,14 +1219,30 @@ export default {
   }
 }
 @media screen and (max-width: 499px) {
+  .header-place {
+    height: 80px;
+  }
   .header {
+    height: 80px;
+    &.scroll {
+      height: 80px;
+    }
     .adaptive {
       padding: 0px calc(10px + 30 * (100vw - 320px) / (767 - 320));
       .decor {
+
+          svg {
+            height: 45px !important;
+            width: auto !important;
+          }
+        
         .dot-arrow {
           display: none;
         }
         .special-link {
+          display: none;
+        }
+        &::before {
           display: none;
         }
       }

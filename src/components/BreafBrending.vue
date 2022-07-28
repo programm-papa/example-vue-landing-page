@@ -1,7 +1,7 @@
 <template>
   <div class="breaf-wrapper">
     <div data-marquiz-id="62cbeb19ea85b8003f71fdda">
-      <div class="close-btn"  @click="openBreaf = false">
+      <div class="close-btn" @click="openBreaf = false">
         <div class="line"></div>
         <div class="line"></div>
       </div>
@@ -42,6 +42,7 @@ export default {
       openOnExit: false,
       disableOnMobile: false,
     });
+
     (function (t, p) {
       window.Marquiz
         ? Marquiz.add([t, p])
@@ -56,7 +57,6 @@ export default {
       rounded: true,
       shadow: "rgba(120, 137, 169, 0.5)",
       blicked: true,
-      buttonOnMobile: true,
     });
   },
 };
@@ -103,6 +103,19 @@ export default {
           width: 2px;
           height: 28px;
           background-color: #cbcdf4;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 819px) {
+    .marquiz__container {
+      .close-btn {
+        border-radius: 100%;
+        top: 5px;
+
+        background-color: #cbcdf4;
+        .line {
+          background-color: #696fe6 !important;
         }
       }
     }

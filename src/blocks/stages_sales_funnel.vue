@@ -1,7 +1,7 @@
 <template>
   <div class="block" id="block9">
     <div class="decor-img">
-      <img src="@/assets/image/block9/img_dna.svg" alt="" />
+      <img src="@/assets/image/block9/img_dna.png" alt="" />
     </div>
     <div class="bacground-color">
       <div class="wrapper">
@@ -20,7 +20,7 @@
             :class="tabsList.tab1 ? 'selected' : ''"
             @click="changeSelectTab('tab1')"
           >
-            <div class="name">Небольшая стоматология</div>
+            <div class="name">Небольшая клиника</div>
             <div class="description">(5-20 сотрудников)</div>
           </div>
           <div
@@ -28,7 +28,7 @@
             :class="tabsList.tab2 ? 'selected' : ''"
             @click="changeSelectTab('tab2')"
           >
-            <div class="name">Средняя стоматология</div>
+            <div class="name">Средняя клиника</div>
             <div class="description">(20-40 сотрудников)</div>
           </div>
           <div
@@ -338,7 +338,20 @@
           </div>
         </transition>
         <div class="want flex-column">
-          <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'consultationV3');this.$store.dispatch('updateOpenCallBackPopUp', true);}">хочу так же!</div>
+          <div
+            class="pink-button"
+            @click="
+              {
+                this.$store.dispatch(
+                  'updateCallBackPopUpType',
+                  'consultationV3'
+                );
+                this.$store.dispatch('updateOpenCallBackPopUp', true);
+              }
+            "
+          >
+            хочу так же!
+          </div>
           <div class="description">
             *В итоговом результате не учитывается часть оборота клиники от
             постоянных клиентов, которые регулярно самостоятельно записываются к
@@ -407,9 +420,10 @@ export default {
   position: relative;
   .decor-img {
     position: absolute;
-    right: 0;
-    top: -420px;
+    right: -98px;
+    top: -300px;
     opacity: 0.7;
+    transform: rotate(-33deg);
   }
   &#block9 {
     border-bottom: 16px solid #ecc0c7;

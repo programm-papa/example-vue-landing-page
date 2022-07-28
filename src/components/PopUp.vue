@@ -1,11 +1,11 @@
 <template>
   <div class="popup-wrapper">
-    <div class="popup">
+    <div class="popup" :class="!successSend ? 'bottom-decor' : ''">
       <div class="close-btn" @click="openCallBackPopUp = false">
         <div class="line"></div>
         <div class="line"></div>
       </div>
-      <div class="content flex-column">
+      <div class="content flex-column" v-if="!successSend">
         <div class="popup__title">{{ popUpSelectPatern.title }}</div>
         <div class="popup__title_description">
           {{ popUpSelectPatern.title_description }}
@@ -52,7 +52,11 @@
           </button>
           <p class="privacy-policy">
             Отправляя свои контакты, вы соглашаетесь с нашей
-            <router-link  :to="{ path: '/privacy', hash: '#privacy-page' }"  @click="openCallBackPopUp = false">Политикой конфиденциальности</router-link>
+            <router-link
+              :to="{ path: '/privacy', hash: '#privacy-page' }"
+              @click="openCallBackPopUp = false"
+              >Политикой конфиденциальности</router-link
+            >
           </p>
         </form>
         <a href="https://t.me/ArtGorka" class="telegram" target="_blank"
@@ -71,6 +75,33 @@
           Связаться в Телеграм</a
         >
       </div>
+      <div class="content flex-column" v-if="successSend">
+        <div class="popup__title">Заявка принята</div>
+        <div class="popup__title_description">Благодарим за ваше обращение</div>
+        <img
+          class="success-img"
+          src="@\assets\image\popup-success.png"
+          alt=""
+        />
+        <div class="wait-call">
+          <div class="wait-call__title">Ожидайте звонка с номера</div>
+          <div class="wait-call__phone">+7 (921) 0250 250</div>
+        </div>
+        <div class="description">
+          Наш специалист свяжется с вами для обсуждения деталей
+        </div>
+        <div
+          class="pink-button"
+          @click="
+            {
+              openCallBackPopUp = false;
+              successSend = false;
+            }
+          "
+        >
+          Вернуться к сайту
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -83,6 +114,8 @@ export default {
   data() {
     return {
       sitekey: "6Leb2w8hAAAAAJU6tatt0pLakroQRrTWM2HMAcPZ",
+      successSend: false,
+      successTimer: null,
       validationFormClass: [],
       popUpSelectPatern: {
         title: "Оставьте заявку на звонок",
@@ -269,6 +302,37 @@ export default {
           ],
           button: "Получить предложение",
         },
+        price: {
+          title: "Заявка на расчёт необходимых услуг",
+          title_description:
+            "Мы свяжемся для уточнения деталей, чтобы выполнить предварительный расчет",
+          fields: [
+            {
+              type: "text",
+              name: "name",
+              placeholder: "Ваше имя",
+              required: false,
+            },
+            {
+              type: "text",
+              name: "phone",
+              placeholder: "+7 (900) 000 00 00",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "mail",
+              placeholder: "Ваш e-mail",
+              required: true,
+            },
+            {
+              type: "text",
+              name: "link",
+              placeholder: "Ссылка на ваш сайт",
+            },
+          ],
+          button: "Отправить заявку",
+        },
       },
       rePhone: /^[\d\+][\d\(\)\ -]{4,14}\d$/,
       reMail: /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i,
@@ -338,11 +402,27 @@ export default {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
           "Content-Type": "multipart/form-data",
-          "Accept": "*/*",
+          Accept: "*/*",
         },
         data: formData,
       });
       console.log(response);
+      if (response.data.result == "success") {
+        this.successSend = true;
+        this.successTimer = setTimeout(
+          function () {
+            this.openCallBackPopUp = false;
+            this.successSend = false;
+            clearTimeout(this.successTimer);
+            this.successTimer = null;
+          }.bind(this),
+          5000
+        );
+      } else {
+        alert(
+          "Не удалось отправить заявку, обновите страницу и попробуйте снова."
+        );
+      }
       // axios.defaults.headers.common['Content-Type'] = 'multipart/form-data';
       // api.mail.sendMail({formData}).catch((err) => {
       //   console.log(err);
@@ -375,15 +455,17 @@ export default {
     padding: 50px 0px;
     background: #696fe6;
     border-radius: 20px;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 155px;
-      background: #5356ae;
-      border-radius: 20px;
+    &.bottom-decor {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 155px;
+        background: #5356ae;
+        border-radius: 20px;
+      }
     }
     .close-btn {
       width: 40px;
@@ -543,6 +625,74 @@ export default {
         line-height: 20px;
         letter-spacing: 0.02em;
         color: #5356ae;
+      }
+      .success-img {
+        margin-bottom: 20px;
+      }
+      .wait-call {
+        width: 300px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 15px 0px;
+        .wait-call__phone {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 30px;
+          text-align: center;
+          color: #696fe6;
+        }
+        .wait-call__title {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          text-align: center;
+          color: #696fe6;
+        }
+      }
+      .description {
+        width: 360px;
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .pink-button {
+        width: 360px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    // align-items: flex-start;
+    padding: 0px;
+    overflow: auto;
+    .popup {
+      width: calc(100% - 20px);
+      max-width: 670px;
+      min-width: 320px;
+      .content {
+        width: calc(100% - 30px);
+        max-width: 560px;
+        .popup__form {
+          width: 100%;
+          max-width: 360px;
+          .input-container {
+            input {
+              width: 100%;
+            }
+          }
+          * {
+            width: 100% !important;
+          }
+        }
       }
     }
   }

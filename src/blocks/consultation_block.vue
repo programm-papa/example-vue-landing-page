@@ -4,7 +4,7 @@
       <div class="wrapper flex">
         <div class="decor-img">
           <div class="painted-circle">
-            <img src="@/assets/image/block4/decor-img-woman.png" alt="" />
+            <img src="@/assets/image/block4/decor-img-woman.webp" alt="" />
           </div>
           <div class="border-circle"></div>
         </div>
@@ -14,7 +14,20 @@
         </div>
         <div class="left">
           <div class="title">Не можете определиться с необходимой услугой?</div>
-          <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'consultationV2');this.$store.dispatch('updateOpenCallBackPopUp', true);}">Получить бесплатную консультацию</div>
+          <div
+            class="pink-button"
+            @click="
+              {
+                this.$store.dispatch(
+                  'updateCallBackPopUpType',
+                  'consultationV2'
+                );
+                this.$store.dispatch('updateOpenCallBackPopUp', true);
+              }
+            "
+          >
+            Получить бесплатную консультацию
+          </div>
         </div>
         <div class="right">
           <div class="description">
@@ -76,6 +89,8 @@ export default {};
             img {
               position: absolute;
               top: -34px;
+              width: 169px;
+              height: auto;
             }
           }
         }
@@ -192,7 +207,7 @@ export default {};
               left: auto;
               overflow: hidden;
               img {
-                    top: 5px;
+                top: 5px;
               }
             }
             .border-circle {

@@ -251,15 +251,15 @@
                 />
                 <div class="service-content">
                   <div class="service-title">Фирменный логотип и шрифты</div>
-                  <div class="price">от 25.000 руб.</div>
+                  <div class="price">от 30.000 руб.</div>
                   <div class="list">
                     <p class="list-title">
                       <b>Разработка логотипа</b> - фирменный знак компании
-                      индивидуально отражающий вашу суть, образ и деятельность
+                      индивидуально отражающий вашу суть, образ и деятельность, мы предложим:
                     </p>
                     <ul>
                       <li>
-                        разработка логотипа (предлагаем до 3 вариаций и
+                        разработку уникального логотипа (предлагаем до 3 вариаций и
                         дорабатываем в финальную версию, готовим в различных
                         версиях - для применения в веб/соцсетях и для
                         полиграфии);
@@ -268,7 +268,7 @@
                         фирменные шрифты для всех полиграфических и
                         маркетинговых материалов;
                       </li>
-                      <li>разработка фирменной цветовой палитры.</li>
+                      <li>разработку фирменной цветовой палитры.</li>
                     </ul>
                   </div>
                 </div>
@@ -278,7 +278,7 @@
                   <div class="service-title">
                     Базовый набор фирменного стиля
                   </div>
-                  <div class="price">от 12.000 руб.</div>
+                  <div class="price">от 15.000 руб.</div>
                   <div class="list">
                     <p class="list-title">
                       <b
@@ -327,7 +327,7 @@
                   <div class="service-title">
                     Расширенный набор фирменного стиля
                   </div>
-                  <div class="price">от 15.000 руб.</div>
+                  <div class="price">от 18.000 руб.</div>
                   <div class="list">
                     <p class="list-title">
                       <b
@@ -366,7 +366,7 @@
                   <div class="service-title">
                     Внешнее оформление клиники и информационные носители
                   </div>
-                  <div class="price">от 24.000 руб.</div>
+                  <div class="price">от 25.000 руб.</div>
                   <div class="list">
                     <p class="list-title">
                       <b
@@ -1221,7 +1221,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="indicator">
+                          <div class="indicator indicator_roi">
                             <div class="indicator__name">
                               ROI, % (коэффициент возврата инвестиций)
                             </div>
@@ -1549,7 +1549,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="indicator">
+                          <div class="indicator indicator_roi">
                             <div class="indicator__name">
                               ROI, % (коэффициент возврата инвестиций)
                             </div>
@@ -1574,7 +1574,7 @@
                                 </div>
                                 <div class="line"></div>
                                 <div class="text">
-                                  <b>184.850 руб. - 50.000 руб.</b> / 50000 руб.
+                                  <b>241.485 руб. - 50.000 руб.</b> / 50000 руб.
                                   * 100% <b class="result">= 269,70%</b>
                                 </div>
                                 <div class="corner"></div>
@@ -3107,6 +3107,12 @@ export default {
                             }
                           }
                         }
+                        &.indicator_roi {
+                          background-color: #696fe6;
+                          * {
+                            color: #ffffff;
+                          }
+                        }
                         &:hover {
                           background-color: #696fe6;
                           * {
@@ -3331,6 +3337,7 @@ export default {
           }
         }
         &#step-one {
+          padding: 120px 0px !important;
           .wrapper {
             background-size: cover;
             width: 768px;
