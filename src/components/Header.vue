@@ -7,7 +7,7 @@
       :class="openSpecialMenu ? 'modified-menu' : ''"
     >
       <div class="decor">
-        <a href="#" class="logo">
+        <router-link :to="{ path: '/', hash: '#block1' }" class="logo">
           <svg
             width="90"
             height="65"
@@ -68,7 +68,7 @@
               fill="#696FE6"
             />
           </svg>
-        </a>
+        </router-link>
         <div class="dot-arrow" @click="openSpecialMenu = !openSpecialMenu">
           <div class="dot"></div>
           <div class="dot"></div>
@@ -76,11 +76,11 @@
           <div class="dot"></div>
           <div class="dot"></div>
         </div>
-        <a
+        <router-link
+          :to="{ path: '/', hash: '#block3' }"
           class="special-link"
-          href="#block3"
           @click="openSpecialMenu = !openSpecialMenu"
-          >Услуги медицинского маркетинга</a
+          >Услуги медицинского маркетинга</router-link
         >
       </div>
       <div class="links">
@@ -89,9 +89,15 @@
           :class="scroll_tracking__linksClass"
         >
           <div class="links_row" ref="links_row">
-            <a href="#step-one">Ребрендинг</a>
-            <a href="#step-two">Веб-разработка</a>
-            <a href="#step-three">Маркетинг</a>
+            <router-link class="scroll_tracking__link" :to="{ path: '/', hash: '#step-one' }"
+              >Ребрендинг</router-link
+            >
+            <router-link class="scroll_tracking__link" :to="{ path: '/', hash: '#step-two' }"
+              >Веб-разработка</router-link
+            >
+            <router-link class="scroll_tracking__link" :to="{ path: '/', hash: '#step-three' }"
+              >Маркетинг</router-link
+            >
           </div>
           <div
             class="prograss_row"
@@ -111,12 +117,18 @@
             </div>
           </div>
         </div>
-        <a href="#block7">Кейсы</a>
-        <a href="#block8">Наши методики</a>
-        <a href="#block9">Результативность</a>
-        <a href="#block10">Отзывы</a>
-        <a href="#block11">Кто мы</a>
-        <a href="#contacts">Контакты</a>
+        <router-link :to="{ path: '/', hash: '#block7' }">Кейсы</router-link>
+        <router-link :to="{ path: '/', hash: '#block8' }"
+          >Наши методики</router-link
+        >
+        <router-link :to="{ path: '/', hash: '#block9' }"
+          >Результативность</router-link
+        >
+        <router-link :to="{ path: '/', hash: '#block10' }">Отзывы</router-link>
+        <router-link :to="{ path: '/', hash: '#block11' }">Кто мы</router-link>
+        <router-link :to="{ path: '/', hash: '#contacts' }"
+          >Контакты</router-link
+        >
       </div>
       <!-- <div class="links">
         <a href="#block3">Услуги</a>
@@ -155,7 +167,17 @@
       </div> -->
       <div class="contact">
         <a href="" class="phone"> +7 921 0 250-250</a>
-        <div class="order-call" @click="{this.$store.dispatch('updateCallBackPopUpType', 'call');this.$store.dispatch('updateOpenCallBackPopUp', true);}"><div class="text">Заказать звонок</div></div>
+        <div
+          class="order-call"
+          @click="
+            {
+              this.$store.dispatch('updateCallBackPopUpType', 'call');
+              this.$store.dispatch('updateOpenCallBackPopUp', true);
+            }
+          "
+        >
+          <div class="text">Заказать звонок</div>
+        </div>
         <!-- <div class="order-call flex">
           <div class="phone-icon">
             <svg
@@ -354,9 +376,37 @@
                     </div>
                   </div>
                   <div class="dropdown-link__content">
-                    <a href="#step-one" class="link" @click="{openMenu = false; adaptiveMenuDropDown = !adaptiveMenuDropDown}">Ребрендинг</a
-                    ><a href="#step-two" class="link" @click="{openMenu = false; adaptiveMenuDropDown = !adaptiveMenuDropDown}">Веб-разработка</a
-                    ><a href="#step-three" class="link" @click="{openMenu = false; adaptiveMenuDropDown = !adaptiveMenuDropDown}">Маркетинг</a>
+                    <a
+                      href="#step-one"
+                      class="link"
+                      @click="
+                        {
+                          openMenu = false;
+                          adaptiveMenuDropDown = !adaptiveMenuDropDown;
+                        }
+                      "
+                      >Ребрендинг</a
+                    ><a
+                      href="#step-two"
+                      class="link"
+                      @click="
+                        {
+                          openMenu = false;
+                          adaptiveMenuDropDown = !adaptiveMenuDropDown;
+                        }
+                      "
+                      >Веб-разработка</a
+                    ><a
+                      href="#step-three"
+                      class="link"
+                      @click="
+                        {
+                          openMenu = false;
+                          adaptiveMenuDropDown = !adaptiveMenuDropDown;
+                        }
+                      "
+                      >Маркетинг</a
+                    >
                   </div>
                 </div>
                 <a href="#block7" class="link" @click="openMenu = false"
@@ -475,7 +525,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header-place {
-  height: 100px;
+  height: 120px;
   width: 100%;
   position: relative;
   margin-bottom: -120px;
@@ -615,9 +665,10 @@ export default {
           z-index: 3;
           display: flex;
           gap: 30px;
-          a {
+          .scroll_tracking__link {
             display: flex;
             justify-content: center;
+            text-decoration: none !important;
             &::before {
               position: absolute;
               content: "";
@@ -656,7 +707,7 @@ export default {
         //Стиль заполнения
         &.active1 {
           .links_row {
-            a:nth-of-type(1) {
+            .scroll_tracking__link:nth-of-type(1) {
               &::before {
                 transition: background-color 0.7s;
                 background-color: #696fe6;
@@ -666,8 +717,8 @@ export default {
         }
         &.active2 {
           .links_row {
-            a:nth-of-type(1),
-            a:nth-of-type(2) {
+            .scroll_tracking__link:nth-of-type(1),
+            .scroll_tracking__link:nth-of-type(2) {
               &::before {
                 transition: background-color 0.7s;
                 background-color: #696fe6;
@@ -677,9 +728,9 @@ export default {
         }
         &.active3 {
           .links_row {
-            a:nth-of-type(1),
-            a:nth-of-type(2),
-            a:nth-of-type(3) {
+            .scroll_tracking__link:nth-of-type(1),
+            .scroll_tracking__link:nth-of-type(2),
+            .scroll_tracking__link:nth-of-type(3) {
               &::before {
                 transition: background-color 0.7s;
                 background-color: #696fe6;

@@ -1246,8 +1246,8 @@
                                 </div>
                                 <div class="line"></div>
                                 <div class="text">
-                                  <b>184.850 руб. - 50.000 руб.</b> / 50000 руб.
-                                  * 100% <b class="result">= 269,70%</b>
+                                  <b>79.657 руб. - 35.000 руб.</b> / 35000 руб.
+                                  * 100% <b class="result">= 127,59%</b>
                                 </div>
                                 <div class="corner"></div>
                               </div>

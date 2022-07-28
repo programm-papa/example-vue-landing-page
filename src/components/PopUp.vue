@@ -52,7 +52,7 @@
           </button>
           <p class="privacy-policy">
             Отправляя свои контакты, вы соглашаетесь с нашей
-            <a href="" tabindex="_blank">Политикой конфиденциальности</a>
+            <router-link  :to="{ path: '/privacy', hash: '#privacy-page' }"  @click="openCallBackPopUp = false">Политикой конфиденциальности</router-link>
           </p>
         </form>
         <a href="https://t.me/ArtGorka" class="telegram" target="_blank"

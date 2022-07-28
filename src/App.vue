@@ -164,4 +164,11 @@ a {
     padding: 0px 20px;
   }
 }
+.page {
+  .wrapper {
+    margin: 0px auto;
+    width: 1200px;
+    padding: 0px 20px;
+  }
+}
 </style>
