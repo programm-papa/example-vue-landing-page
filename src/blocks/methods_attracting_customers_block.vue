@@ -227,12 +227,12 @@
         </div>
 
         <img
-          src="@/assets/image/block8/decor_img_1.png"
+          src="@/assets/image/block8/decor_img_1.webp"
           class="decor-img"
           id="decor-img_1"
         />
         <img
-          src="@/assets/image/block8/decor_img_1_1.png"
+          src="@/assets/image/block8/decor_img_1_1.webp"
           class="decor-img_adaptive"
           id="decor-img_1_1"
         />

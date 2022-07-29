@@ -79,7 +79,7 @@
           <div class="plant">
             <img src="@/assets/image/top_decor-img/plant.webp" alt="" />
           </div>
-          <img src="@/assets/image/top_decor-img/screen.webp" alt="" />
+          <img class="screen-img" src="@/assets/image/top_decor-img/screen.webp" alt="" />
           <div class="screen_chart">
             <div class="line-chart">
               <!-- Круги -->
@@ -574,6 +574,9 @@ export default {
           position: absolute;
           top: 284px;
           left: 92px;
+          img.screen-img {
+            margin: 0px -60px -40px;
+          }
         }
         .screen_chart {
           width: 142px;

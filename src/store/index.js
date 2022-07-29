@@ -24,12 +24,22 @@ export default createStore({
       state.openSpecialMenuStatus = !!newValue;
     },
     changeOpenCallBackPopUp(state, newValue) {
+      if(newValue) {
+      document.body.classList.add('scrollOff');
+      } else {
+        document.body.classList.remove('scrollOff');
+      }
       state.openCallBackPopUp = !!newValue;
     },
     changeCallBackPopUpType(state, newValue) {
       state.callBackPopUpType = newValue;
     },
     changeOpenBreaf(state, newValue) {
+      if(newValue) {
+      document.body.classList.add('scrollOff');
+      } else {
+        document.body.classList.remove('scrollOff');
+      }
       state.openBreaf = !!newValue;
     },
     changeBreafType(state, newValue) {

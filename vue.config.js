@@ -2,6 +2,6 @@
 // vue.config.js
 module.exports = {
     pwa: {
-        themeColor: '#1da025'
+        themeColor: '#696FE5'
     },
   }

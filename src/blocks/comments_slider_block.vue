@@ -7,10 +7,10 @@
         <!-- <div class="decor-line"></div> -->
       </div>
       <div class="decor-img" id="decor-img1">
-        <img src="@/assets/image/block10/comment_pink.png" alt="" />
+        <img src="@/assets/image/block10/comment_pink.webp" alt="" />
       </div>
       <div class="decor-img" id="decor-img2">
-        <img src="@/assets/image/block10/comment_blue.png" alt="" />
+        <img src="@/assets/image/block10/comment_blue.webp" alt="" />
       </div>
       <div class="swiper-block">
         <div class="wrapper">
@@ -43,7 +43,7 @@
             <div class="swiper-content">
               <div class="avatar-block">
                 <img
-                  src="@/assets/image/block10/AlexandrGrivkov.png"
+                  src="@/assets/image/block10/AlexandrGrivkov.webp"
                   alt="avatar"
                 />
               </div>
@@ -87,7 +87,7 @@
             <div class="swiper-content">
               <div class="avatar-block">
                 <img
-                  src="@/assets/image/block10/OlgaVinogradova.png"
+                  src="@/assets/image/block10/OlgaVinogradova.webp"
                   alt="avatar"
                 />
               </div>
@@ -130,7 +130,7 @@
             <div class="swiper-content">
               <div class="avatar-block">
                 <img
-                  src="@/assets/image/block10/IlyaAndrushkiv.png"
+                  src="@/assets/image/block10/IlyaAndrushkiv.webp"
                   alt="avatar"
                 />
               </div>
@@ -152,21 +152,14 @@
                   <path d="M7 6L21.966 47H107L7 6Z" fill="white" />
                   <rect y="36" width="83" height="5" fill="white" />
                 </svg>
-                3 года назад услышал рекламу студии АРТ горка на радио.<br /><br />
-                Мне предложили начать с продвижения группы вк, так как в нашем
-                городе это был хороший и недорогой способ привлечь новую
-                аудиторию. Смело скажу, что доволен результатами продвижения
-                группы и мы продолжаем работу по сегодняшний день. На тот момент
-                задумывался и о сайте, но несколько повременил. Поступали
-                предложения от сторонних разработчиков, в том числе и недорогие
-                варианты. Конечно, можно было сэкономить, но в столь
-                конкурентной нише (сфере медицинских услуг) упаковка – это
-                далеко не последний инструмент продаж. После запуска сайта
-                заявки стали поступать чаще: удобный и красивый инструмент
-                регистрации и полезный ресурс в целом дал мощное конкурентное
-                преимущество. Поначалу меня отпугивала стоимость, казалось что
-                услуги дорогие, но сейчас скажу, что эти работы однозначно стоят
-                своих денег.
+                3 года назад услышал рекламу студии на радио.<br /><br />
+                Мне предложили начать с продвижения группы ВК. Новых клиентов
+                привлекали таргетированной рекламой. Смело скажу, что доволен
+                результатами продвижения и мы работаем по сегодняшний день. На
+                тот момент задумывался и о сайте. Позднее, с запуском сайта,
+                заявки стали поступать чаще: полезный ресурс дал мощное
+                конкурентное преимущество. Поначалу отпугивала стоимость, но
+                теперь скажу однозначно — работы стоили своих денег.
               </div>
               <div class="commentator-name">Андрушкив Илья Юрьевич</div>
               <div class="commentator-post">

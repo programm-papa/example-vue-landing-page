@@ -1,0 +1,27 @@
+body::-webkit-scrollbar {
+    width: 12px; /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: rgba(204, 206, 245, .3); /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+    min-height: 60px;
+    max-height: 500px;
+    background-color: #696FE5; /* цвет плашки */
+    border-radius: 20px; /* закругления плашки */
+    border: 3px solid #CBCDF4; /* padding вокруг плашки */
+}
+body.scrollOff {
+    overflow: hidden;
+}
+
+#app {
+    @media screen and (max-width: 1365px) {
+        overflow-x: hidden;
+    }
+}
+.block#block6 {
+    .swiper-slide {
+        width: fit-content !important;
+    }
+}

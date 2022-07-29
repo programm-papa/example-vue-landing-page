@@ -39,7 +39,7 @@
                 <div class="circles">
                   <div class="border-circle external">
                     <div class="border-circle internal">
-                      <img src="@/assets/image/block6/step1/row1.png" alt="" />
+                      <img src="@/assets/image/block6/step1/row1.webp" alt="" />
                     </div>
                   </div>
                 </div>
@@ -57,7 +57,7 @@
                 <div class="circles">
                   <div class="border-circle external">
                     <div class="border-circle internal">
-                      <img src="@/assets/image/block6/step1/row2.png" alt="" />
+                      <img src="@/assets/image/block6/step1/row2.webp" alt="" />
                     </div>
                   </div>
                 </div>
@@ -77,7 +77,7 @@
                 <div class="circles">
                   <div class="border-circle external">
                     <div class="border-circle internal">
-                      <img src="@/assets/image/block6/step1/row3.png" alt="" />
+                      <img src="@/assets/image/block6/step1/row3.webp" alt="" />
                     </div>
                   </div>
                 </div>
@@ -135,97 +135,97 @@
           >
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide1.png"
+                src="@/assets/image/block6/step1/slide1.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide2.png"
+                src="@/assets/image/block6/step1/slide2.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide3.png"
+                src="@/assets/image/block6/step1/slide3.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide4.png"
+                src="@/assets/image/block6/step1/slide4.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide5.png"
+                src="@/assets/image/block6/step1/slide5.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide6.png"
+                src="@/assets/image/block6/step1/slide6.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide7.png"
+                src="@/assets/image/block6/step1/slide7.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide8.png"
+                src="@/assets/image/block6/step1/slide8.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide9.png"
+                src="@/assets/image/block6/step1/slide9.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide10.png"
+                src="@/assets/image/block6/step1/slide10.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide11.png"
+                src="@/assets/image/block6/step1/slide11.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide12.png"
+                src="@/assets/image/block6/step1/slide12.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide13.png"
+                src="@/assets/image/block6/step1/slide13.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide14.png"
+                src="@/assets/image/block6/step1/slide14.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide15.png"
+                src="@/assets/image/block6/step1/slide15.webp"
                 alt="slide_img"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="@/assets/image/block6/step1/slide16.png"
+                src="@/assets/image/block6/step1/slide16.webp"
                 alt="slide_img"
               />
             </swiper-slide>
@@ -240,12 +240,12 @@
             <div class="services-list flex-column">
               <div class="service flex">
                 <img
-                  src="@/assets/image/block6/step1/service1.png"
+                  src="@/assets/image/block6/step1/service1.webp"
                   alt=""
                   class="service-img"
                 />
                 <img
-                  src="@/assets/image/block6/step1/service1-adaptive.png"
+                  src="@/assets/image/block6/step1/service1-adaptive.webp"
                   alt=""
                   class="service-img-adaptive"
                 />
@@ -302,24 +302,24 @@
                   </div>
                 </div>
                 <img
-                  src="@/assets/image/block6/step1/service2.png"
+                  src="@/assets/image/block6/step1/service2.webp"
                   alt=""
                   class="service-img"
                 />
                 <img
-                  src="@/assets/image/block6/step1/service2-adaptive.png"
+                  src="@/assets/image/block6/step1/service2-adaptive.webp"
                   alt=""
                   class="service-img-adaptive"
                 />
               </div>
               <div class="service flex">
                 <img
-                  src="@/assets/image/block6/step1/service3.png"
+                  src="@/assets/image/block6/step1/service3.webp"
                   alt=""
                   class="service-img"
                 />
                 <img
-                  src="@/assets/image/block6/step1/service3-adaptive.png"
+                  src="@/assets/image/block6/step1/service3-adaptive.webp"
                   alt=""
                   class="service-img-adaptive"
                 />
@@ -391,12 +391,12 @@
                   </div>
                 </div>
                 <img
-                  src="@/assets/image/block6/step1/service4.png"
+                  src="@/assets/image/block6/step1/service4.webp"
                   alt=""
                   class="service-img"
                 />
                 <img
-                  src="@/assets/image/block6/step1/service4-adaptive.png"
+                  src="@/assets/image/block6/step1/service4-adaptive.webp"
                   alt=""
                   class="service-img-adaptive"
                 />
@@ -426,7 +426,7 @@
           <div class="bacground-wrapper">
             <div class="wrapper flex">
               <img
-                src="@/assets/image/block6/step1/breaf_1.png"
+                src="@/assets/image/block6/step1/breaf_1.webp"
                 alt=""
                 class="left"
               />
@@ -467,7 +467,7 @@
         </div>
         <div class="step-description flex">
           <img
-            src="@/assets/image/block6/step2/step-description-img.png"
+            src="@/assets/image/block6/step2/step-description-img.webp"
             alt=""
           />
           <div class="text">
@@ -558,12 +558,12 @@
         <!-- <img
           class="decor-img"
           id="decor-img_1"
-          src="@/assets/image/block6/step2/decor-img_1.png"
+          src="@/assets/image/block6/step2/decor-img_1.webp"
           alt="decor-img"
         /> -->
         <div class="decor-img" id="decor-img_1">
-          <img src="@/assets/image/block6/step2/decor-img_1_1.png" alt="" />
-          <img src="@/assets/image/block6/step2/decor-img_1_2.png" alt="" />
+          <img src="@/assets/image/block6/step2/decor-img_1_1.webp" alt="" />
+          <img src="@/assets/image/block6/step2/decor-img_1_2.webp" alt="" />
         </div>
         <div class="title">Каким должен быть сайт?</div>
         <div class="deployable-blocks-list flex-column">
@@ -649,7 +649,7 @@
         <img
           class="decor-img"
           id="decor-img_2"
-          src="@/assets/image/block6/step2/decor-img_2.png"
+          src="@/assets/image/block6/step2/decor-img_2.webp"
           alt="decor-img"
         />
       </div>
@@ -667,7 +667,7 @@
           <div class="decor-img_1">
             <div class="img-wrapper">
               <img
-                src="@/assets/image/block6/step2/bref_2_decor_1.png"
+                src="@/assets/image/block6/step2/bref_2_decor_1.webp"
                 alt=""
               />
             </div>
@@ -697,7 +697,7 @@
             Внедряем маркетинг
             <div class="title__decor flex">
               <img
-                src="@/assets/image/block6/step3/decor-img__avatar.png"
+                src="@/assets/image/block6/step3/decor-img__avatar.webp"
                 alt=""
                 class="avatar"
               />
@@ -709,7 +709,7 @@
           </div>
           <div class="step-description flex" id="step-description_1">
             <img
-              src="@/assets/image/block6/step3/step-description-img_1.png"
+              src="@/assets/image/block6/step3/step-description-img_1.webp"
               alt=""
             />
             <div class="content">
@@ -1591,7 +1591,7 @@
           </div>
           <div class="step-description flex" id="step-description_2">
             <img
-              src="@/assets/image/block6/step3/step-description-img_2.png"
+              src="@/assets/image/block6/step3/step-description-img_2.webp"
               alt=""
             />
             <div class="content">
@@ -1611,7 +1611,7 @@
               <div class="img-circle">
                 <div class="img-background">
                   <img
-                    src="@/assets/image/block6/step3/stages-marketing_1.png"
+                    src="@/assets/image/block6/step3/stages-marketing_1.webp"
                     alt=""
                   />
                 </div>
@@ -1622,7 +1622,7 @@
               <div class="img-circle">
                 <div class="img-background">
                   <img
-                    src="@/assets/image/block6/step3/stages-marketing_2.png"
+                    src="@/assets/image/block6/step3/stages-marketing_2.webp"
                     alt=""
                   />
                 </div>
@@ -1633,7 +1633,7 @@
               <div class="img-circle">
                 <div class="img-background">
                   <img
-                    src="@/assets/image/block6/step3/stages-marketing_3.png"
+                    src="@/assets/image/block6/step3/stages-marketing_3.webp"
                     alt=""
                   />
                 </div>

@@ -446,9 +446,10 @@ export default {
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   .popup {
+    margin: auto;
     position: relative;
     height: fit-content;
     width: 670px;

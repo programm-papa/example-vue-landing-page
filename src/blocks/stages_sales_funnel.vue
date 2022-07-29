@@ -1,7 +1,7 @@
 <template>
   <div class="block" id="block9">
     <div class="decor-img">
-      <img src="@/assets/image/block9/img_dna.png" alt="" />
+      <img src="@/assets/image/block9/img_dna.webp" alt="" />
     </div>
     <div class="bacground-color">
       <div class="wrapper">
@@ -418,11 +418,12 @@ export default {
 }
 .block {
   position: relative;
+  overflow: hidden;
   .decor-img {
     position: absolute;
     right: -98px;
-    top: -300px;
-    opacity: 0.7;
+    top: 0px;
+    opacity: 0.6;
     transform: rotate(-33deg);
   }
   &#block9 {
