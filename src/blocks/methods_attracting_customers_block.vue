@@ -230,11 +230,13 @@
           src="@/assets/image/block8/decor_img_1.webp"
           class="decor-img"
           id="decor-img_1"
+          alt="decor_img"
         />
         <img
           src="@/assets/image/block8/decor_img_1_1.webp"
           class="decor-img_adaptive"
           id="decor-img_1_1"
+          alt="decor_img"
         />
       </div>
       <div class="button-block flex">

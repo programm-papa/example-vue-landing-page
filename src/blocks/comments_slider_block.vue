@@ -7,10 +7,10 @@
         <!-- <div class="decor-line"></div> -->
       </div>
       <div class="decor-img" id="decor-img1">
-        <img src="@/assets/image/block10/comment_pink.webp" alt="" />
+        <img src="@/assets/image/block10/comment_pink.webp" alt="комментарий" />
       </div>
       <div class="decor-img" id="decor-img2">
-        <img src="@/assets/image/block10/comment_blue.webp" alt="" />
+        <img src="@/assets/image/block10/comment_blue.webp" alt="комментарий" />
       </div>
       <div class="swiper-block">
         <div class="wrapper">
@@ -44,7 +44,7 @@
               <div class="avatar-block">
                 <img
                   src="@/assets/image/block10/AlexandrGrivkov.webp"
-                  alt="avatar"
+                  alt="автор"
                 />
               </div>
               <div class="comment">
@@ -88,7 +88,7 @@
               <div class="avatar-block">
                 <img
                   src="@/assets/image/block10/OlgaVinogradova.webp"
-                  alt="avatar"
+                  alt="автор"
                 />
               </div>
               <div class="comment">
@@ -131,7 +131,7 @@
               <div class="avatar-block">
                 <img
                   src="@/assets/image/block10/IlyaAndrushkiv.webp"
-                  alt="avatar"
+                  alt="автор"
                 />
               </div>
               <div class="comment">

@@ -78,7 +78,7 @@
       </div>
       <div class="footer-line flex">
         <div class="line"></div>
-        <div class="artgorka-logo">
+        <a href="https://artgorka.ru/" target="_blank" class="artgorka-logo">
           <svg
             width="65"
             height="38"
@@ -141,7 +141,7 @@
               fill="#424C5C"
             />
           </svg>
-        </div>
+        </a>
         <div class="line"></div>
       </div>
       <div class="bottom flex">

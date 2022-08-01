@@ -13,7 +13,7 @@
     </div>
     <div class="wrapper">
       <div class="steps-way">
-        <img src="@/assets/image/block6/steps-way.svg" alt="" />
+        <img src="@/assets/image/block6/steps-way.svg" alt="steps-way" />
       </div>
     </div>
     <div class="bacground-color">
@@ -39,7 +39,10 @@
                 <div class="circles">
                   <div class="border-circle external">
                     <div class="border-circle internal">
-                      <img src="@/assets/image/block6/step1/row1.webp" alt="" />
+                      <img
+                        src="@/assets/image/block6/step1/row1.webp"
+                        alt="индивидуальный подход"
+                      />
                     </div>
                   </div>
                 </div>
@@ -57,7 +60,10 @@
                 <div class="circles">
                   <div class="border-circle external">
                     <div class="border-circle internal">
-                      <img src="@/assets/image/block6/step1/row2.webp" alt="" />
+                      <img
+                        src="@/assets/image/block6/step1/row2.webp"
+                        alt="образ и асоциации"
+                      />
                     </div>
                   </div>
                 </div>
@@ -77,7 +83,10 @@
                 <div class="circles">
                   <div class="border-circle external">
                     <div class="border-circle internal">
-                      <img src="@/assets/image/block6/step1/row3.webp" alt="" />
+                      <img
+                        src="@/assets/image/block6/step1/row3.webp"
+                        alt="начало"
+                      />
                     </div>
                   </div>
                 </div>
@@ -91,12 +100,12 @@
             </div>
             <img
               src="@/assets/image/block6/step1/decor-line.svg"
-              alt=""
+              alt="decor-line"
               class="decor-line"
             />
             <img
               src="@/assets/image/block6/step1/decor-line-adaptive.svg"
-              alt=""
+              alt="decor-line-adaptive"
               class="decor-line-adaptive"
             />
           </div>
@@ -241,12 +250,12 @@
               <div class="service flex">
                 <img
                   src="@/assets/image/block6/step1/service1.webp"
-                  alt=""
+                  alt="Фирменный логотип и шрифты"
                   class="service-img"
                 />
                 <img
                   src="@/assets/image/block6/step1/service1-adaptive.webp"
-                  alt=""
+                  alt="Фирменный логотип и шрифты"
                   class="service-img-adaptive"
                 />
                 <div class="service-content">
@@ -255,13 +264,14 @@
                   <div class="list">
                     <p class="list-title">
                       <b>Разработка логотипа</b> - фирменный знак компании
-                      индивидуально отражающий вашу суть, образ и деятельность, мы предложим:
+                      индивидуально отражающий вашу суть, образ и деятельность,
+                      мы предложим:
                     </p>
                     <ul>
                       <li>
-                        разработку уникального логотипа (предлагаем до 3 вариаций и
-                        дорабатываем в финальную версию, готовим в различных
-                        версиях - для применения в веб/соцсетях и для
+                        разработку уникального логотипа (предлагаем до 3
+                        вариаций и дорабатываем в финальную версию, готовим в
+                        различных версиях - для применения в веб/соцсетях и для
                         полиграфии);
                       </li>
                       <li>
@@ -303,24 +313,24 @@
                 </div>
                 <img
                   src="@/assets/image/block6/step1/service2.webp"
-                  alt=""
+                  alt="Базовый набор фирменного стиля"
                   class="service-img"
                 />
                 <img
                   src="@/assets/image/block6/step1/service2-adaptive.webp"
-                  alt=""
+                  alt=" Базовый набор фирменного стиля"
                   class="service-img-adaptive"
                 />
               </div>
               <div class="service flex">
                 <img
                   src="@/assets/image/block6/step1/service3.webp"
-                  alt=""
+                  alt="Расширенный набор фирменного стиля"
                   class="service-img"
                 />
                 <img
                   src="@/assets/image/block6/step1/service3-adaptive.webp"
-                  alt=""
+                  alt="Расширенный набор фирменного стиля"
                   class="service-img-adaptive"
                 />
                 <div class="service-content">
@@ -392,12 +402,12 @@
                 </div>
                 <img
                   src="@/assets/image/block6/step1/service4.webp"
-                  alt=""
+                  alt="Внешнее оформление клиники и информационные носители"
                   class="service-img"
                 />
                 <img
                   src="@/assets/image/block6/step1/service4-adaptive.webp"
-                  alt=""
+                  alt="Внешнее оформление клиники и информационные носители"
                   class="service-img-adaptive"
                 />
               </div>
@@ -427,19 +437,29 @@
             <div class="wrapper flex">
               <img
                 src="@/assets/image/block6/step1/breaf_1.webp"
-                alt=""
+                alt="комплексный брендинг вашей клиники"
                 class="left"
               />
               <div class="right">
                 <div class="breaf-title">
                   Заполните бриф на комплексный брендинг вашей клиники
                 </div>
-                <div class="pink-button" @click="{this.$store.dispatch('updateBreafType', 'brending');this.$store.dispatch('updateOpenBreaf', true);}">Заполнить бриф</div>
+                <div
+                  class="pink-button"
+                  @click="
+                    {
+                      this.$store.dispatch('updateBreafType', 'brending');
+                      this.$store.dispatch('updateOpenBreaf', true);
+                    }
+                  "
+                >
+                  Заполнить бриф
+                </div>
               </div>
             </div>
             <img
               src="@/assets/image/block6/step1/breaf_1_decor_1.svg"
-              alt=""
+              alt="decor-img_1"
               class="decor-img_1"
             />
             <div class="decor-img_2" data-v-2ff20447="">
@@ -468,7 +488,7 @@
         <div class="step-description flex">
           <img
             src="@/assets/image/block6/step2/step-description-img.webp"
-            alt=""
+            alt="Разработка нового сайта"
           />
           <div class="text">
             Наша работа для роста вашей медицинской клиники чаще всего
@@ -562,8 +582,14 @@
           alt="decor-img"
         /> -->
         <div class="decor-img" id="decor-img_1">
-          <img src="@/assets/image/block6/step2/decor-img_1_1.webp" alt="" />
-          <img src="@/assets/image/block6/step2/decor-img_1_2.webp" alt="" />
+          <img
+            src="@/assets/image/block6/step2/decor-img_1_1.webp"
+            alt="decor-img_1_1"
+          />
+          <img
+            src="@/assets/image/block6/step2/decor-img_1_2.webp"
+            alt="decor-img_1_2"
+          />
         </div>
         <div class="title">Каким должен быть сайт?</div>
         <div class="deployable-blocks-list flex-column">
@@ -661,14 +687,24 @@
                 Нужен новый сайт?<br />Мы хотим ознакомиться с вашими
                 пожеланиями
               </div>
-              <div class="pink-button" @click="{this.$store.dispatch('updateBreafType', 'site');this.$store.dispatch('updateOpenBreaf', true);}">Заполнить бриф</div>
+              <div
+                class="pink-button"
+                @click="
+                  {
+                    this.$store.dispatch('updateBreafType', 'site');
+                    this.$store.dispatch('updateOpenBreaf', true);
+                  }
+                "
+              >
+                Заполнить бриф
+              </div>
             </div>
           </div>
           <div class="decor-img_1">
             <div class="img-wrapper">
               <img
                 src="@/assets/image/block6/step2/bref_2_decor_1.webp"
-                alt=""
+                alt="bref_2_decor_1"
               />
             </div>
           </div>
@@ -698,7 +734,7 @@
             <div class="title__decor flex">
               <img
                 src="@/assets/image/block6/step3/decor-img__avatar.webp"
-                alt=""
+                alt="decor-img__avatar"
                 class="avatar"
               />
               <div class="comment">
@@ -710,7 +746,7 @@
           <div class="step-description flex" id="step-description_1">
             <img
               src="@/assets/image/block6/step3/step-description-img_1.webp"
-              alt=""
+              alt="Получайте больше обращений и записей в клинику"
             />
             <div class="content">
               <div class="description__title">
@@ -903,29 +939,25 @@
                   <div class="description flex">
                     <div class="left">
                       <p>
-                        Здесь мы приводим наиболее распространенный пример,
-                        когда клиент в момент обращения в нашу студию не смог
-                        предоставить полную статистику продаж и маркетинговых
-                        показателей по своей клинике, в связи с отсутствием
-                        рекламной кампании и скудных показателей с метрики
-                        сайта.
+                        Здесь приведен распространенный пример, когда клиент в
+                        момент обращения в нашу студию не смог предоставить
+                        полную статистику продаж и маркетинговых показателей по
+                        своей клинике из-за их отсутствия или неполноты сведений. А метрика из сайта давала лишь общую картину по посещениям и статистику просмотра страниц.
                       </p>
                       <p>
-                        Наша задача – подготовить и запустить эффективную
-                        контекстную рекламу на новый, специально подготовленный
-                        для этих целей конверсионный сайт и сделать первый срез
-                        показателей уже через месяц.
+                        Наша задача – подготовить и запустить рекламу на новый,
+                        специально подготовленный для этих целей, конверсионный
+                        сайт и сделать первый срез показателей уже через месяц.
                       </p>
                     </div>
                     <div class="right">
                       <p>
-                        Как правило уже
+                        Как правило,
                         <span class="blue">через 3 - 4 месяца</span> грамотно
                         настроенная реклама дает кратное увеличение показателей,
                         в том числе благодаря регулярному анализу показателей,
                         оптимизации стоимости кликов и объявлений, выделяя из
-                        них и прорабатывая далее наиболее эффективные с точки
-                        зрения конверсии.
+                        них наиболее конверсионные.
                       </p>
                     </div>
                   </div>
@@ -1592,7 +1624,7 @@
           <div class="step-description flex" id="step-description_2">
             <img
               src="@/assets/image/block6/step3/step-description-img_2.webp"
-              alt=""
+              alt="Мы знаем почти всё о медицинском маркетинге"
             />
             <div class="content">
               <div class="description__title">
@@ -1612,7 +1644,7 @@
                 <div class="img-background">
                   <img
                     src="@/assets/image/block6/step3/stages-marketing_1.webp"
-                    alt=""
+                    alt="Выведем в ТОП в поисковых системах"
                   />
                 </div>
               </div>
@@ -1623,7 +1655,7 @@
                 <div class="img-background">
                   <img
                     src="@/assets/image/block6/step3/stages-marketing_2.webp"
-                    alt=""
+                    alt="Увеличим конверсию сайта"
                   />
                 </div>
               </div>
@@ -1634,7 +1666,7 @@
                 <div class="img-background">
                   <img
                     src="@/assets/image/block6/step3/stages-marketing_3.webp"
-                    alt=""
+                    alt="Обеспечим поток заявок в ваши соцсети"
                   />
                 </div>
               </div>
@@ -3917,12 +3949,24 @@ export default {
                   border-radius: 20px;
                   overflow: hidden;
                   .selectName {
+                    position: relative;
                     width: 100%;
                     height: 62px;
                     background-color: #696fe5;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    &::before {
+                      position: absolute;
+                      content: "";
+                      border: 8px solid transparent;
+                      border-top: 8px solid #ffffff;
+                      right: 20px;
+                      top: 28px;
+                      transition: transform 0.4s;
+                      transform: rotate(0deg);
+                      transform-origin: 50% 25%;
+                    }
                     //Стили текста
                     font-style: normal;
                     font-weight: 600;
@@ -3961,6 +4005,11 @@ export default {
                   }
                   &.open {
                     max-height: 186px;
+                    .selectName {
+                      &::before {
+                        transform: rotate(180deg);
+                      }
+                    }
                     filter: drop-shadow(
                       8px 16px 18px rgba(105, 111, 229, 0.18)
                     );

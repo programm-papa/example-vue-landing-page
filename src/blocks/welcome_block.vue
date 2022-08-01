@@ -3,14 +3,24 @@
     <div class="wrapper flex">
       <div class="content">
         <div class="description">
-          Комплексный маркетинг для стоматологий и медицинских клиник
+          <h1>Комплексный маркетинг для стоматологий и медицинских клиник</h1>
         </div>
         <div class="title">
           Нужен <span class="stroke-text">новый</span> поток клиентов
           <span class="stroke-text">для </span>
           <span class="stroke-text">вашей</span> клиники?
         </div>
-        <div class="pink-button" @click="{this.$store.dispatch('updateCallBackPopUpType', 'consultationV1');this.$store.dispatch('updateOpenCallBackPopUp', true);}">Да, мне нужны пациенты</div>
+        <div
+          class="pink-button"
+          @click="
+            {
+              this.$store.dispatch('updateCallBackPopUpType', 'consultationV1');
+              this.$store.dispatch('updateOpenCallBackPopUp', true);
+            }
+          "
+        >
+          Да, мне нужны пациенты
+        </div>
       </div>
       <div class="decor-img">
         <div class="input-efect-wrap flex">
@@ -38,22 +48,25 @@
           <div class="input-line"></div>
         </div>
         <div class="phone-image">
-          <img src="@/assets/image/top_decor-img/phone.webp" alt="" />
+          <img src="@/assets/image/top_decor-img/phone.webp" alt="телефон" />
         </div>
         <div class="outer-circle">
           <div class="heart img-wrap">
-            <img src="@/assets/image/top_decor-img/heart.webp" alt="" />
+            <img src="@/assets/image/top_decor-img/heart.webp" alt="сердце" />
           </div>
           <div class="tooth img-wrap">
-            <img src="@/assets/image/top_decor-img/tooth.webp" alt="" />
+            <img src="@/assets/image/top_decor-img/tooth.webp" alt="зуб зубы" />
           </div>
           <div class="eye img-wrap">
-            <img src="@/assets/image/top_decor-img/eye.webp" alt="" />
+            <img src="@/assets/image/top_decor-img/eye.webp" alt="глаз глаза" />
           </div>
           <div class="internal-circle">
             <div class="animated-bell">
               <div class="bell img-wrap">
-                <img src="@/assets/image/top_decor-img/bell.webp" alt="" />
+                <img
+                  src="@/assets/image/top_decor-img/bell.webp"
+                  alt="уведомления"
+                />
               </div>
               <div class="notification">{{ notificationNumber }}</div>
             </div>
@@ -61,25 +74,31 @@
         </div>
 
         <div class="doctor">
-          <img src="@/assets/image/top_decor-img/doctor.webp" alt="" />
+          <img src="@/assets/image/top_decor-img/doctor.webp" alt="доктор" />
           <img
             class="doctor__brow_left"
             src="@/assets/image/top_decor-img/brow.svg"
+            alt="бровь"
           />
           <img
             class="doctor__brow_right"
             src="@/assets/image/top_decor-img/brow.svg"
+            alt="бровь"
           />
         </div>
         <div class="cloud">
-          <img src="@/assets/image/top_decor-img/cloud.webp" alt="" />
+          <img src="@/assets/image/top_decor-img/cloud.webp" alt="облако" />
         </div>
 
         <div class="screen">
           <div class="plant">
-            <img src="@/assets/image/top_decor-img/plant.webp" alt="" />
+            <img src="@/assets/image/top_decor-img/plant.webp" alt="растение" />
           </div>
-          <img class="screen-img" src="@/assets/image/top_decor-img/screen.webp" alt="" />
+          <img
+            class="screen-img"
+            src="@/assets/image/top_decor-img/screen.webp"
+            alt="интерфейс"
+          />
           <div class="screen_chart">
             <div class="line-chart">
               <!-- Круги -->
@@ -100,22 +119,34 @@
             </div>
           </div>
           <div class="light_bulb">
-            <img src="@/assets/image/top_decor-img/light_bulb.webp" alt="" />
+            <img
+              src="@/assets/image/top_decor-img/light_bulb.webp"
+              alt="идея идеи"
+            />
           </div>
           <div class="chat1">
-            <img src="@/assets/image/top_decor-img/bubble_speech.webp" alt="" />
+            <img
+              src="@/assets/image/top_decor-img/bubble_speech.webp"
+              alt="комментарии"
+            />
           </div>
           <div class="chat2">
-            <img src="@/assets/image/top_decor-img/bubble_speech.webp" alt="" />
+            <img
+              src="@/assets/image/top_decor-img/bubble_speech.webp"
+              alt="отзывы"
+            />
           </div>
           <div class="stone">
-            <img src="@/assets/image/top_decor-img/stone.webp" alt="" />
+            <img src="@/assets/image/top_decor-img/stone.webp" alt="камень" />
           </div>
           <div class="purpose">
-            <img src="@/assets/image/top_decor-img/target.webp" alt="" />
+            <img src="@/assets/image/top_decor-img/target.webp" alt="цель" />
           </div>
           <div class="arrow">
-            <img src="@/assets/image/top_decor-img/arrow.webp" alt="" />
+            <img
+              src="@/assets/image/top_decor-img/arrow.webp"
+              alt="достижение цели"
+            />
           </div>
         </div>
       </div>
@@ -242,7 +273,7 @@ export default {
 <style lang="scss" scoped>
 .block {
   &#block1 {
-        padding: 100px 0px 0px;
+    padding: 100px 0px 0px;
     .wrapper {
       width: 1190px;
       padding: 80px 0px 85px;
@@ -256,14 +287,16 @@ export default {
           padding: 20px 29px;
           margin-bottom: 30px;
           //Стили текста
-          font-family: "Gilroy";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 24px;
-          letter-spacing: 0.02em;
-          text-transform: uppercase;
-          color: #424c5c;
+          * {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #424c5c;
+          }
         }
         .title {
           padding-left: 31px;
@@ -1037,8 +1070,9 @@ export default {
             height: calc(154px + 161 * (100vw - 320px) / (767 - 320));
             left: calc(46px + 46 * (100vw - 320px) / (767 - 320));
             top: calc(202px + 82 * (100vw - 320px) / (767 - 320));
-            img {
-              width: 100%;
+            img.screen-img {
+              margin: 0px calc(-35px - 25 * (100vw - 320px) / (767 - 320)) -40px;
+              width: calc(100% + (70px + 50 * (100vw - 320px) / (767 - 320)));
               height: auto;
             }
           }
@@ -1279,7 +1313,7 @@ export default {
   }
   @media screen and (max-width: 500px) {
     &#block1 {
-        padding: 60px 0px 0px;
+      padding: 60px 0px 0px;
     }
   }
 }

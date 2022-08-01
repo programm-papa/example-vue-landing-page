@@ -4,13 +4,13 @@
       <div class="wrapper flex">
         <div class="decor-img">
           <div class="painted-circle">
-            <img src="@/assets/image/block4/decor-img-woman.webp" alt="" />
+            <img src="@/assets/image/block4/decor-img-woman.webp" alt="клиент" />
           </div>
           <div class="border-circle"></div>
         </div>
         <div class="decor-arrow">
-          <img src="@/assets/image/block4/arrow.svg" alt="" />
-          <img src="@/assets/image/block4/arrow-adaptive.svg" alt="" />
+          <img src="@/assets/image/block4/arrow.svg" alt="цель" />
+          <img src="@/assets/image/block4/arrow-adaptive.svg" alt="цель" />
         </div>
         <div class="left">
           <div class="title">Не можете определиться с необходимой услугой?</div>

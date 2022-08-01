@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Костя.png" alt="" />
+              <img src="@/assets/image/block11/Костя.webp" alt="Константин" />
             </div>
           </div>
           <div class="employee">
@@ -59,7 +59,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/СашаПМ.png" alt="" />
+              <img src="@/assets/image/block11/СашаПМ.webp" alt="Александр" />
             </div>
           </div>
           <div class="employee">
@@ -84,7 +84,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Николай.png" alt="" />
+              <img src="@/assets/image/block11/Николай.webp" alt="Николай" />
             </div>
           </div>
           <div class="employee">
@@ -109,7 +109,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Анна.png" alt="" />
+              <img src="@/assets/image/block11/Анна.webp" alt="Анна" />
             </div>
           </div>
           <div class="employee">
@@ -134,7 +134,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Артем.png" alt="" />
+              <img src="@/assets/image/block11/Артем.webp" alt="Артем" />
             </div>
           </div>
           <div class="employee">
@@ -159,7 +159,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Мария.png" alt="" />
+              <img src="@/assets/image/block11/Мария.webp" alt="Мария" />
             </div>
           </div>
           <div class="employee">
@@ -186,7 +186,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Иван.png" alt="" />
+              <img src="@/assets/image/block11/Иван.webp" alt="Иван" />
             </div>
           </div>
           <div class="employee">
@@ -211,7 +211,7 @@
               </div>
             </div>
             <div class="employee__avatar">
-              <img src="@/assets/image/block11/Павел.png" alt="" />
+              <img src="@/assets/image/block11/Павел.webp" alt="Павел" />
             </div>
           </div>
         </div>

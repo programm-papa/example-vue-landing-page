@@ -5,7 +5,7 @@
         <a class="card" href="#block3" @click="openSpecialMenu = true">
           <div class="card-img-circle">
             <div class="bacground-circle">
-              <img src="@/assets/image/block2/services.webp" alt="" />
+              <img src="@/assets/image/block2/services.webp" alt="услуги" />
             </div>
           </div>
           <div class="description">
@@ -37,7 +37,7 @@
         <a class="card" href="#block7">
           <div class="card-img-circle">
             <div class="bacground-circle">
-              <img src="@/assets/image/block2/cases.webp" alt="" />
+              <img src="@/assets/image/block2/cases.webp" alt="кейсы примеры работ" />
             </div>
           </div>
           <div class="description">
@@ -73,7 +73,7 @@
           ">
           <div class="card-img-circle">
             <div class="bacground-circle">
-              <img src="@/assets/image/block2/calculate.webp" alt="" />
+              <img src="@/assets/image/block2/calculate.webp" alt="расчет стоимости" />
             </div>
           </div>
           <div class="description">

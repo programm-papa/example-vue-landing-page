@@ -17,7 +17,7 @@
           </div>
           <img
             src="@/assets/image/block3/decor-img-chart.webp"
-            alt=""
+            alt="chart"
             class="chart"
           />
         </div>
@@ -27,7 +27,7 @@
           <div class="rotate">
             <div class="item">
               <div class="num">01</div>
-              <img src="@/assets/image/block3/dev.webp" alt="" />
+              <img src="@/assets/image/block3/dev.webp" alt="Разработка / создание медицинских сайтов" />
               <div class="name">Разработка / создание медицинских сайтов</div>
             </div>
             <div class="back">
@@ -54,7 +54,7 @@
               <div class="num">02</div>
               <img
                 src="@/assets/image/block3/marketing-for-medicine.webp"
-                alt=""
+                alt="Комплексный маркетинг для медицины"
               />
               <div class="name">
                 Комплексный<br />маркетинг<br />для медицины
@@ -83,7 +83,7 @@
           <div class="rotate">
             <div class="item">
               <div class="num">03</div>
-              <img src="@/assets/image/block3/brand.webp" alt="" />
+              <img src="@/assets/image/block3/brand.webp" alt="Брендинг и дизайн" />
               <div class="name">Брендинг и дизайн</div>
             </div>
             <div class="back">
@@ -102,7 +102,7 @@
           <div class="rotate">
             <div class="item">
               <div class="num">04</div>
-              <img src="@/assets/image/block3/suport.webp" alt="" />
+              <img src="@/assets/image/block3/suport.webp" alt="Поддержка и сопровождение" />
               <div class="name">Поддержка<br />и сопровождение</div>
             </div>
             <div class="back">

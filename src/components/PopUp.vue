@@ -81,7 +81,7 @@
         <img
           class="success-img"
           src="@\assets\image\popup-success.png"
-          alt=""
+          alt="Готово"
         />
         <div class="wait-call">
           <div class="wait-call__title">Ожидайте звонка с номера</div>
@@ -125,7 +125,7 @@ export default {
             type: "text",
             name: "name",
             placeholder: "Ваше имя",
-            required: false,
+            required: true,
           },
           {
             type: "text",
@@ -146,7 +146,7 @@ export default {
               type: "text",
               name: "name",
               placeholder: "Ваше имя",
-              required: false,
+              required: true,
             },
             {
               type: "text",
@@ -166,7 +166,7 @@ export default {
               type: "text",
               name: "name",
               placeholder: "Ваше имя",
-              required: false,
+              required: true,
             },
             {
               type: "text",
@@ -197,7 +197,7 @@ export default {
               type: "text",
               name: "name",
               placeholder: "Ваше имя",
-              required: false,
+              required: true,
             },
             {
               type: "text",
@@ -228,7 +228,7 @@ export default {
               type: "text",
               name: "name",
               placeholder: "Ваше имя",
-              required: false,
+              required: true,
             },
             {
               type: "text",
@@ -259,7 +259,7 @@ export default {
               type: "text",
               name: "name",
               placeholder: "Ваше имя",
-              required: false,
+              required: true,
             },
             {
               type: "text",
@@ -285,7 +285,7 @@ export default {
               type: "text",
               name: "name",
               placeholder: "Ваше имя",
-              required: false,
+              required: true,
             },
             {
               type: "text",
@@ -311,7 +311,7 @@ export default {
               type: "text",
               name: "name",
               placeholder: "Ваше имя",
-              required: false,
+              required: true,
             },
             {
               type: "text",
@@ -334,6 +334,7 @@ export default {
           button: "Отправить заявку",
         },
       },
+      reName: /^[а-яё -\s]+$/i,
       rePhone: /^[\d\+][\d\(\)\ -]{4,14}\d$/,
       reMail: /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i,
     };
@@ -359,6 +360,14 @@ export default {
         ["input"].includes(tag.tagName.toLowerCase())
       );
       for (const input of inputs) {
+        if (
+          input.required &&
+          input.name == "name" &&
+          !this.reName.test(input.value)
+        ) {
+          this.validationFormClass.push("empty-" + input.name);
+          continue;
+        }
         if (
           input.required &&
           input.name == "phone" &&
@@ -584,6 +593,11 @@ export default {
             text-decoration: underline;
           }
         }
+        &.empty-name {
+          input[name="name"] {
+            border: 1px solid #ff5555;
+          }
+        }
         &.empty-phone {
           input[name="phone"] {
             border: 1px solid #ff5555;
@@ -594,6 +608,7 @@ export default {
             border: 1px solid #ff5555;
           }
         }
+
         .captcha {
           margin: -10px 0px;
         }

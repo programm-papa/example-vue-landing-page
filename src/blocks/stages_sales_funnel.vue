@@ -1,7 +1,7 @@
 <template>
   <div class="block" id="block9">
     <div class="decor-img">
-      <img src="@/assets/image/block9/img_dna.webp" alt="" />
+      <img src="@/assets/image/block9/img_dna.webp" alt="днк" />
     </div>
     <div class="bacground-color">
       <div class="wrapper">
