@@ -405,7 +405,7 @@ export default {
       formData.append("popUpType", this.callBackPopUpType);
       const response = await axios({
         method: "post",
-        url: "https://artclinik.ru/api/mail.php",
+        url: "https://************", //url for mailer api
         withCredentials: false,
         headers: {
           "Access-Control-Allow-Origin": "*",
